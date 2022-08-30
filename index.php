@@ -20,14 +20,14 @@
         <!-- Main column -->
         <div class="col-12 col-lg-9 p-0 ui-card ui-column">
             
-            <div class="row p-2">
+            <div class="row">
                 <div class="col-auto my-auto px-1">
                     Buy / sell
                 </div>
                 
                 <div class="col-auto my-auto px-1">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 pb-1">
                             <h6 class="secondary">Coin:</h6>
                         </div>
                         <div class="col-12">
@@ -38,7 +38,7 @@
                 
                 <div class="col-auto my-auto px-1">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 pb-1">
                             <h6 class="secondary">Fiat:</h6>
                         </div>
                         <div class="col-12">
@@ -49,7 +49,7 @@
                 
                 <div class="col-auto my-auto px-1">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 pb-1">
                             <h6 class="secondary">Payment method:</h6>
                         </div>
                         <div class="col-12">
