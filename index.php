@@ -51,7 +51,7 @@
         </div>
         </div>
         
-        <script src="js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
+        <script src="/p2p/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
         <?php include('../../templates/vanilla_mobile_nav.php'); ?>
