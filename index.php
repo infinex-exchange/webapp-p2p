@@ -37,7 +37,25 @@
                 </div>
                 
                 <div class="col-auto my-auto px-1">
-                    Fiat
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="secondary">Fiat:</h6>
+                        </div>
+                        <div class="col-12">
+                            <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-auto my-auto px-1">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="secondary">Payment method:</h6>
+                        </div>
+                        <div class="col-12">
+                            <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                        </div>
+                    </div>
                 </div>
             </div>
             
