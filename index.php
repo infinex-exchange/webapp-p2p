@@ -42,7 +42,7 @@
                             <h6 class="secondary">Fiat:</h6>
                         </div>
                         <div class="col-12">
-                            <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                            <?php include(__DIR__.'/templates/select_fiat.php'); ?>
                         </div>
                     </div>
                 </div>
