@@ -76,9 +76,12 @@
                 <div class="text-end" style="width: 20%">
                     <h5>Payment methods</h5>
                 </div>
+                <div style="width: 20%">
+                    <h5>Trade</h5>
+                </div>
             </div>
             
-            <div id="asset-data">
+            <div id="offers-data">
             </div>
         
         <!-- / Main column -->
@@ -91,7 +94,7 @@
                 <h3>Recent P2P trades</h3>
             </div>
             
-            <div id="recent-tx-data">
+            <div id="recent-trades-data">
             </div>
         
         <!-- / Right column -->
