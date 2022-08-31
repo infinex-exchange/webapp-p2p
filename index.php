@@ -64,22 +64,17 @@
             </div>
             
             <div class="row p-2 secondary d-none d-lg-flex">
-                <div style="width: 60px">
+                <div style="width: 20%">
+                    <h5>User</h5>
                 </div>
-                <div style="width: calc(20% - 60px)">
-                <h5>Token</h5>
+                <div class="text-end" style="width: 20%">
+                    <h5>Price</h5>
                 </div>
-                <div class="text-end" style="width: 19%">
-                <h5>Total</h5>
+                <div class="text-end" style="width: 20%">
+                    <h5>Available</h5>
                 </div>
-                <div class="text-end" style="width: 19%">
-                <h5>Available</h5>
-                </div>
-                <div class="text-end" style="width: 18%">
-                <h5>Locked</h5>
-                </div>
-                <div style="width: 24%">
-                <h5>Action</h5>
+                <div class="text-end" style="width: 20%">
+                    <h5>Payment methods</h5>
                 </div>
             </div>
             
