@@ -53,7 +53,7 @@ function initSelectFiat(endpoint = '/p2p/fiats') {
                             <div class="select-fiat-item row p-1 hoverable" data-asset="${k}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
                                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="50" cy="50" r="50" fill="white"/>
+                                        <circle cx="50%" cy="50%" r="50%" fill="white"/>
                                     </svg>
                                 </div>
                                 <div class="col my-auto">
