@@ -29,7 +29,7 @@
                     <label class="btn small btn-outline-danger px-4" for="side-sell">Sell</label>
                 </div>
                 
-                <div class="col-6 col-lg-auto mx-auto px-1">
+                <div class="col-6 col-lg-auto my-auto px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h6 class="secondary">Coin:</h6>
