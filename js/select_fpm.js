@@ -48,7 +48,7 @@ function initSelectFpm(endpoint = '/p2p/fiat_payment_methods') {
             .retry(config.retry)
             .done(function (data) {
                 if(data.success) {
-                    $.each(data.fiats, function(k, v) {
+                    $.each(data.payment_methods, function(k, v) {
                         thisAS.append(`
                             <div class="select-fpm-item row p-1 hoverable" data-asset="${k}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
