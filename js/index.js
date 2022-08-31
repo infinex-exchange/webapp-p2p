@@ -1,7 +1,7 @@
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
-    initSelectCoin('/bridge/assets');
-    initSelectFiat('/bridge/assets');
-    initSelectFpm('/bridge/assets');
+    initSelectCoin('/p2p/assets');
+    initSelectFiat();
+    initSelectFpm();
     $(document).trigger('renderingStage');
 });
