@@ -20,7 +20,7 @@
         <!-- Main column -->
         <div class="col-12 col-lg-9 p-0 ui-card ui-column">
             
-            <div class="row">
+            <div class="row pb-5">
                 <div class="col-6 col-lg-auto my-auto px-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" autocomplete="off" checked>
                     <label class="btn btn-outline-success" for="side-buy">Buy</label>
