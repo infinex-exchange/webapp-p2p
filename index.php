@@ -22,11 +22,11 @@
             
             <div class="row">
                 <div class="col-6 col-lg-auto my-auto px-1">
-                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="success-outlined">Buy</label>
+                    <input type="radio" class="btn-check" name="side-buy" id="side-buy" autocomplete="off" checked>
+                    <label class="btn btn-outline-success" for="side-buy">Buy</label>
 
-                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-                    <label class="btn btn-outline-danger" for="danger-outlined">Sell</label>
+                    <input type="radio" class="btn-check" name="side-sell" id="side-sell" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="side-sell">Sell</label>
                 </div>
                 
                 <div class="col-6 col-lg-auto my-auto px-1">
