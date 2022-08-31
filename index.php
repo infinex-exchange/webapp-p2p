@@ -23,10 +23,10 @@
             <div class="row">
                 <div class="col-6 col-lg-auto my-auto px-1">
                     <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-                    <label class="btn btn-outline-success" for="success-outlined">BUY</label>
+                    <label class="btn btn-outline-success" for="success-outlined">Buy</label>
 
                     <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-                    <label class="btn btn-outline-danger" for="danger-outlined">SELL</label>
+                    <label class="btn btn-outline-danger" for="danger-outlined">Sell</label>
                 </div>
                 
                 <div class="col-6 col-lg-auto my-auto px-1">
