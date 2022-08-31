@@ -1,13 +1,13 @@
-<div id="select-fiat-wrapper">
+<div class="selector-wrapper">
     <form>
-        <div class="select-arrow">
-            <input readonly id="select-fiat" type="text" placeholder="Select fiat" class="form-control">
-            <i id="select-fiat-arrow" class="fa-solid fa-angle-down flippable"></i>
+        <div class="selector-inner">
+            <input readonly id="select-fiat" type="text" placeholder="Select fiat" class="form-control selector-input">
+            <i id="select-fiat-arrow" class="fa-solid fa-angle-down flippable selector-arrow"></i>
         </div>
     </form>
-    <div id="select-fiat-dropdown">
-        <input id="select-fiat-search" type="text" placeholder="Search..." class="input-search form-control">
-        <div id="select-fiat-data" class="scrollable"></div>
+    <div id="select-fiat-dropdown" class="selector-dropdown">
+        <input id="select-fiat-search" type="text" placeholder="Search..." class="input-search form-control selector-search">
+        <div id="select-fiat-data" class="scrollable selector-data"></div>
         <div id="select-fiat-data-preloader">
             Loading...
         </div>

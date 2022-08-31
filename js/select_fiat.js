@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $('#select-fiat').on('click', function(event) {
+        $('.selector-dropdown').not('#select-fiat-dropdown').hide();
+        $('.selector-arrow').not('#select-fiat-arrow').removeClass('flip');
+        
         $('#select-fiat-dropdown').toggle();
         $('#select-fiat-arrow').toggleClass('flip');
-        $('#select-coin-dropdown').hide();
-        $('#select-coin-arrow').removeClass('flip');
-        $('#select-net-dropdown').hide();
-        $('#select-net-arrow').removeClass('flip');
+        
         event.stopPropagation();
     });
     
