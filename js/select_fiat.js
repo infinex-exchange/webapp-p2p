@@ -51,8 +51,8 @@ function initSelectFiat(endpoint = '/p2p/fiats') {
                     $.each(data.fiats, function(k, v) {
                         thisAS.append(`
                             <div class="select-fiat-item row p-1 hoverable" data-asset="${k}">
-                                <div class="col-auto my-auto text-center" style="width: 32px">
-                                    <div class="bg-white rounded-circle" style="width: 24px; height: 24px; color: black;">
+                                <div class="col-auto my-auto">
+                                    <div class="bg-white text-center align-middle rounded-circle" style="width: 24px; height: 24px; color: black;">
                                         ${v.symbol}
                                     </div>
                                 </div>
