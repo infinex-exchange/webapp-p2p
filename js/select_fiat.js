@@ -52,8 +52,10 @@ function initSelectFiat(endpoint = '/p2p/fiats') {
                         thisAS.append(`
                             <div class="select-fiat-item row p-1 hoverable" data-asset="${k}">
                                 <div class="col-auto my-auto">
-                                    <div class="bg-white text-center rounded-circle" style="width: 24px; height: 24px; color: black;">
-                                        <strong class="align-middle">${v.symbol}</strong>
+                                    <div class="bg-white rounded-circle" style="width: 24px; height: 24px; color: black;">
+	                                    <div class="m-auto">
+	                                        <strong>${v.symbol}</strong>
+	                                    </div>
                                     </div>
                                 </div>
                                 <div class="col my-auto">
