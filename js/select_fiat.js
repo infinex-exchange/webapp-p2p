@@ -73,7 +73,7 @@ function initSelectFiat(endpoint = '/p2p/fiats') {
                         
                     thisAS.done();
                             
-                    if(data.assets.length != 50)
+                    if(data.fiats.length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);

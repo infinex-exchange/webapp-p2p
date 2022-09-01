@@ -71,7 +71,7 @@ function initSelectFpm(endpoint = '/p2p/fiat_payment_methods') {
                         
                     thisAS.done();
                             
-                    if(data.assets.length != 50)
+                    if(data.payment_methods.length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);
