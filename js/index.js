@@ -47,3 +47,57 @@ $(document).ready(function() {
         msgBoxNoConn(true); 
     });
 });
+
+$(document).on('haveConfig', function() {
+    $('#select-coin').val(window.p2pInitialCoin);
+    $('#select-fiat').val(window.p2pInitialFiat);
+    
+    window.openOrdersAS = new AjaxScroll(
+        $('#offers-data'),
+        $('#offers-preloader'),
+        {
+            side: 'BUY',
+            asset: window.p2pInitialCoin,
+            fiat: window.p2pInitialFiat
+        },
+        function() {
+            this.data.offset = this.offset;
+            var thisAS = this;
+            
+        //---
+    $.ajax({
+        url: config.apiUrl + '/p2p/offers',
+        type: 'POST',
+        data: JSON.stringify(thisAS.data),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            $.each(data.orders, function(k, v) {
+                thisAS.append(renderOpenOrder(v));
+            });
+            
+            thisAS.done();
+            
+            if(data.orders.length != 50)
+                thisAS.noMoreData(); 
+        }
+        else {
+            msgBoxRedirect(data.error);
+            thisAS.done();
+            thisAS.noMoreData();
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(true);
+        thisAS.done();
+        thisAS.noMoreData();  
+    });
+        //---
+        
+        },
+        true
+    );
+});
