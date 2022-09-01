@@ -50,12 +50,11 @@ function initSelectFpm(endpoint = '/p2p/fpms') {
                 if(data.success) {
                     $.each(data.fpms, function(k, v) {
                         thisAS.append(`
-                            <div class="select-fpm-item row p-1 hoverable" data-asset="${k}">
+                            <div class="select-fpm-item row p-1 hoverable" data-fpmid="${k}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
                                     <img width="24px" height="24px" src="${v.icon_url}">
                                 </div>
                                 <div class="col my-auto">
-                                    <strong>${k}</strong>
                                     <span class="secondary">${v.name}</span>
                                 </div>
                             </div>
