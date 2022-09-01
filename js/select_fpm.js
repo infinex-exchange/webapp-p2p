@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
 });
 
-function initSelectFpm(endpoint = '/p2p/fiat_payment_methods') {
+function initSelectFpm(endpoint = '/p2p/fpms') {
     window.selectFpmAS = new AjaxScroll(
         $('#select-fpm-data'),
         $('#select-fpm-data-preloader'),
@@ -48,7 +48,7 @@ function initSelectFpm(endpoint = '/p2p/fiat_payment_methods') {
             .retry(config.retry)
             .done(function (data) {
                 if(data.success) {
-                    $.each(data.payment_methods, function(k, v) {
+                    $.each(data.fpms, function(k, v) {
                         thisAS.append(`
                             <div class="select-fpm-item row p-1 hoverable" data-asset="${k}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
@@ -71,7 +71,7 @@ function initSelectFpm(endpoint = '/p2p/fiat_payment_methods') {
                         
                     thisAS.done();
                             
-                    if(data.payment_methods.length != 50)
+                    if(data.fpms.length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);
