@@ -114,6 +114,7 @@ $(document).on('haveConfig', function() {
                             ${v.nickname}
                             <br>
                             <div class="rateit" data-rateit-value="2.5" style="font-size: 20px"></div>
+                            96%
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
