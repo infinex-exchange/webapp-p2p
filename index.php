@@ -158,14 +158,14 @@
                     </div>   
                 </div>
                 
-                <div id="my-offers-footer" class="row p-2 user-only">
-                    <div class="col-6 p-0">
+                <div id="my-offers-footer" class="row user-only">
+                    <div class="col-6 p-1">
                         <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">
                             <i class="fa-solid fa-plus"></i>
                             Create offer
                         </a>
                     </div>
-                    <div class="col-6 p-0">
+                    <div class="col-6 p-1">
                         <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">
                             <i class="fa-solid fa-gear"></i>
                             P2P settings
