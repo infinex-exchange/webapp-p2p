@@ -135,8 +135,8 @@ $(document).on('haveConfig', function() {
             $('.rateit').rateit({
                 readonly: true,
                 ispreset: true,
-                starwidth: 24,
-                starheight: 24,
+                starwidth: 16,
+                starheight: 16,
                 mode: 'font'
             });
             
