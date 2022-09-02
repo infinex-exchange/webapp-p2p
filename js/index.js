@@ -12,6 +12,7 @@ $(document).ready(function() {
     $('#select-coin').on('change', function() {
         window.p2pOffersAS.data.asset = this.value;
         window.p2pOffersAS.reset();
+        localStorage.setItem("p2pInitialFiat", this.value);
     });
     
     $('#select-fiat').on('change', function() {
@@ -19,6 +20,7 @@ $(document).ready(function() {
         delete window.p2pOffersAS.data.fpm;
         window.p2pOffersAS.data.fiat = this.value;
         window.p2pOffersAS.reset();
+        localStorage.setItem("p2pInitialFiat", this.value);
     });
     
     $('#select-fpm').on('change', function() {
