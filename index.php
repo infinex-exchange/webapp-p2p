@@ -45,6 +45,12 @@
                         My offers
                     </a>
                 </li>
+                <li class="nav-item user-only">
+                    <a class="nav-link" href="/p2p/settings">
+                        <i class="fa-solid fa-gear"></i><br>
+                        P2P settings
+                    </a>
+                </li>
             </ul>
         </nav>
         
@@ -166,7 +172,7 @@
                         </a>
                     </div>
                     <div class="col-6 d-none d-lg-block">
-                        <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">
+                        <a href="/p2p/settings" class="btn btn-primary btn-sm w-100">
                             <i class="fa-solid fa-gear"></i>
                             P2P settings
                         </a>
