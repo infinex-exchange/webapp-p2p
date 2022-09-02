@@ -109,7 +109,7 @@ $(document).on('haveConfig', function() {
                 });
                 
                 thisAS.append(`
-                    <div class="trade-item row px-2 py-3 hoverable">
+                    <div class="trade-item row px-2 py-4 hoverable">
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                         </div>
