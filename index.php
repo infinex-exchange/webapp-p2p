@@ -19,14 +19,14 @@
         <!-- Mobile navbar -->
         <nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
             <ul class="navbar-nav mx-auto text-center">
-                <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">
-                            <i class="fas fa-home"></i><br>
-                            Home
-                        </a>
-                    </li>
-                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="fas fa-home"></i><br>
+                        Home
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto text-center">
                 <li class="nav-item">
                     <a class="nav-link active" href="#_" data-ui-card-target="trade">
                         <i class="fa-solid fa-right-left"></i></i><br>
