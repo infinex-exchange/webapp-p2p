@@ -9,7 +9,7 @@
         <input id="select-fpm-search" type="text" placeholder="Search..." class="input-search form-control selector-search">
         <div class="select-fpm-item row p-1 hoverable" data-fpmid="" data-name="All payment methods">
             <div class="col-auto my-auto text-center" style="width: 32px">
-                <i class="fa-solid fa-table-cells"></i>
+                <i class="fa-solid fa-xl fa-table-cells"></i>
             </div>
             <div class="col my-auto">
                 <strong class="secondary">All payment methods</strong>
