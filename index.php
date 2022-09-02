@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../templates/head.php'); ?>
+        <?php include(__DIR__.'/../../templates/head.php'); ?>
+        <?php include(__DIR__.'/imports/star_rating_svg.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <title>Vayamos P2P</title>
@@ -9,11 +10,11 @@
     <body>
     
         <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
         <div id="main-navbar">
-            <?php include('../../templates/navbar.php'); ?>
+            <?php include(__DIR__.'/../../templates/navbar.php'); ?>
         </div>
         
         <!-- Mobile navbar -->
