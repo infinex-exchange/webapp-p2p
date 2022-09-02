@@ -100,7 +100,7 @@ $(document).on('haveConfig', function() {
                         <div class="col-auto my-auto text-center" style="width: 32px">
                             <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
                         </div>
-                        <div class="col my-auto">
+                        <div class="col-auto my-auto">
                             <span class="secondary">${data.fpms[fpmid].name}</span>
                         </div>
                         <div class="col-12 d-none d-lg-block"></div>
