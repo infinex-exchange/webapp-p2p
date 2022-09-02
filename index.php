@@ -149,10 +149,10 @@
             
             <div id="my-offers" class="col-12 ui-card ui-card-ver d-lg-block half-column-height sm-rest-of-height" data-ui-card="my-offers">
                 <div id="my-offers-header" class="row p-2">
-                    <div class="col-10 my-auto">
+                    <div class="col-8 my-auto">
                         <h3>My offers</h3>
                     </div>
-                    <div class="col-2 my-auto">
+                    <div class="col-4 my-auto">
                         <a href="/p2p/create_offer" class="btn btn-primary btn-sm">Create</a>
                     </div>
                 </div>
