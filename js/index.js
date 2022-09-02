@@ -141,6 +141,9 @@ $(document).on('haveConfig', function() {
                         </div>
                         <div class="my-auto sm-w-70 py-4 py-lg-0 order-3" style="width: 23%">
                             <div class="row">
+                                <div class="col-12 d-lg-none pb-2">
+                                    <h4>${v.price} ${window.p2pInitialFiat}</h4>
+                                </div>
                                 <div class="col-4 d-lg-none secondary">
                                     Available:
                                 </div>
