@@ -78,3 +78,15 @@
     background-color: var(--color-red);
     border-color: var(--color-red);
 }
+
+/* Force column height on mobile */
+
+@media (max-width: 991px) {
+    .sm-w-50 {
+        width: 50% !important;
+    }
+    
+    .sm-w-100 {
+        width: 100% !important;
+    }
+}
