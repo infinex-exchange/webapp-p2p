@@ -54,3 +54,27 @@
 #my-offers-data {
     height: var(--target-height-my-offers-data);
 }
+
+/* Outline button */
+
+.btn-outline-green {
+    color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.btn-check:active+.btn-outline-green, .btn-check:checked+.btn-outline-green, .btn-outline-green.active, .btn-outline-green.dropdown-toggle.show, .btn-outline-green:active {
+    color: var(--color-primary);
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.btn-outline-red {
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+.btn-check:active+.btn-outline-red, .btn-check:checked+.btn-outline-red, .btn-outline-red.active, .btn-outline-red.dropdown-toggle.show, .btn-outline-red:active {
+    color: var(--color-primary);
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}

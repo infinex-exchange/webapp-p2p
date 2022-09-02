@@ -69,11 +69,11 @@
             <div class="row pb-3 pe-2 pe-lg-0">
                 <div class="col-3 col-lg-1 mt-auto pb-2 px-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
-                    <label class="btn w-100 small btn-outline-success px-4" for="side-buy">Buy</label>
+                    <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
                 </div>
                 <div class="col-3 col-lg-1 mt-auto pb-2 px-1">
                     <input type="radio" class="btn-check" name="side" id="side-sell" value="SELL" autocomplete="off">
-                    <label class="btn w-100 small btn-outline-danger px-4" for="side-sell">Sell</label>
+                    <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
                 </div>
                 
                 <div class="col-6 col-lg-3 my-auto pb-2 px-1">
