@@ -7,7 +7,7 @@
     </form>
     <div id="select-fpm-dropdown" class="selector-dropdown">
         <input id="select-fpm-search" type="text" placeholder="Search..." class="input-search form-control selector-search">
-        <div class="select-fpm-item row p-1 hoverable" data-fpmid="">
+        <div class="select-fpm-item row p-1 hoverable" data-fpmid="" data-name="All payment methods">
             <div class="col-auto my-auto text-center" style="width: 32px">
                 <img width="24px" height="24px" src="/p2p/img/fpm_all.svg">
             </div>
