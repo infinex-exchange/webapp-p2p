@@ -1,0 +1,56 @@
+/* Init variables */
+
+:root {
+    --emulated-100vh: 100vh;
+    --height-main-nav: 0px;
+    --height-mobile-nav: 0px;
+    --target-height-offers-data: 0px;
+    --target-height-recent-trades-data: 0px;
+    --target-height-my-offers-data: 0px;
+}
+
+/* Js sizing */
+
+.column-height {
+    height: calc(
+                  var(--emulated-100vh)
+                  - var(--height-main-nav)
+                );
+}
+    
+.half-column-height {
+    height: calc(
+                  (
+                    var(--emulated-100vh)
+                    - var(--height-main-nav)
+                  )
+                  / 2
+                );
+}
+
+.rest-of-height {
+    height: calc(var(--emulated-100vh)
+                 - var(--height-main-nav)
+                );
+}
+
+@media (max-width: 991px) {
+    .sm-rest-of-height {
+        height: calc(var(--emulated-100vh)
+                     - var(--height-main-nav)
+                     - var(--height-mobile-nav)
+                    ) !important;
+    }
+}
+
+#offers-data {
+    height: var(--target-height-offers-data);
+}
+
+#recent-trades-data {
+    height: var(--target-height-recent-trades-data);
+}
+
+#my-offers-data {
+    height: var(--target-height-my-offers-data);
+}

@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <?php include('../../templates/head.php'); ?>
+        <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <title>Vayamos P2P</title>
     </head>
@@ -154,6 +155,7 @@
         </div>
         </div>
         
+        <script type="text/javascript" src="/p2p/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/p2p/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
