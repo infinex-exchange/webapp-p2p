@@ -112,7 +112,8 @@ $(document).on('haveConfig', function() {
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
-                            <div class="rateit" data-rateit-value="2.5" style="font-size: 16px"></div>
+                            <br>
+                            <div class="rateit" data-rateit-value="2.5" style="font-size: 20px"></div>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
