@@ -4,7 +4,7 @@
     --emulated-100vh: 100vh;
     --height-main-nav: 0px;
     --height-mobile-nav: 0px;
-    --target-height-offers-data: 0px;
+    --target-height-trade-data: 0px;
     --target-height-recent-trades-data: 0px;
     --target-height-my-offers-data: 0px;
 }
@@ -43,8 +43,8 @@
     }
 }
 
-#offers-data {
-    height: var(--target-height-offers-data);
+#trade-data {
+    height: var(--target-height-trade-data);
 }
 
 #recent-trades-data {

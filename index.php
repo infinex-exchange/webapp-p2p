@@ -57,6 +57,8 @@
         <div class="row m-0">
         <div id="trade" class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="trade">
             
+            <div id="trade-header">
+            
             <div class="row pb-3 pe-2 pe-lg-0">
                 <div class="col-3 col-lg-1 mt-auto pb-2 px-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
@@ -119,7 +121,9 @@
                 </div>
             </div>
             
-            <div id="offers-data" class="scrollable">
+            </div>
+            
+            <div id="trade-data" class="scrollable">
             </div>
         
         <!-- / Main column -->
