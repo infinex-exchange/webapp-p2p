@@ -111,11 +111,11 @@ $(document).on('haveConfig', function() {
                 thisAS.append(`
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
                         <div class="my-auto" style="width: 20%">
-                            ${v.nickname}
+                            <strong>${v.nickname}</strong>
                             <br>
                             <div class="rateit" data-rateit-value="4.5" style="font-size: 20px"></div>
                             <br>
-                            <span class="small">
+                            <span class="small secondary">
                                 3 transactions | 96%
                             </span>
                         </div>
