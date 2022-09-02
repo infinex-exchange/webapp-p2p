@@ -97,14 +97,13 @@ $(document).on('haveConfig', function() {
                 
                 $.each(v.fpms, function(x, fpmid) {
                     innerPayments += `
-                        <div class="row">
-                            <div class="col-auto my-auto text-center" style="width: 32px">
-                                <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
-                            </div>
-                            <div class="col my-auto">
-                                <span class="secondary">${data.fpms[fpmid].name}</span>
-                            </div>
+                        <div class="col-auto my-auto text-center" style="width: 32px">
+                            <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
                         </div>
+                        <div class="col my-auto">
+                            <span class="secondary">${data.fpms[fpmid].name}</span>
+                        </div>
+                        <div class="col-12 d-none d-lg-block"></div>
                     `;
                 });
                 
@@ -157,7 +156,9 @@ $(document).on('haveConfig', function() {
 		                    </div>
                         </div>
                         <div class="my-auto sm-w-100 order-5 order-lg-4" style="width: 23%">
-                            ${innerPayments}
+                            <div class="row">
+	                            ${innerPayments}
+	                        </div>
                         </div>
                         <div class="my-auto sm-w-30 order-4 order-lg-5" style="width: 14%">
                             <button type="button" class="btn ${btnBg} w-100 user-only">${btnText}</button>
