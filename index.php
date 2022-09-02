@@ -119,7 +119,7 @@
                 <div class="text-end" style="width: 20%">
                     <h5>Available</h5>
                 </div>
-                <div class="text-end" style="width: 20%">
+                <div style="width: 20%">
                     <h5>Payment methods</h5>
                 </div>
                 <div style="width: 20%">

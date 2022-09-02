@@ -121,7 +121,7 @@ $(document).on('haveConfig', function() {
                             <br>
                             ${v.fiat_min} ${window.p2pInitialFiat} - ${v.fiat_max} ${window.p2pInitialFiat}
                         </div>
-                        <div class="text-end" style="width: 20%">
+                        <div style="width: 20%">
                             ${innerPayments}
                         </div>
                         <div style="width: 20%">
