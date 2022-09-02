@@ -113,7 +113,7 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                             <br>
-                            <div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+                            <span class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true" data-rateit-readonly="true"></span>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
