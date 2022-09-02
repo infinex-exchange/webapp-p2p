@@ -112,7 +112,7 @@ $(document).on('haveConfig', function() {
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
-                            <span class="rateit" data-rateit-value="2.5"></span>
+                            <div class="rateit" data-rateit-value="2.5" style="font-size:inherit"></div>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
@@ -135,8 +135,6 @@ $(document).on('haveConfig', function() {
             $('.rateit').rateit({
                 readonly: true,
                 ispreset: true,
-                starwidth: 16,
-                starheight: 16,
                 mode: 'font'
             });
             
