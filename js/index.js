@@ -95,8 +95,7 @@ $(document).on('haveConfig', function() {
             $.each(data.offers, function(k, v) {
                 innerPayments = '';
                 
-                $.each(v.fpms, function(fpmid) {
-                    console.log(fpmid);
+                $.each(v.fpms, function(x, fpmid) {
                     innerPayments += `
                         <div class="row p-1">
                             <div class="col-auto my-auto text-center" style="width: 32px">
