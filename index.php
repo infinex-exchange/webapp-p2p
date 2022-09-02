@@ -109,7 +109,7 @@
                 </div>
             </div>
             
-            <div class="row p-2 secondary d-none d-lg-flex">
+            <div class="row p-2 secondary d-none d-lg-flex scrollable">
                 <div style="width: 20%">
                     <h5>User</h5>
                 </div>
