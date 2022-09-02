@@ -110,21 +110,21 @@ $(document).on('haveConfig', function() {
                 
                 thisAS.append(`
                     <div class="trade-item row p-1 hoverable">
-                        <div style="width: 20%">
+                        <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                         </div>
-                        <div class="text-end" style="width: 20%">
+                        <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
                         </div>
-                        <div class="text-end" style="width: 20%">
+                        <div class="my-auto text-end" style="width: 20%">
                             ${v.total} ${window.p2pInitialCoin}
                             <br>
                             ${v.fiat_min} ${window.p2pInitialFiat} - ${v.fiat_max} ${window.p2pInitialFiat}
                         </div>
-                        <div style="width: 20%">
+                        <div class="my-auto" style="width: 20%">
                             ${innerPayments}
                         </div>
-                        <div style="width: 20%">
+                        <div class="my-auto" style="width: 20%">
                             button
                         </div>
                     </div>
