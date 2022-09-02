@@ -4,7 +4,9 @@ function doJsSizing() {
 	document.body.style.setProperty('--height-main-nav', $('#main-navbar').outerHeight() + 'px');
     
     ['trade', 'recent-trades', 'my-offers'].forEach(function(i) {
-        var remainH = $('#' + i).height() - $('#' + i + '-header').outerHeight();
+        var footerH = 0;
+        if($('#' + i + '-footer')) footerH = $('#' + i + '-footer').outerHeight();
+        var remainH = $('#' + i).height() - $('#' + i + '-header').outerHeight() - footerH;
         document.body.style.setProperty('--target-height-' + i + '-data', remainH + 'px');
     });
 }

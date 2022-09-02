@@ -149,18 +149,26 @@
             
             <div id="my-offers" class="col-12 ui-card ui-card-ver d-lg-block half-column-height sm-rest-of-height" data-ui-card="my-offers">
                 <div id="my-offers-header" class="row p-2">
-                    <div class="col-8 my-auto">
-                        <h3>My offers</h3>
-                    </div>
-                    <div class="col-4 my-auto user-only">
-                        <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">Create</a>
-                    </div>
+                    <h3>My offers</h3>
                 </div>
             
                 <div id="my-offers-data" class="scrollable small d-flex">
                     <div class="guest-only m-auto">
                         <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
                     </div>   
+                </div>
+                
+                <div id="my-offers-footer" class="row p-2 user-only">
+                    <div class="col-6">
+                        <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">
+                            Create
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">
+                            Create
+                        </a>
+                    </div>
                 </div>
             </div>
         
