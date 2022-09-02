@@ -16,6 +16,7 @@ $(document).ready(function() {
     
     $('#select-fiat').on('change', function() {
         initSelectFpm(this.value);
+        delete window.p2pOffersAS.data.fpm;
         window.p2pOffersAS.data.fiat = this.value;
         window.p2pOffersAS.reset();
     });
