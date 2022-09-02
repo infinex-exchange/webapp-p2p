@@ -113,7 +113,7 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                             <br>
-                            <div class="rateit" data-rateit-value="2.5" style="font-size: 20px"></div>
+                            <div class="rateit" data-rateit-value="4.5" style="font-size: 20px"></div>
                             <br>
                             <span class="small">
                                 3 transactions | 96%
