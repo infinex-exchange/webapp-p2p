@@ -113,7 +113,7 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                             <br>
-                            <div class="d-inline star-rating"></div>
+                            <div class="star-rating"></div>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
@@ -136,7 +136,7 @@ $(document).on('haveConfig', function() {
                     initialRating: 4,
                     strokeColor: '#894A00',
                     strokeWidth: 10,
-                    starSize: 25,
+                    starSize: 10,
                     readOnly: true
                 });
             });
