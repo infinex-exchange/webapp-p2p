@@ -149,7 +149,12 @@
             
             <div id="my-offers" class="col-12 ui-card ui-card-ver d-lg-block half-column-height sm-rest-of-height" data-ui-card="my-offers">
                 <div id="my-offers-header" class="row p-2">
-                    <h3>My offers</h3>
+                    <div class="col-10">
+                        <h3>My offers</h3>
+                    </div>
+                    <div class="col-2">
+                        Add
+                    </div>
                 </div>
             
                 <div id="my-offers-data" class="scrollable small d-flex">
