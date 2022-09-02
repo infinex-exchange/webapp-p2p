@@ -115,7 +115,9 @@ $(document).on('haveConfig', function() {
                             <br>
                             <div class="rateit" data-rateit-value="2.5" style="font-size: 20px"></div>
                             <br>
-                            3 transactions&nbsp;&nbsp;<span class="secondary">|</span>&nbsp;&nbsp;96%
+                            <span class="small">
+                                3 transactions | 96%
+                            </span>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
