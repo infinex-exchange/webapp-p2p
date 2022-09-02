@@ -13,12 +13,46 @@
         <!-- Navbar -->
         <?php include('../../templates/navbar.php'); ?>
         
+        <!-- Mobile navbar -->
+        <nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
+            <ul class="navbar-nav mx-auto text-center">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fa-solid fa-chart-simple"></i><br>
+                            Home
+                        </a>
+                    </li>
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#_" data-ui-card-target="trade">
+                        <i class="fa-solid fa-right-left"></i></i><br>
+                        Trade
+                    </a>
+                </li>
+                <li class="nav-item"">
+                    <a class="nav-link active" href="#_" data-ui-card-target="recent-trades">
+                        <i class="fa-solid fa-chart-line"></i><br>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#_" data-ui-card-target="my-offers">
+                        <i class="fa-solid fa-arrow-up-short-wide"></i><br>
+                        My offers
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
         <!-- Root container -->
-        <div id="root" class="container-fluid container-1500 p-0">
-        <div class="row m-0 h-rest">
+        <div class="container-fluid container-1500 p-0">
+        <div class="row m-0">
         
         <!-- Main column -->
-        <div class="col-12 col-lg-9 p-0 ui-card ui-column">
+        <div class="col-12 col-lg-9 p-0 ui-column">
+        <div class="row m-0">
+        <div id="trade" class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="trade">
             
             <div class="row pb-3 pe-2 pe-lg-0">
                 <div class="col-3 col-lg-1 mt-auto pb-2 px-1">
@@ -87,24 +121,33 @@
         
         <!-- / Main column -->
         </div>
+        </div>
+        </div>
         
         <!-- Right column -->
-        <div class="col-12 col-lg-3 p-0 ui-card ui-column d-none d-lg-block">
-        
-            <div class="row p-2">
-                <h3>Recent P2P trades</h3>
-            </div>
+        <div class="col-12 col-lg-3 p-0 ui-column">
+        <div class="row m-0">
             
-            <div id="recent-trades-data">
-            </div>
-            
-            <div class="row h-100 guest-only">
-                <div class="col my-auto text-center">
-                    <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
+            <div id="recent-trades" class="col-12 ui-card ui-card-ver d-lg-block half-column-height sm-rest-of-height" data-ui-card="recent-trades">
+                <div id="recent-trades-header" class="row p-2">
+                    <h3>Recent P2P trades</h3>
                 </div>
-            </div> 
+            
+                <div id="recent-trades-data">
+                </div>
+            </div>
+            
+            <div id="my-offers" class="col-12 ui-card ui-card-ver d-lg-block half-column-height sm-rest-of-height" data-ui-card="my-offers">
+                <div id="my-offers-header" class="row p-2">
+                    <h3>My offers</h3>
+                </div>
+            
+                <div id="my-offers-data">
+                </div>
+            </div>
         
         <!-- / Right column -->
+        </div>
         </div>
             
         <!-- / Root container -->    
@@ -114,7 +157,6 @@
         <script src="/p2p/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
-        <?php include('../../templates/vanilla_mobile_nav.php'); ?>
     
     </body>
 </html>
