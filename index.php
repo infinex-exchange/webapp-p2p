@@ -152,7 +152,7 @@
                     <div class="col-8 my-auto">
                         <h3>My offers</h3>
                     </div>
-                    <div class="col-4 my-auto">
+                    <div class="col-4 my-auto user-only">
                         <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">Create</a>
                     </div>
                 </div>
