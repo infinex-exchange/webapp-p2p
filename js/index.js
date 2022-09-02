@@ -132,6 +132,14 @@ $(document).on('haveConfig', function() {
                 `);
             });
             
+            $('.rateit').rateit({
+                readonly: true,
+                ispreset: true,
+                starwidth: 24,
+                starheight: 24,
+                mode: 'font'
+            });
+            
             thisAS.done();
             
             if(thisAS.data.offset == 0)
