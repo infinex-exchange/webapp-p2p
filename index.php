@@ -96,12 +96,13 @@
             </div>
             
             <div id="recent-trades-data">
-                <div class="guest-only h-100">
-                    <div class="m-auto">
-                        <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
-                    </div>
-                </div> 
             </div>
+            
+            <div class="row guest-only">
+                <div class="col m-auto">
+                    <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
+                </div>
+            </div> 
         
         <!-- / Right column -->
         </div>
