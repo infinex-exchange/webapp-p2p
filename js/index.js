@@ -113,7 +113,7 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                             <br>
-                            <div class="star-rating"></div>
+                            <div class="d-inline star-rating"></div>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
