@@ -96,6 +96,7 @@ $(document).on('haveConfig', function() {
                 innerPayments = '';
                 
                 $.each(v.fpms, function(fpmid) {
+                    console.log(fpmid);
                     innerPayments += `
                         <div class="row p-1">
                             <div class="col-auto my-auto text-center" style="width: 32px">
