@@ -110,9 +110,8 @@ $(document).on('haveConfig', function() {
                 
                 thisAS.append(`
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
-                        <div class="col-12 my-auto" style="width: 20%">
+                        <div class="my-auto" style="width: 20%">
                             ${v.nickname}
-                            <div class="star-rating"></div>
                         </div>
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
@@ -130,14 +129,6 @@ $(document).on('haveConfig', function() {
                         </div>
                     </div>
                 `);
-                
-                $('.trade-item[data-offerid="' + v.offerid + '"] .star-rating').starRating({
-                    initialRating: 4,
-                    strokeColor: '#894A00',
-                    strokeWidth: 10,
-                    starSize: 24,
-                    readOnly: true
-                });
             });
             
             thisAS.done();
