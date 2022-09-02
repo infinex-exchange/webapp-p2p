@@ -139,7 +139,7 @@
                 <div id="recent-trades-data" class="scrollable small d-flex">
                     <div class="guest-only m-auto">
                         <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
-                    </div>  
+                    </div>
                 </div>
             </div>
             
