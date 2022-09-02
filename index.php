@@ -136,7 +136,10 @@
                     <h3>Recent P2P trades</h3>
                 </div>
             
-                <div id="recent-trades-data" class="scrollable">
+                <div id="recent-trades-data" class="scrollable small d-flex">
+                    <div class="guest-only m-auto">
+                        <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
+                    </div>  
                 </div>
             </div>
             
@@ -145,7 +148,10 @@
                     <h3>My offers</h3>
                 </div>
             
-                <div id="my-offers-data" class="scrollable">
+                <div id="my-offers-data" class="scrollable small d-flex">
+                    <div class="guest-only m-auto">
+                        <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
+                    </div>   
                 </div>
             </div>
         
