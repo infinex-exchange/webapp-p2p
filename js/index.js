@@ -141,16 +141,16 @@ $(document).on('haveConfig', function() {
                         </div>
                         <div class="my-auto sm-w-70 py-4 py-lg-0 order-3" style="width: 23%">
                             <div class="row">
-                                <div class="col-6 d-lg-none secondary">
+                                <div class="col-4 d-lg-none secondary">
                                     Available:
                                 </div>
-                                <div class="col-6 col-lg-12 text-end">
+                                <div class="col-8 col-lg-12 text-end">
 		                            ${v.total} ${window.p2pInitialCoin}
 	                            </div>
-	                            <div class="col-6 d-lg-none secondary">
+	                            <div class="col-4 d-lg-none secondary">
 	                                Limit:
 	                            </div>
-	                            <div class="col-6 col-lg-12 text-end">
+	                            <div class="col-8 col-lg-12 text-end">
 		                            ${v.fiat_min} ${window.p2pInitialFiat} - ${v.fiat_max} ${window.p2pInitialFiat}
 		                        </div>
 		                    </div>
