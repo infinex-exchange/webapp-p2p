@@ -5,7 +5,7 @@ function doJsSizing() {
     
     ['trade', 'recent-trades', 'my-offers'].forEach(function(i) {
         var footerH = 0;
-        if($('#' + i + '-footer')) footerH = $('#' + i + '-footer').outerHeight();
+        if($('#' + i + '-footer').length) footerH = $('#' + i + '-footer').outerHeight();
         var remainH = $('#' + i).height() - $('#' + i + '-header').outerHeight() - footerH;
         document.body.style.setProperty('--target-height-' + i + '-data', remainH + 'px');
     });
