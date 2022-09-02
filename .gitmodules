@@ -1,0 +1,3 @@
+[submodule "img/fpm-icons"]
+	path = img/fpm-icons
+	url = https://github.com/vayamos-exchange/fpm-icons
