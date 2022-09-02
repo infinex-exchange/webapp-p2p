@@ -108,15 +108,15 @@ $(document).on('haveConfig', function() {
                 });
                 
                 btnBg = '';
-                btnText = window.p2pInitialCoin;
+                btnText = '';
                 
                 if(thisAS.data.side == 'BUY') {
                     btnBg = 'bg-green';
-                    btnText = 'Buy ' + btnText;
+                    btnText = 'Buy ';
                 }
                 else {
                     btnBg = 'bg-red';
-                    btnText = 'Sell ' + btnText;
+                    btnText = 'Sell ';
                 }          
                 
                 thisAS.append(`
@@ -161,7 +161,10 @@ $(document).on('haveConfig', function() {
 	                        </div>
                         </div>
                         <div class="my-auto sm-w-30 py-4 py-lg-0 order-4 order-lg-5" style="width: 14%">
-                            <button type="button" class="btn ${btnBg} w-100 user-only">${btnText}</button>
+                            <button type="button" class="btn ${btnBg} w-100 user-only">
+	                            ${btnText}
+	                            <span class="d-none d-lg-inline">${window.p2pInitialCoin}</span>
+	                        </button>
                         </div>
                     </div>
                 `);
