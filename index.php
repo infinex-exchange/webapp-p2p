@@ -12,7 +12,9 @@
         <?php include('../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
+        <div id="main-navbar">
+            <?php include('../../templates/navbar.php'); ?>
+        </div>
         
         <!-- Mobile navbar -->
         <nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
