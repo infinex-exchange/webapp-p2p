@@ -117,13 +117,13 @@
                 <div class="text-end" style="width: 20%">
                     <h5>Price</h5>
                 </div>
-                <div class="text-end" style="width: 20%">
+                <div class="text-end" style="width: 23%">
                     <h5>Available</h5>
                 </div>
-                <div style="width: 20%">
+                <div style="width: 23%">
                     <h5>Payment methods</h5>
                 </div>
-                <div style="width: 20%">
+                <div style="width: 14%">
                     <h5>Trade</h5>
                 </div>
             </div>

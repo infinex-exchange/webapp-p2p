@@ -134,15 +134,15 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
                         </div>
-                        <div class="my-auto text-end" style="width: 20%">
+                        <div class="my-auto text-end" style="width: 23%">
                             ${v.total} ${window.p2pInitialCoin}
                             <br>
                             ${v.fiat_min} ${window.p2pInitialFiat} - ${v.fiat_max} ${window.p2pInitialFiat}
                         </div>
-                        <div class="my-auto" style="width: 20%">
+                        <div class="my-auto" style="width: 23%">
                             ${innerPayments}
                         </div>
-                        <div class="my-auto" style="width: 20%">
+                        <div class="my-auto" style="width: 14%">
                             <button type="button" class="btn ${btnBg} w-100 user-only">${btnText}</button>
                         </div>
                     </div>
