@@ -21,7 +21,9 @@ $(document).ready(function() {
     });
     
     $('#select-fpm').on('change', function() {
-        window.p2pOffersAS.data.fpm = $(this).data('fpmid');
+        val = $(this).data('fpmid');
+        if(val == '') delete window.p2pOffersAS.data.fpm;
+        else window.p2pOffersAS.data.fpm = val;
         window.p2pOffersAS.reset();
     });
     
