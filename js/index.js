@@ -122,7 +122,7 @@ $(document).on('haveConfig', function() {
                 
                 thisAS.append(`
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
-                        <div class="my-auto col-12 col-lg order-1" style="width: 20%">
+                        <div class="my-auto order-1" style="width: 20%">
                             <div class="row">
 	                            <div class="col-4 col-lg-12">
 		                            <strong>${v.nickname}</strong>
