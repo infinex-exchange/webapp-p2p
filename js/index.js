@@ -97,7 +97,7 @@ $(document).on('haveConfig', function() {
                 
                 $.each(v.fpms, function(x, fpmid) {
                     innerPayments += `
-                        <div class="row p-1">
+                        <div class="row">
                             <div class="col-auto my-auto text-center" style="width: 32px">
                                 <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
                             </div>
@@ -109,7 +109,7 @@ $(document).on('haveConfig', function() {
                 });
                 
                 thisAS.append(`
-                    <div class="trade-item row p-1 hoverable">
+                    <div class="trade-item row px-2 py-3 hoverable">
                         <div class="my-auto" style="width: 20%">
                             ${v.nickname}
                         </div>
