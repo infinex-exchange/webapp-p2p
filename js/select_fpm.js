@@ -29,13 +29,16 @@ $(document).ready(function() {
     });
 });
 
-function initSelectFpm(endpoint = '/p2p/fpms') {
+function initSelectFpm(fiat, endpoint = '/p2p/fpms') {
     $('#select-fpm').data('fpmid', '');
+    $('#select-fpm-data').empty();
     
     window.selectFpmAS = new AjaxScroll(
         $('#select-fpm-data'),
         $('#select-fpm-data-preloader'),
-        {},
+        {
+            fiat: fiat
+        },
         function() {
             this.data.offset = this.offset;
             var thisAS = this;

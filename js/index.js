@@ -1,58 +1,70 @@
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
+    
     initSelectCoin('/p2p/assets');
     initSelectFiat();
-    initSelectFpm();
-    $(document).trigger('renderingStage');
     
     $('input[name="side"]').change(function() {
-        window.p2pOffersAs.data.side = this.value;
-        window.p2pOffersAs.reset();
+        window.p2pOffersAS.data.side = this.value;
+        window.p2pOffersAS.reset();
     });
     
     $('#select-coin').on('change', function() {
-        window.p2pOffersAs.data.asset = this.value;
-        window.p2pOffersAs.reset();
+        window.p2pOffersAS.data.asset = this.value;
+        window.p2pOffersAS.reset();
     });
     
     $('#select-fiat').on('change', function() {
-        window.p2pOffersAs.data.fiat = this.value;
-        window.p2pOffersAs.reset();
+        initSelectFpm(this.value);
+        window.p2pOffersAS.data.fiat = this.value;
+        window.p2pOffersAS.reset();
     });
     
     $('#select-fpm').on('change', function() {
-        window.p2pOffersAs.data.fpm = $(this).data('fpmid');
-        window.p2pOffersAs.reset();
+        window.p2pOffersAS.data.fpm = $(this).data('fpmid');
+        window.p2pOffersAS.reset();
     });
     
-    $.ajax({
-        url: config.apiUrl + '/p2p/config',
-        type: 'POST',
-        data: JSON.stringify({
-        }),
-        contentType: "application/json",
-        dataType: "json",
-    })
-    .retry(config.retry)
-    .done(function (data) {
-        if(data.success) {
-            //
-            $(document).trigger('haveConfig');
-        }
-        else {
-            msgBoxRedirect(data.error);
-        }
-    })
-    .fail(function (jqXHR, textStatus, errorThrown) {
-        msgBoxNoConn(true); 
-    });
+    window.p2pInitialCoin = localStorage.getItem("p2pInitialCoin");
+    window.p2pInitialFiat = localStorage.getItem("p2pInitialFiat");
+    if(window.p2pInitialCoin === null || window.p2pInitialFiat === null) {
+        $.ajax({
+            url: config.apiUrl + '/p2p/config',
+            type: 'POST',
+            data: JSON.stringify({
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                window.p2pInitialCoin = data.default_coin;
+                localStorage.setItem("p2pInitialCoin", data.default_coin);
+                
+                window.p2pInitialFiat = data.default_fiat;
+                localStorage.setItem("p2pInitialFiat", data.default_fiat);
+                
+                $(document).trigger('haveConfig');
+            }
+            else {
+                msgBoxRedirect(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(true); 
+        });
+    }
+    else
+        $(document).trigger('haveConfig');
 });
 
 $(document).on('haveConfig', function() {
     $('#select-coin').val(window.p2pInitialCoin);
     $('#select-fiat').val(window.p2pInitialFiat);
+    initSelectFpm(window.p2pInitialFiat);
     
-    window.openOrdersAS = new AjaxScroll(
+    window.p2pOffersAS = new AjaxScroll(
         $('#offers-data'),
         $('#offers-preloader'),
         {
@@ -75,13 +87,16 @@ $(document).on('haveConfig', function() {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
-            $.each(data.orders, function(k, v) {
-                thisAS.append(renderOpenOrder(v));
+            $.each(data.offers, function(k, v) {
+                console.log(v);
             });
             
             thisAS.done();
             
-            if(data.orders.length != 50)
+            if(thisAS.data.offset == 0)
+                $(document).trigger('renderingStage');
+            
+            if(data.offers.length != 50)
                 thisAS.noMoreData(); 
         }
         else {
