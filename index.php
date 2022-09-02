@@ -22,26 +22,26 @@
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item">
                         <a class="nav-link" href="/">
-                            <i class="fa-solid fa-chart-simple"></i><br>
+                            <i class="fas fa-home"></i><br>
                             Home
                         </a>
                     </li>
                 </ul>
                 <li class="nav-item">
-                    <a class="nav-link" href="#_" data-ui-card-target="trade">
+                    <a class="nav-link active" href="#_" data-ui-card-target="trade">
                         <i class="fa-solid fa-right-left"></i></i><br>
                         Trade
                     </a>
                 </li>
                 <li class="nav-item"">
-                    <a class="nav-link active" href="#_" data-ui-card-target="recent-trades">
-                        <i class="fa-solid fa-chart-line"></i><br>
+                    <a class="nav-link" href="#_" data-ui-card-target="recent-trades">
+                        <i class="fa-solid fa-clock-rotate-left"></i><br>
                         History
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#_" data-ui-card-target="my-offers">
-                        <i class="fa-solid fa-arrow-up-short-wide"></i><br>
+                        <i class="fa-solid fa-address-card"></i><br>
                         My offers
                     </a>
                 </li>
