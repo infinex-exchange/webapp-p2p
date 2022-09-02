@@ -31,6 +31,7 @@ $(document).ready(function() {
 
 function initSelectFpm(fiat, endpoint = '/p2p/fpms') {
     $('#select-fpm').data('fpmid', '');
+    $('#select-fpm').val('All payment methods');
     $('#select-fpm-data').empty();
     
     window.selectFpmAS = new AjaxScroll(
