@@ -139,7 +139,7 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto order-2 d-none d-lg-block text-end" style="width: 20%">
                             ${v.price} ${window.p2pInitialFiat}
                         </div>
-                        <div class="my-auto sm-w-70 py-2 py-lg-0 order-3" style="width: 23%">
+                        <div class="my-auto sm-w-70 py-4 py-lg-0 order-3" style="width: 23%">
                             <div class="row">
                                 <div class="col-6 d-lg-none secondary">
                                     Available:
@@ -160,7 +160,7 @@ $(document).on('haveConfig', function() {
 	                            ${innerPayments}
 	                        </div>
                         </div>
-                        <div class="my-auto sm-w-30 py-2 py-lg-0 order-4 order-lg-5" style="width: 14%">
+                        <div class="my-auto sm-w-30 py-4 py-lg-0 order-4 order-lg-5" style="width: 14%">
                             <button type="button" class="btn ${btnBg} w-100 user-only">${btnText}</button>
                         </div>
                     </div>
