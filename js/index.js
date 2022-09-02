@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('#select-coin').on('change', function() {
         window.p2pOffersAS.data.asset = this.value;
         window.p2pOffersAS.reset();
-        localStorage.setItem("p2pInitialFiat", this.value);
+        localStorage.setItem("p2pInitialCoin", this.value);
     });
     
     $('#select-fiat').on('change', function() {
