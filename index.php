@@ -119,7 +119,7 @@
                 </div>
             </div>
             
-            <div id="offers-data">
+            <div id="offers-data" class="scrollable">
             </div>
         
         <!-- / Main column -->
@@ -136,7 +136,7 @@
                     <h3>Recent P2P trades</h3>
                 </div>
             
-                <div id="recent-trades-data">
+                <div id="recent-trades-data" class="scrollable">
                 </div>
             </div>
             
@@ -145,7 +145,7 @@
                     <h3>My offers</h3>
                 </div>
             
-                <div id="my-offers-data">
+                <div id="my-offers-data" class="scrollable">
                 </div>
             </div>
         
