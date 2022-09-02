@@ -108,6 +108,18 @@ $(document).on('haveConfig', function() {
                     `;
                 });
                 
+                btnBg = '';
+                btnText = window.p2pInitialCoin;
+                
+                if(thisAS.data.side == 'BUY') {
+                    btnBg = 'bg-green';
+                    btnText = 'Buy ' + btnText;
+                }
+                else {
+                    btnBg = 'bg-red';
+                    btnText = 'Sell ' + btnText;
+                }          
+                
                 thisAS.append(`
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
                         <div class="my-auto" style="width: 20%">
@@ -131,7 +143,7 @@ $(document).on('haveConfig', function() {
                             ${innerPayments}
                         </div>
                         <div class="my-auto" style="width: 20%">
-                            button
+                            <button type="button" class="btn ${btnBg} w-100 user-only">${btnText}</button>
                         </div>
                     </div>
                 `);
