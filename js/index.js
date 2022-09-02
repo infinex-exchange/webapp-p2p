@@ -70,8 +70,8 @@ $(document).on('haveConfig', function() {
     initSelectFpm(window.p2pInitialFiat);
     
     window.p2pOffersAS = new AjaxScroll(
-        $('#offers-data'),
-        $('#offers-preloader'),
+        $('#trade-data'),
+        $('#trade-preloader'),
         {
             side: 'BUY',
             asset: window.p2pInitialCoin,
@@ -93,7 +93,42 @@ $(document).on('haveConfig', function() {
     .done(function (data) {
         if(data.success) {
             $.each(data.offers, function(k, v) {
-                console.log(v);
+                innerPayments = '';
+                
+                $.each(v.fpms, function(fpmid)) {
+                    innerPayments += `
+                        <div class="row p-1">
+                            <div class="col-auto my-auto text-center" style="width: 32px">
+                                <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
+                            </div>
+                            <div class="col my-auto">
+                                <span class="secondary">${data.fpms[fpmid].name}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                thisAS.append(`
+                    <div class="trade-item row p-1 hoverable">
+                        <div style="width: 20%">
+                            ${v.nickname}
+                        </div>
+                        <div class="text-end" style="width: 20%">
+                            ${v.price} ${window.p2pInitialFiat}
+                        </div>
+                        <div class="text-end" style="width: 20%">
+                            ${v.total} ${window.p2pInitialCoin}
+                            <br>
+                            ${v.fiat_min} ${window.p2pInitialFiat} - ${v.fiat_max} ${window.p2pInitialFiat}
+                        </div>
+                        <div class="text-end" style="width: 20%">
+                            ${innerPayments}
+                        </div>
+                        <div style="width: 20%">
+                            button
+                        </div>
+                    </div>
+                `);
             });
             
             thisAS.done();
