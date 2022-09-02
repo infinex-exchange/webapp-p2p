@@ -9,10 +9,10 @@
         <input id="select-fpm-search" type="text" placeholder="Search..." class="input-search form-control selector-search">
         <div class="select-fpm-item row p-1 hoverable" data-fpmid="" data-name="All payment methods">
             <div class="col-auto my-auto text-center" style="width: 32px">
-                <img width="24px" height="24px" src="/p2p/img/fpm_all.svg">
+                <i class="fa-solid fa-table-cells"></i>
             </div>
             <div class="col my-auto">
-                <span class="secondary">All payment methods</span>
+                <strong class="secondary">All payment methods</strong>
             </div>
         </div>
         <div id="select-fpm-data" class="scrollable selector-data"></div>
