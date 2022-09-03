@@ -198,18 +198,27 @@
                     </div>
                     
                     <div class="modal-body">
+                    
                         <div class="row">
-                            <div id="mt-amount-fiat-wrapper" class="col-12">
-                                <span data-side="BUY">I want to buy</span>
-                                <span data-side="SELL">I will receive</span>
-                                <input type="text" class="form-control" id="mt-amount-fiat" data-val="">
+                            <div class="col-12">
+                                <span data-side="BUY">I want to buy:</span>
+                                <span data-side="SELL">I want to sell:</span>
                             </div>
-                            <div id="mt-amount-crypto-wrapper" class="col-12">
-                                <span data-side="BUY">I will receive</span>
-                                <span data-side="SELL">I want to sell</span>
+                            <div class="col-12">
                                 <input type="text" class="form-control" id="mt-amount-crypto" data-val="">
                             </div>
                         </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <span data-side="BUY">I will pay:</span>
+                                <span data-side="SELL">I will receive:</span>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="mt-amount-fiat" data-val="">
+                            </div>
+                        </div>
+                        
                     </div>
                     
                     <div class="modal-footer">
