@@ -94,6 +94,7 @@ $(document).on('haveConfig', function() {
         if(data.success) {
             window.p2pAssetPrec = data.asset_prec;
             window.p2pFiatPrec = data.fiat_prec;
+            window.p2pPricePrec = data.price_prec;
             
             $.each(data.offers, function(k, v) {
                 innerPayments = '';
@@ -209,8 +210,23 @@ $(document).on('haveConfig', function() {
 });
 
 function takeOfferModal(offerid) {
+    var modal = $('#modal-take');
+    var side = window.p2pOffersAS.data.side;
+    
     $('.mt-title').html(window.btnText + window.p2pInitialCoin);
     $('#mt-submit').removeClass('bg-green bg-red').addClass(window.btnBg);
     
-    $('#modal-take').modal('show');
+    modal.find('[data-side]').hide();
+    modal.find('[data-side="' + side + '"]').show();
+    
+    if(side == 'BUY') {
+        $('#mt-amount-fiat-wrapper').removeClass('order-2').addClass('order-1');
+        $('#mt-amount-crypto-wrapper').removeClass('order-1').addClass('order-2');
+    }
+    else {
+        $('#mt-amount-fiat-wrapper').removeClass('order-1').addClass('order-2');
+        $('#mt-amount-crypto-wrapper').removeClass('order-2').addClass('order-1');
+    }
+    
+    modal.modal('show');
 }

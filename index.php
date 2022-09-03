@@ -198,28 +198,22 @@
                     </div>
                     
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <h5>Total:</h5>
+                        <div id="mt-amount-fiat-wrapper" class="row">
+                            <div class="col-12">
+                                <span data-side="BUY">I want to buy</span>
+                                <span data-side="SELL">I will receive</span>
                             </div>
-                            <div class="col-6 text-end">
-                                <span id="mad-total"></span>
-                            </div>
-                        </div>
-                        <div class="row py-2">
-                            <div class="col-6">
-                                <h5>Available:</h5>
-                            </div>
-                            <div class="col-6 text-end">
-                                <span id="mad-avbl"></span>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="mt-amount-fiat" data-val="">
                             </div>
                         </div>
-                        <div class="row py-2">
-                            <div class="col-6">
-                                <h5>Locked:</h5>
+                        <div id="mt-amount-crypto-wrapper" class="row">
+                            <div class="col-12">
+                                <span data-side="BUY">I will receive</span>
+                                <span data-side="SELL">I want to sell</span>
                             </div>
-                            <div class="col-6 text-end">
-                                <span id="mad-locked"></span>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="mt-amount-crypto" data-val="">
                             </div>
                         </div>
                     </div>
