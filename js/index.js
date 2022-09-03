@@ -30,6 +30,39 @@ $(document).ready(function() {
         window.p2pOffersAS.reset();
     });
     
+    // Check balance when coin selected
+    window.p2pSellBalance = new BigNumber(0);
+    
+    $('#select-coin, input[name="side"]').on('change', function() {
+        side = $('input[name="side"]').val();
+        
+        if(side == 'SELL' && window.loggedIn) {
+            asset = $('#select-coin').val();
+            
+             $.ajax({
+                url: config.apiUrl + '/wallet/balances',
+                type: 'POST',
+                data: JSON.stringify({
+                    api_key: window.apiKey,
+                    symbols: [ asset ]
+                }),
+                contentType: "application/json",
+                dataType: "json",
+            })
+            .retry(config.retry)
+            .done(function (data) {
+                if(data.success) {
+                    window.p2pSellBalance = new BigNumber(data.balances[asset].avbl);
+                } else {
+                    msgBox(data.error);
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                msgBoxNoConn(false);
+            });
+        }
+    });
+    
     window.p2pInitialCoin = localStorage.getItem("p2pInitialCoin");
     window.p2pInitialFiat = localStorage.getItem("p2pInitialFiat");
     if(window.p2pInitialCoin === null || window.p2pInitialFiat === null) {
@@ -221,6 +254,8 @@ function takeOfferModal(offerid) {
     
     modal.find('[data-side]').hide();
     modal.find('[data-side="' + side + '"]').show();
+    
+    $('#mt-amount-crypto, #mt-amount-fiat').val('').data('val', '');
     
     modal.modal('show');
 }
