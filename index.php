@@ -201,7 +201,7 @@
                     <div class="modal-body">
                     
                         <div class="row">
-                            <div class="col-12 pb-1">
+                            <div class="col-12 pb-1 secondary">
                                 <span data-side="BUY">I want to buy:</span>
                                 <span data-side="SELL">I want to sell:</span>
                             </div>
@@ -211,10 +211,8 @@
                                     <span class="suffix mt-assetid"></span>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-12 pb-1">
+
+                            <div class="col-12 pb-1 secondary">
                                 <span data-side="BUY">I will pay:</span>
                                 <span data-side="SELL">I will receive:</span>
                             </div>
@@ -224,10 +222,15 @@
                                     <span class="suffix mt-fiatid"></span>
                                 </div>
                             </div>
+                            <div class="col-12" data-side="SELL">
+                                <span class="secondary">Available:</span>
+                                <span class="float-end" id="mt-avbl"></span>
+                        </div>
+                            </div>
                         </div>
                         
                         <div class="row" data-side="SELL">
-                            <div class="col-12 pt-2 pb-1">
+                            <div class="col-12 pt-2 pb-1 secondary">
                                 Payment method:
                             </div>
                             <div class="col-12">
