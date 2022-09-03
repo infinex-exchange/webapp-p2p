@@ -68,12 +68,9 @@ $(document).ready(function() {
     
     // Drop amount to available balance
     $('#mt-amount-crypto').on('prevalidated', function() {
-        amount = new BigNumber($(this).data('val'));
+        amount = new BigNumber($(this).data('val'));      
         
-        console.log(window.p2pOffersAS.data.side == 'SELL');
-        console.log(amount.gt(window.p2pSellMax));        
-        
-        if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellMax)) {
+        if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
             $('#mt-amount-crypto, #mt-crypto-balance').addClass('blink-red');
             setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance').removeClass('blink-red');
