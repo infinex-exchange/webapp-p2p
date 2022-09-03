@@ -211,13 +211,15 @@
                                     <span class="suffix mt-assetid"></span>
                                 </div>
                             </div>
-                            <div class="col-12 pt-1" data-side="SELL">
-                                <span class="secondary">Your balance:</span>
-                                <div class="d-inline float-end">
-                                    <span id="mt-crypto-balance"></span>
-                                    <span class="mt-assetid"></span>
+                            <div class="col-12 pt-1">
+                                <div class="d-inline" data-side="SELL">
+                                    <span class="secondary">Your balance:</span>
+                                    <div class="d-inline float-end">
+                                        <span id="mt-crypto-balance"></span>
+                                        <span class="mt-assetid"></span>
+                                    </div>
+                                    <br>
                                 </div>
-                                <br>
                                 <span class="secondary">Available:</span>
                                 <div class="d-inline float-end">
                                     <span id="mt-crypto-avbl"></span>
