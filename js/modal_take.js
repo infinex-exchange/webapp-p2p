@@ -73,7 +73,7 @@ $(document).ready(function() {
         
         if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
             $('#mt-amount-crypto, #mt-crypto-balance').addClass('blink-red');
-            final_max = window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
+            final_max = window.p2pSellBalance;
         }
         
         if(amount.gt(window.p2pCryptoTotal)) {
@@ -85,8 +85,8 @@ $(document).ready(function() {
         setTimeout(function() {
             $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
-            $('#mt-amount-crypto').data('val', final_max)
-                                  .val(final_max)
+            $('#mt-amount-crypto').data('val', final_max.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
+                                  .val(final_max.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
                                   .trigger('prevalidated');
         }, 1000);
     });
