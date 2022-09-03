@@ -67,20 +67,21 @@ $(document).ready(function() {
     });
     
     // Drop amount to available balance
-    /*$('#mt-amount-crypto').on('prevalidated', function() {
-        var amount = new BigNumber($(this).data('val'));
-        if(amount.gt(window.p2pSellMax)) {
-            $('#withdraw-amount, #withdraw-amount-max').addClass('blink-red');
+    $('#mt-amount-crypto').on('prevalidated', function() {
+        amount = new BigNumber($(this).data('val'));        
+        
+        if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellMax)) {
+            $('#mt-amount-crypto, #mt-crypto-balance').addClass('blink-red');
             setTimeout(function() {
-                $('#withdraw-amount, #withdraw-amount-max').removeClass('blink-red');
+                $('#mt-amount-crypto, #mt-crypto-balance').removeClass('blink-red');
                 
-                var max = window.wdAmountMax.toString();
-                $('#withdraw-amount').data('val', max)
-                                    .val(max)
-                                    .trigger('prevalidated');
+                var max = window.p2pSellMax.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
+                $('#mt-amount-crypto').data('val', max)
+                                      .val(max)
+                                      .trigger('prevalidated');
             }, 1000);
         }
-    });*/
+    });
 });
 
 function takeOfferModal(offerid) {
@@ -102,8 +103,8 @@ function takeOfferModal(offerid) {
     $('#mt-crypto-balance').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
     
     window.p2pCryptoTotal = new BigNumber(dataSource.data('total'));
-    window.p2pTotalMin = new BigNumber(dataSource.data('fiat-min'));
-    window.p2pTotalMax = new BigNumber(dataSource.data('fiat-max'));
+    window.p2pFiatMin = new BigNumber(dataSource.data('fiat-min'));
+    window.p2pFiatlMax = new BigNumber(dataSource.data('fiat-max'));
     
     $('#mt-crypto-avbl').html(dataSource.data('total'));
     $('#mt-fiat-min').html(dataSource.data('fiat-min'));
