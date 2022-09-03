@@ -225,7 +225,6 @@
                             <div class="col-12" data-side="SELL">
                                 <span class="secondary">Available:</span>
                                 <span class="float-end" id="mt-avbl"></span>
-                        </div>
                             </div>
                         </div>
                         
