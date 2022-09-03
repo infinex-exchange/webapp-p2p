@@ -311,7 +311,3 @@ function takeOfferModal(offerid) {
     
     modal.modal('show');
 }
-
-function setSellMax() {
-    //
-}
