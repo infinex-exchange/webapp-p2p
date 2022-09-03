@@ -207,7 +207,8 @@ $(document).on('haveConfig', function() {
                 }         
                 
                 thisAS.append(`
-                    <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
+                    <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}" data-total="${v.total}"
+                     data-fiat-min="${v.fiat_min}" data-fiat-max="${v.fiat_max}">
                         <div class="my-auto sm-w-100 order-1" style="width: 20%">
                             <div class="row">
 	                            <div class="col-3 col-lg-12">
@@ -295,6 +296,7 @@ $(document).on('haveConfig', function() {
 function takeOfferModal(offerid) {
     var modal = $('#modal-take');
     var side = window.p2pOffersAS.data.side;
+    var dataSource = $('.trade-item[data-offerid="' + offerid + '"]');
     
     $('.mt-title').html(window.btnText + ' ' + window.p2pInitialCoin);
     $('#mt-submit').removeClass('bg-green bg-red').addClass(window.btnBg);
@@ -308,10 +310,14 @@ function takeOfferModal(offerid) {
     $('#mt-amount-crypto, #mt-amount-fiat').val('').data('val', '');
     
     $('#mt-crypto-balance').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
-    $('#mt-crypto-avbl').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
     
-    $('#mt-fiat-min').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
-    $('#mt-fiat-max').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
+    window.p2pCryptoTotal = new BigNumber(dataSource.data('total'));
+    window.p2pTotalMin = new BigNumber(dataSource.data('fiat-min'));
+    window.p2pTotalMax = new BigNumber(dataSource.data('fiat-max'));
+    
+    $('#mt-crypto-avbl').html(dataSource.data('total'));
+    $('#mt-fiat-min').html(dataSource.data('fiat-min'));
+    $('#mt-fiat-max').html(dataSource.data('fiat-max'));
     
     modal.modal('show');
 }
