@@ -226,6 +226,15 @@
                             </div>
                         </div>
                         
+                        <div class="row" data-side="SELL">
+                            <div class="col-12 pt-2 pb-1">
+                                Payment method:
+                            </div>
+                            <div class="col-12">
+                                <?php include(__DIR__.'/templates/select_fpm_instance.php'); ?>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                     <div class="modal-footer">
