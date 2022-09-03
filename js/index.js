@@ -310,5 +310,8 @@ function takeOfferModal(offerid) {
     $('#mt-crypto-balance').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
     $('#mt-crypto-avbl').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
     
+    $('#mt-fiat-min').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
+    $('#mt-fiat-max').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
+    
     modal.modal('show');
 }

@@ -238,7 +238,7 @@
                             <div class="col-12 pt-1" data-side="SELL">
                                 <span class="secondary">Min:</span>
                                 <div class="d-inline float-end">
-                                    <span id="mt-fiat-max"></span>
+                                    <span id="mt-fiat-min"></span>
                                     <span class="mt-fiatid"></span>
                                 </div>
                                 <br>
