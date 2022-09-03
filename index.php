@@ -235,7 +235,7 @@
                                     <span class="suffix mt-fiatid"></span>
                                 </div>
                             </div>
-                            <div class="col-12 pt-1" data-side="SELL">
+                            <div class="col-12 pt-1">
                                 <span class="secondary">Min:</span>
                                 <div class="d-inline float-end">
                                     <span id="mt-fiat-min"></span>
