@@ -211,10 +211,18 @@
                                     <span class="suffix mt-assetid"></span>
                                 </div>
                             </div>
-                            <div class="col-auto ms-auto" data-side="SELL">
+                            <div class="col-12 col-lg-6 ms-auto ms-lg-0" data-side="SELL">
+                                <span class="secondary">Your balance:</span>
+                                <div class="d-inline float-end">
+                                    <span id="mt-crypto-balance"></span>
+                                    <span class="mt-assetid"></span>
+                                </div>
+                                <br>
                                 <span class="secondary">Available:</span>
-                                <span id="mt-avbl"></span>
-                                <span class="mt-assetid"></span>
+                                <div class="d-inline float-end">
+                                    <span id="mt-crypto-avbl"></span>
+                                    <span class="mt-assetid"></span>
+                                </div>
                             </div>
 
                             <div class="col-12 pb-1 secondary">
@@ -225,6 +233,19 @@
                                 <div class="input-ps-group">
                                     <input id="mt-amount-fiat" type="text" class="form-control" data-val="">
                                     <span class="suffix mt-fiatid"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 ms-auto ms-lg-0" data-side="SELL">
+                                <span class="secondary">Min:</span>
+                                <div class="d-inline float-end">
+                                    <span id="mt-fiat-max"></span>
+                                    <span class="mt-assetid"></span>
+                                </div>
+                                <br>
+                                <span class="secondary">Max:</span>
+                                <div class="d-inline float-end">
+                                    <span id="mt-fiat-max"></span>
+                                    <span class="mt-assetid"></span>
                                 </div>
                             </div>
                         </div>
