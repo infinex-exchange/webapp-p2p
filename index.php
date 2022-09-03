@@ -201,9 +201,9 @@
                     <div class="modal-body">
                     
                         <div class="row">
-                            <div class="col-12 secondary">
-                                <span data-side="BUY">I want to buy:</span>
-                                <span data-side="SELL">I want to sell:</span>
+                            <div class="col-12">
+                                <h5 data-side="BUY">I want to buy:</span>
+                                <h5 data-side="SELL">I want to sell:</span>
                             </div>
                             <div class="col-12 pt-1">
                                 <div class="input-ps-group">
@@ -225,9 +225,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 pt-3 secondary">
-                                <span data-side="BUY">I will pay:</span>
-                                <span data-side="SELL">I will receive:</span>
+                            <div class="col-12 pt-3">
+                                <h5 data-side="BUY">I will pay:</span>
+                                <h5 data-side="SELL">I will receive:</span>
                             </div>
                             <div class="col-12 pt-1">
                                 <div class="input-ps-group">
@@ -251,8 +251,8 @@
                         </div>
                         
                         <div class="row" data-side="SELL">
-                            <div class="col-12 pt-3 secondary">
-                                Payment method:
+                            <div class="col-12 pt-3">
+                                <h5>Payment method:</h5>
                             </div>
                             <div class="col-12">
                                 <?php include(__DIR__.'/templates/select_fpm_instance.php'); ?>
