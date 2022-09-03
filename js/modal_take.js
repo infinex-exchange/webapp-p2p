@@ -68,19 +68,27 @@ $(document).ready(function() {
     
     // Drop amount to available balance
     $('#mt-amount-crypto').on('prevalidated', function() {
-        amount = new BigNumber($(this).data('val'));      
+        amount = new BigNumber($(this).data('val'));
+        final_max = null;      
         
         if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
             $('#mt-amount-crypto, #mt-crypto-balance').addClass('blink-red');
-            setTimeout(function() {
-                $('#mt-amount-crypto, #mt-crypto-balance').removeClass('blink-red');
-                
-                var max = window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
-                $('#mt-amount-crypto').data('val', max)
-                                      .val(max)
-                                      .trigger('prevalidated');
-            }, 1000);
+            final_max = window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
         }
+        
+        if(amount.gt(window.p2pCryptoTotal)) {
+            $('#mt-amount-crypto, #mt-crypto-avbl').addClass('blink-red');
+            if(window.p2pCryptoTotal.lt(final_max))
+                final_max = window.p2pCryptoTotal;
+        }
+        
+        setTimeout(function() {
+            $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
+            
+            $('#mt-amount-crypto').data('val', final_max)
+                                  .val(max)
+                                  .trigger('prevalidated');
+        }, 1000);
     });
 });
 
