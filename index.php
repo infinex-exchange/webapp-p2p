@@ -201,17 +201,17 @@
                     <div class="modal-body">
                     
                         <div class="row">
-                            <div class="col-12 pb-1 secondary">
+                            <div class="col-12 secondary">
                                 <span data-side="BUY">I want to buy:</span>
                                 <span data-side="SELL">I want to sell:</span>
                             </div>
-                            <div class="col-12 pb-2">
+                            <div class="col-12 py-1">
                                 <div class="input-ps-group">
                                     <input id="mt-amount-crypto" type="text" class="form-control" data-val="">
                                     <span class="suffix mt-assetid"></span>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-8 ms-auto ms-lg-0" data-side="SELL">
+                            <div class="col-12 py-1" data-side="SELL">
                                 <span class="secondary">Your balance:</span>
                                 <div class="d-inline float-end">
                                     <span id="mt-crypto-balance"></span>
@@ -225,17 +225,17 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 pb-1 secondary">
+                            <div class="col-12 py-1 secondary">
                                 <span data-side="BUY">I will pay:</span>
                                 <span data-side="SELL">I will receive:</span>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 py-1">
                                 <div class="input-ps-group">
                                     <input id="mt-amount-fiat" type="text" class="form-control" data-val="">
                                     <span class="suffix mt-fiatid"></span>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-8 ms-auto ms-lg-0" data-side="SELL">
+                            <div class="col-12 py-1" data-side="SELL">
                                 <span class="secondary">Min:</span>
                                 <div class="d-inline float-end">
                                     <span id="mt-fiat-max"></span>
@@ -251,7 +251,7 @@
                         </div>
                         
                         <div class="row" data-side="SELL">
-                            <div class="col-12 pt-2 pb-1 secondary">
+                            <div class="col-12 py-1 secondary">
                                 Payment method:
                             </div>
                             <div class="col-12">
