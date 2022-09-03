@@ -116,11 +116,11 @@ $(document).on('haveConfig', function() {
                 
                 if(thisAS.data.side == 'BUY') {
                     window.btnBg = 'bg-green';
-                    window.btnText = 'Buy ';
+                    window.btnText = 'Buy';
                 }
                 else {
                     window.btnBg = 'bg-red';
-                    window.btnText = 'Sell ';
+                    window.btnText = 'Sell';
                 }         
                 
                 thisAS.append(`
@@ -213,8 +213,11 @@ function takeOfferModal(offerid) {
     var modal = $('#modal-take');
     var side = window.p2pOffersAS.data.side;
     
-    $('.mt-title').html(window.btnText + window.p2pInitialCoin);
+    $('.mt-title').html(window.btnText + ' ' + window.p2pInitialCoin);
     $('#mt-submit').removeClass('bg-green bg-red').addClass(window.btnBg);
+    
+    $('.mt-fiatid').html(window.p2pInitialFiat);
+    $('.mt-assetid').html(window.p2pInitialCoin);
     
     modal.find('[data-side]').hide();
     modal.find('[data-side="' + side + '"]').show();

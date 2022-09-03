@@ -205,7 +205,10 @@
                                 <span data-side="SELL">I want to sell:</span>
                             </div>
                             <div class="col-12 pb-2">
-                                <input type="text" class="form-control" id="mt-amount-crypto" data-val="">
+                                <div class="input-ps-group">
+                                    <input id="mt-amount-crypto" type="text" class="form-control" data-val="">
+                                    <span class="suffix mt-assetid"></span>
+                                </div>
                             </div>
                         </div>
                         
@@ -215,7 +218,10 @@
                                 <span data-side="SELL">I will receive:</span>
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control" id="mt-amount-fiat" data-val="">
+                                <div class="input-ps-group">
+                                    <input id="mt-amount-fiat" type="text" class="form-control" data-val="">
+                                    <span class="suffix mt-fiatid"></span>
+                                </div>
                             </div>
                         </div>
                         
