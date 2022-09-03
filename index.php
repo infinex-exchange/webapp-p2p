@@ -222,9 +222,9 @@
                                     <span class="suffix mt-fiatid"></span>
                                 </div>
                             </div>
-                            <div class="col-12" data-side="SELL">
-                                <span class="float-end secondary">Available:</span>
-                                <span class="float-end" id="mt-avbl"></span>
+                            <div class="col-12 text-end" data-side="SELL">
+                                <span class="secondary">Available:</span>
+                                <span id="mt-avbl"></span>
                             </div>
                         </div>
                         
