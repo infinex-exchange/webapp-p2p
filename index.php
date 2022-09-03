@@ -239,13 +239,13 @@
                                 <span class="secondary">Min:</span>
                                 <div class="d-inline float-end">
                                     <span id="mt-fiat-max"></span>
-                                    <span class="mt-assetid"></span>
+                                    <span class="mt-fiatid"></span>
                                 </div>
                                 <br>
                                 <span class="secondary">Max:</span>
                                 <div class="d-inline float-end">
                                     <span id="mt-fiat-max"></span>
-                                    <span class="mt-assetid"></span>
+                                    <span class="mt-fiatid"></span>
                                 </div>
                             </div>
                         </div>
