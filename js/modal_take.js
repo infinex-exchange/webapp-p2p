@@ -75,7 +75,7 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance').removeClass('blink-red');
                 
-                var max = window.p2pSellMax.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
+                var max = window.p2pSellTotal.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
                 $('#mt-amount-crypto').data('val', max)
                                       .val(max)
                                       .trigger('prevalidated');
