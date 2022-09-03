@@ -78,7 +78,7 @@ $(document).ready(function() {
         
         if(amount.gt(window.p2pCryptoTotal)) {
             $('#mt-amount-crypto, #mt-crypto-avbl').addClass('blink-red');
-            if(window.p2pCryptoTotal.lt(final_max))
+            if(final_max === null || window.p2pCryptoTotal.lt(final_max))
                 final_max = window.p2pCryptoTotal;
         }
         
