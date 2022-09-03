@@ -34,7 +34,7 @@ $(document).ready(function() {
     window.p2pSellBalance = new BigNumber(0);
     
     $('#select-coin, input[name="side"]').on('change', function() {
-        side = $('input[name="side"]').val();
+        side = $('input[name="side"]:checked').val();
         
         if(side == 'SELL' && window.loggedIn) {
             asset = $('#select-coin').val();
