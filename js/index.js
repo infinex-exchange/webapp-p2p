@@ -92,6 +92,9 @@ $(document).on('haveConfig', function() {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
+            window.p2pAssetPrec = data.asset_prec;
+            window.p2pFiatPrec = data.fiat_prec;
+            
             $.each(data.offers, function(k, v) {
                 innerPayments = '';
                 
@@ -107,17 +110,17 @@ $(document).on('haveConfig', function() {
                     `;
                 });
                 
-                btnBg = '';
-                btnText = '';
+                window.btnBg = '';
+                window.btnText = '';
                 
                 if(thisAS.data.side == 'BUY') {
-                    btnBg = 'bg-green';
-                    btnText = 'Buy ';
+                    window.btnBg = 'bg-green';
+                    window.btnText = 'Buy ';
                 }
                 else {
-                    btnBg = 'bg-red';
-                    btnText = 'Sell ';
-                }          
+                    window.btnBg = 'bg-red';
+                    window.btnText = 'Sell ';
+                }         
                 
                 thisAS.append(`
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}">
@@ -164,8 +167,8 @@ $(document).on('haveConfig', function() {
 	                        </div>
                         </div>
                         <div class="my-auto sm-w-30 py-4 py-lg-0 order-4 order-lg-5" style="width: 14%">
-                            <button type="button" class="btn ${btnBg} w-100 user-only">
-	                            ${btnText}
+                            <button type="button" class="btn ${window.btnBg} w-100 user-only" onClick="takeOfferModal(${v.offerid})">
+	                            ${window.btnText}
 	                            <span class="d-none d-lg-inline">${window.p2pInitialCoin}</span>
 	                        </button>
                         </div>
@@ -204,3 +207,10 @@ $(document).on('haveConfig', function() {
         true
     );
 });
+
+function takeOfferModal(offerid) {
+    $('.mt-title').html(window.btnText + window.p2pInitialCoin);
+    $('#mt-submit').removeClass('bg-green bg-red').addClass(window.btnBg);
+    
+    $('#mt-modal').modal('show');
+}

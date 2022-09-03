@@ -189,6 +189,49 @@
         </div>
         </div>
         
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-take">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="ps-1 modal-title mt-title"></h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5>Total:</h5>
+                            </div>
+                            <div class="col-6 text-end">
+                                <span id="mad-total"></span>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-6">
+                                <h5>Available:</h5>
+                            </div>
+                            <div class="col-6 text-end">
+                                <span id="mad-avbl"></span>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-6">
+                                <h5>Locked:</h5>
+                            </div>
+                            <div class="col-6 text-end">
+                                <span id="mad-locked"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <a href="#" id="mt-submit" class="mt-title btn btn-primary"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script type="text/javascript" src="/p2p/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/p2p/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
