@@ -1,4 +1,37 @@
 $(document).ready(function() {
+    // Check balance when coin selected
+    window.p2pSellBalance = new BigNumber(0);
+    
+    $('#select-coin, input[name="side"]').on('change', function() {
+        side = $('input[name="side"]:checked').val();
+        
+        if(side == 'SELL' && window.loggedIn) {
+            asset = $('#select-coin').val();
+            
+             $.ajax({
+                url: config.apiUrl + '/wallet/balances',
+                type: 'POST',
+                data: JSON.stringify({
+                    api_key: window.apiKey,
+                    symbols: [ asset ]
+                }),
+                contentType: "application/json",
+                dataType: "json",
+            })
+            .retry(config.retry)
+            .done(function (data) {
+                if(data.success) {
+                    window.p2pSellBalance = new BigNumber(data.balances[asset].avbl);
+                } else {
+                    msgBox(data.error);
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                msgBoxNoConn(false);
+            });
+        }
+    });
+    
     // Lock format and precision of amount input
     $('#mt-amount-crypto, #mt-amount-fiat').on('input', function () {
         prec = window.p2pAssetPrec;
