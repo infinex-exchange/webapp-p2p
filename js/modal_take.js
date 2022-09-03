@@ -69,27 +69,55 @@ $(document).ready(function() {
     // Drop amount to available balance
     $('#mt-amount-crypto').on('prevalidated', function() {
         amount = new BigNumber($(this).data('val'));
-        var final_max = null;      
+        var finalMaxCrypto = null;      
         
         if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
             $('#mt-amount-crypto, #mt-crypto-balance').addClass('blink-red');
-            final_max = window.p2pSellBalance;
+            finalMaxCrypto = window.p2pSellBalance;
         }
         
         if(amount.gt(window.p2pCryptoTotal)) {
             $('#mt-amount-crypto, #mt-crypto-avbl').addClass('blink-red');
-            if(final_max === null || window.p2pCryptoTotal.lt(final_max))
-                final_max = window.p2pCryptoTotal;
+            if(finalMaxCrypto === null || window.p2pCryptoTotal.lt(final_max))
+                finalMaxCrypto = window.p2pCryptoTotal;
         }
         
         if(final_max !== null)
             setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
-                $('#mt-amount-crypto').data('val', final_max.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
-                                      .val(final_max.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
+                $('#mt-amount-crypto').data('val', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
+                                      .val(finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
                                       .trigger('prevalidated');
             }, 1000);
+    });
+    
+    $('#mt-amount-fiat').on('prevalidated', function() {
+        amount = new BigNumber($(this).data('val'));   
+        
+        if(amount.gt(window.p2pFiatMax)) {
+            $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
+            
+            setTimeout(function() {
+                $('#mt-amount-fiat, #mt-fiat-max').removeClass('blink-red');
+            
+                $('#mt-amount-fiat').data('val', window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                    .val(window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                    .trigger('prevalidated');
+            }, 1000);
+        }
+        
+        else if(amount.lt(window.p2pFiatMin)) {
+            $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
+            
+            setTimeout(function() {
+                $('#mt-amount-fiat, #mt-fiat-min').removeClass('blink-red');
+            
+                $('#mt-amount-fiat').data('val', window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                    .val(window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                    .trigger('prevalidated');
+            }, 1000);
+        } 
     });
 });
 
