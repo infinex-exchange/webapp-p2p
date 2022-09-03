@@ -212,5 +212,5 @@ function takeOfferModal(offerid) {
     $('.mt-title').html(window.btnText + window.p2pInitialCoin);
     $('#mt-submit').removeClass('bg-green bg-red').addClass(window.btnBg);
     
-    $('#mt-modal').modal('show');
+    $('#modal-take').modal('show');
 }
