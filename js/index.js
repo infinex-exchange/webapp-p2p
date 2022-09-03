@@ -63,6 +63,56 @@ $(document).ready(function() {
         }
     });
     
+    // Lock format and precision of amount input
+    $('#mt-amount-crypto, #mt-amount-fiat').on('input', function () {
+        prec = window.p2pAssetPrec;
+        if($(this).is('#mt-amount-fiat')) prec = window.p2pFiatPrec; 
+        
+        var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + prec + "})?$");
+        var newVal = $(this).val();
+        
+        // Revert bad format (real visible value)
+        if (!regex.test(newVal)) {
+            $(this).val( $(this).data('val') );
+        }
+        
+        // Drop . on last position (data-val only)
+        else if(newVal.slice(-1) == '.') {
+            $(this).data('val', newVal.substring(0, newVal.length - 1));
+        }
+        
+        // Change . to 0. on first position (data-val only)
+        else if(newVal.startsWith('.')) {
+            $(this).data('val', '0' + newVal);
+        }
+        
+        // Save data-val when everythink ok
+        else $(this).data('val', newVal);
+    
+        $(this).trigger('prevalidated');
+    });
+    
+    // Move data-val to real visible value
+    $('#mt-amount-crypto, #mt-amount-fiat').on('focusout', function() {
+        $(this).val( $(this).data('val') );
+    });
+    
+    // Drop amount to available balance
+    /*$('#mt-amount-crypto').on('prevalidated', function() {
+        var amount = new BigNumber($(this).data('val'));
+        if(amount.gt(window.p2pSellMax)) {
+            $('#withdraw-amount, #withdraw-amount-max').addClass('blink-red');
+            setTimeout(function() {
+                $('#withdraw-amount, #withdraw-amount-max').removeClass('blink-red');
+                
+                var max = window.wdAmountMax.toString();
+                $('#withdraw-amount').data('val', max)
+                                    .val(max)
+                                    .trigger('prevalidated');
+            }, 1000);
+        }
+    });*/
+    
     window.p2pInitialCoin = localStorage.getItem("p2pInitialCoin");
     window.p2pInitialFiat = localStorage.getItem("p2pInitialFiat");
     if(window.p2pInitialCoin === null || window.p2pInitialFiat === null) {
@@ -260,4 +310,8 @@ function takeOfferModal(offerid) {
     $('#mt-avbl').html(window.p2pSellBalance.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN));
     
     modal.modal('show');
+}
+
+function setSellMax() {
+    //
 }
