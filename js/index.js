@@ -220,12 +220,12 @@ function takeOfferModal(offerid) {
     modal.find('[data-side="' + side + '"]').show();
     
     if(side == 'BUY') {
-        $('#mt-amount-fiat-wrapper').removeClass('order-2').addClass('order-1');
-        $('#mt-amount-crypto-wrapper').removeClass('order-1').addClass('order-2');
-    }
-    else {
         $('#mt-amount-fiat-wrapper').removeClass('order-1').addClass('order-2');
         $('#mt-amount-crypto-wrapper').removeClass('order-2').addClass('order-1');
+    }
+    else {
+        $('#mt-amount-fiat-wrapper').removeClass('order-2').addClass('order-1');
+        $('#mt-amount-crypto-wrapper').removeClass('order-1').addClass('order-2');
     }
     
     modal.modal('show');
