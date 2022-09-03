@@ -86,7 +86,7 @@ $(document).ready(function() {
             $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
             $('#mt-amount-crypto').data('val', final_max)
-                                  .val(max)
+                                  .val(final_max)
                                   .trigger('prevalidated');
         }, 1000);
     });
