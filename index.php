@@ -211,7 +211,7 @@
                                     <span class="suffix mt-assetid"></span>
                                 </div>
                             </div>
-                            <div class="col-12 text-end hoverable" data-side="SELL">
+                            <div class="col-auto ms-auto hoverable" data-side="SELL">
                                 <span class="secondary">Available:</span>
                                 <span id="mt-avbl"></span>
                                 <span class="mt-assetid"></span>
