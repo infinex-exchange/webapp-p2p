@@ -202,8 +202,8 @@
                     
                         <div class="row">
                             <div class="col-12">
-                                <h5 data-side="BUY">I want to buy:</span>
-                                <h5 data-side="SELL">I want to sell:</span>
+                                <h5 data-side="BUY">I want to buy:</h5>
+                                <h5 data-side="SELL">I want to sell:</h5>
                             </div>
                             <div class="col-12 pt-1">
                                 <div class="input-ps-group">
@@ -227,8 +227,8 @@
                             </div>
 
                             <div class="col-12 pt-3">
-                                <h5 data-side="BUY">I will pay:</span>
-                                <h5 data-side="SELL">I will receive:</span>
+                                <h5 data-side="BUY">I will pay:</h5>
+                                <h5 data-side="SELL">I will receive:</h5>
                             </div>
                             <div class="col-12 pt-1">
                                 <div class="input-ps-group">
