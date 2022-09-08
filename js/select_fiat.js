@@ -6,6 +6,9 @@ $(document).ready(function() {
         $('#select-fiat-dropdown').toggle();
         $('#select-fiat-arrow').toggleClass('flip');
         
+        if($('#select-fiat-arrow').hasClass('flip'))
+            $('#select-fiat-search').focus();
+        
         event.stopPropagation();
     });
     

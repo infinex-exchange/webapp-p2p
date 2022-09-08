@@ -6,6 +6,9 @@ $(document).ready(function() {
         $('#select-fpm-dropdown').toggle();
         $('#select-fpm-arrow').toggleClass('flip');
         
+        if($('#select-fpm-arrow').hasClass('flip'))
+            $('#select-fpm-search').focus();
+        
         event.stopPropagation();
     });
     
