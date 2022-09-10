@@ -82,8 +82,6 @@ $(document).ready(function() {
     
     // Drop amount to available balance
     $('#mt-amount-crypto').on('focusOut setVal', function() {
-        if($(this).is(':focus')) return;
-        
         amount = new BigNumber($(this).data('rval'));
         var finalMaxCrypto = null;      
         
@@ -98,56 +96,40 @@ $(document).ready(function() {
                 finalMaxCrypto = window.p2pCryptoTotal;
         }
         
-        if(finalMaxCrypto !== null)
-            setTimeout(function() {
-                $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
-            
-                $('#mt-amount-crypto').data('rval', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
-                                      .trigger('setVal')
-                                      .trigger('updateCalc');
-            }, 1000);
+        if($(this).is(':focus') || $('#mt-amount-fiat').is(':focus') || finalMaxCrypto === null) return;
+        
+        setTimeout(function() {
+            $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
+        
+            $('#mt-amount-crypto').data('rval', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
+                                  .trigger('setVal')
+                                  .trigger('updateCalc');
+        }, 1000);
     });
     
     $('#mt-amount-fiat').on('focusout setVal', function() {
-        if($(this).is(':focus')) return;
-        
-        amount = new BigNumber($(this).data('rval'));   
+        amount = new BigNumber($(this).data('rval'));
+        var finalFiat = null;   
         
         if(amount.gt(window.p2pFiatMax)) {
-            if(typeof(window.timeoutFiatAmount) !== 'undefined' && window.timeoutFiatAmount !== null)
-                clearTimeout(window.timeoutFiatAmount);
-            
             $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
-            
-            window.timeoutFiatAmount = setTimeout(function() {
-                $('#mt-amount-fiat, #mt-fiat-max').removeClass('blink-red');
-            
-                $('#mt-amount-fiat').data('rval', window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
-                                    .trigger('setVal')
-                                    .trigger('updateCalc');
-            }, 1000);
+            finalFiat = window.p2pFiatMax;
         }
         
         else if(amount.lt(window.p2pFiatMin)) {
-            if(typeof(window.timeoutFiatAmount) !== 'undefined' && window.timeoutFiatAmount !== null)
-                clearTimeout(window.timeoutFiatAmount);
-                
             $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
-            
-            window.timeoutFiatAmount = setTimeout(function() {
-                $('#mt-amount-fiat, #mt-fiat-min').removeClass('blink-red');
-            
-                $('#mt-amount-fiat').data('rval', window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
-                                    .trigger('setVal')
-                                    .trigger('updateCalc');
-            }, 1000);
+            finalFiat = window.p2pFiatMin;
         }
         
-        else if(typeof(window.timeoutFiatAmount) !== 'undefined' && window.timeoutFiatAmount !== null) {
-            clearTimeout(window.timeoutFiatAmount);
-            $('#mt-amount-fiat, #mt-fiat-min, #mt-fiat-max').removeClass('blink-red');
-            window.timeoutFiatAmount = null;
-        } 
+        if($(this).is(':focus') || $('#mt-amount-crypto').is(':focus') || finalFiat === null) return;
+            
+        setTimeout(function() {
+            $('#mt-amount-fiat, #mt-fiat-min').removeClass('blink-red');
+        
+            $('#mt-amount-fiat').data('rval', finalFiat.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                .trigger('setVal')
+                                .trigger('updateCalc');
+        }, 1000);
     });
     
     // Change fiat when crypto changed
