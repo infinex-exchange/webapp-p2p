@@ -74,7 +74,7 @@ $(document).ready(function() {
     
     // Move data-val to real visible value
     $('#mt-amount-crypto, #mt-amount-fiat').onFirst('focusout setVal', function() {
-        if($('#mt-amount-crypto').is(':focus') || $('#mt-amount-fiat')) return;
+        if($(this).is(':focus')) return;
         
         $(this).data('tsval', $(this).data('rval') )
                .val( $(this).data('rval') );
