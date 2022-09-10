@@ -132,7 +132,7 @@ $(document).ready(function() {
         if($(this).is(':focus') || $('#mt-amount-crypto').is(':focus') || finalFiat === null) return;
         
         if(amount.gt(window.p2pFiatMax)) {
-            $('#mt-amount-fiat, #mt-fiat-max').removeClassClass('text-red').addClass('blink-red');
+            $('#mt-amount-fiat, #mt-fiat-max').removeClass('text-red').addClass('blink-red');
         }
         
         else if(amount.lt(window.p2pFiatMin)) {
