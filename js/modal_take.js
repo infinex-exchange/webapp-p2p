@@ -86,17 +86,25 @@ $(document).ready(function() {
         var finalMaxCrypto = null;      
         
         if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
-            $('#mt-amount-crypto, #mt-crypto-balance').addClass('blink-red');
+            $('#mt-amount-crypto, #mt-crypto-balance').addClass('text-red');
             finalMaxCrypto = window.p2pSellBalance;
         }
         
         if(amount.gt(window.p2pCryptoTotal)) {
-            $('#mt-amount-crypto, #mt-crypto-avbl').addClass('blink-red');
+            $('#mt-amount-crypto, #mt-crypto-avbl').addClass('text-red');
             if(finalMaxCrypto === null || window.p2pCryptoTotal.lt(finalMaxCrypto))
                 finalMaxCrypto = window.p2pCryptoTotal;
         }
         
         if($(this).is(':focus') || $('#mt-amount-fiat').is(':focus') || finalMaxCrypto === null) return;
+        
+        if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
+            $('#mt-amount-crypto, #mt-crypto-balance').removeClass('text-red').addClass('blink-red');
+        }
+        
+        if(amount.gt(window.p2pCryptoTotal)) {
+            $('#mt-amount-crypto, #mt-crypto-avbl').removeClass('text-red').addClass('blink-red');
+        }
         
         setTimeout(function() {
             $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
@@ -112,16 +120,24 @@ $(document).ready(function() {
         var finalFiat = null;   
         
         if(amount.gt(window.p2pFiatMax)) {
-            $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
+            $('#mt-amount-fiat, #mt-fiat-max').addClass('text-red');
             finalFiat = window.p2pFiatMax;
         }
         
         else if(amount.lt(window.p2pFiatMin)) {
-            $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
+            $('#mt-amount-fiat, #mt-fiat-min').addClass('text-red');
             finalFiat = window.p2pFiatMin;
         }
         
         if($(this).is(':focus') || $('#mt-amount-crypto').is(':focus') || finalFiat === null) return;
+        
+        if(amount.gt(window.p2pFiatMax)) {
+            $('#mt-amount-fiat, #mt-fiat-max').removeClassClass('text-red').addClass('blink-red');
+        }
+        
+        else if(amount.lt(window.p2pFiatMin)) {
+            $('#mt-amount-fiat, #mt-fiat-min').removeClass('text-red').addClass('blink-red');
+        }
             
         setTimeout(function() {
             $('#mt-amount-fiat, #mt-fiat-min').removeClass('blink-red');
