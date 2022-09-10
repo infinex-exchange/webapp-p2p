@@ -74,7 +74,7 @@ $(document).ready(function() {
     
     // Move data-val to real visible value
     $('#mt-amount-crypto, #mt-amount-fiat').onFirst('focusout setVal', function() {
-        if($(this).is(':focus')) return;
+        if($('#mt-amount-crypto').is(':focus') || $('#mt-amount-fiat')) return;
         
         $(this).data('tsval', $(this).data('rval') )
                .val( $(this).data('rval') );
@@ -94,27 +94,18 @@ $(document).ready(function() {
         
         if(amount.gt(window.p2pCryptoTotal)) {
             $('#mt-amount-crypto, #mt-crypto-avbl').addClass('blink-red');
-            if(finalMaxCrypto === null || window.p2pCryptoTotal.lt(final_max))
+            if(finalMaxCrypto === null || window.p2pCryptoTotal.lt(finalMaxCrypto))
                 finalMaxCrypto = window.p2pCryptoTotal;
         }
         
-        if(finalMaxCrypto !== null) {
-            if(typeof(window.timeoutCryptoAmount) !== 'undefined' && window.timeoutCryptoAmount !== null)
-                clearTimeout(window.timeoutCryptoAmount);
-            window.timeoutCryptoAmount = setTimeout(function() {
+        if(finalMaxCrypto !== null)
+            setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
                 $('#mt-amount-crypto').data('rval', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
                                       .trigger('setVal')
                                       .trigger('updateCalc');
             }, 1000);
-        }
-        
-        else if(typeof(window.timeoutCryptoAmount) !== 'undefined' && window.timeoutCryptoAmount !== null) {
-            clearTimeout(window.timeoutCryptoAmount);
-            $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
-            window.timeoutCryptoAmount = null;
-        }
     });
     
     $('#mt-amount-fiat').on('focusout setVal', function() {
