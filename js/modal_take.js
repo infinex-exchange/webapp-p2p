@@ -98,7 +98,7 @@ $(document).ready(function() {
                 finalMaxCrypto = window.p2pCryptoTotal;
         }
         
-        if(final_max !== null)
+        if(finalMaxCrypto !== null)
             setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
@@ -161,7 +161,10 @@ $(document).ready(function() {
         
         if(!total.isZero() && !total.isNaN()) {        
             var amount = total.dividedBy(window.p2pPrice);
-            amountStr = amount.toFixed(window.p2pCryptoPrec);
+            if(window.p2pOffersAS.data.side == 'SELL')
+                amountStr = amount.toFixed(window.p2pCryptoPrec, BigNumber.ROUND_DOWN);
+            else
+                amountStr = amount.toFixed(window.p2pCryptoPrec, BigNumber.ROUND_UP);
         }
         
         $('#mt-amount-crypto').data('rval', amountStr)
