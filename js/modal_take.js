@@ -117,6 +117,7 @@ $(document).ready(function() {
         
         if(amount.gt(window.p2pFiatMax)) {
             console.log('greater than max');
+            console.log(window.p2pFiatMax.toString());
             $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
             
             setTimeout(function() {
@@ -130,6 +131,7 @@ $(document).ready(function() {
         
         else if(amount.lt(window.p2pFiatMin)) {
             console.log('less than min');
+            console.log(window.p2pFiatMin.toString());
             $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
             
             setTimeout(function() {
