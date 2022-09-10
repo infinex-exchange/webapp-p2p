@@ -74,22 +74,17 @@ $(document).ready(function() {
     
     // Move data-val to real visible value
     $('#mt-amount-crypto, #mt-amount-fiat').onFirst('focusout setVal', function() {
-        console.log('onFirst');
         if($(this).is(':focus')) return;
-        console.log('onFirst not returned');
-        console.log('rval' + $(this).data('rval'));
         
         $(this).data('tsval', $(this).data('rval') )
                .val( $(this).data('rval') );
-        
-        console.log('val ' + $(this).val());
     });
     
     // Drop amount to available balance
     $('#mt-amount-crypto').on('focusOut setVal', function() {
         if($(this).is(':focus')) return;
         
-        amount = new BigNumber($(this).data('val'));
+        amount = new BigNumber($(this).data('rval'));
         var finalMaxCrypto = null;      
         
         if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
@@ -114,17 +109,11 @@ $(document).ready(function() {
     });
     
     $('#mt-amount-fiat').on('focusout setVal', function() {
-        console.log('Fiat focusout or setVal');
         if($(this).is(':focus')) return;
-        console.log('Not returned');
         
-        amount = new BigNumber($(this).data('val'));   
+        amount = new BigNumber($(this).data('rval'));   
         
-        console.log(window.p2pFiatMax.toString());
-        console.log(window.p2pFiatMin.toString());
-        console.log(amount.toString());
         if(amount.gt(window.p2pFiatMax)) {
-            console.log('greater than max');
             $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
             
             setTimeout(function() {
@@ -137,7 +126,6 @@ $(document).ready(function() {
         }
         
         else if(amount.lt(window.p2pFiatMin)) {
-            console.log('less than min');
             $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
             
             setTimeout(function() {
