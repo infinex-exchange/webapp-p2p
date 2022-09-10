@@ -108,7 +108,7 @@ $(document).ready(function() {
             }, 1000);
     });
     
-    $('#mt-amount-fiat').on('focusOut setVal', function() {
+    $('#mt-amount-fiat').on('focusout setVal', function() {
         if($(this).is(':focus')) return;
         
         amount = new BigNumber($(this).data('val'));   
