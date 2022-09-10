@@ -99,13 +99,19 @@ $(document).ready(function() {
         }
         
         if(finalMaxCrypto !== null)
-            setTimeout(function() {
+            window.timeoutCryptoAmount = setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
                 $('#mt-amount-crypto').data('rval', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
                                       .trigger('setVal')
                                       .trigger('updateCalc');
             }, 1000);
+        
+        else if(typeof(window.timeoutCryptoAmount) !== 'undefined' && window.timeoutCryptoAmount !== null) {
+            clearTimeout(window.timeoutCryptoAmount);
+            $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
+            window.timeoutCryptoAmount = null;
+        }
     });
     
     $('#mt-amount-fiat').on('focusout setVal', function() {
@@ -116,7 +122,7 @@ $(document).ready(function() {
         if(amount.gt(window.p2pFiatMax)) {
             $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
             
-            setTimeout(function() {
+            window.timeoutFiatAmount = setTimeout(function() {
                 $('#mt-amount-fiat, #mt-fiat-max').removeClass('blink-red');
             
                 $('#mt-amount-fiat').data('rval', window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
@@ -128,13 +134,19 @@ $(document).ready(function() {
         else if(amount.lt(window.p2pFiatMin)) {
             $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
             
-            setTimeout(function() {
+            window.timeoutFiatAmount = setTimeout(function() {
                 $('#mt-amount-fiat, #mt-fiat-min').removeClass('blink-red');
             
                 $('#mt-amount-fiat').data('rval', window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
                                     .trigger('setVal')
                                     .trigger('updateCalc');
             }, 1000);
+        }
+        
+        else if(typeof(window.timeoutFiatAmount) !== 'undefined' && window.timeoutFiatAmount !== null) {
+            clearTimeout(window.timeoutFiatAmount);
+            $('#mt-amount-fiat, #mt-fiat-min, #mt-fiat-max').removeClass('blink-red');
+            window.timeoutFiatAmount = null;
         } 
     });
     
