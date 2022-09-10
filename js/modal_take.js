@@ -81,7 +81,7 @@ $(document).ready(function() {
     });
     
     // Drop amount to available balance
-    $('#mt-amount-crypto').on('focusOut setVal', function() {
+    $('#mt-amount-crypto').on('focusout setVal', function() {
         amount = new BigNumber($(this).data('rval'));
         var finalMaxCrypto = null;      
         
