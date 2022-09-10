@@ -162,9 +162,9 @@ $(document).ready(function() {
         if(!total.isZero() && !total.isNaN()) {        
             var amount = total.dividedBy(window.p2pPrice);
             if(window.p2pOffersAS.data.side == 'SELL')
-                amountStr = amount.toFixed(window.p2pCryptoPrec, BigNumber.ROUND_DOWN);
+                amountStr = amount.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
             else
-                amountStr = amount.toFixed(window.p2pCryptoPrec, BigNumber.ROUND_UP);
+                amountStr = amount.toFixed(window.p2pAssetPrec, BigNumber.ROUND_UP);
         }
         
         $('#mt-amount-crypto').data('rval', amountStr)
