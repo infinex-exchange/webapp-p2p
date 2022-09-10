@@ -109,11 +109,14 @@ $(document).ready(function() {
     });
     
     $('#mt-amount-fiat').on('focusout setVal', function() {
+        console.log('Fiat focusout or setVal');
         if($(this).is(':focus')) return;
+        console.log('Not returned');
         
         amount = new BigNumber($(this).data('val'));   
         
         if(amount.gt(window.p2pFiatMax)) {
+            console.log('greater than max');
             $('#mt-amount-fiat, #mt-fiat-max').addClass('blink-red');
             
             setTimeout(function() {
@@ -126,6 +129,7 @@ $(document).ready(function() {
         }
         
         else if(amount.lt(window.p2pFiatMin)) {
+            console.log('less than min');
             $('#mt-amount-fiat, #mt-fiat-min').addClass('blink-red');
             
             setTimeout(function() {
