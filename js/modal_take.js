@@ -40,34 +40,50 @@ $(document).ready(function() {
         var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + prec + "})?$");
         var newVal = $(this).val();
         
-        // Revert bad format (real visible value)
+        // Revert bad format (visible value to typing safe value)
         if (!regex.test(newVal)) {
-            $(this).val( $(this).data('val') );
+            $(this).val( $(this).data('tsval') );
         }
         
-        // Drop . on last position (data-val only)
-        else if(newVal.slice(-1) == '.') {
-            $(this).data('val', newVal.substring(0, newVal.length - 1));
+        else {
+            // Check is real value change by calculations pending
+            var haveRVal = $(this).data('rval') != $(this).data('tsval');
+            
+            // Drop . on last position (typing safe value only)
+            if(newVal.slice(-1) == '.') {
+                $(this).data('tsval', newVal.substring(0, newVal.length - 1));
+            }
+        
+            // Change . to 0. on first position (typing safe value only)
+            else if(newVal.startsWith('.')) {
+                $(this).data('tsval', '0' + newVal);
+            }
+        
+            // Save typing safe value as is when everythink ok
+            else {
+                $(this).data('tsval', newVal);
+            }
+            
+            // If there is no pending change by calculations set rval also
+            $(this).data('rval', newVal);
         }
         
-        // Change . to 0. on first position (data-val only)
-        else if(newVal.startsWith('.')) {
-            $(this).data('val', '0' + newVal);
-        }
-        
-        // Save data-val when everythink ok
-        else $(this).data('val', newVal);
-    
-        $(this).trigger('prevalidated');
+        // Do calculations
+        $(this).trigger('updateCalc');
     });
     
     // Move data-val to real visible value
-    $('#mt-amount-crypto, #mt-amount-fiat').on('focusout', function() {
-        $(this).val( $(this).data('val') );
+    $('#mt-amount-crypto, #mt-amount-fiat').onFirst('focusout setVal', function() {
+        if($(this).is(':focus')) return;
+        
+        $(this).data('tsval', $(this).data('rval') )
+               .val( $(this).data('rval') );
     });
     
     // Drop amount to available balance
-    $('#mt-amount-crypto').on('prevalidated', function() {
+    $('#mt-amount-crypto').on('focusOut setVal', function() {
+        if($(this).is(':focus')) return;
+        
         amount = new BigNumber($(this).data('val'));
         var finalMaxCrypto = null;      
         
@@ -86,13 +102,15 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('blink-red');
             
-                $('#mt-amount-crypto').data('val', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
-                                      .val(finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
-                                      .trigger('prevalidated');
+                $('#mt-amount-crypto').data('rval', finalMaxCrypto.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN))
+                                      .trigger('setVal')
+                                      .trigger('updateCalc');
             }, 1000);
     });
     
-    $('#mt-amount-fiat').on('prevalidated', function() {
+    $('#mt-amount-fiat').on('focusOut setVal', function() {
+        if($(this).is(':focus')) return;
+        
         amount = new BigNumber($(this).data('val'));   
         
         if(amount.gt(window.p2pFiatMax)) {
@@ -101,9 +119,9 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('#mt-amount-fiat, #mt-fiat-max').removeClass('blink-red');
             
-                $('#mt-amount-fiat').data('val', window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
-                                    .val(window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
-                                    .trigger('prevalidated');
+                $('#mt-amount-fiat').data('rval', window.p2pFiatMax.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                    .trigger('setVal')
+                                    .trigger('updateCalc');
             }, 1000);
         }
         
@@ -113,11 +131,41 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('#mt-amount-fiat, #mt-fiat-min').removeClass('blink-red');
             
-                $('#mt-amount-fiat').data('val', window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
-                                    .val(window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
-                                    .trigger('prevalidated');
+                $('#mt-amount-fiat').data('rval', window.p2pFiatMin.toFixed(window.p2pFiatPrec, BigNumber.ROUND_DOWN))
+                                    .trigger('setVal')
+                                    .trigger('updateCalc');
             }, 1000);
         } 
+    });
+    
+    // Change fiat when crypto changed
+    $('#mt-amount-crypto').on('updateCalc', function() {
+        var amount = new BigNumber($(this).data('rval'));
+        
+        var totalStr = '';
+        
+        if(!amount.isZero() && !amount.isNaN()) {
+            var total = amount.multipliedBy(window.p2pPrice);
+            totalStr = total.toFixed(window.p2pFiatPrec);
+        }
+        
+        $('#mt-amount-fiat').data('rval', totalStr)
+                            .trigger('setVal');
+    });
+    
+    // Change crypto when fiat changed
+    $('#mt-amount-fiat').on('updateCalc', function() {
+        var total = new BigNumber($(this).data('rval'));
+        
+        var amountStr = '';
+        
+        if(!total.isZero() && !total.isNaN()) {        
+            var amount = total.dividedBy(window.p2pPrice);
+            amountStr = amount.toFixed(window.p2pCryptoPrec);
+        }
+        
+        $('#mt-amount-crypto').data('rval', amountStr)
+                              .trigger('setVal');
     });
 });
 
@@ -141,7 +189,8 @@ function takeOfferModal(offerid) {
     
     window.p2pCryptoTotal = new BigNumber(dataSource.data('total'));
     window.p2pFiatMin = new BigNumber(dataSource.data('fiat-min'));
-    window.p2pFiatlMax = new BigNumber(dataSource.data('fiat-max'));
+    window.p2pFiatMax = new BigNumber(dataSource.data('fiat-max'));
+    window.p2pPrice = new BigNumber(dataSource.data('price'));
     
     $('#mt-crypto-avbl').html(dataSource.data('total'));
     $('#mt-fiat-min').html(dataSource.data('fiat-min'));

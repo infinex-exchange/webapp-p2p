@@ -207,7 +207,7 @@
                             </div>
                             <div class="col-12 pt-1">
                                 <div class="input-ps-group">
-                                    <input id="mt-amount-crypto" type="text" class="form-control" data-val="">
+                                    <input id="mt-amount-crypto" type="text" class="form-control" data-tsval="" data-rval="">
                                     <span class="suffix mt-assetid"></span>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="col-12 pt-1">
                                 <div class="input-ps-group">
-                                    <input id="mt-amount-fiat" type="text" class="form-control" data-val="">
+                                    <input id="mt-amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
                                     <span class="suffix mt-fiatid"></span>
                                 </div>
                             </div>
