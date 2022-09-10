@@ -76,6 +76,8 @@ $(document).ready(function() {
     $('#mt-amount-crypto, #mt-amount-fiat').onFirst('focusout setVal', function() {
         console.log('onFirst');
         if($(this).is(':focus')) return;
+        console.log('onFirst not returned');
+        console.log('rval' + $(this).data('rval'));
         
         $(this).data('tsval', $(this).data('rval') )
                .val( $(this).data('rval') );
