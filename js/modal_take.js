@@ -96,8 +96,6 @@ $(document).ready(function() {
                 finalMaxCrypto = window.p2pCryptoTotal;
         }
         
-        $('#mt-amount-fiat').trigger('setVal');
-        
         if($(this).is(':focus') || $('#mt-amount-fiat').is(':focus') || finalMaxCrypto === null) return;
         
         if(window.p2pOffersAS.data.side == 'SELL' && amount.gt(window.p2pSellBalance)) {
@@ -130,8 +128,6 @@ $(document).ready(function() {
             $('#mt-amount-fiat, #mt-fiat-min').addClass('text-red');
             finalFiat = window.p2pFiatMin;
         }
-        
-        $('#mt-amount-crypto').trigger('setVal');
         
         if($(this).is(':focus') || $('#mt-amount-crypto').is(':focus') || finalFiat === null) return;
         
