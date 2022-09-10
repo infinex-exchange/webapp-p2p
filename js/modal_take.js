@@ -81,6 +81,8 @@ $(document).ready(function() {
         
         $(this).data('tsval', $(this).data('rval') )
                .val( $(this).data('rval') );
+        
+        console.log('val ' + $(this).val());
     });
     
     // Drop amount to available balance
