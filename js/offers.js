@@ -121,7 +121,9 @@ $(document).on('haveConfig', function() {
                 else {
                     window.btnBg = 'bg-red';
                     window.btnText = 'Sell';
-                }         
+                }
+                
+                var ratingStars = Math.round(v.user_rating/10)/2; // num / 10 = num / 20 * 2        
                 
                 thisAS.append(`
                     <div class="trade-item row px-2 py-4 hoverable" data-offerid="${v.offerid}" data-total="${v.total}"
@@ -132,7 +134,7 @@ $(document).on('haveConfig', function() {
 		                            <strong>${v.nickname}</strong>
 		                        </div>
                                 <div class="col-4 col-lg-12">
-		                            <div class="rateit" data-rateit-value="4.5" style="font-size: 20px"></div>
+		                            <div class="rateit" data-rateit-value="${ratingStars}" style="font-size: 20px"></div>
 	                            </div>
 	                            <div class="col-5 col-lg-12">
 		                            <span class="small secondary">
