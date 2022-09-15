@@ -5,7 +5,7 @@ function renderTransactions(t) {
                 ${t.ptid} ${t.create_time}
             </div>
         </div>
-    `);
+    `;
 }
 
 $(document).on('authChecked', function() {
