@@ -136,7 +136,7 @@ $(document).on('haveConfig', function() {
 	                            </div>
 	                            <div class="col-5 col-lg-12">
 		                            <span class="small secondary">
-		                                3 transactions | 96%
+		                                ${v.user_tcount} transactions | ${v.user_rating}%
 		                            </span>
 		                        </div>
 		                    </div>
