@@ -272,6 +272,7 @@
         
         <script type="text/javascript" src="/p2p/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/p2p/js/offers.js?<?php echo filemtime(__DIR__.'/js/offers.js'); ?>"></script>
+        <script src="/p2p/js/transactions.js?<?php echo filemtime(__DIR__.'/js/transactions.js'); ?>"></script>
         <script src="/p2p/js/modal_take.js?<?php echo filemtime(__DIR__.'/js/modal_take.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
