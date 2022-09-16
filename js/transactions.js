@@ -13,6 +13,9 @@ function renderTransaction(t) {
             <div class="col-6 text-end small secondary">
                 ${cTime}
             </div>
+            <div class="col-6 pt-2">
+                <strong>${t.amount_fiat} ${t.fiatid}</strong>
+            </div>
             <div class="col-6 text-end small">
 	            <span class="status">${t.status}</span>
 	        </div>
