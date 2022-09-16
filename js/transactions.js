@@ -29,7 +29,7 @@ function renderTransaction(t) {
 			        </div>
 			    </div>
 			</div>
-			<div class="col-1 my-auto">
+			<div class="col-1 my-auto text-center secondary">
 			    <i class="fa-solid fa-chevron-right"></i>
 			</div>
         </div>
