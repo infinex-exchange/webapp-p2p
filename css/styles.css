@@ -100,3 +100,10 @@
         border-top: 1px solid var(--color-border);
     }
 }
+
+/* Transactions */
+
+#transactions-data {
+    display: flex;
+    flex-direction: column;
+}
