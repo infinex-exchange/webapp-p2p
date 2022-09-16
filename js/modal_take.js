@@ -117,9 +117,7 @@ $(document).ready(function() {
         }
         
         $('#mt-amount-fiat').data('rval', totalStr)
-                            .trigger('setVal')
-                            .trigger('updateCalc');
-        // Always crypto from fiat (rounding error)
+                            .trigger('setVal');
     });
     
     // Change crypto when fiat changed
@@ -130,7 +128,7 @@ $(document).ready(function() {
         
         if(!total.isZero() && !total.isNaN()) {        
             var amount = total.dividedBy(window.p2pPrice);
-            if(window.p2pOffersAS.data.side == 'SELL')
+            if(window.p2pOffersAS.data.side == 'BUY')
                 amountStr = amount.toFixed(window.p2pAssetPrec, BigNumber.ROUND_DOWN);
             else
                 amountStr = amount.toFixed(window.p2pAssetPrec, BigNumber.ROUND_UP);
