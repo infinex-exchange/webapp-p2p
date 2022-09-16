@@ -117,7 +117,8 @@ $(document).ready(function() {
         }
         
         $('#mt-amount-fiat').data('rval', totalStr)
-                            .trigger('setVal');
+                            .trigger('updateCalc');
+        // Always crypto from fiat (rounding error)
     });
     
     // Change crypto when fiat changed
@@ -143,10 +144,38 @@ $(document).ready(function() {
         var crypto = $('#mt-amount-crypto');
         var fiat = $('#mt-amount-fiat');
         
-        if(crypto.hasClass('text-red') || fiat.hasClass('text-red')) {
-            msgBox('Fill the form correctly');
+        if(crypto.hasClass('text-red') || fiat.hasClass('text-red'))
             return;
-        }
+            
+        var reqData = {
+                api_key: window.apiKey,
+                offer: window.p2pSelectedOfferid,
+                amount_fiat: fiat.data('rval')
+        };
+        
+        if(window.p2pOffersAS.data.side == 'SELL')
+            reqData = Object.assign(reqData, {
+                fpm_instance: 999 /////////////////////////////////////////////////////////////////////////////////////////////
+            });
+        
+        $.ajax({
+            url: config.apiUrl + '/p2p/offers/take',
+            type: 'POST',
+            data: JSON.stringify(reqData),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                window.p2pSellBalance = new BigNumber(data.balances[asset].avbl);
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
     });
 });
 
@@ -172,6 +201,7 @@ function takeOfferModal(offerid) {
     window.p2pFiatMin = new BigNumber(dataSource.data('fiat-min'));
     window.p2pFiatMax = new BigNumber(dataSource.data('fiat-max'));
     window.p2pPrice = new BigNumber(dataSource.data('price'));
+    window.p2pSelectedOfferid = offerid;
     
     $('#mt-crypto-avbl').html(dataSource.data('total'));
     $('#mt-fiat-min').html(dataSource.data('fiat-min'));
