@@ -1,9 +1,21 @@
 function renderTransaction(t) {
+    var cTime = new Date(t.create_time * 1000).toLocaleString();
+
+	var color = 'text-green';
+    if(t.side == 'SELL') color = 'text-red';
+
     return `
-        <div class="transaction-item row py-2 hoverable">
-            <div class="col-12">
-                ${t.ptid} ${t.create_time}
+        <div class="transaction-item row px-1 py-2 hoverable">
+            <div class="col-6 small">
+                <span class="${color}">${t.side}</span>
+                ${t.amount_crypto} ${t.assetid}
             </div>
+            <div class="col-6 text-end small secondary">
+                ${cTime}
+            </div>
+            <div class="col-6 text-end small">
+	            <span class="status">${t.status}</span>
+	        </div>
         </div>
     `;
 }
