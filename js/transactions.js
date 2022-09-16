@@ -5,7 +5,7 @@ function renderTransaction(t) {
     if(t.side == 'SELL') color = 'text-red';
 
     return `
-        <div class="transaction-item row px-1 py-2 hoverable">
+        <div class="transaction-item separate row px-1 py-2 hoverable">
             <div class="col-6 small">
                 <span class="${color}">${t.side}</span>
                 ${t.amount_crypto} ${t.assetid}

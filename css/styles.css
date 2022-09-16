@@ -93,12 +93,12 @@
     .sm-w-100 {
         width: 100% !important;
     }
-    
-    /* Separate list items on mobile */
-    
-    .trade-item ~ .trade-item {
-        border-top: 1px solid var(--color-border);
-    }
+}
+
+/* Separate list items */
+
+.separate ~ .separate {
+    border-top: 1px solid var(--color-border);
 }
 
 /* Transactions */
