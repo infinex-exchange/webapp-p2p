@@ -137,6 +137,17 @@ $(document).ready(function() {
         $('#mt-amount-crypto').data('rval', amountStr)
                               .trigger('setVal');
     });
+    
+    // Submit
+    $('#mt-submit').click(function() {
+        var crypto = $('#mt-amount-crypto');
+        var fiat = $('#mt-amount-fiat');
+        
+        if(crypto.hasClass('text-red') || fiat.hasClass('text-red')) {
+            msgBoxError('Fill the form correctly');
+            return;
+        }
+    });
 });
 
 function takeOfferModal(offerid) {
