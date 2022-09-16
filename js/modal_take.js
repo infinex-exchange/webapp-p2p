@@ -210,5 +210,8 @@ function takeOfferModal(offerid) {
     $('#mt-fiat-min').html(dataSource.data('fiat-min'));
     $('#mt-fiat-max').html(dataSource.data('fiat-max'));
     
+    $('#mt-amount-fiat, #mt-fiat-max, #mt-fiat-min, #mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl')
+        .removeClass('text-red');
+    
     modal.modal('show');
 }
