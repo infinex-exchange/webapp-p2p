@@ -18,8 +18,8 @@ function renderTransaction(t) {
                 </div>
             </div>
             <div class="col-2 my-auto">
-                <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle">
-	                <i class="fa-solid fa-envelope fa-lg fa-beat"></i>
+                <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle font-big">
+	                <i class="fa-solid fa-envelope fa-beat"></i>
 	            </div>
             </div>
             <div class="col-5">
