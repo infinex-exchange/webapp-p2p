@@ -169,7 +169,7 @@ $(document).ready(function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                window.p2pSellBalance = new BigNumber(data.balances[asset].avbl);
+                location.href = '/p2p/transaction/' + data.ptid;
             } else {
                 msgBox(data.error);
             }
