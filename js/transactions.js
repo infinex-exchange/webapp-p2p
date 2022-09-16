@@ -14,7 +14,7 @@ function renderTransaction(t) {
                 ${cTime}
             </div>
             <div class="col-6 pt-2">
-                <strong>${t.amount_fiat} ${t.fiatid}</strong>
+                <h5>${t.amount_fiat} ${t.fiatid}</h5>
             </div>
             <div class="col-6 text-end small">
 	            <span class="status">${t.status}</span>
