@@ -117,6 +117,7 @@ $(document).ready(function() {
         }
         
         $('#mt-amount-fiat').data('rval', totalStr)
+                            .trigger('setVal')
                             .trigger('updateCalc');
         // Always crypto from fiat (rounding error)
     });
