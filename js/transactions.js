@@ -6,7 +6,7 @@ function renderTransaction(t) {
 
     return `
         <div class="transaction-item separate row px-1 py-2 hoverable">
-            <div class="col-5">
+            <div class="col-4">
                 <div class="row">
                     <div class="col-12">
 		                <span class="${color}">${t.side}</span>
@@ -17,7 +17,7 @@ function renderTransaction(t) {
 		            </div>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-2 my-auto">
             </div>
             <div class="col-5">
                 <div class="row">
@@ -28,6 +28,9 @@ function renderTransaction(t) {
 			            <span class="status">${t.status}</span>
 			        </div>
 			    </div>
+			</div>
+			<div class="col-1 my-auto">
+			    <i class="fa-solid fa-chevron-right"></i>
 			</div>
         </div>
     `;
