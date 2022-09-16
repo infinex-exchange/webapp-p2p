@@ -6,7 +6,7 @@ function renderTransaction(t) {
 
     return `
         <div class="transaction-item separate row px-1 py-2 hoverable">
-            <div class="col-6 small">
+            <div class="col-6">
                 <span class="${color}">${t.side}</span>
                 ${t.amount_crypto} ${t.assetid}
             </div>
