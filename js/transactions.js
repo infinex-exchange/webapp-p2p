@@ -21,6 +21,9 @@ function renderTransaction(t) {
                 <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle font-big">
 	                <i class="fa-solid fa-envelope fa-beat"></i>
 	            </div>
+	            <div class="noti-icon noti-check d-flex align-items-center justify-content-center rounded-circle font-big">
+	                <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
+	            </div>
             </div>
             <div class="col-5">
                 <div class="row">
