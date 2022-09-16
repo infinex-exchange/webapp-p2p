@@ -6,19 +6,25 @@ function renderTransaction(t) {
 
     return `
         <div class="transaction-item separate row px-1 py-2 hoverable">
-            <div class="col-6">
-                <span class="${color}">${t.side}</span>
-                ${t.amount_crypto} ${t.assetid}
+            <div class="col-2">
             </div>
-            <div class="col-6 text-end small secondary">
-                ${cTime}
-            </div>
-            <div class="col-6 pt-2">
-                <h4>${t.amount_fiat} ${t.fiatid}</h4>
-            </div>
-            <div class="col-6 pt-1 text-end small">
-	            <span class="status">${t.status}</span>
-	        </div>
+            <div class="col-10">
+                <div class="row">
+		            <div class="col-6">
+		                <span class="${color}">${t.side}</span>
+		                ${t.amount_crypto} ${t.assetid}
+		            </div>
+		            <div class="col-6 text-end small secondary">
+		                ${cTime}
+		            </div>
+		            <div class="col-6 pt-2">
+		                <h4>${t.amount_fiat} ${t.fiatid}</h4>
+		            </div>
+		            <div class="col-6 pt-1 text-end small">
+			            <span class="status">${t.status}</span>
+			        </div>
+			    </div>
+			</div>
         </div>
     `;
 }
