@@ -18,6 +18,9 @@ function renderTransaction(t) {
                 </div>
             </div>
             <div class="col-2 my-auto">
+                <div class="noti-msg bg-white d-flex align-items-center justify-content-center rounded-circle" style="width: 24px; height: 24px; color: black;">
+	                <i class="fa-regular fa-envelope"></i>
+	            </div>
             </div>
             <div class="col-5">
                 <div class="row">
