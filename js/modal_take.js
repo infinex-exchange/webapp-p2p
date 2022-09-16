@@ -142,15 +142,17 @@ $(document).ready(function() {
     // Submit
     $('#mt-submit').click(function() {
         var crypto = $('#mt-amount-crypto');
+        var cryptoVal = crypto.data('rval');
         var fiat = $('#mt-amount-fiat');
+        var fiatVal = fiat.data('rval');
         
-        if(crypto.hasClass('text-red') || fiat.hasClass('text-red'))
+        if(crypto.hasClass('text-red') || fiat.hasClass('text-red') || cryptoVal == '' || fiatVal == '')
             return;
             
         var reqData = {
                 api_key: window.apiKey,
                 offer: window.p2pSelectedOfferid,
-                amount_fiat: fiat.data('rval')
+                amount_fiat: fiatVal
         };
         
         if(window.p2pOffersAS.data.side == 'SELL')
