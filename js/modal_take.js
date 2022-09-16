@@ -81,7 +81,7 @@ $(document).ready(function() {
     });
     
     // Drop amount to available balance
-    $('#mt-amount-crypto').on('focusout setVal', function() {
+    $('#mt-amount-crypto').on('updateCalc setVal', function() {
         amount = new BigNumber($(this).data('rval'));
         
         $('#mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl').removeClass('text-red');
@@ -93,7 +93,7 @@ $(document).ready(function() {
             $('#mt-amount-crypto, #mt-crypto-avbl').addClass('text-red');
     });
     
-    $('#mt-amount-fiat').on('focusout setVal', function() {
+    $('#mt-amount-fiat').on('updateCalc setVal', function() {
         amount = new BigNumber($(this).data('rval'));
         
         $('#mt-amount-fiat, #mt-fiat-max, #mt-fiat-min').removeClass('text-red'); 
