@@ -16,7 +16,7 @@ function renderTransaction(t) {
             <div class="col-6 pt-2">
                 <h4>${t.amount_fiat} ${t.fiatid}</h4>
             </div>
-            <div class="col-6 text-end small">
+            <div class="col-6 pt-1 text-end small">
 	            <span class="status">${t.status}</span>
 	        </div>
         </div>
