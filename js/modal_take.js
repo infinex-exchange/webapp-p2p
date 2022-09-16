@@ -144,7 +144,7 @@ $(document).ready(function() {
         var fiat = $('#mt-amount-fiat');
         
         if(crypto.hasClass('text-red') || fiat.hasClass('text-red')) {
-            msgBoxError('Fill the form correctly');
+            msgBox('Fill the form correctly');
             return;
         }
     });
