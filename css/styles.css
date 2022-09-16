@@ -119,6 +119,5 @@
 .transaction-item .noti-icon {
     width: 48px;
     height: 48px;
-    color: var(--color-ultra);
-    background-color: var(--color-input);
+    background-color: var(--color-ultra);
 }
