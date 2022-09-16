@@ -148,8 +148,8 @@
                     <h3>Recent P2P trades</h3>
                 </div>
             
-                <div id="transactions-data" class="scrollable small d-flex">
-                    <div class="guest-only m-auto">
+                <div id="transactions-data" class="scrollable d-flex">
+                    <div class="guest-only small m-auto">
                         <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
                     </div>
                 </div>
