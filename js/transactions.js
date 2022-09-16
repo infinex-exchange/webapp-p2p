@@ -1,4 +1,4 @@
-function renderTransactions(t) {
+function renderTransaction(t) {
     return `
         <div class="transaction-item row py-2 hoverable">
             <div class="col-12">
@@ -11,8 +11,8 @@ function renderTransactions(t) {
 $(document).on('authChecked', function() {
     if(window.loggedIn) {
         window.p2pTraAS = new AjaxScroll(
-            $('#recent-trades-data'),
-            $('#recent-trades-data-preloader'),
+            $('#transactions-data'),
+            $('#transactions-data-preloader'),
             {
                 api_key: window.apiKey
             },
