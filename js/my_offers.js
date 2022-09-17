@@ -107,7 +107,7 @@ $(document).on('authChecked', function() {
                 if(thisAS.data.offset == 0)
                     $(document).trigger('renderingStage');
                 
-                if(data.transactions.length != 50)
+                if(data.offers.length != 50)
                     thisAS.noMoreData(); 
             }
             else {
