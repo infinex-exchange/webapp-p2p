@@ -6,7 +6,7 @@ function renderMyOffer(offer, fpms) {
                 
     $.each(offer.fpms, function(x, fpmid) {
         fpmsHtml += `
-            <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
+            <img width="24px" height="24px" src="${fpms[fpmid].icon_url}">
         `;
     });
 
