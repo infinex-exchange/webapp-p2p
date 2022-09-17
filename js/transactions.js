@@ -38,12 +38,12 @@ function renderTransaction(t) {
                     
                     <div class="col-12 pt-1">
                         <div class="row">
-                            <div class="col-auto ps-0 pe-1">
+                            <div class="col-auto pe-1">
                                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
 	                               <i class="fa-solid fa-envelope fa-beat"></i>
                                </div>
                             </div>
-                            <div class="col-auto ps-0 pe-1">
+                            <div class="col-auto pe-1">
 	                           <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
 	                               <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
                                </div>
