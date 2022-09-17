@@ -15,41 +15,24 @@ function renderMyOffer(offer) {
                 </div>
                
             </div>
-            <div class="col-9 pe-0">
+            <div class="col-8 pe-0">
                 <div class="row">
-                    <div class="col-5">
-                        <div class="row">
-                        
-                            <div class="col-12 small">
-                                <span class="${color}">${offer.side} ${offer.assetid}</span>
-                            </div>
-                            <div class="col-12 small">
-		                        x d
-		                    </div>
-                            
-                            <div class="col-12 pt-1">
-		                        <h4>x d</h4>
-		                    </div>
-                        
-                        </div>
+                    <div class="col-12 small">
+                        <span class="${color}">${offer.side}</span>
+                        ${offer.assetid}
                     </div>
-                    <div class="col-7">
-                        <div cass="row">
-                            
-                            <div class="col-12 text-end small secondary">
-		                        00
-		                    </div>
-                            
-                            <div class="col-12 pt-1 text-end small">
-			                    <span class="status">00</span>
-			                </div>
-                            
-                        </div>
-                    </div>
+                    
+                    <div class="col-12 small">
+                    x d
                 </div>
-            </div>
-			<div class="col-1 ps-0 my-auto text-center secondary">
-			    <i class="fa-solid fa-chevron-right"></i>
+                    
+                <div class="col-12 pt-1">
+                    <h4>x d</h4>
+                </div>
+                        
+                        
+			<div class="col-2 ps-0 my-auto text-center secondary">
+			    <i class="fa-solid fa-sliders fa-xl"></i>
 			</div>
         </div>
     `;
