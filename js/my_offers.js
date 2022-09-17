@@ -8,7 +8,9 @@ function renderMyOffer(offer) {
                
                 <div class="pretty p-switch p-bigger">
                     <input type="checkbox" class="active-checkbox" id="active-checkbox-${offer.offerid}">
-                </div> 
+                    <div class="state p-primary">
+                    </div>
+                </div>
                
             </div>
             <div class="col-9 pe-0">
