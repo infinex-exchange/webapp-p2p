@@ -22,6 +22,11 @@ function renderMyOffer(offer) {
                         ${offer.assetid}
                     </div>
                     
+                    <div class="col-12 small">
+                        <span class="secondary">Price:</span>
+                        ${offer.price} ${offer.fiatid}
+                    </div>
+                    
                     <div class="col-12 pt-2 small">
                         <div class="progress" style="height: 3px;">
                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
