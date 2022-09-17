@@ -3,20 +3,35 @@ function renderTransaction(t) {
 
 	var color = 'text-green';
     if(t.side == 'SELL') color = 'text-red';
-
-    return `
-        <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable">
-            <div class="noti-msg col-2 pe-0 my-auto text-center d-none">
+    
+    var notiHtml = '';
+    var restCol = 11;
+    if(t.status == 'PAID' && t.side == 'SELL') {
+        notiHtml = `
+            <div class="col-2 pe-0 my-auto text-center d-none">
                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
                     <i class="fa-solid fa-envelope fa-beat small"></i>
                </div>
             </div>
-            <div class="noti-transfer col-2 pe-0 my-auto text-center d-none">
+        `;
+    }
+    else if(t.new_msg) {
+        notiHtml = `
+            <div class="col-2 pe-0 my-auto text-center d-none">
                 <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
 	                <i class="fa-solid fa-money-bill-transfer fa-beat small"></i>
                 </div>
             </div>
-            <div class="col-11 pe-0">
+        `;
+    }
+    else {
+        restCol = 9;
+    }
+
+    return `
+        <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable">
+            ${notiHtml}
+            <div class="col-${restCol} pe-0">
                 <div class="row">
                     <div class="col-5">
                         <div class="row">
