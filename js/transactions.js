@@ -6,6 +6,16 @@ function renderTransaction(t) {
 
     return `
         <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable">
+            <div class="noti-msg col-2 pe-0 my-auto text-center d-none">
+               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
+                    <i class="fa-solid fa-envelope fa-beat small"></i>
+               </div>
+            </div>
+            <div class="noti-transfer col-2 pe-0 my-auto text-center d-none">
+                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
+	                <i class="fa-solid fa-money-bill-transfer fa-beat small"></i>
+                </div>
+            </div>
             <div class="col-11 pe-0">
                 <div class="row">
                     <div class="col-5">
@@ -35,24 +45,6 @@ function renderTransaction(t) {
                             
                         </div>
                     </div>
-                    
-                    <div class="col-12 pt-2">
-                        <div class="row">
-                            <div class="col-auto me-auto">
-                            </div>
-                            <div class="col-auto pe-1">
-                               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-	                               <i class="fa-solid fa-envelope fa-beat small"></i>
-                               </div>
-                            </div>
-                            <div class="col-auto pe-1">
-	                           <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-	                               <i class="fa-solid fa-money-bill-transfer fa-beat small"></i>
-                               </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
 			<div class="col-1 ps-0 my-auto text-center secondary">
