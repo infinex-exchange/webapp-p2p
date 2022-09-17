@@ -22,7 +22,7 @@ function renderMyOffer(offer) {
                         ${offer.assetid}
                     </div>
                     
-                    <div class="col-12 small">
+                    <div class="col-12 pt-2 small">
                         <div class="progress" style="height: 3px;">
                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
                                  aria-valuemin="0" aria-valuemax="100">
@@ -30,8 +30,10 @@ function renderMyOffer(offer) {
                         </div>
                     </div>
                     
-                    <div class="col-12 pt-1">
-                        <h4>x d</h4>
+                    <div class="col-12 small text-center pt-1">
+                        10
+                        <span class="secondary">/</span>
+                        20
                     </div>
                     
                 </div>
