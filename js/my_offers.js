@@ -11,7 +11,7 @@ function renderMyOffer(offer, fpms) {
     });
 
     return `
-        <div class="my-order-item separate row flex-nowrap px-1 py-2 hoverable">
+        <div class="my-order-item separate row flex-nowrap px-1 py-3 hoverable">
             <div class="col-2 pe-0 my-auto text-center">
                
                 <div class="pretty p-switch p-bigger">
@@ -39,7 +39,7 @@ function renderMyOffer(offer, fpms) {
                         ${offer.price} ${offer.fiatid}
                     </div>
                     
-                    <div class="col-12 pt-2 small">
+                    <div class="col-12 pt-3 small">
                         <div class="progress" style="height: 3px;">
                             <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
                                  aria-valuemin="0" aria-valuemax="100">
