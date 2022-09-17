@@ -2,7 +2,7 @@ function updateOfferModal(offerid) {
 }
 
 function updateOfferActive(offerid) {
-    var checkbox = $('.my-offer.item[data-offerid="' + offerid + '"] .active-checkbox');
+    var checkbox = $('.my-offer-item[data-offerid="' + offerid + '"] .active-checkbox');
     
     $.ajax({
         url: config.apiUrl + '/p2p/my_offers/update',
