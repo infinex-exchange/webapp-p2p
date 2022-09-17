@@ -8,17 +8,17 @@ function renderTransaction(t) {
         <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable">
             <div class="col-11 pe-0">
                 <div class="row">
-                    <div class="col-6 small">
+                    <div class="col-5 small">
 		                <span class="${color}">${t.side}</span>
 		                ${t.amount_crypto}&nbsp;${t.assetid}
 		            </div>
-                    <div class="col-6 text-end small secondary">
+                    <div class="col-7 text-end small secondary">
 		                ${cTime}
 		            </div>
-                    <div class="col-6 pt-1">
+                    <div class="col-5 pt-1">
 		                <h4>${t.amount_fiat} ${t.fiatid}</h4>
 		            </div>
-		            <div class="col-6 pt-1 text-end small">
+		            <div class="col-7 pt-1 text-end small">
 			            <span class="status">${t.status}</span>
 			        </div>
                     <div class="col-12 pt-1">
