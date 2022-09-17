@@ -160,8 +160,8 @@
                     <h3>My offers</h3>
                 </div>
             
-                <div id="my-offers-data" class="scrollable small d-flex">
-                    <div class="guest-only m-auto">
+                <div id="my-offers-data" class="scrollable d-flex">
+                    <div class="guest-only small m-auto">
                         <a class="link-ultra" href="#_" onClick="gotoLogin()">Log In</a> or <a class="link-ultra" href="/account/register">Register</a> to trade
                     </div>   
                 </div>
@@ -273,6 +273,7 @@
         <script type="text/javascript" src="/p2p/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/p2p/js/offers.js?<?php echo filemtime(__DIR__.'/js/offers.js'); ?>"></script>
         <script src="/p2p/js/transactions.js?<?php echo filemtime(__DIR__.'/js/transactions.js'); ?>"></script>
+        <script src="/p2p/js/my_offers.js?<?php echo filemtime(__DIR__.'/js/my_offers.js'); ?>"></script>
         <script src="/p2p/js/modal_take.js?<?php echo filemtime(__DIR__.'/js/modal_take.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
