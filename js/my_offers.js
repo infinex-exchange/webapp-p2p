@@ -9,7 +9,7 @@ function updateOfferActive(offerid) {
         type: 'POST',
         data: JSON.stringify({
             api_key: window.api_key,
-            active: checkbox.attr('checked')
+            active: checkbox.prop('checked')
         }),
         contentType: "application/json",
         dataType: "json",
@@ -17,12 +17,12 @@ function updateOfferActive(offerid) {
     .retry(config.retry)
     .done(function (data) {
         if(!data.success) {
-            checkbox.attr('checked', ! checkbox.attr('checked'));
+            checkbox.prop('checked', ! checkbox.prop('checked'));
             msgBox(data.error);
         }
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
-        checkbox.attr('checked', ! checkbox.attr('checked'));
+        checkbox.prop('checked', ! checkbox.prop('checked'));
         msgBoxNoConn(false); 
     });
 }
