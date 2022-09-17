@@ -23,14 +23,16 @@ function renderMyOffer(offer) {
                     </div>
                     
                     <div class="col-12 small">
-                    x d
-                </div>
+                        x d
+                    </div>
                     
-                <div class="col-12 pt-1">
-                    <h4>x d</h4>
+                    <div class="col-12 pt-1">
+                        <h4>x d</h4>
+                    </div>
+                    
                 </div>
-                        
-                        
+            </div>
+                            
 			<div class="col-2 ps-0 my-auto text-center secondary">
 			    <i class="fa-solid fa-sliders fa-xl"></i>
 			</div>
