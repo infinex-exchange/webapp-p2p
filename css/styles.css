@@ -47,7 +47,7 @@
     height: var(--target-height-trade-data);
 }
 
-#recent-trades-data {
+#transactions-data {
     height: var(--target-height-recent-trades-data);
 }
 
