@@ -23,7 +23,11 @@ function renderMyOffer(offer) {
                     </div>
                     
                     <div class="col-12 small">
-                        x d
+                        <div class="progress" style="height: 3px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="col-12 pt-1">
