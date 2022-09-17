@@ -34,7 +34,7 @@ function renderMyOffer(offer) {
             </div>
                             
 			<div class="col-2 ps-0 my-auto text-center secondary">
-			    <i class="fa-solid fa-sliders fa-xl"></i>
+			    <i class="fa-solid fa-sliders fa-lg"></i>
 			</div>
         </div>
     `;
