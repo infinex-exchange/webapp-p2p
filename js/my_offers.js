@@ -1,6 +1,3 @@
-function updateOfferModal(offerid) {
-}
-
 function updateOfferActive(offerid) {
     var checkbox = $('.my-offer-item[data-offerid="' + offerid + '"] .active-checkbox');
     
@@ -90,7 +87,7 @@ function renderMyOffer(offer, fpms) {
             </div>
                             
 			<div class="col-2 ps-0 my-auto text-center secondary">
-			    <a class="nav-link" href="#_" onClick="updateOfferModal(${offer.offerid})">
+			    <a class="nav-link" href="/p2p/update_offer/${offer.offerid}">
                     <i class="fa-solid fa-sliders fa-lg"></i>
                 </a>
 			</div>
