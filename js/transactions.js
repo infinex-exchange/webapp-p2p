@@ -6,7 +6,7 @@ function renderTransaction(t) {
 
     return `
         <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable">
-            <div class="col-5">
+            <div class="col-5 pe-0">
                 <div class="row">
                     <div class="col-12 small">
 		                <span class="${color}">${t.side}</span>
@@ -17,7 +17,7 @@ function renderTransaction(t) {
 		            </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 px-0">
                 <div class="row">
 		            <div class="col-12 text-end small secondary">
 		                ${cTime}
@@ -35,7 +35,7 @@ function renderTransaction(t) {
                     </div>
 			    </div>
 			</div>
-			<div class="col-1 my-auto text-center secondary">
+			<div class="col-1 ps-0 my-auto text-center secondary">
 			    <i class="fa-solid fa-chevron-right"></i>
 			</div>
         </div>
