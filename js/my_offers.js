@@ -59,7 +59,7 @@ function renderMyOffer(offer, fpms) {
             </div>
                             
 			<div class="col-2 ps-0 my-auto text-center secondary">
-			    <a><i class="fa-solid fa-sliders fa-lg"></i></a>
+			    <a class="nav-link"><i class="fa-solid fa-sliders fa-lg"></i></a>
 			</div>
         </div>
     `;
