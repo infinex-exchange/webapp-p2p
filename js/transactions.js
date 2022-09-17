@@ -8,7 +8,7 @@ function renderTransaction(t) {
     var restCol = 11;
     if(t.status == 'PAID' && t.side == 'SELL') {
         notiHtml = `
-            <div class="col-2 pe-0 my-auto text-center d-none">
+            <div class="col-2 pe-0 my-auto text-center">
                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
                     <i class="fa-solid fa-envelope fa-beat small"></i>
                </div>
@@ -17,7 +17,7 @@ function renderTransaction(t) {
     }
     else if(t.new_msg) {
         notiHtml = `
-            <div class="col-2 pe-0 my-auto text-center d-none">
+            <div class="col-2 pe-0 my-auto text-center">
                 <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
 	                <i class="fa-solid fa-money-bill-transfer fa-beat small"></i>
                 </div>
