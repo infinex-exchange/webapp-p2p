@@ -5,7 +5,7 @@ function renderTransaction(t) {
     if(t.side == 'SELL') color = 'text-red';
     
     var notiHtml = '';
-    var restCol = 11;
+    var restCol = 9;
     if(t.status == 'PAID' && t.side == 'SELL') {
         notiHtml = `
             <div class="col-2 pe-0 my-auto text-center">
@@ -25,7 +25,7 @@ function renderTransaction(t) {
         `;
     }
     else {
-        restCol = 9;
+        restCol = 11;
     }
 
     return `
