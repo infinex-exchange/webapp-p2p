@@ -31,6 +31,7 @@ function renderMyOffer(offer) {
                     </div>
                     
                     <div class="col-12 small text-center pt-1">
+                        <span class="secondary">Filled:</span>
                         ${offer.crypto_filled}
                         <span class="secondary">/</span>
                         ${offer.crypto_total}
