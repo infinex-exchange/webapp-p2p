@@ -5,7 +5,7 @@ function renderTransaction(t) {
     if(t.side == 'SELL') color = 'text-red';
 
     return `
-        <div class="transaction-item separate row px-1 py-2 hoverable">
+        <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable">
             <div class="col-5">
                 <div class="row">
                     <div class="col-12 small">
