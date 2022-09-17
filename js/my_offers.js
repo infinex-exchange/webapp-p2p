@@ -1,3 +1,32 @@
+function updateOfferModal(offerid) {
+}
+
+function updateOfferActive(offerid) {
+    var checkbox = $('.my-offer.item[data-offerid="' + offerid + '"] .active-checkbox');
+    
+    $.ajax({
+        url: config.apiUrl + '/p2p/my_offers/update',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.api_key,
+            active: checkbox.attr('checked')
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(!data.success) {
+            checkbox.attr('checked', ! checkbox.attr('checked'));
+            msgBoxRedirect(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        checkbox.attr('checked', ! checkbox.attr('checked'));
+        msgBoxNoConn(true); 
+    });
+}
+
 function renderMyOffer(offer, fpms) {
 	var color = 'text-green';
     if(offer.side == 'SELL') color = 'text-red';
@@ -9,13 +38,16 @@ function renderMyOffer(offer, fpms) {
             <img width="16px" height="16px" src="${fpms[fpmid].icon_url}">
         `;
     });
+    
+    var filledPerc = Math.round(offer.crypto_filled / offer.crypto_total * 100);
 
     return `
-        <div class="my-order-item separate row flex-nowrap px-1 py-3 hoverable">
+        <div class="my-offer-item separate row flex-nowrap px-1 py-3 hoverable" data-offerid="${offer.offerid}">
             <div class="col-2 pe-0 my-auto text-center">
                
                 <div class="pretty p-switch p-bigger">
-                    <input type="checkbox" class="active-checkbox" id="active-checkbox-${offer.offerid}">
+                    <input type="checkbox" class="active-checkbox" id="active-checkbox-${offer.offerid}"
+                     onChange="updateOfferActive(${offer.offerid})">
                     <div class="state p-primary">
                         <label for="active-checkbox-${offer.offerid}">
                         </label>
@@ -41,8 +73,7 @@ function renderMyOffer(offer, fpms) {
                     
                     <div class="col-12 pt-3 small">
                         <div class="progress" style="height: 3px;">
-                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                                 aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" role="progressbar" style="width: ${filledPerc}%">
                             </div>
                         </div>
                     </div>
@@ -59,7 +90,9 @@ function renderMyOffer(offer, fpms) {
             </div>
                             
 			<div class="col-2 ps-0 my-auto text-center secondary">
-			    <a class="nav-link"><i class="fa-solid fa-sliders fa-lg"></i></a>
+			    <a class="nav-link" href="#_" onClick="updateOfferModal(${offer.offerid})">
+                    <i class="fa-solid fa-sliders fa-lg"></i>
+                </a>
 			</div>
         </div>
     `;
