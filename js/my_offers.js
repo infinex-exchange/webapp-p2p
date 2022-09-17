@@ -1,54 +1,30 @@
 function renderMyOffer(offer) {
-    console.log(offer);
-    return;
-    var cTime = new Date(t.create_time * 1000).toLocaleString();
-
 	var color = 'text-green';
     if(t.side == 'SELL') color = 'text-red';
-    
-    var notiHtml = '';
-    var restCol = 9;
-    if((t.status == 'PAID' && t.side == 'SELL') ||
-       (t.status == 'PENDING' && t.side == 'BUY')
-    ) {
-        notiHtml = `
-            <div class="col-2 pe-0 my-auto text-center">
-               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-                   <i class="fa-solid fa-money-bill-transfer fa-beat small"></i> 
-               </div>
-            </div>
-        `;
-    }
-    else if(t.new_msg) {
-        notiHtml = `
-            <div class="col-2 pe-0 my-auto text-center">
-                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-                    <i class="fa-solid fa-envelope fa-beat small"></i>
-                </div>
-            </div>
-        `;
-    }
-    else {
-        restCol = 11;
-    }
 
     return `
-        <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable" onClick="gotoTrans(${t.ptid})">
-            ${notiHtml}
-            <div class="col-${restCol} pe-0">
+        <div class="my-order-item separate row flex-nowrap px-1 py-2 hoverable">
+            <div class="col-2 pe-0 my-auto text-center">
+               
+                <div class="pretty p-switch p-bigger">
+                    <input type="checkbox" class="active-checkbox" id="active-checkbox-${offer.offerid}">
+                </div> 
+               
+            </div>
+            <div class="col-9 pe-0">
                 <div class="row">
                     <div class="col-5">
                         <div class="row">
                         
                             <div class="col-12 small">
-                                <span class="${color}">${t.side}</span>
+                                <span class="${color}">${offer.side} ${offer.assetid}</span>
                             </div>
                             <div class="col-12 small">
-		                        ${t.amount_crypto} ${t.assetid}
+		                        x d
 		                    </div>
                             
                             <div class="col-12 pt-1">
-		                        <h4>${t.amount_fiat} ${t.fiatid}</h4>
+		                        <h4>x d</h4>
 		                    </div>
                         
                         </div>
@@ -57,11 +33,11 @@ function renderMyOffer(offer) {
                         <div cass="row">
                             
                             <div class="col-12 text-end small secondary">
-		                        ${cTime}
+		                        00
 		                    </div>
                             
                             <div class="col-12 pt-1 text-end small">
-			                    <span class="status">${t.status}</span>
+			                    <span class="status">00</span>
 			                </div>
                             
                         </div>
