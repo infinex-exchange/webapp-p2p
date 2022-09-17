@@ -42,7 +42,9 @@ function renderTransaction(t) {
                         
                             <div class="col-12 small">
                                 <span class="${color}">${t.side}</span>
-		                        ${t.amount_crypto}&nbsp;${t.assetid}
+                            </div>
+                            <div class="col-12 small">
+		                        ${t.amount_crypto} ${t.assetid}
 		                    </div>
                             
                             <div class="col-12 pt-1">
