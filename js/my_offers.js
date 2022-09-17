@@ -1,6 +1,6 @@
 function renderMyOffer(offer) {
 	var color = 'text-green';
-    if(t.side == 'SELL') color = 'text-red';
+    if(offer.side == 'SELL') color = 'text-red';
 
     return `
         <div class="my-order-item separate row flex-nowrap px-1 py-2 hoverable">
