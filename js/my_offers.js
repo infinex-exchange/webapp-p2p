@@ -9,6 +9,8 @@ function renderMyOffer(offer) {
                 <div class="pretty p-switch p-bigger">
                     <input type="checkbox" class="active-checkbox" id="active-checkbox-${offer.offerid}">
                     <div class="state p-primary">
+                        <label for="active-checkbox-${offer.offerid}">
+                        </label>
                     </div>
                 </div>
                
