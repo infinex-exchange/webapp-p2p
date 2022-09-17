@@ -17,13 +17,13 @@ function updateOfferActive(offerid) {
     .retry(config.retry)
     .done(function (data) {
         if(!data.success) {
-            checkbox.prop('checked', ! checkbox.prop('checked'));
             msgBox(data.error);
         }
+        window.p2pMyOffersAS.reset();
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
-        checkbox.prop('checked', ! checkbox.prop('checked'));
-        msgBoxNoConn(false); 
+        msgBoxNoConn(false);
+        window.p2pMyOffersAS.reset(); 
     });
 }
 
