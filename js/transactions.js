@@ -10,7 +10,7 @@ function renderTransaction(t) {
         notiHtml = `
             <div class="col-2 pe-0 my-auto text-center">
                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-                    <i class="fa-solid fa-envelope fa-beat small"></i>
+                   <i class="fa-solid fa-money-bill-transfer fa-beat small"></i> 
                </div>
             </div>
         `;
@@ -19,7 +19,7 @@ function renderTransaction(t) {
         notiHtml = `
             <div class="col-2 pe-0 my-auto text-center">
                 <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-	                <i class="fa-solid fa-money-bill-transfer fa-beat small"></i>
+                    <i class="fa-solid fa-envelope fa-beat small"></i>
                 </div>
             </div>
         `;
