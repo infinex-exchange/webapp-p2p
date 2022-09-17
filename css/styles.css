@@ -120,5 +120,5 @@
     width: 32px;
     height: 32px;
     background-color: var(--color-bg-light);
-    color: red;
+    color: var(--color-ultra);
 }
