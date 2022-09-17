@@ -101,12 +101,14 @@
     border-top: 1px solid var(--color-border);
 }
 
-/* Transactions */
+/* Fix containers with login or register hint */
 
-#transactions-data {
+#transactions-data, #my-offers-data {
     display: flex;
     flex-direction: column;
 }
+
+/* Transactions */
 
 .transaction-item .status {
 	background-color: var(--color-bg-light);
