@@ -18,12 +18,12 @@ function renderTransaction(t) {
                     <div class="col-12 pt-1 text-end">
                         <div class="row">
                             <div class="col-auto noti-msg">
-                                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
+                                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
         	                        <i class="fa-solid fa-envelope fa-beat"></i>
                                 </div>
                             </div>
                             <div class="col-auto noti-check">
-        	                    <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
+        	                    <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
         	                        <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
                                 </div>
                             </div>
