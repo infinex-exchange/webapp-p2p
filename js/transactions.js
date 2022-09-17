@@ -37,11 +37,17 @@ function renderTransaction(t) {
                     </div>
                     
                     <div class="col-12 pt-1">
-                        <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle">
-	                        <i class="fa-solid fa-envelope fa-beat"></i>
-                        </div>
-	                    <div class="noti-icon noti-transfer d-flex align-items-center justify-content-center rounded-circle">
-	                        <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
+                        <div class="row">
+                            <div class="col-auto">
+                               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
+	                               <i class="fa-solid fa-envelope fa-beat"></i>
+                               </div>
+                            </div>
+                            <div class="col-auto">
+	                           <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
+	                               <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
+                               </div>
+                            </div>
                         </div>
                     </div>
                     
