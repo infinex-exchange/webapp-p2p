@@ -15,6 +15,20 @@ function renderTransaction(t) {
 		            <div class="col-12 pt-2">
 		                <h4>${t.amount_fiat} ${t.fiatid}</h4>
 		            </div>
+                    <div class="col-12 pt-1 text-end">
+                        <div class="row">
+                            <div class="col-auto noti-msg">
+                                <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
+        	                        <i class="fa-solid fa-envelope fa-beat"></i>
+                                </div>
+                            </div>
+                            <div class="col-auto noti-check">
+        	                    <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
+        	                        <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
+                                </div>
+                            </div>
+        	            </div>
+                    </div>
                 </div>
             </div>
             <div class="col-6 px-0">
@@ -25,14 +39,6 @@ function renderTransaction(t) {
 		            <div class="col-12 pt-1 text-end small">
 			            <span class="status">${t.status}</span>
 			        </div>
-                    <div class="col-12 pt-1 text-end">
-                        <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
-        	                <i class="fa-solid fa-envelope fa-beat"></i>
-        	            </div>
-        	            <div class="noti-icon noti-check d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
-        	                <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
-        	            </div>
-                    </div>
 			    </div>
 			</div>
 			<div class="col-1 ps-0 my-auto text-center secondary">
