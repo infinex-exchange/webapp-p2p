@@ -18,12 +18,12 @@ function updateOfferActive(offerid) {
     .done(function (data) {
         if(!data.success) {
             checkbox.attr('checked', ! checkbox.attr('checked'));
-            msgBoxRedirect(data.error);
+            msgBox(data.error);
         }
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
         checkbox.attr('checked', ! checkbox.attr('checked'));
-        msgBoxNoConn(true); 
+        msgBoxNoConn(false); 
     });
 }
 
