@@ -1,6 +1,14 @@
 function renderMyOffer(offer) {
 	var color = 'text-green';
     if(offer.side == 'SELL') color = 'text-red';
+    
+    var fpmsHtml = '';
+                
+    $.each(v.fpms, function(x, fpmid) {
+        fpmsHtml += `
+            <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
+        `;
+    });
 
     return `
         <div class="my-order-item separate row flex-nowrap px-1 py-2 hoverable">
@@ -17,9 +25,13 @@ function renderMyOffer(offer) {
             </div>
             <div class="col-8 pe-0">
                 <div class="row">
-                    <div class="col-12 small">
+                    <div class="col-auto small">
                         <span class="${color}">${offer.side}</span>
                         ${offer.assetid}
+                    </div>
+                    
+                    <div class="col-auto ms-auto">
+                        ${fpmsHtml}
                     </div>
                     
                     <div class="col-12 small">
