@@ -6,9 +6,9 @@ function renderTransaction(t) {
 
     return `
         <div class="transaction-item separate row px-1 py-2 hoverable">
-            <div class="col-4">
+            <div class="col-5">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 small">
 		                <span class="${color}">${t.side}</span>
 		                ${t.amount_crypto}&nbsp;${t.assetid}
 		            </div>
@@ -17,15 +17,7 @@ function renderTransaction(t) {
 		            </div>
                 </div>
             </div>
-            <div class="col-2 my-auto">
-                <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
-	                <i class="fa-solid fa-envelope fa-beat"></i>
-	            </div>
-	            <div class="noti-icon noti-check d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
-	                <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
-	            </div>
-            </div>
-            <div class="col-5">
+            <div class="col-6">
                 <div class="row">
 		            <div class="col-12 text-end small secondary">
 		                ${cTime}
@@ -33,6 +25,14 @@ function renderTransaction(t) {
 		            <div class="col-12 pt-1 text-end small">
 			            <span class="status">${t.status}</span>
 			        </div>
+                    <div class="col-12 pt-1 text-end">
+                        <div class="noti-icon noti-msg d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
+        	                <i class="fa-solid fa-envelope fa-beat"></i>
+        	            </div>
+        	            <div class="noti-icon noti-check d-flex align-items-center justify-content-center rounded-circle m-2 font-big">
+        	                <i class="fa-solid fa-money-bill-transfer fa-beat"></i>
+        	            </div>
+                    </div>
 			    </div>
 			</div>
 			<div class="col-1 my-auto text-center secondary">
