@@ -1,4 +1,4 @@
-function renderMyOffer(offer) {
+function renderMyOffer(offer, fpms) {
 	var color = 'text-green';
     if(offer.side == 'SELL') color = 'text-red';
     
@@ -89,7 +89,7 @@ $(document).on('authChecked', function() {
         .done(function (data) {
             if(data.success) {
                 $.each(data.offers, function(k, v) {
-                    thisAS.append(renderMyOffer(v));
+                    thisAS.append(renderMyOffer(v, data.fpms));
                 });
                 
                 thisAS.done();
