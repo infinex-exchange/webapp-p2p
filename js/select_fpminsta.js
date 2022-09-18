@@ -32,17 +32,15 @@ $(document).ready(function() {
     });
 });
 
-function initSelectFpmInsta//(fiat, endpoint = '/p2p/fpms') {
-    $('#select-fpm').data('fpmid', '');
-    $('#select-fpm').val('All payment methods');
-    $('#select-fpm-data').empty();
+function initSelectFpmInsta(endpoint) {
+    $('#select-fpm-insta').data('fpminstaid', '');
+    $('#select-fpm-insta').val('');
+    $('#select-fpm-insta-data').empty();
     
-    window.selectFpmAS = new AjaxScroll(
-        $('#select-fpm-data'),
-        $('#select-fpm-data-preloader'),
-        {
-            fiat: fiat
-        },
+    window.selectFpmInstaAS = new AjaxScroll(
+        $('#select-fpm-insta-data'),
+        $('#select-fpm-insta-data-preloader'),
+        {},
         function() {
             this.data.offset = this.offset;
             var thisAS = this;
@@ -57,30 +55,34 @@ function initSelectFpmInsta//(fiat, endpoint = '/p2p/fpms') {
             .retry(config.retry)
             .done(function (data) {
                 if(data.success) {
-                    $.each(data.fpms, function(k, v) {
+                    $.each(data.fpm_instances, function(k, v) {
+                        var fpm = data.fpms[v.fpmid];
+                        
                         thisAS.append(`
-                            <div class="select-fpm-item row p-1 hoverable" data-fpmid="${k}" data-name="${v.name}">
+                            <div class="select-fpm-insta-item row p-1 hoverable" data-fpminstaid="${k}" data-name="${v.name}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
-                                    <img width="24px" height="24px" src="${v.icon_url}">
+                                    <img width="24px" height="24px" src="${fpm.icon_url}">
                                 </div>
                                 <div class="col my-auto">
-                                    <span class="secondary">${v.name}</span>
+                                    <h5 class="secondary">${v.name}</h5>
+                                    <br>
+                                    <i>${fpm.name}</i>
                                 </div>
                             </div>
                         `);
                     });
                     
-                    $('#select-fpm').trigger('dataLoaded');
+                    $('#select-fpm-insta').trigger('dataLoaded');
                     
-                    $('.select-fpm-item').on('click', function(event) {
-                        $('#select-fpm').val($(this).attr('data-name'));
-                        $('#select-fpm').data('fpmid', $(this).data('fpmid'));
-                        $('#select-fpm').trigger('change');
+                    $('.select-fpm-insta-item').on('click', function(event) {
+                        $('#select-fpm-insta').val($(this).attr('data-name'));
+                        $('#select-fpm-insta').data('fpminstaid', $(this).data('fpminstaid'));
+                        $('#select-fpm-insta').trigger('change');
                     });
                         
                     thisAS.done();
                             
-                    if(data.fpms.length != 50)
+                    if(data.fpm_instances.length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);
@@ -93,6 +95,7 @@ function initSelectFpmInsta//(fiat, endpoint = '/p2p/fpms') {
                 thisAS.done();
                 thisAS.noMoreData();
             }); 
-        }
+        },
+        false
     );
 }
