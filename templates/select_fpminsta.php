@@ -11,7 +11,7 @@
         <div id="select-fpm-insta-data-preloader">
             Loading...
         </div>
-        <div class="select-fpm-manage row p-1 hoverable">
+        <div id="select-fpm-manage row p-1 hoverable">
             <div class="col-auto m-auto">
                 <strong class="secondary">Manage payment methods</strong>
             </div>

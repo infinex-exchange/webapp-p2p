@@ -30,6 +30,10 @@ $(document).ready(function() {
             window.selectFpmInstaAS.data.search = query;
         window.selectFpmInstaAS.reset();
     });
+    
+    $('#select-fpm-manage').click(function() {
+        window.location.href = '/p2p/settings/payment_methods';
+    });
 });
 
 function initSelectFpmInsta(endpoint = '/p2p/fpm_instances') {
