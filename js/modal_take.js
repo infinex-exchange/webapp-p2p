@@ -158,8 +158,13 @@ $(document).ready(function() {
         };
         
         if(window.p2pOffersAS.data.side == 'SELL')
+            var fpminstaid = $('#select-fpminsta').data('fpminstaid');
+            
+            if(fpminstaid == '')
+                return;
+            
             reqData = Object.assign(reqData, {
-                fpm_instance: 999 /////////////////////////////////////////////////////////////////////////////////////////////
+                fpm_instance: fpminstaid
             });
         
         $.ajax({
