@@ -157,7 +157,7 @@ $(document).ready(function() {
                 amount_fiat: fiatVal
         };
         
-        if(window.p2pOffersAS.data.side == 'SELL')
+        if(window.p2pOffersAS.data.side == 'SELL') {
             var fpminstaid = $('#select-fpminsta').data('fpminstaid');
             
             if(fpminstaid == '')
@@ -166,6 +166,7 @@ $(document).ready(function() {
             reqData = Object.assign(reqData, {
                 fpm_instance: fpminstaid
             });
+        }
         
         $.ajax({
             url: config.apiUrl + '/p2p/offers/take',
