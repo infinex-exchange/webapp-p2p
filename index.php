@@ -256,7 +256,7 @@
                                 <h5>Payment method:</h5>
                             </div>
                             <div class="col-12">
-                                <?php include(__DIR__.'/templates/select_fpm_instance.php'); ?>
+                                <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
                             </div>
                         </div>
                         
