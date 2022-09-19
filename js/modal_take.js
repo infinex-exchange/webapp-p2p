@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // Init fpminsta selector
+    initSelectFpmInsta();
+    
     // Check balance when coin selected
     window.p2pSellBalance = new BigNumber(0);
     

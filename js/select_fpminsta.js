@@ -32,17 +32,17 @@ $(document).ready(function() {
     });
 });
 
-function initSelectFpmInsta(data = {}, endpoint = '/p2p/fpm_instances') {
+function initSelectFpmInsta(endpoint = '/p2p/fpm_instances') {
     $('#select-fpm-insta').data('fpminstaid', '');
     $('#select-fpm-insta').val('');
     $('#select-fpm-insta-data').empty();
     
-    data.api_key = window.apiKey;
-    
     window.selectFpmInstaAS = new AjaxScroll(
         $('#select-fpm-insta-data'),
         $('#select-fpm-insta-data-preloader'),
-        data,
+        {
+            api_key: window.apiKey
+        },
         function() {
             this.data.offset = this.offset;
             var thisAS = this;
