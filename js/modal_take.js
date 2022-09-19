@@ -220,5 +220,17 @@ function takeOfferModal(offerid) {
     $('#mt-amount-fiat, #mt-fiat-max, #mt-fiat-min, #mt-amount-crypto, #mt-crypto-balance, #mt-crypto-avbl')
         .removeClass('text-red');
     
+    if(side == 'SELL'
+       &&
+       (
+           typeof(window.selectFpmInstaAS.data.match_offer) == 'undefined'
+           ||
+           window.selectFpmInstaAS.data.match_offer != offerid
+       )
+    ) {
+        window.selectFpmInstaAS.data.match_offer = offerid;
+        window.selectFpmInstaAS.reset();
+    }
+    
     modal.modal('show');
 }
