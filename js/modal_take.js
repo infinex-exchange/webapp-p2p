@@ -158,7 +158,7 @@ $(document).ready(function() {
         };
         
         if(window.p2pOffersAS.data.side == 'SELL') {
-            var fpminstaid = $('#select-fpminsta').data('fpminstaid');
+            var fpminstaid = $('#select-fpm-insta').data('fpminstaid');
             
             if(fpminstaid == '')
                 return;
