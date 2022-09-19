@@ -255,7 +255,7 @@
                             <div class="col-12 pt-3">
                                 <h5>Payment method:</h5>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 pt-1">
                                 <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
                             </div>
                         </div>
