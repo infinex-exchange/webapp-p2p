@@ -10,6 +10,7 @@ window.addEventListener('message', function(event) {
 		password: event.data.password,
 		discover_connection_methods: false,
 		singleton: true,
-		auto_join_private_chats: [ event.data.opposite_jid ]
+		auto_join_private_chats: [ event.data.opposite_jid ],
+		theme: 'concord'
 	});
 }, false);
