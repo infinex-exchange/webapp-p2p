@@ -3,7 +3,7 @@ window.addEventListener('message', function(event) {
         return;
     
     converse.initialize({
-		bosh_service_url: 'https://conversejs.org/http-bind/',
+		bosh_service_url: 'https://stream.sandbox.vayamos.cc/bosh/',
 		view_mode: 'fullscreen',
 		auto_login: true,
 		jid: event.data.jid,
