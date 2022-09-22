@@ -3,3 +3,4 @@ Options -MultiViews -Indexes
 RewriteEngine on
 
 RewriteRule ^transaction/([^/]+)/?$ transaction.php [L]
+RewriteRule ^chat/?$ chat.php [L]
