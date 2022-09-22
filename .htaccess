@@ -2,4 +2,4 @@ Options -MultiViews -Indexes
 
 RewriteEngine on
 
-RewriteRule ^transaction/([^/]+)/?$ /transaction.php [L]
+RewriteRule ^transaction/([^/]+)/?$ transaction.php [L]
