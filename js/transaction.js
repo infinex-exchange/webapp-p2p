@@ -1,10 +1,3 @@
-function initChat() {
-    converse.initialize({
-        bosh_service_url: 'https://conversejs.org/http-bind/',
-        view_mode: 'embedded'
-    });
-}
-
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
 });
@@ -34,8 +27,6 @@ $(document).on('authChecked', function() {
                 console.log(data);
 
                 $(document).trigger('renderingStage');
-                
-                initChat();
             }
             else {
                 msgBoxRedirect(data.error);

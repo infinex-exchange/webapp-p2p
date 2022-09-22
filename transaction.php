@@ -4,7 +4,6 @@
         <?php include(__DIR__.'/../../templates/head.php'); ?>
         <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
         <?php include(__DIR__.'/imports/rateit.html'); ?>
-        <?php include(__DIR__.'/imports/converse.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Vayamos P2P</title>
     </head>
@@ -65,7 +64,7 @@
         <div class="row m-0">
         <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
                 
-            <converse-root></converse-root>
+            Chat column
         
         <!-- / Right column -->
         </div>
