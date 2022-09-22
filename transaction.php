@@ -37,7 +37,7 @@
                 <li class="nav-item"">
                     <a class="nav-link" href="#_" data-ui-card-target="chat">
                         <i class="fa-solid fa-comments"></i><br>
-                        History
+                        Chat
                     </a>
                 </li>
             </ul>
