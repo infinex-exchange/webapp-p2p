@@ -5,7 +5,7 @@ $(document).ready(function() {
 $(document).on('authChecked', function() {
     if(window.loggedIn) {
         var pathArray = window.location.pathname.split('/');
-        var ptid = pathArray[pathArray.length - 1];
+        var ptid = parseInt(pathArray[pathArray.length - 1]);
         
         $.ajax({
             url: config.apiUrl + '/p2p/transaction',
