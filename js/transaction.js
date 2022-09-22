@@ -11,7 +11,7 @@ $(document).on('authChecked', function() {
             url: config.apiUrl + '/p2p/transaction',
             type: 'POST',
             data: JSON.stringify({
-                api_key: window.api_key
+                api_key: window.api_key,
                 ptid: ptid
             }),
             contentType: "application/json",
