@@ -7,6 +7,7 @@ window.addEventListener('message', function(event) {
 		view_mode: 'fullscreen',
 		auto_login: true,
 		jid: event.data.jid,
-		password: event.data.password
+		password: event.data.password,
+		discover_connection_methods: false
 	});
 }, false);
