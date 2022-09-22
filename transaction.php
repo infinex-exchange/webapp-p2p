@@ -51,7 +51,7 @@
         <!-- Main column -->
         <div class="col-12 col-lg-9 p-0 ui-column">
         <div class="row m-0">
-        <div class="col-12 ui-card ui-card-ver d-lg-block" data-ui-card="transaction">
+        <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="transaction">
             
         Main column    
         
@@ -63,7 +63,7 @@
         <!-- Right column -->
         <div class="col-12 col-lg-3 p-0 ui-column">
         <div class="row m-0">
-        <div class="col-12 ui-card ui-card-ver d-lg-block" data-ui-card="chat">
+        <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
                 
             <converse-root></converse-root>
         
