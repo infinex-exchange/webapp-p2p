@@ -64,7 +64,7 @@
         <div class="row m-0">
         <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
                 
-            Chat column
+            <iframe src="/p2p/chat" width="100%" height="100%"></iframe>
         
         <!-- / Right column -->
         </div>
