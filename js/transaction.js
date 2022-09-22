@@ -27,7 +27,7 @@ $(document).on('authChecked', function() {
                 console.log(data);
                 
                 window.frames['chat-iframe'].contentWindow.postMessage({
-                    jid: data.jid,
+                    jid: data.transaction.jid,
                     password: window.apiKey
                 });
 
