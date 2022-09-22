@@ -11,6 +11,6 @@ window.addEventListener('message', function(event) {
 		discover_connection_methods: false,
 		singleton: true,
 		auto_join_private_chats: [ event.data.opposite_jid ],
-		theme: 'concord'
+		theme: 'dracula'
 	});
 }, false);
