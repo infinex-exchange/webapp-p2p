@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    // Init fpminsta selector
-    initSelectFpmInsta();
-    
     // Check balance when coin selected
     window.p2pSellBalance = new BigNumber(0);
     
@@ -187,6 +184,13 @@ $(document).ready(function() {
             msgBoxNoConn(false);
         });
     });
+});
+
+$(document).on('authChecked', function() {
+    if(window.loggedIn) {
+        // Init fpminsta selector
+        initSelectFpmInsta();
+    }
 });
 
 function takeOfferModal(offerid) {
