@@ -25,6 +25,11 @@ $(document).on('authChecked', function() {
                 });*/
                 
                 console.log(data);
+                
+                window.frames['chat-iframe'].contentWindow.postMessage({
+                    jid: data.jid
+                    password: window.apiKey
+                });
 
                 $(document).trigger('renderingStage');
             }
