@@ -8,6 +8,8 @@ window.addEventListener('message', function(event) {
 		auto_login: true,
 		jid: event.data.jid,
 		password: event.data.password,
-		discover_connection_methods: false
+		discover_connection_methods: false,
+		singleton: true,
+		auto_join_private_chats: [ event.data.opposite_jid ]
 	});
 }, false);

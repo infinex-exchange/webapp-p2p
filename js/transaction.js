@@ -28,7 +28,8 @@ $(document).on('authChecked', function() {
                 
                 window.frames['chat-iframe'].contentWindow.postMessage({
                     jid: data.transaction.jid,
-                    password: window.apiKey
+                    password: window.apiKey,
+                    opposite_jid: data.transaction.opposite_jid
                 });
 
                 $(document).trigger('renderingStage');
