@@ -91,10 +91,10 @@
             <div class="col-12">
                 <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
-                        <i class="fa-solid fa-clock fa-2x"></i>
+                        <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
                     </div>
                     <div class="px-2">
-                        <strong>Waiting for your payment</strong>
+                        <strong>Please make a payment</strong>
                         <br>
                         Make a transfer using one of the payment methods offered by the seller.
                         <br>
@@ -106,7 +106,7 @@
                         <i class="fa-solid fa-clock fa-2x"></i>
                     </div>
                     <div class="px-2">
-                        <strong>Waiting for the buyer's payment</strong>
+                        <strong>Waiting for the payment</strong>
                         <br>
                         We will inform you when the buyer completes the transfer and marks the payment as complete.
                     </div>
