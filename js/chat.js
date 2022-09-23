@@ -12,4 +12,6 @@ window.addEventListener('message', function(event) {
 		singleton: true,
 		auto_join_private_chats: [ event.data.opposite_jid ]
 	});
+    
+    $('.chat-head').remove();
 }, false);
