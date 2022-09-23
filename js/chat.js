@@ -1,3 +1,7 @@
+window.addEventListener("converse-loaded", function(event) {
+    document.getElementsByClassName('chat-head')[0].remove();
+});
+
 window.addEventListener('message', function(event) {
     if(typeof event.data != 'object' || typeof(event.data.jid) == 'undefined')
         return;
@@ -12,6 +16,4 @@ window.addEventListener('message', function(event) {
 		singleton: true,
 		auto_join_private_chats: [ event.data.opposite_jid ]
 	});
-    
-    document.getElementsByClassName('chat-head')[0].remove();
 }, false);
