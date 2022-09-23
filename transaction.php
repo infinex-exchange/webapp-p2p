@@ -89,7 +89,7 @@
         
         <div class="row p-2">
             <div class="col-12">
-                <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
+                <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
                         <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
                     </div>
