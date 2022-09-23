@@ -27,8 +27,8 @@ $(document).on('authChecked', function() {
                 $('.fiatid').html(data.transaction.fiatid);
                 $('.price').html(data.transaction.price);
                 
-                $('.status').hide();
-                $('.status[data-status="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]');
+                $('.status').addClass('d-none');
+                $('.status[data-status="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
 
                 $(document).trigger('renderingStage');
             }
