@@ -52,11 +52,11 @@
         <div class="row m-0">
         <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="transaction">
             
-        <div class="row p-2">
+        <div class="row">
             <h3 class="transaction-header"></h3>
         </div>
         
-        <div class="row">
+        <div class="row py-2">
             <div class="col-6 col-lg-2 order-1 order-lg-1 secondary my-auto">
                 Fiat amount:
             </div>
@@ -87,7 +87,7 @@
             </div>
         </div>
         
-        <div class="row p-4">
+        <div class="row py-2">
             <div class="col-12">
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
@@ -214,7 +214,11 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
+        
+        <div class="row py-2">
+            <h3>Payment methods:</h3>
+        </div>
         
         <!-- / Main column -->
         </div>
