@@ -125,7 +125,7 @@
                 </div>
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="SELL">
                     <div class="px-2">
-                        <i class="fa-solid fa-clock fa-2x"></i>
+                        <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
                     </div>
                     <div class="px-2">
                         <strong>The buyer paid you</strong>
