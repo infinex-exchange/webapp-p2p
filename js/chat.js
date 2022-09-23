@@ -1,8 +1,6 @@
 window.addEventListener('message', function(event) {
-    if(typeof event.data != 'object')
+    if(typeof event.data != 'object' || typeof(event.data.jid) == 'undefined')
         return;
-    
-    console.log(event.data);
     
     converse.initialize({
 		bosh_service_url: 'https://stream.sandbox.vayamos.cc/bosh/',
