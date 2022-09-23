@@ -217,7 +217,7 @@
         </div>
         
         <div class="row py-2">
-            <h3>Payment methods:</h3>
+            <h4>Payment methods:</h4>
         </div>
         
         <!-- / Main column -->
