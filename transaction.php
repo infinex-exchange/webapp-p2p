@@ -111,6 +111,7 @@
                         We will inform you when the buyer completes the transfer and marks the payment as complete.
                     </div>
                 </div>
+                
                 <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="BUY">
                     <div class="px-2">
                         <i class="fa-solid fa-clock fa-2x"></i>
@@ -131,6 +132,31 @@
                         <strong>The buyer paid you</strong>
                         <br>
                         Please check that you have received the full transfer amount and confirm that you have received it.
+                    </div>
+                </div>
+                
+                <div class="status alert alert-success d-flex align-items-center m-0 py-2" role="alert" data-status="COMPLETED" data-side="BUY">
+                    <div class="px-2">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Completed</strong>
+                        <br>
+                        The seller confirmed receipt of the transfer.
+                        <br>
+                        Cryptocurrency has been released to your account.
+                    </div>
+                </div>
+                <div class="status alert alert-success d-flex align-items-center m-0 py-2" role="alert" data-status="COMPLETED" data-side="SELL">
+                    <div class="px-2">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Completed</strong>
+                        <br>
+                        You confirmed receipt of payment from the buyer.
+                        <br>
+                        Cryptocurrency has been released to buyers account.
                     </div>
                 </div>
             </div>
