@@ -56,7 +56,7 @@
             <h3 class="transaction-header"></h3>
         </div>
         
-        <div class="row p-2">
+        <div class="row">
             <div class="col-6 col-lg-2 order-1 order-lg-1 secondary my-auto">
                 Fiat amount:
             </div>
@@ -87,7 +87,7 @@
             </div>
         </div>
         
-        <div class="row p-2">
+        <div class="row p-4">
             <div class="col-12">
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
