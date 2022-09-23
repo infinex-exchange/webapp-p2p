@@ -121,8 +121,6 @@
                         You marked the payment as complete.
                         <br>
                         Now the seller has to confirm that they have received your transfer.
-                        <br>
-                        Then you will receive a crypto.
                     </div>
                 </div>
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="SELL">
@@ -132,7 +130,7 @@
                     <div class="px-2">
                         <strong>The buyer paid you</strong>
                         <br>
-                        Please check that you have received the full transfer amount and confirm that you have received it
+                        Please check that you have received the full transfer amount and confirm that you have received it.
                     </div>
                 </div>
             </div>
