@@ -2,7 +2,7 @@ window.addEventListener('message', function(event) {
     if(typeof event.data != 'object')
         return;
     
-    alert(event.data);
+    console.log(event.data);
     
     converse.initialize({
 		bosh_service_url: 'https://stream.sandbox.vayamos.cc/bosh/',
