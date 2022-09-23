@@ -26,6 +26,9 @@ $(document).on('authChecked', function() {
                 $('.amount-crypto').html(data.transaction.amount_crypto);
                 $('.fiatid').html(data.transaction.fiatid);
                 $('.price').html(data.transaction.price);
+                
+                $('.status').hide();
+                $('.status[data-status="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]');
 
                 $(document).trigger('renderingStage');
             }
