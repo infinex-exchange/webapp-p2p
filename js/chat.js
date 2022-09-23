@@ -13,5 +13,5 @@ window.addEventListener('message', function(event) {
 		auto_join_private_chats: [ event.data.opposite_jid ]
 	});
     
-    document.getElementByClassName('chat-head')[0].remove();
+    document.getElementsByClassName('chat-head')[0].remove();
 }, false);
