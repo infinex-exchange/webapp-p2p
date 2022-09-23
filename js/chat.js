@@ -1,7 +1,3 @@
-window.addEventListener("converse-loaded", function(event) {
-    document.getElementsByClassName('chat-head')[0].remove();
-});
-
 window.addEventListener('message', function(event) {
     if(typeof event.data != 'object' || typeof(event.data.jid) == 'undefined')
         return;
