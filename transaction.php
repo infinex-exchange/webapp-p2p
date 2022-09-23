@@ -111,6 +111,30 @@
                         We will inform you when the buyer completes the transfer and marks the payment as complete.
                     </div>
                 </div>
+                <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="BUY">
+                    <div class="px-2">
+                        <i class="fa-solid fa-clock fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Waiting for confirmation</strong>
+                        <br>
+                        You marked the payment as complete.
+                        <br>
+                        Now the seller has to confirm that they have received your transfer.
+                        <br>
+                        Then you will receive a crypto.
+                    </div>
+                </div>
+                <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="SELL">
+                    <div class="px-2">
+                        <i class="fa-solid fa-clock fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>The buyer paid you</strong>
+                        <br>
+                        Please check that you have received the full transfer amount and confirm that you have received it
+                    </div>
+                </div>
             </div>
         </div>  
         
