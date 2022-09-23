@@ -184,6 +184,33 @@
                         Cryptocurrency has been returned to your account.
                     </div>
                 </div>
+                
+                <div class="status alert alert-warning d-flex align-items-center m-0 py-2" role="alert" data-status="DISPUTE" data-side="BUY">
+                    <div class="px-2">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Transaction dispute</strong>
+                        <br>
+                        You marked the payment as complete, but the seller did not receive it.
+                        <br>
+                        Use chat to come to an agreement with the seller.
+                        <br>
+                        If you do not cancel the transaction within 24 hours, or the seller does not confirm receipt of payment, this transaction will be investigated by the Vayamos administrators.
+                    </div>
+                </div>
+                <div class="status alert alert-warning d-flex align-items-center m-0 py-2" role="alert" data-status="DISPUTE" data-side="SELL">
+                    <div class="px-2">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Transaction dispute</strong>
+                        <br>
+                        The buyer marked the transaction as paid, but you didn't confirm it.
+                        <br>
+                        If you do not confirm receipt of payment within 24 hours and the buyer does not cancel the transaction, this transaction will be investigated by the Vayamos administrators.
+                    </div>
+                </div>
             </div>
         </div>  
         
