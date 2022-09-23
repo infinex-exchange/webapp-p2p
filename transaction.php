@@ -61,7 +61,7 @@
                 Fiat amount:
             </div>
             
-            <div class="col-6 col-lg-2">
+            <div class="col-6 col-lg-2 text-end text-lg-start">
                 <span class="amount-fiat"></span>
                 <span class="fiatid"></span>
             </div>
@@ -70,7 +70,7 @@
                 Price:
             </div>
             
-            <div class="col-6 col-lg-2">
+            <div class="col-6 col-lg-2 text-end text-lg-start">
                 <span class="price"></span>
                 <span class="fiatid"></span>
             </div>
@@ -79,7 +79,7 @@
                 Crypto amount:
             </div>
             
-            <div class="col-6 col-lg-2">
+            <div class="col-6 col-lg-2 text-end text-lg-start">
                 <span class="amount-crypto"></span>
                 <span class="assetid"></span>
             </div>
