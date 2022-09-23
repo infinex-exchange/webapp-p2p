@@ -57,29 +57,31 @@
         </div>
         
         <div class="row p-2">
-            <div class="col-6 col-lg-2">
+            <div class="col-6 col-lg-2 order-1 order-lg-1">
                 Fiat amount:
             </div>
             
-            <div class="col-6 col-lg-2 text-end text-lg-start">
+            <div class="col-6 col-lg-2 order-3 order-lg-2">
+                Price:
+            </div>
+            
+            <div class="col-6 col-lg-2 order-5 order-lg-3">
+                Crypto amount:
+            </div>
+            
+            <div class="col-6 d-none d-lg-block order-lg-4"></div>
+            
+            <div class="col-6 col-lg-2 text-end text-lg-start order-2 order-lg-5">
                 <span class="amount-fiat"></span>
                 <span class="fiatid"></span>
             </div>
             
-            <div class="col-6 col-lg-2">
-                Price:
-            </div>
-            
-            <div class="col-6 col-lg-2 text-end text-lg-start">
+            <div class="col-6 col-lg-2 text-end text-lg-start order-4 order-lg-6">
                 <span class="price"></span>
                 <span class="fiatid"></span>
             </div>
             
-            <div class="col-6 col-lg-2">
-                Crypto amount:
-            </div>
-            
-            <div class="col-6 col-lg-2 text-end text-lg-start">
+            <div class="col-6 col-lg-2 text-end text-lg-start order-6 order-lg-7">
                 <span class="amount-crypto"></span>
                 <span class="assetid"></span>
             </div>
