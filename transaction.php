@@ -221,6 +221,11 @@
             <h4>Payment methods:</h4>
         </div>
         
+        <div class="row">
+            <div id="fpm-instances-data" class="col-12">
+            </div>
+        </div>
+        
         <!-- / Main column -->
         </div>
         </div>
