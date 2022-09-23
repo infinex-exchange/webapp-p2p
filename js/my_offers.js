@@ -43,7 +43,7 @@ function renderMyOffer(offer, fpms) {
             <div class="col-2 pe-0 my-auto text-center">
                
                 <div class="pretty p-switch p-bigger">
-                    <input type="checkbox" class="active-checkbox" id="active-checkbox-${offer.offerid}"
+                    <input type="checkbox" checked="${offer.active}" class="active-checkbox" id="active-checkbox-${offer.offerid}"
                      onChange="updateOfferActive(${offer.offerid})">
                     <div class="state p-primary">
                         <label for="active-checkbox-${offer.offerid}">
