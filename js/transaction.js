@@ -20,11 +20,12 @@ $(document).on('authChecked', function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                /*$.each(data.transactions, function(k, v) {
-                    thisAS.append(renderTransaction(v));
-                });*/
-                
-                console.log(data);
+                $('.transaction-header').html(data.transaction.side + ' ' + data.transaction.assetid);
+                $('.amount-fiat').html(data.transaction.amount_fiat);
+                $('.assetid').html(data.transaction.assetid);
+                $('.amount-crypto').html(data.transaction.amount_crypto);
+                $('.fiatid').html(data.transaction.fiatid);
+                $('.price').html(data.transaction.price);
 
                 $(document).trigger('renderingStage');
             }

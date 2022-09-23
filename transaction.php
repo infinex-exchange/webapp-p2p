@@ -52,7 +52,38 @@
         <div class="row m-0">
         <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="transaction">
             
-        Main column    
+        <div class="row p-2">
+            <h3 class="transaction-header"></h3>
+        </div>
+        
+        <div class="row p-2">
+            <div class="col-6 col-lg-2">
+                Fiat amount:
+            </div>
+            
+            <div class="col-6 col-lg-2">
+                <span class="amount-fiat"></span>
+                <span class="fiatid"></span>
+            </div>
+            
+            <div class="col-6 col-lg-2">
+                Price:
+            </div>
+            
+            <div class="col-6 col-lg-2">
+                <span class="price"></span>
+                <span class="fiatid"></span>
+            </div>
+            
+            <div class="col-6 col-lg-2">
+                Crypto amount:
+            </div>
+            
+            <div class="col-6 col-lg-2">
+                <span class="amount-crypto"></span>
+                <span class="assetid"></span>
+            </div>
+        </div>  
         
         <!-- / Main column -->
         </div>
@@ -62,9 +93,11 @@
         <!-- Right column -->
         <div class="col-12 col-lg-4 p-0 ui-column">
         <div class="row m-0">
-        <div class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
+        <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
-        Chat column
+        <div id="chat-header" class="row p-2">
+            <h3>Chat</h3>
+        </div>
         
         <!-- / Right column -->
         </div>
