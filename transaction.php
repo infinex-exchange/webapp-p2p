@@ -159,6 +159,31 @@
                         Cryptocurrency has been released to buyers account.
                     </div>
                 </div>
+                
+                <div class="status alert alert-danger d-flex align-items-center m-0 py-2" role="alert" data-status="CANCELED" data-side="BUY">
+                    <div class="px-2">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Canceled</strong>
+                        <br>
+                        You did not make the transfer on time.
+                        <br>
+                        Cryptocurrency has been returned to the seller.
+                    </div>
+                </div>
+                <div class="status alert alert-danger d-flex align-items-center m-0 py-2" role="alert" data-status="CANCELED" data-side="SELL">
+                    <div class="px-2">
+                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                    </div>
+                    <div class="px-2">
+                        <strong>Canceled</strong>
+                        <br>
+                        The buyer did not pay you on time.
+                        <br>
+                        Cryptocurrency has been returned to your account.
+                    </div>
+                </div>
             </div>
         </div>  
         
