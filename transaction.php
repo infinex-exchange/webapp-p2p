@@ -4,6 +4,7 @@
         <?php include(__DIR__.'/../../templates/head.php'); ?>
         <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
         <?php include(__DIR__.'/imports/rateit.html'); ?>
+        <?php include(__DIR__.'/imports/vertical_tabs.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Vayamos P2P</title>
     </head>
