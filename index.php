@@ -18,9 +18,6 @@
             <?php include(__DIR__.'/../../templates/navbar.php'); ?>
         </div>
         
-        <!-- Mobile navbar -->
-        <?php include(__DIR__.'/templates/mobile_navbar.php'); ?>
-        
         <!-- Root container -->
         <div class="container-fluid container-1500 p-0">
         <div class="row m-0">
@@ -242,6 +239,9 @@
         <script src="/p2p/js/modal_take.js?<?php echo filemtime(__DIR__.'/js/modal_take.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
+        
+        <!-- Mobile navbar -->
+        <?php include(__DIR__.'/templates/mobile_navbar.php'); ?>
     
     </body>
 </html>

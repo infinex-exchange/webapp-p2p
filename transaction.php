@@ -17,32 +17,6 @@
             <?php include(__DIR__.'/../../templates/navbar.php'); ?>
         </div>
         
-        <!-- Mobile navbar -->
-        <nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
-            <ul class="navbar-nav mx-auto text-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="/p2p">
-                        <i class="fa-solid fa-arrow-left"></i><br>
-                        Back
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav mx-auto text-center">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#_" data-ui-card-target="transaction">
-                        <i class="fa-solid fa-file-invoice-dollar"></i><br>
-                        Transaction
-                    </a>
-                </li>
-                <li class="nav-item"">
-                    <a class="nav-link" href="#_" data-ui-card-target="chat">
-                        <i class="fa-solid fa-comments"></i><br>
-                        Chat
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        
         <!-- Root container -->
         <div id="root" class="user-only container-fluid container-1500 p-0">
         <div class="row m-0">
@@ -277,6 +251,33 @@
         <script src="/p2p/js/transaction.js?<?php echo filemtime(__DIR__.'/js/transaction.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
+        
+        <!-- Mobile navbar -->
+        <nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/p2p">
+                        <i class="fa-solid fa-arrow-left"></i><br>
+                        Back
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#_" data-ui-card-target="transaction">
+                        <i class="fa-solid fa-file-invoice-dollar"></i><br>
+                        Transaction
+                    </a>
+                </li>
+                <li class="nav-item"">
+                    <a class="nav-link" href="#_" data-ui-card-target="chat">
+                        <i class="fa-solid fa-comments"></i><br>
+                        Chat
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div style="height: 53px; margin-bottom: min(10px, env(safe-area-inset-bottom, 0));" class="d-block d-lg-none"></div>
     
     </body>
 </html>
