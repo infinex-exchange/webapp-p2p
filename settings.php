@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <?php include(__DIR__.'/../../templates/head.php'); ?>
+        <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Settings | Vayamos P2P</title>
     </head>
@@ -24,30 +25,31 @@
         <div class="col-12 col-lg-8 p-0 ui-card ui-column">
             
             <div class="row">
+                <h3>Your feedback</h3>
+            </div>
+            
+            <div class="row">
+                <div class="col-auto mx-auto" id="rateit-wrapper">
+                </div>
+            </div>
+            
+            <div class="row pt-4 pb-2">
                 <h3>P2P nickname</h3>
             </div>
             
             <div class="row">
                 <div class="col-12 col-md-6">
                     <form id="nickname-form" class="d-grid gap-3">
-                        <div>
-                            <span class="secondary">Current nickname:</span>
-                            <span class="float-end" id="nickname-old"></span>
-                        </div>
                         <div class="form-group">
-                            <label for="nickname-new">New nickname:</label>
-                            <input type="text" class="form-control" id="nickname-new">
-                            <small id="help-nickname-new" class="form-text" style="display: none">
+                            <label for="nickname">Set your nickname:</label>
+                            <input type="text" class="form-control" id="nickname">
+                            <small id="help-nickname" class="form-text" style="display: none">
                                 One lowercase, uppercase letters and digits. Can't begin with "Client" and "VPay".
                             </small>
                         </div>
-                        <button type="submit" class="btn btn-primary">Change</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-            </div>
-            
-            <div class="row pt-4 pb-2">
-                <h3>Your feedback</h3>
             </div>
         
         <!-- / Main column -->
