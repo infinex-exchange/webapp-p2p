@@ -12,11 +12,11 @@ function renderFpmInstance(fpminsta, fpms) {
     }
     
     $('#fpmi-tabs').append(`
-        <li class="nav-item" role="presentation">
-            <div id="fpmi-${len}-tab" class="nav-link tab-clickable ${active}" role="tab" data-bs-toggle="tab"
-             data-bs-target="#fpmi-${len}" aria-controls="fpmi-${len}" aria-selected="${ariaSel}">
-                ${fpms[fpminsta.fpmid].name}
-            </div>
+        <li class="nav-item">
+            <a href="#_">
+                <img width="24px" height="24px" src="${fpms[fpminsta.fpmid].icon_url}">
+                <span class="d-none d-lg-inline">${fpms[fpminsta.fpmid].name}</span>
+            </a>
         </li>
     `);
     

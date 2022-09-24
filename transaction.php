@@ -221,11 +221,11 @@
         </div>
         
         <div class="row vtabs">
-            <div class="col-md-3">
-                <ul id="fpmi-tabs" class="nav nav-tabs left-tabs" role="tablist">
+            <div class="col-1 col-lg-3 p-0">
+                <ul class="nav flex-column">
                 </ul>
             </div>
-            <div class="col-md-9">
+            <div class="col-11 col-md-9">
                 <div id="fpmi-data" class="tab-content accordion">
                 </div>
             </div>
