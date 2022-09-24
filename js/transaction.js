@@ -22,7 +22,7 @@ function renderFpmInstance(fpminsta, fpms) {
     `);
     
     $('#fpmi-data').append(`
-        <div class="fpmi-item" data-id="${id}">
+        <div class="fpmi-item d-none" data-id="${id}">
             Test ${fpminsta.fpmid}<br>
             Test ${fpminsta.fpmid}<br>
             Test ${fpminsta.fpmid}<br>
