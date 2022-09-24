@@ -27,6 +27,8 @@ $(document).on('authChecked', function() {
                     ispreset: true,
                     mode: 'font'
                 });
+                $('#rating-perc').html(data.rating);
+                $('#rating-tcount').html(data.tcount);
                 
                 $(document).trigger('renderingStage');
             } else {

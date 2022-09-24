@@ -32,6 +32,13 @@
                 <div class="col-auto mx-auto" id="rateit-wrapper">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-auto mx-auto big secondary">
+                    <span id="rating-perc"></span>% of users recommend trading with you
+                    <br>
+                    (<span id="rating-tcount"></span>transactions in total) 
+                </div>
+            </div>
             
             <div class="row pt-4 pb-2">
                 <h3>P2P nickname</h3>
