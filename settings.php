@@ -45,7 +45,7 @@
             
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <form id="nickname-form" class="d-grid gap-3">
+                    <form id="form-nickname" class="d-grid gap-3">
                         <div class="form-group">
                             <label for="nickname">Set your nickname:</label>
                             <input type="text" class="form-control" id="nickname">

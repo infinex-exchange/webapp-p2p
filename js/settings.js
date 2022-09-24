@@ -7,6 +7,39 @@ $(document).ready(function() {
         else
             $('#help-nickname').show();
     });
+    
+    $('#form-nickname').submit(function(event) {
+        event.preventDefault();
+        
+        var nickname = $('#nickname').val();
+        
+        if(!validateP2PNickname(nickname)) {
+            msgBox('Fill the form correctly');
+            return;
+        }
+        
+        $.ajax({
+            url: config.apiUrl + '/p2p/account/change_nickname',
+            type: 'POST',
+            data: JSON.stringify({
+                api_key: window.apiKey,
+                nickname: nickname
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                msgBox('Your nickname was changed');
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
+    });
 });
 
 $(document).on('authChecked', function() {
