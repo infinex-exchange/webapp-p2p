@@ -131,6 +131,6 @@
     border-right: 2px solid var(--color-input);
 }
 
-.ver-tabs-item > .active {
+.ver-tabs-item:has(.active) {
     background-color: var(--color-input);
 }
