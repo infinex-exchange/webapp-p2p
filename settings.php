@@ -58,7 +58,7 @@
         <script src="/p2p/js/settings.js?<?php echo filemtime(__DIR__.'/js/settings.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
-        <?php include('templates/mobile_nav.php'); ?>
+        <?php include('templates/mobile_navbar.php'); ?>
     
     </body>
 </html>
