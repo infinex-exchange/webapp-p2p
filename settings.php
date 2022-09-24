@@ -30,8 +30,10 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <form id="nickname-form" class="d-grid gap-3">
-                        <span class="secondary">Current nickname:</span>
-                        <span class="float-end" id="nickname-old"></span>
+                        <div>
+                            <span class="secondary">Current nickname:</span>
+                            <span class="float-end" id="nickname-old"></span>
+                        </div>
                         <div class="form-group">
                             <label for="nickname-new">New nickname:</label>
                             <input type="text" class="form-control" id="nickname-new">
