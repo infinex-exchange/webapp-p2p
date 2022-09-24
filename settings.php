@@ -50,7 +50,7 @@
                             <label for="nickname">Set your nickname:</label>
                             <input type="text" class="form-control" id="nickname">
                             <small id="help-nickname" class="form-text" style="display: none">
-                                One lowercase, uppercase letters and digits. Can't begin with "Client" and "VPay".
+                                Only lowercase, uppercase letters and digits. Can't begin with "Client" and "VPay".
                             </small>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
