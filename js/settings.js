@@ -16,7 +16,7 @@ $(document).on('authChecked', function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                $('.nickname').val(data.nickname);
+                $('#nickname').val(data.nickname);
                 
                 var ratingStars = Math.round(data.rating/10)/2; // num / 10 = num / 20 * 2        
                 $('#rateit-wrapper').html(`
