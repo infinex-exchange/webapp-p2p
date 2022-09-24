@@ -4,3 +4,5 @@ RewriteEngine on
 
 RewriteRule ^transaction/([^/]+)/?$ transaction.php [L]
 RewriteRule ^chat/?$ chat.php [L]
+RewriteRule ^settings/?$ settings.php [L]
+RewriteRule ^settings/payment-methods/?$ settings-fpmi.php [L]

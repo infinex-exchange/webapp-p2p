@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
     
     $('#select-fpm-manage').click(function() {
-        window.location.href = '/p2p/settings/payment_methods';
+        window.location.href = '/p2p/settings/payment-methods';
     });
 });
 
