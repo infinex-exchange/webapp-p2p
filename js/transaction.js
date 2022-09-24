@@ -62,7 +62,7 @@ $(document).on('authChecked', function() {
                 $('.price').html(data.transaction.price);
                 
                 $('.status').addClass('d-none');
-                $('.status[data-status="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
+                $('.status[data-status~="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
                 
                 $.each(data.fpm_instances, function(k, v) {
                     renderFpmInstance(v, data.fpms);
