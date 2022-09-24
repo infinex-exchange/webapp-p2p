@@ -23,7 +23,7 @@
         <!-- Main column -->
         <div class="col-12 col-lg-8 p-0 ui-card ui-column">
             
-            <div class="row p-2">
+            <div class="row">
                 <h3>P2P nickname</h3>
             </div>
             
