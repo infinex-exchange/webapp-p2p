@@ -12,8 +12,8 @@ function renderFpmInstance(fpminsta, fpms) {
     }
     
     $('#fpmi-tabs').append(`
-        <li class="nav-item">
-            <a href="#_">
+        <li class="nav-item hoverable py-2">
+            <a class="nav-link" href="#_">
                 <img width="24px" height="24px" src="${fpms[fpminsta.fpmid].icon_url}">
                 <span class="d-none d-lg-inline">${fpms[fpminsta.fpmid].name}</span>
             </a>
