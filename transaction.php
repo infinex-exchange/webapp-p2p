@@ -220,14 +220,12 @@
             <h4>Payment methods:</h4>
         </div>
         
-        <div class="row vtabs">
+        <div class="row">
             <div class="col-2 col-lg-3 text-center text-lg-start">
                 <ul id="fpmi-tabs" class="nav flex-column ver-tabs">
                 </ul>
             </div>
-            <div class="col-10 col-md-9">
-                <div id="fpmi-data" class="tab-content accordion">
-                </div>
+            <div id="fpmi-data" class="col-10 col-md-9">
             </div>
         </div>
         
