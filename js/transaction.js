@@ -1,5 +1,5 @@
 function switchFpmiTab(id) {
-    var navLinks = $('.ver-tabs-item.nav-link');
+    var navLinks = $('.ver-tabs-item .nav-link');
     console.log(navLinks);
     var items = $('.fpmi-item')
     console.log(items); 
