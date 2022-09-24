@@ -222,7 +222,7 @@
         
         <div class="row vtabs">
             <div class="col-1 col-lg-3">
-                <ul id="fpmi-tabs" class="nav flex-column">
+                <ul id="fpmi-tabs" class="nav flex-column ver-tabs">
                 </ul>
             </div>
             <div class="col-11 col-md-9">

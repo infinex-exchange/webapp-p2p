@@ -124,3 +124,13 @@
     background-color: var(--color-bg-light);
     color: var(--color-ultra);
 }
+
+/* Vertical tabs for fpmi list */
+
+.ver-tabs {
+    border-right: 2px solid var(--color-input);
+}
+
+.ver-tabs-item.active {
+    background-color: var(--color-input);
+}
