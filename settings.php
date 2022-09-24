@@ -31,12 +31,10 @@
             <div class="row">
                 <div class="col-auto mx-auto" id="rateit-wrapper">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-auto mx-auto big secondary">
-                    <span id="rating-perc"></span>% of users recommend trading with you
+                <div class="col-12 mx-auto text-center big secondary">
+                    <strong><span id="rating-perc"></span>%</strong> of users recommend trading with you
                     <br>
-                    (<span id="rating-tcount"></span>transactions in total) 
+                    (<strong id="rating-tcount"></strong> transactions in total) 
                 </div>
             </div>
             
