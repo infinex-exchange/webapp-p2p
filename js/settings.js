@@ -20,7 +20,7 @@ $(document).on('authChecked', function() {
                 
                 var ratingStars = Math.round(data.rating/10)/2; // num / 10 = num / 20 * 2        
                 $('#rateit-wrapper').html(`
-                    <div class="rateit" data-rateit-value="${ratingStars}" style="font-size: 32px"></div>
+                    <div class="rateit" data-rateit-value="${ratingStars}" style="font-size: 48px"></div>
                 `);
                 $('.rateit').rateit({
                     readonly: true,
