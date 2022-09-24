@@ -229,6 +229,19 @@
             </div>
         </div>
         
+        <div class="row py-2">
+            <div class="col-12">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa-solid fa-check"></i>
+                    Confirm that transfer was made
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <i class="fa-solid fa-xmark"></i>
+                    Cancel P2P transaction
+                </button>
+            </div>
+        </div>
+        
         <!-- / Main column -->
         </div>
         </div>
