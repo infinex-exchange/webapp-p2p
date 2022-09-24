@@ -1,19 +1,20 @@
+function switchFpmiTab(id) {
+    var navLinks = $('.ver-tabs-item.nav-link');
+    var items = $('.fpmi-item') 
+    
+    navLinks.removeClass('active');
+    items.addClass('d-none');
+    
+    navLinks.find('[data-id="' + id + '"]').addClass('active');
+    items.find('[data-id="' + id + '"]').removeClass('d-none');
+}
+
 function renderFpmInstance(fpminsta, fpms) {
-    var len = $('#fpmi-tabs').length;
-    
-    var active = 'active';
-    var show = 'show';
-    var ariaSel = 'true';
-    
-    if(len) {
-        active = '';
-        show = '';
-        ariaSel = 'false';
-    }
+    var id = $('#fpmi-tabs').length;
     
     $('#fpmi-tabs').append(`
         <li class="ver-tabs-item nav-item hoverable py-1">
-            <a class="nav-link" href="#_">
+            <a class="nav-link" href="#_" data-id="${id}" onClick="switchFpmiTab(${id})">
                 <img width="24px" height="24px" src="${fpms[fpminsta.fpmid].icon_url}">
                 <span class="d-none d-lg-inline">${fpms[fpminsta.fpmid].name}</span>
             </a>
@@ -21,23 +22,17 @@ function renderFpmInstance(fpminsta, fpms) {
     `);
     
     $('#fpmi-data').append(`
-        <div id="fpmi-${len}" class="tab-pane fade ${show} ${active} accordion-item" role="tabpanel">
-            <div class="accordion-header" role="tab">
-                <button class="accordion-button collapsed" type="button" role="button" data-bs-toggle="collapse"
-                 data-bs-target="#fpmi-${len}-art" aria-expanded="${ariaSel}" aria-controls="fpmi-${len}-art">
-                    ${fpms[fpminsta.fpmid].name}
-                </button>
-            </div>
-            <div id="fpmi-${len}-art" class="accordion-body accordion-collapse collapse"
-             data-bs-parent="#fpmi-data" aria-labelledby="fpmi-${len}-tab">
-                Test ${fpminsta.fpmid}<br>
-                Test ${fpminsta.fpmid}<br>
-                Test ${fpminsta.fpmid}<br>
-                Test ${fpminsta.fpmid}<br>
-                Test ${fpminsta.fpmid}<br>                
-            </div>
+        <div class="fpmi-item" data-id="${id}">
+            Test ${fpminsta.fpmid}<br>
+            Test ${fpminsta.fpmid}<br>
+            Test ${fpminsta.fpmid}<br>
+            Test ${fpminsta.fpmid}<br>
+            Test ${fpminsta.fpmid}<br>                
         </div>
     `);
+    
+    if(id == 0)
+        switchFpmiTab(0);
 }
 
 $(document).ready(function() {
