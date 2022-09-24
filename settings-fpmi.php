@@ -29,7 +29,7 @@
             
             <div class="row p-2">
                 <div class="col-auto my-auto">
-                    <button type="button" class="btn btn-primary btn-sm" onClick="showAddAKPrompt()">New API key</a>
+                    <button type="button" class="btn btn-primary btn-sm" onClick="showAddFpmiPrompt()">Add payment method</a>
                 </div>
             </div>
             
@@ -45,7 +45,7 @@
                 </div>
             </div>
             
-            <div id="api-keys-data">
+            <div id="fpmi-data">
             </div>
         
         <!-- / Main column -->
