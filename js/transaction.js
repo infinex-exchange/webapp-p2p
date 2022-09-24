@@ -1,14 +1,9 @@
-function switchFpmiTab(id) {
-    var navLinks = $('.ver-tabs-item .nav-link');
-    console.log(navLinks);
-    var items = $('.fpmi-item')
-    console.log(items); 
+function switchFpmiTab(id) {  
+    $('.ver-tabs-item .nav-link').removeClass('active');
+    $('.fpmi-item').addClass('d-none');
     
-    navLinks.removeClass('active');
-    items.addClass('d-none');
-    
-    navLinks.find('[data-id="' + id + '"]').addClass('active');
-    items.find('[data-id="' + id + '"]').removeClass('d-none');
+    $('.ver-tabs-item .nav-link[data-id="' + id + '"]').addClass('active');
+    $('.fpmi-item[data-id="' + id + '"]').removeClass('d-none');
 }
 
 function renderFpmInstance(fpminsta, fpms) {
