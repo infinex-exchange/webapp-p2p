@@ -30,7 +30,7 @@
             </div>
             
             <div class="row">
-                <div class="col-auto mx-auto" id="rateit-wrapper">
+                <div class="col-auto mx-auto py-1" id="rateit-wrapper">
                 </div>
                 <div class="col-12 mx-auto text-center big secondary">
                     <strong><span id="rating-perc"></span>%</strong> of users recommend trading with you
