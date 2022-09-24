@@ -231,11 +231,11 @@
         
         <div class="row py-2">
             <div class="col-12">
-                <button type="button" class="btn btn-primary btn-block">
+                <button type="button" class="btn btn-primary d-block">
                     <i class="fa-solid fa-check"></i>
                     Confirm that transfer was made
                 </button>
-                <button type="button" class="btn btn-danger btn-block">
+                <button type="button" class="btn btn-danger d-block">
                     <i class="fa-solid fa-xmark"></i>
                     Cancel P2P transaction
                 </button>
