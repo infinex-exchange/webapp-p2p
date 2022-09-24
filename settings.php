@@ -46,7 +46,7 @@
                 </div>
             </div>
             
-            <div class="row p-2">
+            <div class="row pt-4 pb-2">
                 <h3>Your feedback</h3>
             </div>
         
