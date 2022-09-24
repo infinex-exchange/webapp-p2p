@@ -1,5 +1,12 @@
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
+    
+    $('#nickname').on('input', function() {
+        if(validateP2PNickname($(this).val()))
+            $('#help-nickname').hide();
+        else
+            $('#help-nickname').show();
+    });
 });
 
 $(document).on('authChecked', function() {
