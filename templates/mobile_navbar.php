@@ -26,11 +26,18 @@
                 My offers
             </a>
         </li>
-        <li class="nav-item user-only">
-            <a class="nav-link" href="/p2p/settings">
+        <li class="nav-item user-only dropup">
+            <a href="#_" class="nav-link dropdown-toggle auto-active-group" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-gear"></i><br>
-                P2P settings
+                Settings
             </a>
-        </li>
+            <div class="dropdown-menu">
+                <ul class="nav flex-column">
+                    <?php include('menu_settings.html'); ?>
+                </ul>
+            </div>
+        </li> 
     </ul>
 </nav>
+
+<div style="height: 53px; margin-bottom: min(10px, env(safe-area-inset-bottom, 0));" class="d-block d-lg-none"></div>
