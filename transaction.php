@@ -248,7 +248,6 @@
                     Cancel P2P transaction
                 </button>
             </div>
-            </div>
         </div>
         
         <!-- / Main column -->
