@@ -1,3 +1,45 @@
+function renderFpmInstance(fpminsta, fpms) {
+    var len = $('#fpmi-tabs').length;
+    
+    var active = 'active';
+    var show = 'show';
+    var ariaSel = 'true';
+    
+    if(len) {
+        active = '';
+        show = '';
+        ariaSel = 'false';
+    }
+    
+    $('#fpmi-tabs').append(`
+        <li class="nav-item" role="presentation">
+            <div id="fpmi-${len}-tab" class="nav-link tab-clickable ${active}" role="tab" data-bs-toggle="tab"
+             data-bs-target="#fpmi-${len}" aria-controls="fpmi-${len}" aria-selected="${ariaSel}">
+                ${fpms[fpminsta.fpmid].name}
+            </div>
+        </li>
+    `);
+    
+    $('#fpmi-data').append(`
+        <div id="fpmi-${len}" class="tab-pane fade ${show} ${active} accordion-item" role="tabpanel">
+            <div class="accordion-header" role="tab">
+                <button class="accordion-button collapsed" type="button" role="button" data-bs-toggle="collapse"
+                 data-bs-target="#fpmi-${len}-art" aria-expanded="${ariaSel}" aria-controls="fpmi-${len}-art">
+                    ${fpms[fpminsta.fpmid].name}
+                </button>
+            </div>
+            <div id="fpmi-${len}-art" class="accordion-body accordion-collapse collapse"
+             data-bs-parent="#fpmi-data" aria-labelledby="fpmi-${len}-tab">
+                Test ${fpminsta.fpmid}<br>
+                Test ${fpminsta.fpmid}<br>
+                Test ${fpminsta.fpmid}<br>
+                Test ${fpminsta.fpmid}<br>
+                Test ${fpminsta.fpmid}<br>                
+            </div>
+        </div>
+    `);
+}
+
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
 });
@@ -29,6 +71,10 @@ $(document).on('authChecked', function() {
                 
                 $('.status').addClass('d-none');
                 $('.status[data-status="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
+                
+                $.each(data.fpm_instances, function(k, v) {
+                    renderFpmInstance(v, data.fpms);
+                });
 
                 $(document).trigger('renderingStage');
             }

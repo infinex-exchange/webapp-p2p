@@ -221,8 +221,14 @@
             <h4>Payment methods:</h4>
         </div>
         
-        <div class="row">
-            <div id="fpm-instances-data" class="col-12">
+        <div class="row vtabs">
+            <div class="col-md-3">
+                <ul id="fpmi-tabs" class="nav nav-tabs left-tabs" role="tablist">
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div id="fpmi-data" class="tab-content accordion">
+                </div>
             </div>
         </div>
         
