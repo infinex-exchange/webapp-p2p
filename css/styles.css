@@ -128,9 +128,9 @@
 /* Vertical tabs for fpmi list */
 
 .ver-tabs {
-    border-right: 2px solid var(--color-input);
+    border-right: 2px solid var(--color-border);
 }
 
 .ver-tabs-item:has(.active) {
-    background-color: var(--color-input);
+    background-color: var(--color-border);
 }
