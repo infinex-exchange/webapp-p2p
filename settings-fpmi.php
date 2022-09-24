@@ -24,7 +24,7 @@
         <div class="col-12 col-lg-8 p-0 ui-card ui-column">
             
             <div class="row p-2">
-                <h3>API keys</h3>
+                <h3>Manage payment methods</h3>
             </div>
             
             <div class="row p-2">

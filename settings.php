@@ -24,28 +24,28 @@
         <div class="col-12 col-lg-8 p-0 ui-card ui-column">
             
             <div class="row p-2">
-                <h3>API keys</h3>
+                <h3>P2P nickname</h3>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <form id="nickname-form" class="d-grid gap-3">
+                        <span class="secondary">Current nickname:</span>
+                        <span class="float-end" id="nickname-old"></span>
+                        <div class="form-group">
+                            <label for="nickname-new">New nickname:</label>
+                            <input type="text" class="form-control" id="nickname-new">
+                            <small id="help-nickname-new" class="form-text" style="display: none">
+                                One lowercase, uppercase letters and digits. Can't begin with "Client" and "VPay".
+                            </small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Change</button>
+                    </form>
+                </div>
             </div>
             
             <div class="row p-2">
-                <div class="col-auto my-auto">
-                    <button type="button" class="btn btn-primary btn-sm" onClick="showAddAKPrompt()">New API key</a>
-                </div>
-            </div>
-            
-            <div class="row p-2 d-none d-lg-flex secondary">
-                <div class="col-4">
-                <h5>Name</h5>
-                </div>
-                <div class="col-5">
-                <h5>API key</h5>
-                </div>
-                <div class="col-3">
-                <h5>Options</h5>
-                </div>
-            </div>
-            
-            <div id="api-keys-data">
+                <h3>Your feedback</h3>
             </div>
         
         <!-- / Main column -->
