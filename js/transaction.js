@@ -12,7 +12,7 @@ function switchFpmiTab(id) {
 }
 
 function renderFpmInstance(fpminsta, fpms) {
-    var id = $('#fpmi-tabs').length;
+    var id = $('.ver-tabs-item').length;
     
     $('#fpmi-tabs').append(`
         <li class="ver-tabs-item nav-item hoverable py-1">
