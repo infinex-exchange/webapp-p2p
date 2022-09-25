@@ -28,8 +28,31 @@ $(document).on('authChecked', function() {
     .done(function (data) {
         if(data.success) {
             $.each(data.fpm_instances, function(k, v) {
+	            var fieldsInnerHtml = '';
+	            
+	            $.each(v.fields, function(kk, vv) {
+	                fieldsInnerHtml += `
+	                    <h5 class="secondary">
+	                        ${data.fpms[v.fpmid].struct[kk]}:
+	                    </h5>
+	                    ${vv}
+	                    <br>
+	                `;
+	            });
+            
                 thisAS.append(`
-                    ${v.name}
+                    <div class="row p-2 fpmi-item hoverable separate">
+		                <div class="col-12 col-lg-3">
+			                ${v.name}
+		                </div>
+		                <div class="col-12 col-lg-3">
+		                    <img width="24px" height="24px" src="${data.fpms[v.fpmid].icon_url}">
+			                ${data.fpms[v.fpmid].name}
+		                </div>
+		                <div class="col-12 col-lg-6">
+			                ${fieldsInnerHtml}
+		                </div>
+		            </div>
                 `);
             });
             
