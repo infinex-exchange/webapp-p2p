@@ -1,17 +1,17 @@
-function switchFpmiTab(id) {  
+function switchFpmiTab(fpminstaid) {  
     $('.ver-tabs-item .nav-link').removeClass('active');
     $('.fpmi-item').addClass('d-none');
     
-    $('.ver-tabs-item .nav-link[data-id="' + id + '"]').addClass('active');
-    $('.fpmi-item[data-id="' + id + '"]').removeClass('d-none');
+    $('.ver-tabs-item .nav-link[data-fpminstaid="' + fpminstaid + '"]').addClass('active');
+    $('.fpmi-item[data-fpminstaid="' + fpminstaid + '"]').removeClass('d-none');
 }
 
-function renderFpmInstance(fpminsta, fpms) {
-    var id = $('.ver-tabs-item').length;
+function renderFpmInstance(fpminstaid, fpminsta, fpms) {
+    var len = $('.ver-tabs-item').length;
     
     $('#fpmi-tabs').append(`
         <li class="ver-tabs-item nav-item hoverable py-1">
-            <a class="nav-link" href="#_" data-id="${id}" onClick="switchFpmiTab(${id})">
+            <a class="nav-link" href="#_" data-fpminstaid="${fpminstaid}" onClick="switchFpmiTab(${fpminstaid})">
                 <img width="24px" height="24px" src="${fpms[fpminsta.fpmid].icon_url}">
                 <span class="d-none d-lg-inline">${fpms[fpminsta.fpmid].name}</span>
             </a>
@@ -19,7 +19,7 @@ function renderFpmInstance(fpminsta, fpms) {
     `);
     
     $('#fpmi-data').append(`
-        <div class="fpmi-item d-none" data-id="${id}">
+        <div class="fpmi-item d-none" data-fpminstaid="${fpminstaid}">
             Test ${fpminsta.fpmid}<br>
             Test ${fpminsta.fpmid}<br>
             Test ${fpminsta.fpmid}<br>
@@ -28,8 +28,8 @@ function renderFpmInstance(fpminsta, fpms) {
         </div>
     `);
     
-    if(id == 0)
-        switchFpmiTab(0);
+    if(len == 0)
+        switchFpmiTab(fpminstaid);
 }
 
 $(document).ready(function() {
@@ -65,7 +65,7 @@ $(document).on('authChecked', function() {
                 $('.status[data-status~="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
                 
                 $.each(data.fpm_instances, function(k, v) {
-                    renderFpmInstance(v, data.fpms);
+                    renderFpmInstance(k, v, data.fpms);
                 });
 
                 $(document).trigger('renderingStage');
