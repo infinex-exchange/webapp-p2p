@@ -13,13 +13,13 @@ function validateField(field) {
     var val = $(field).val();
     var re = new RegExp(window.currentStruct[key].regexp);
     
-    if((val == '' && window.currentStruct[key].required) || !val.match(re)) {
-        $('.ma-field-help[data-key="' + key + '"]').show();
-        return false;
+    if((val == '' && !window.currentStruct[key].required) || val.match(re)) {
+        $('.ma-field-help[data-key="' + key + '"]').hide();
+        return true;
     }
     
-    $('.ma-field-help[data-key="' + key + '"]').hide();
-    return true;
+    $('.ma-field-help[data-key="' + key + '"]').show();
+    return false;
 }
 
 $(document).ready(function() {
