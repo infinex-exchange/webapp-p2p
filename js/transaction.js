@@ -22,11 +22,26 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
 	            
     $.each(fpminsta.fields, function(kk, vv) {
         fieldsInnerHtml += `
-            <h5 class="secondary">
-                ${fpms[fpminsta.fpmid].struct[kk]}:
-            </h5>
-            ${vv}
-            <br>
+        
+	        <div class="row">
+                <div class="col-12">
+                    <span class="secondary">
+	                    ${fpms[fpminsta.fpmid].struct[kk]}:
+                    </span>
+                </div>
+            </div>
+            <div class="row flex-nowrap mb-2">
+                <div class="col-10 col-lg-auto my-auto">
+                    <h4 class="wrap" id="fieldval-${fpminstaid}-${kk}">
+                        ${vv}
+                    </h4>
+                </div>
+                <div class="col-auto my-auto">
+                    <a href="#_" class="secondary copy-button" data-copy="#fieldval-${fpminstaid}-${kk}">
+                        <i class="fa-solid fa-copy fa-xl"></i>
+                    </a>
+                </div>
+            </div>
         `;
     });
     
