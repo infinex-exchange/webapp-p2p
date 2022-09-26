@@ -32,9 +32,7 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
             </div>
             <div class="row flex-nowrap mb-2">
                 <div class="col-10 col-lg-auto my-auto">
-                    <h4 class="wrap" id="fieldval-${fpminstaid}-${kk}">
-                        ${vv}
-                    </h4>
+                    <h4 class="wrap" id="fieldval-${fpminstaid}-${kk}">${vv}</h4>
                 </div>
                 <div class="col-auto my-auto">
                     <a href="#_" class="secondary copy-button" data-copy="#fieldval-${fpminstaid}-${kk}" onClick="copyButton(this)">
