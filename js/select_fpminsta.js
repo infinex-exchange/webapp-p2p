@@ -71,8 +71,7 @@ function initSelectFpmInsta(endpoint = '/p2p/fpm_instances') {
                                 </div>
                                 <div class="col my-auto">
                                     <h5 class="secondary">${v.name}</h5>
-                                    <br>
-                                    <i>${fpm.name}</i>
+                                    ${fpm.name}
                                 </div>
                             </div>
                         `);
