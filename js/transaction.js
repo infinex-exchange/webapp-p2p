@@ -37,7 +37,7 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
                     </h4>
                 </div>
                 <div class="col-auto my-auto">
-                    <a href="#_" class="secondary copy-button" data-copy="#fieldval-${fpminstaid}-${kk}">
+                    <a href="#_" class="secondary copy-button" data-copy="#fieldval-${fpminstaid}-${kk}" onClick="copyButton(this)">
                         <i class="fa-solid fa-copy fa-xl"></i>
                     </a>
                 </div>
