@@ -1,7 +1,7 @@
 <div class="selector-wrapper">
     <form>
         <div class="selector-inner">
-            <input readonly id="select-fpm" type="text" class="form-control selector-input">
+            <input readonly id="select-fpm" type="text" class="form-control selector-input" placeholder="Select payment method">
             <i id="select-fpm-arrow" class="fa-solid fa-angle-down flippable selector-arrow"></i>
         </div>
     </form>
@@ -11,7 +11,7 @@
         <div id="select-fpm-data-preloader">
             Loading...
         </div>
-        <div class="select-fpm-item row p-1 hoverable" data-fpmid="" data-name="All payment methods">
+        <div class="select-fpm-item select-fpm-item-wildcard row p-1 hoverable" data-fpmid="" data-name="All payment methods">
             <div class="col-auto m-auto">
                 <strong class="secondary">All payment methods</strong>
             </div>

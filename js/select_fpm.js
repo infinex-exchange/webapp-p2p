@@ -32,10 +32,13 @@ $(document).ready(function() {
     });
 });
 
-function initSelectFpm(fiat = null, endpoint = '/p2p/fpms') {
+function initSelectFpm(fiat = null, allowWildcard = true, endpoint = '/p2p/fpms') {
     $('#select-fpm').data('fpmid', '');
-    $('#select-fpm').val('All payment methods');
+    $('#select-fpm').val(allowWildcard ? 'All payment methods' : '');
     $('#select-fpm-data').empty();
+    
+    if(!allowWildcard)
+        $('.select-fpm-item-wildcard').hide();
     
     var data = {};
     if(fiat) data = { fiat: fiat };

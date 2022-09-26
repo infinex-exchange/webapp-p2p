@@ -89,5 +89,5 @@ $(document).on('authChecked', function() {
         true
     );
     
-    initSelectFpm(null);
+    initSelectFpm(null, false);
 });
