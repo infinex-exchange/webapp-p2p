@@ -11,7 +11,14 @@ function showAddFpmiPrompt() {
 function validateField(field) {
     var key = $(field).data('key');
     var val = $(field).val();
+    var re = mew RegExp(window.currentStruct[key].regexp);
     
+    if(val.match(re)) {
+        $('.ma-field-help[data-key="' + key + '"]').hide();
+        return true;
+    }
+    
+    $('.ma-field-help[data-key="' + key + '"]').show();
     return false;
 }
 
