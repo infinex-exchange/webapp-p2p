@@ -43,7 +43,7 @@ $(document).ready(function() {
                         
                         $('#ma-fields').append(`
                             <div class="col-12 pt-3">
-                                <h5>${v.name}:</h5>
+                                <h5 class="d-inline">${v.name}:</h5>
                                 ${optional}
                             </div>
                             <div class="col-12 pt-1">
