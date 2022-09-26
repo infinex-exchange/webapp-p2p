@@ -88,4 +88,6 @@ $(document).on('authChecked', function() {
         true,
         true
     );
+    
+    initSelectFpm(null);
 });
