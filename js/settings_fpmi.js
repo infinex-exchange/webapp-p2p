@@ -2,11 +2,65 @@ function showAddFpmiPrompt() {
     $('#ma-name').val('');
     $('#ma-help-name').hide();
     
+    if($('#select-fpm').data('fpmid') != '')
+        $('#select-fpm').trigger('change');
+    
     $('#modal-add').modal('show');
+}
+
+function validateField(field) {
+    var key = $(field).data('key');
+    var val = $(field).val();
+    
+    return false;
 }
 
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
+    
+    $('#select-fpm').on('change', function() {
+        $('#ma-fields').html('');
+        
+        fpmid = $(this).data('fpmid');
+        if(fpmid != '') {
+            $.ajax({
+                url: config.apiUrl + '/p2p/fpms_ex',
+                type: 'POST',
+                data: JSON.stringify({
+                    fpmid: fpmid
+                }),
+                contentType: "application/json",
+                dataType: "json",
+            })
+            .retry(config.retry)
+            .done(function (data) {
+                if(data.success) {
+                    window.currentStruct = data.fpms[fpmid].struct;
+                    
+                    $.each(window.currentStruct, function(k, v) {
+                        $('#ma-fields').append(`
+                            <div class="col-12 pt-3">
+                                <h5>${v.name}</h5>
+                            </div>
+                            <div class="col-12 pt-1">
+                                <input type="text" class="ma-field form-control" data-key="${k}" onInput="validateField(this)">
+                            </div>
+                            <div class="col-12 pt-1">
+                                <small class="ma-field-help form-text" data-key="${k}" style="display: none">
+                                    Invalid ${v.name}.
+                                </small>
+                            </div>
+                        `);
+                    });
+                } else {
+                    msgBox(data.error);
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                msgBoxNoConn(false);
+            });
+        }
+    });
 });
 
 $(document).on('authChecked', function() {
