@@ -82,7 +82,7 @@
                             <div class="col-12 pt-1">
                                 <input id="ma-name" type="text" class="form-control">
                             </div>
-                            <div class="col-12 pt-1">
+                            <div class="col-12 pt-1 pb-3">
                                 <small id="ma-help-name" class="form-text" style="display: none">
                                     Invalid account name.
                                 </small>
