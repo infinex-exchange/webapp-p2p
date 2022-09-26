@@ -87,16 +87,16 @@ $(document).ready(function() {
         if(fpmid == '') return;
         
         var name = $('#ma-name').val();
-        if(!validateFpmInstaName(name)) return;
+        if(!validateFpmInstaName(name)) {
+            $('#ma-help-name').show();
+            return;
+        }
         
         var fields = new Object();
         
         for(key in window.currentStruct) {
-            var field = $('.ma-field[data-key="' + key + '"]')[0];
+            var field = '.ma-field[data-key="' + key + '"]';
             var val = $(field).val();
-            
-            if(val == '' && window.currentStruct[key].required)
-                return;
             
             if(!validateField(field))
                 return;
