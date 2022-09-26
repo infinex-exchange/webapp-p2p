@@ -108,6 +108,7 @@ $(document).ready(function() {
             url: config.apiUrl + '/p2p/fpm_instances/add',
             type: 'POST',
             data: JSON.stringify({
+                api_key: window.apiKey,
                 fpmid: fpmid,
                 name: name,
                 fields: fields
