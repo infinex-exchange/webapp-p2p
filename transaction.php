@@ -195,7 +195,7 @@
         </div>
         
         <div class="row">
-            <div class="col-2 col-lg-3 text-center text-lg-start ver-tabs">
+            <div class="col-2 col-lg-3 p-0 text-center text-lg-start ver-tabs">
                 <ul id="fpmi-tabs" class="nav flex-column">
                 </ul>
             </div>
