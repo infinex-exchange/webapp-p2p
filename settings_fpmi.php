@@ -34,7 +34,7 @@
                 </div>
             </div>
             
-            <div class="row p-2 d-none d-lg-flex secondary">
+            <div class="row p-2 d-none d-lg-flex secondary separate">
                 <div class="col-3">
                 <h5>Account name</h5>
                 </div>
