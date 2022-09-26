@@ -163,7 +163,7 @@ $(document).on('authChecked', function() {
 	            $.each(v.fields, function(kk, vv) {
 	                fieldsInnerHtml += `
 	                    <div class="col-12 pb-2">
-		                    <h5class="secondary">
+		                    <h5 class="secondary">
 		                        ${data.fpms[v.fpmid].struct[kk]}:
 		                    </h5>
 		                    ${vv}
