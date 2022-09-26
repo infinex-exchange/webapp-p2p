@@ -129,6 +129,7 @@
 
 .ver-tabs {
     border-right: 2px solid var(--color-input);
+    height: 100%;
 }
 
 .ver-tabs-item:has(.active) {
