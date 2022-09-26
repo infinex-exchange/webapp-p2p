@@ -68,7 +68,7 @@
                     
                     <div class="modal-body">
                     
-                        <div class="row">
+                        <div class="row separate">
                             <div class="col-12">
                                 <h5>Payment method:</h5>
                             </div>
@@ -82,7 +82,7 @@
                             <div class="col-12 pt-1">
                                 <input id="ma-name" type="text" class="form-control">
                             </div>
-                            <div class="col-12 pt-1 separate">
+                            <div class="col-12 pt-1">
                                 <small id="ma-help-name" class="form-text" style="display: none">
                                     Invalid account name.
                                 </small>
