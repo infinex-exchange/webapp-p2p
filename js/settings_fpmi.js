@@ -1,3 +1,10 @@
+function showAddFpmiPrompt() {
+    $('#ma-name').val('');
+    $('#ma-help-name').hide();
+    
+    $('#modal-add').modal('show');
+}
+
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
 });

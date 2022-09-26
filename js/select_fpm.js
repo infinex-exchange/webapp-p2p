@@ -32,17 +32,18 @@ $(document).ready(function() {
     });
 });
 
-function initSelectFpm(fiat, endpoint = '/p2p/fpms') {
+function initSelectFpm(fiat = null, endpoint = '/p2p/fpms') {
     $('#select-fpm').data('fpmid', '');
     $('#select-fpm').val('All payment methods');
     $('#select-fpm-data').empty();
     
+    var data = {};
+    if(fiat) data = { fiat: fiat };
+    
     window.selectFpmAS = new AjaxScroll(
         $('#select-fpm-data'),
         $('#select-fpm-data-preloader'),
-        {
-            fiat: fiat
-        },
+        data,
         function() {
             this.data.offset = this.offset;
             var thisAS = this;
