@@ -23,7 +23,7 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
     $.each(fpminsta.fields, function(kk, vv) {
         fieldsInnerHtml += `
             <h5 class="secondary">
-                ${fpms[v.fpmid].struct[kk]}:
+                ${fpms[fpminsta.fpmid].struct[kk]}:
             </h5>
             ${vv}
             <br>
