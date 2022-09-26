@@ -119,6 +119,7 @@ $(document).ready(function() {
         .done(function (data) {
             if(data.success) {
                 window.fpmiAS.reset();
+                $('#modal-add').modal('close');
             } else {
                 msgBox(data.error);
             }
