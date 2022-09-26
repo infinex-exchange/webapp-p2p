@@ -18,13 +18,21 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
         </li>
     `);
     
+    var fieldsInnerHtml = '';
+	            
+    $.each(fpminsta.fields, function(kk, vv) {
+        fieldsInnerHtml += `
+            <h5 class="secondary">
+                ${fpms[v.fpmid].struct[kk]}:
+            </h5>
+            ${vv}
+            <br>
+        `;
+    });
+    
     $('#fpmi-data').append(`
         <div class="fpmi-item d-none" data-fpminstaid="${fpminstaid}">
-            Test ${fpminsta.fpmid}<br>
-            Test ${fpminsta.fpmid}<br>
-            Test ${fpminsta.fpmid}<br>
-            Test ${fpminsta.fpmid}<br>
-            Test ${fpminsta.fpmid}<br>                
+            ${fieldsInnerHtml}
         </div>
     `);
     
