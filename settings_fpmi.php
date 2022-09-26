@@ -46,7 +46,7 @@
                 </div>
             </div>
             
-            <div id="fpmi-data">
+            <div class="separate" id="fpmi-data">
             </div>
         
         <!-- / Main column -->
