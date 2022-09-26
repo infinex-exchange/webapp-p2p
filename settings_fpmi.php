@@ -34,7 +34,7 @@
                 </div>
             </div>
             
-            <div class="row p-2 d-none d-lg-flex secondary separate">
+            <div class="row p-2 d-none d-lg-flex secondary">
                 <div class="col-3">
                 <h5>Account name</h5>
                 </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             
-            <div class="separate" id="fpmi-data">
+            <div id="fpmi-data">
             </div>
         
         <!-- / Main column -->
@@ -82,14 +82,14 @@
                             <div class="col-12 pt-1">
                                 <input id="ma-name" type="text" class="form-control">
                             </div>
-                            <div class="col-12 pt-1">
+                            <div class="col-12 pt-1 separate">
                                 <small id="ma-help-name" class="form-text" style="display: none">
                                     Invalid account name.
                                 </small>
                             </div>
                         </div>
                         
-                        <div class="row" id="ma-fields">
+                        <div class="row separate" id="ma-fields">
                         </div>
                         
                     </div>
