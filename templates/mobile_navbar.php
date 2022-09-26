@@ -31,7 +31,7 @@
                 <i class="fa-solid fa-gear"></i><br>
                 Settings
             </a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu dropdown-menu-end">
                 <ul class="nav flex-column">
                     <?php include('menu_settings.html'); ?>
                 </ul>
