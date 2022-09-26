@@ -167,15 +167,16 @@ $(document).on('authChecked', function() {
 	                    </h5>
 	                    ${vv}
 	                    <br>
+	                    <br>
 	                `;
 	            });
             
                 thisAS.append(`
                     <div class="row p-2 fpmi-item hoverable separate">
-		                <div class="col-12 col-lg-3">
-			                ${v.name}
+		                <div class="col-auto col-lg-3">
+			                <h5>${v.name}</h5>
 		                </div>
-		                <div class="col-12 col-lg-3">
+		                <div class="col-auto col-lg-3">
 		                    <img width="24px" height="24px" src="${data.fpms[v.fpmid].icon_url}">
 			                ${data.fpms[v.fpmid].name}
 		                </div>
