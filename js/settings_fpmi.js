@@ -38,9 +38,13 @@ $(document).ready(function() {
                     window.currentStruct = data.fpms[fpmid].struct;
                     
                     $.each(window.currentStruct, function(k, v) {
+                        var optional = '';
+                        if(!v.required) optional = '<i class="secondary">(optional)</i>';
+                        
                         $('#ma-fields').append(`
                             <div class="col-12 pt-3">
-                                <h5>${v.name}</h5>
+                                <h5>${v.name}:</h5>
+                                ${optional}
                             </div>
                             <div class="col-12 pt-1">
                                 <input type="text" class="ma-field form-control" data-key="${k}" onInput="validateField(this)">
