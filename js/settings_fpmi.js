@@ -72,6 +72,61 @@ $(document).ready(function() {
             });
         }
     });
+    
+    $('#ma-name').on('input', function() {
+        var name = $(this).val();
+        
+        if(validateFpmInstaName(name))
+            $('#ma-help-name').hide();
+        else
+            $('#ma-help-name').show();
+    });
+    
+    $('#ma-submit').click(function() {
+        var fpmid = $('#select-fpm').data('fpmid');
+        if(fpmid == '') return;
+        
+        var name = $('#ma-name').val();
+        if(!validateFpmInstaName(name)) return;
+        
+        var fields = new Object();
+        
+        for(key in window.currentStruct) {
+            var field = $('.ma-field[data-key="' + key + '"]')[0];
+            var val = $(field).val();
+            
+            if(val == '' && window.currentStruct[key].required)
+                return;
+            
+            if(!validateField(field))
+                return;
+                
+	        fields[key] = val;
+        }
+        
+        $.ajax({
+            url: config.apiUrl + '/p2p/fpm_instances/add',
+            type: 'POST',
+            data: JSON.stringify({
+                fpmid: fpmid,
+                name: name,
+                fields: fields
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                window.fpmiAS.reset();
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
+    });
 });
 
 $(document).on('authChecked', function() {
