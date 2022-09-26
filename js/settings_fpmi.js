@@ -162,26 +162,28 @@ $(document).on('authChecked', function() {
 	            
 	            $.each(v.fields, function(kk, vv) {
 	                fieldsInnerHtml += `
-	                    <h5 class="secondary">
-	                        ${data.fpms[v.fpmid].struct[kk]}:
-	                    </h5>
-	                    ${vv}
-	                    <br>
-	                    <br>
+	                    <div class="col-12 pb-2">
+		                    <h5 class="secondary">
+		                        ${data.fpms[v.fpmid].struct[kk]}:
+		                    </h5>
+		                    ${vv}
+		                </div>
 	                `;
 	            });
             
                 thisAS.append(`
                     <div class="row p-2 fpmi-item hoverable separate">
-		                <div class="col-auto col-lg-3">
+		                <div class="col-auto col-lg-3 my-auto my-lg-0">
 			                <h5>${v.name}</h5>
 		                </div>
-		                <div class="col-auto col-lg-3">
+		                <div class="col-auto col-lg-3 my-auto my-lg-0">
 		                    <img width="24px" height="24px" src="${data.fpms[v.fpmid].icon_url}">
 			                ${data.fpms[v.fpmid].name}
 		                </div>
-		                <div class="col-12 col-lg-6">
+		                <div class="col-12 col-lg-6 pt-2 pt-lg-0">
+			                <div class="row">
 			                ${fieldsInnerHtml}
+			                </div>
 		                </div>
 		            </div>
                 `);
