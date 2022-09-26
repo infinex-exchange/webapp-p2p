@@ -203,7 +203,7 @@
             </div>
         </div>
         
-        <div class="row py-2">
+        <div class="row py-4">
             <div class="status col-6 col-lg-auto" data-status="PENDING" data-side="BUY">
                 <button type="button" class="btn btn-primary w-100">
                     <i class="fa-solid fa-check"></i>
