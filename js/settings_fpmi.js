@@ -101,7 +101,8 @@ $(document).ready(function() {
             if(!validateField(field))
                 return;
                 
-	        fields[key] = val;
+            if(val != '')
+		        fields[key] = val;
         }
         
         $.ajax({
