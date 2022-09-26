@@ -18,7 +18,7 @@ $(document).on('authChecked', function() {
             
         //---
     $.ajax({
-        url: config.apiUrl + '/p2p/fpm_instances',
+        url: config.apiUrl + '/p2p/fpm_instances_ex',
         type: 'POST',
         data: JSON.stringify(thisAS.data),
         contentType: "application/json",

@@ -56,6 +56,52 @@
         </div>
         </div>
         
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-add">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="ps-1 modal-title">
+                            Add payment method
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="modal-body">
+                    
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Payment method:</h5>
+                            </div>
+                            <div class="col-12 pt-1">
+                                <?php include(__DIR__.'/templates/select_fpm.php'); ?>
+                            </div>
+
+                            <div class="col-12 pt-3">
+                                <h5>Account name:</h5>
+                            </div>
+                            <div class="col-12 pt-1">
+                                <input id="ma-name" type="text" class="form-control">
+                            </div>
+                            <div class="col-12 pt-1">
+                                <small id="ma-help-name" class="form-text" style="display: none">
+                                    Invalid account name.
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <div class="row" id="ma-fields">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <a href="#_" id="ma-submit" class="btn btn-primary">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script src="/p2p/js/settings_fpmi.js?<?php echo filemtime(__DIR__.'/js/settings_fpmi.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
