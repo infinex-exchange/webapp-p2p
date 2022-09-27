@@ -61,7 +61,7 @@
             </div>
         </div>
         
-        <div class="row py-4">
+        <div class="row pb-4">
             <div class="col-12">
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
