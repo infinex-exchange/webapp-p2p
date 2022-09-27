@@ -224,6 +224,35 @@
             </div>
         </div>
         
+        <div class="feedback row pt-4 pb-2" data-feedback="null true false">
+            <h4>Feedback:</h4>
+        </div>
+        
+        <div class="feedback row" data-feedback="null">
+            <div class="col-6 col-lg-auto">
+                <button type="button" class="btn btn-outline-green w-100" onClick="sendFeedback(true)">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    I recommend
+                </button>
+            </div>
+            <div class="col-6 col-lg-auto">
+                <button type="button" class="btn btn-outline-red w-100" onClick="sendFeedback(false)">
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    I do not recommend
+                </button>
+            </div>
+        </div>
+        
+        <div class="feedback row text-green" data-feedback="true">
+            <i class="fa-solid fa-thumbs-up"></i>
+            I recommend
+        </div>
+        
+         <div class="feedback row text-red" data-feedback="false">
+            <i class="fa-solid fa-thumbs-up"></i>
+            I do not recommend
+        </div>
+        
         <!-- / Main column -->
         </div>
         </div>
