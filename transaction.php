@@ -30,7 +30,7 @@
             <h3 class="transaction-header"></h3>
         </div>
         
-        <div class="row py-2">
+        <div class="row py-4">
             <div class="col-6 col-lg-2 order-1 order-lg-1 secondary my-auto">
                 Fiat amount:
             </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
         
-        <div class="row py-2">
+        <div class="row py-4">
             <div class="col-12">
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
@@ -190,11 +190,11 @@
             </div>
         </div>
         
-        <div class="row py-2">
+        <div class="row pt-2 pb-2">
             <h4>Payment methods:</h4>
         </div>
         
-        <div class="row">
+        <div class="row pb-4">
             <div class="col-2 col-lg-3 p-0 text-center text-lg-start ver-tabs">
                 <ul id="fpmi-tabs" class="nav flex-column">
                 </ul>
@@ -203,7 +203,7 @@
             </div>
         </div>
         
-        <div class="row py-3">
+        <div class="row py-4">
             <div class="status col-6 col-lg-auto" data-status="PENDING" data-side="BUY">
                 <button type="button" class="btn btn-primary w-100">
                     <i class="fa-solid fa-check"></i>
