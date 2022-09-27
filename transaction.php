@@ -24,7 +24,7 @@
         <!-- Main column -->
         <div class="col-12 col-lg-8 p-0 ui-column">
         <div class="row m-0">
-        <div class="col-12 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="transaction">
+        <div class="col-12 ui-card ui-card-ver d-lg-block sm-rest-of-height" data-ui-card="transaction">
             
         <div class="row">
             <h3 class="transaction-header"></h3>
