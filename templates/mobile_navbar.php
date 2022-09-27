@@ -9,19 +9,19 @@
     </ul>
     <ul class="navbar-nav mx-auto text-center">
         <li class="nav-item">
-            <a class="nav-link active" href="#_" data-ui-card-target="trade">
+            <a class="nav-link active" href="/p2p#my-trade" data-ui-card-target="trade">
                 <i class="fa-solid fa-right-left"></i><br>
                 Trade
             </a>
         </li>
         <li class="nav-item"">
-            <a class="nav-link" href="#_" data-ui-card-target="recent-trades">
+            <a class="nav-link" href="/p2p#recent-trades" data-ui-card-target="recent-trades">
                 <i class="fa-solid fa-clock-rotate-left"></i><br>
                 History
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#_" data-ui-card-target="my-offers">
+            <a class="nav-link" href="/p2p#my-offers" data-ui-card-target="my-offers">
                 <i class="fa-solid fa-address-card"></i><br>
                 My offers
             </a>
