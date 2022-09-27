@@ -123,12 +123,20 @@ function cancelTransaction() {
     internalSetStatus('/p2p/transaction/cancel');
 }
 
+function cancelTransactionPrompt() {
+    $('#modal-confirm-cancel').modal('show');
+}
+
 function confirmPaid() {
     internalSetStatus('/p2p/transaction/confirm_paid');
 }
 
 function confirmReceived() {
     internalSetStatus('/p2p/transaction/confirm_received');
+}
+
+function confirmReceivedPrompt() {
+    $('#modal-confirm-received').modal('show');
 }
 
 $(document).ready(function() {

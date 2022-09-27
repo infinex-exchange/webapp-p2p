@@ -211,13 +211,13 @@
                 </button>
             </div>
             <div class="status col-6 col-lg-auto" data-status="PAID DISPUTE" data-side="SELL">
-                <button type="button" class="btn btn-primary w-100" onClick="confirmReceived()">
+                <button type="button" class="btn btn-primary w-100" onClick="confirmReceivedPrompt()">
                     <i class="fa-solid fa-check"></i>
                     Confirm transfer received
                 </button>
             </div>
             <div class="status col-6 col-lg-auto" data-status="PENDING PAID DISPUTE" data-side="BUY">
-                <button type="button" class="btn btn-danger w-100" onClick="cancelTransaction()">
+                <button type="button" class="btn btn-danger w-100" onClick="cancelTransactionPrompt()">
                     <i class="fa-solid fa-xmark"></i>
                     Cancel P2P transaction
                 </button>
@@ -251,6 +251,51 @@
         <script src="/p2p/js/transaction.js?<?php echo filemtime(__DIR__.'/js/transaction.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
+        
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm-received">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirm payment received</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Please confirm receipt of payment only after verifying in your bank account that you have received
+                        the full transaction amount from the buyer.
+                        <br>
+                        Upon confirmation, the buyer will receive your cryptocurrencies and transaction cannot be reverted.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal" onClick="confirmReceived()">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm-cancel">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirm payment</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Cancel transaction only if you have serious reasons.
+                        <br>
+                        You can get a negative rating for it.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal" onClick="cancelTransaction()">
+                            Cancel transaction
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- Mobile navbar -->
         <nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
