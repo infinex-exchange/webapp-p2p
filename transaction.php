@@ -230,13 +230,13 @@
         
         <div class="feedback row" data-feedback="null">
             <div class="col-6 col-lg-auto">
-                <button type="button" class="btn btn-outline-green w-100" onClick="sendFeedback(true)">
+                <button type="button" class="btn btn-outline-green w-100" onClick="postFeedback(true)">
                     <i class="fa-solid fa-thumbs-up"></i>
                     I recommend
                 </button>
             </div>
             <div class="col-6 col-lg-auto">
-                <button type="button" class="btn btn-outline-red w-100" onClick="sendFeedback(false)">
+                <button type="button" class="btn btn-outline-red w-100" onClick="postFeedback(false)">
                     <i class="fa-solid fa-thumbs-down"></i>
                     I do not recommend
                 </button>

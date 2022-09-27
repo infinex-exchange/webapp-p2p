@@ -142,6 +142,32 @@ function confirmReceivedPrompt() {
     $('#modal-confirm-received').modal('show');
 }
 
+function postFeedback(feedback) {
+    $.ajax({
+        url: config.apiUrl + '/p2p/transaction/feedback',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            ptid: window.ptid,
+            feedback: feedback
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            refreshTransaction();
+        }
+        else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
 });
