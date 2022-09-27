@@ -205,19 +205,19 @@
         
         <div class="row py-4">
             <div class="status col-6 col-lg-auto" data-status="PENDING" data-side="BUY">
-                <button type="button" class="btn btn-primary w-100">
+                <button type="button" class="btn btn-primary w-100" onClick="confirmPaid()">
                     <i class="fa-solid fa-check"></i>
                     Confirm that transfer was made
                 </button>
             </div>
             <div class="status col-6 col-lg-auto" data-status="PAID DISPUTE" data-side="SELL">
-                <button type="button" class="btn btn-primary w-100">
+                <button type="button" class="btn btn-primary w-100" onClick="confirmReceived()">
                     <i class="fa-solid fa-check"></i>
                     Confirm transfer received
                 </button>
             </div>
             <div class="status col-6 col-lg-auto" data-status="PENDING PAID DISPUTE" data-side="BUY">
-                <button type="button" class="btn btn-danger w-100">
+                <button type="button" class="btn btn-danger w-100" onClick="cancelTransaction()">
                     <i class="fa-solid fa-xmark"></i>
                     Cancel P2P transaction
                 </button>

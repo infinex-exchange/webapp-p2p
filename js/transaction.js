@@ -59,7 +59,7 @@ function refreshTransaction(first = false) {
         type: 'POST',
         data: JSON.stringify({
             api_key: window.apiKey,
-            ptid: ptid
+            ptid: window.ptid
         }),
         contentType: "application/json",
         dataType: "json",
@@ -92,6 +92,43 @@ function refreshTransaction(first = false) {
     .fail(function (jqXHR, textStatus, errorThrown) {
         msgBoxNoConn(true);
     });
+}
+
+function internalSetStatus(endpoint) {
+    $.ajax({
+        url: config.apiUrl + endpoint,
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            ptid: window.ptid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            refreshTransaction();
+        }
+        else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function cancelTransaction() {
+    internalSetStatus('/p2p/transaction/cancel');
+}
+
+function confirmPaid() {
+    internalSetStatus('/p2p/transaction/confirm_paid');
+}
+
+function confirmReceived() {
+    internalSetStatus('/p2p/transaction/confirm_received');
 }
 
 $(document).ready(function() {
