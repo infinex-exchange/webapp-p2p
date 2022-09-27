@@ -224,7 +224,7 @@
             </div>
         </div>
         
-        <div class="feedback row pt-4 pb-2" data-feedback="null true false">
+        <div class="feedback row py-2" data-feedback="null true false">
             <h4>Feedback:</h4>
         </div>
         
