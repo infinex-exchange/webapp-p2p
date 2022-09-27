@@ -53,28 +53,21 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
         switchFpmiTab(fpminstaid);
 }
 
-$(document).ready(function() {
-    window.renderingStagesTarget = 1;
-});
-
-$(document).on('authChecked', function() {
-    if(window.loggedIn) {
-        var pathArray = window.location.pathname.split('/');
-        var ptid = parseInt(pathArray[pathArray.length - 1]);
-        
-        $.ajax({
-            url: config.apiUrl + '/p2p/transaction',
-            type: 'POST',
-            data: JSON.stringify({
-                api_key: window.apiKey,
-                ptid: ptid
-            }),
-            contentType: "application/json",
-            dataType: "json",
-        })
-        .retry(config.retry)
-        .done(function (data) {
-            if(data.success) {
+function refreshTransaction(first = false) {
+    $.ajax({
+        url: config.apiUrl + '/p2p/transaction',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            ptid: ptid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            if(first) {
                 $('.transaction-header').html(data.transaction.side + ' ' + data.transaction.assetid);
                 $('.amount-fiat').html(data.transaction.amount_fiat);
                 $('.assetid').html(data.transaction.assetid);
@@ -82,21 +75,38 @@ $(document).on('authChecked', function() {
                 $('.fiatid').html(data.transaction.fiatid);
                 $('.price').html(data.transaction.price);
                 
-                $('.status').addClass('d-none');
-                $('.status[data-status~="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
-                
                 $.each(data.fpm_instances, function(k, v) {
                     renderFpmInstance(k, v, data.fpms);
                 });
 
                 $(document).trigger('renderingStage');
             }
-            else {
-                msgBoxRedirect(data.error);
-            }
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            msgBoxNoConn(true);
-        });
+            
+            $('.status').addClass('d-none');
+            $('.status[data-status~="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
+        }
+        else {
+            msgBoxRedirect(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(true);
+    });
+}
+
+$(document).ready(function() {
+    window.renderingStagesTarget = 1;
+});
+
+$(document).on('authChecked', function() {
+    if(window.loggedIn) {
+        var pathArray = window.location.pathname.split('/');
+        window.ptid = parseInt(pathArray[pathArray.length - 1]);
+        
+        refreshTransaction(true);
+        
+        setTimeout(function() {
+            refreshTransaction(false);
+        }, 5000);
     }
 });
