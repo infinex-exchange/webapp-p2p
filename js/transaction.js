@@ -86,7 +86,8 @@ function refreshTransaction(first = false) {
             $('.status[data-status~="' + data.transaction.status + '"][data-side="' + data.transaction.side + '"]').removeClass('d-none');
             
             $('.feedback').addClass('d-none');
-            $('.feedback[data-feedback~="' + data.transaction.recommends + '"]').removeClass('d-none');
+            if(status == 'COMPLETED' || status == 'CANCELED')
+                $('.feedback[data-feedback~="' + data.transaction.recommends + '"]').removeClass('d-none');
         }
         else {
             msgBoxRedirect(data.error);
