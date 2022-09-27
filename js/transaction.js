@@ -105,7 +105,7 @@ $(document).on('authChecked', function() {
         
         refreshTransaction(true);
         
-        setTimeout(function() {
+        setInterval(function() {
             refreshTransaction(false);
         }, 5000);
     }
