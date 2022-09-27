@@ -244,13 +244,17 @@
         </div>
         
         <div class="feedback row text-green" data-feedback="true">
-            <i class="fa-solid fa-thumbs-up"></i>
-            I recommend
+            <div class="col-12">
+                <i class="fa-solid fa-thumbs-up"></i>
+                I recommend
+            </div>
         </div>
         
          <div class="feedback row text-red" data-feedback="false">
-            <i class="fa-solid fa-thumbs-up"></i>
-            I do not recommend
+            <div class="col-12">
+                <i class="fa-solid fa-thumbs-up"></i>
+                I do not recommend
+            </div>
         </div>
         
         <!-- / Main column -->
