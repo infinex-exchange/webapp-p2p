@@ -96,13 +96,10 @@ function renderMyOffer(offer, fpms) {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="#_">Good Till Canceled</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#_">Immediate Or Cancel</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#_">Fill Or Kill</a>
+                        <a class="dropdown-item" href="#_">
+                            <i class="fa-solid fa-xmark"></i>
+                            Close offer
+                        </a>
                     </li>
                 </ul>
 			</div>
