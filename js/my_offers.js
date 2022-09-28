@@ -25,6 +25,30 @@ function setOfferActive(offerid) {
     });
 }
 
+function hardCloseOffer(offerid) {
+    $.ajax({
+        url: config.apiUrl + '/p2p/my_offers/close',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            offer: offerid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(!data.success) {
+            msgBox(data.error);
+        }
+        window.p2pMyOffersAS.reset();
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+        window.p2pMyOffersAS.reset(); 
+    });
+}
+
 function renderMyOffer(offer, fpms) {
 	var color = 'text-green';
     if(offer.side == 'SELL') color = 'text-red';
@@ -96,7 +120,7 @@ function renderMyOffer(offer, fpms) {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="#_">
+                        <a class="dropdown-item" href="#_" onClick="hardCloseOffer(${offer.offerid})">
                             <i class="fa-solid fa-xmark"></i>
                             Close offer
                         </a>
