@@ -127,6 +127,10 @@ $(document).on('authChecked', function() {
             
             },
             true
-        );   
+        );
+        
+        setInterval(function() {
+            window.p2pTraAS.reset();
+        }, 10000);   
     }
 });
