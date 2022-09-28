@@ -5,7 +5,7 @@ function updateOfferActive(offerid) {
         url: config.apiUrl + '/p2p/my_offers/update',
         type: 'POST',
         data: JSON.stringify({
-            api_key: window.api_key,
+            api_key: window.apiKey,
             offer: offerid,
             active: checkbox.prop('checked')
         }),
