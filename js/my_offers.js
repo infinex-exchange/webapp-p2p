@@ -91,7 +91,7 @@ function renderMyOffer(offer, fpms) {
             </div>
                             
 			<div class="col-2 ps-0 my-auto text-center secondary dropdown">
-			    <a class="nav-link dropdown-toggle" href="#_" data-bs-toggle="dropdown">
+			    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
                     <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
