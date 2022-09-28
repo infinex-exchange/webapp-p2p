@@ -1,8 +1,8 @@
-function updateOfferActive(offerid) {
+function setOfferActive(offerid) {
     var checkbox = $('.my-offer-item[data-offerid="' + offerid + '"] .active-checkbox');
     
     $.ajax({
-        url: config.apiUrl + '/p2p/my_offers/update',
+        url: config.apiUrl + '/p2p/my_offers/set_active',
         type: 'POST',
         data: JSON.stringify({
             api_key: window.apiKey,
@@ -48,7 +48,7 @@ function renderMyOffer(offer, fpms) {
                
                 <div class="pretty p-switch p-bigger">
                     <input type="checkbox" ${checked} class="active-checkbox" id="active-checkbox-${offer.offerid}"
-                     onChange="updateOfferActive(${offer.offerid})">
+                     onChange="setOfferActive(${offer.offerid})">
                     <div class="state p-primary">
                         <label for="active-checkbox-${offer.offerid}">
                         </label>
