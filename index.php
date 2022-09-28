@@ -232,6 +232,29 @@
             </div>
         </div>
         
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm-hard-close">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Close offer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        A closed offer cannot be restored.<br>
+                        If you don't have time to serve your customers now, just use the toggle switch on the left
+                        side to temporary deactivate the offer.<br>
+                        Are you sure you want to permanently close the offer?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="mchc-submit" type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal">
+                            Confirm close offer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <script type="text/javascript" src="/p2p/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/p2p/js/offers.js?<?php echo filemtime(__DIR__.'/js/offers.js'); ?>"></script>
         <script src="/p2p/js/transactions.js?<?php echo filemtime(__DIR__.'/js/transactions.js'); ?>"></script>

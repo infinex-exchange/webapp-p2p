@@ -49,6 +49,14 @@ function hardCloseOffer(offerid) {
     });
 }
 
+function hardCloseOfferPrompt(offerid) {
+    $('#mchc-submit').unbind('click').click(function() {
+        hardCloseOffer(offerid);
+    });
+    
+    $('#modal-confirm-hard-close').modal('show');
+}
+
 function renderMyOffer(offer, fpms) {
 	var color = 'text-green';
     if(offer.side == 'SELL') color = 'text-red';
@@ -120,7 +128,7 @@ function renderMyOffer(offer, fpms) {
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="#_" onClick="hardCloseOffer(${offer.offerid})">
+                        <a class="dropdown-item" href="#_" onClick="hardCloseOfferPrompt(${offer.offerid})">
                             <i class="fa-solid fa-xmark"></i>
                             Close offer
                         </a>
