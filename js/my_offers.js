@@ -38,13 +38,16 @@ function renderMyOffer(offer, fpms) {
     });
     
     var filledPerc = Math.round(offer.crypto_filled / offer.crypto_total * 100);
+    
+    var checked = '';
+    if(offer.active) checked = 'checked';
 
     return `
         <div class="my-offer-item separate row flex-nowrap px-1 py-3 hoverable" data-offerid="${offer.offerid}">
             <div class="col-2 pe-0 my-auto text-center">
                
                 <div class="pretty p-switch p-bigger">
-                    <input type="checkbox" checked="${offer.active}" class="active-checkbox" id="active-checkbox-${offer.offerid}"
+                    <input type="checkbox" ${checked} class="active-checkbox" id="active-checkbox-${offer.offerid}"
                      onChange="updateOfferActive(${offer.offerid})">
                     <div class="state p-primary">
                         <label for="active-checkbox-${offer.offerid}">
