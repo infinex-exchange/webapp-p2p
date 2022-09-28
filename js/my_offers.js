@@ -90,10 +90,21 @@ function renderMyOffer(offer, fpms) {
                 </div>
             </div>
                             
-			<div class="col-2 ps-0 my-auto text-center secondary">
-			    <a class="nav-link" href="/p2p/update_offer/${offer.offerid}">
+			<div class="col-2 ps-0 my-auto text-center secondary dropdown">
+			    <a class="nav-link dropdown-toggle" href="#_" data-bs-toggle="dropdown">
                     <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
                 </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <a class="dropdown-item" href="#_">Good Till Canceled</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#_">Immediate Or Cancel</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#_">Fill Or Kill</a>
+                    </li>
+                </ul>
 			</div>
         </div>
     `;
