@@ -65,13 +65,16 @@ function renderMyOffer(offer, fpms) {
     
     var checked = '';
     if(offer.active) checked = 'checked';
+    
+    var disabled = '';
+    if(offer.hard_close) disabled = 'disabled';
 
     return `
         <div class="my-offer-item separate row flex-nowrap px-1 py-3 hoverable" data-offerid="${offer.offerid}">
             <div class="col-2 pe-0 my-auto text-center">
                
                 <div class="pretty p-switch p-bigger">
-                    <input type="checkbox" ${checked} class="active-checkbox" id="active-checkbox-${offer.offerid}"
+                    <input type="checkbox" ${checked} ${disabled} class="active-checkbox" id="active-checkbox-${offer.offerid}"
                      onChange="setOfferActive(${offer.offerid})">
                     <div class="state p-primary">
                         <label for="active-checkbox-${offer.offerid}">
