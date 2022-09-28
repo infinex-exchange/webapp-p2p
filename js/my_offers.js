@@ -6,6 +6,7 @@ function updateOfferActive(offerid) {
         type: 'POST',
         data: JSON.stringify({
             api_key: window.api_key,
+            offer: offerid,
             active: checkbox.prop('checked')
         }),
         contentType: "application/json",
