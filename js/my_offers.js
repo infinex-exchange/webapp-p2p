@@ -56,7 +56,7 @@ function renderMyOffer(offer, fpms) {
                 </div>
                
             </div>
-            <div class="col-8 pe-0">
+            <div class="col-9 pe-0">
                 <div class="row">
                     <div class="col-auto small">
                         <span class="${color}">${offer.side}</span>
@@ -90,9 +90,9 @@ function renderMyOffer(offer, fpms) {
                 </div>
             </div>
                             
-			<div class="col-2 ps-0 my-auto text-center secondary">
+			<div class="col-1 ps-0 my-auto text-center secondary">
 			    <a class="nav-link" href="/p2p/update_offer/${offer.offerid}">
-                    <i class="fa-solid fa-sliders fa-lg"></i>
+                    <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
                 </a>
 			</div>
         </div>
