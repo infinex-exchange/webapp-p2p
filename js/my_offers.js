@@ -189,10 +189,6 @@ $(document).on('authChecked', function() {
             
             },
             true
-        );
-        
-        setInterval(function() {
-            window.p2pMyOffersAS.reset();
-        }, 30000);    
+        ); 
     }
 });
