@@ -1,4 +1,4 @@
-function() {
+function refreshCountdown() {
     var timeLeft = window.cdEnd - Math.floor(Date.now()/1000);
     if(timeLeft < 0) {
         clearInterval(window.cdInterval);
@@ -17,7 +17,8 @@ function initCountdown(begin, end) {
     window.cdBegin = begin;
     window.cdEnd = end;
     
-    window.cdInterval = setInterval(, 1000);
+    window.cdInterval = setInterval(refreshCountdown, 1000);
+    refreshCountdown();
 }
 
 function formatTime(time) {
