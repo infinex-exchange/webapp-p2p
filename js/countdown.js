@@ -1,3 +1,15 @@
+function() {
+    var timeLeft = window.cdEnd - Math.floor(Date.now()/1000);
+    if(timeLeft < 0) {
+        clearInterval(window.cdInterval);
+        timeLeft = 0;
+    }
+    
+    $('.countdown-label').html(formatTime(timeLeft));
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+}
+
 function initCountdown(begin, end) {
     if(typeof(window.cdInterval) !== 'undefined' && window.cdInterval)
         clearInterval(window.cdInterval);
@@ -5,17 +17,7 @@ function initCountdown(begin, end) {
     window.cdBegin = begin;
     window.cdEnd = end;
     
-    window.cdInterval = setInterval(function() {
-        var timeLeft = window.cdEnd - Math.floor(Date.now()/1000);
-        
-        $('.countdown-label').html(formatTime(timeLeft));
-        setCircleDasharray();
-        setRemainingPathColor(timeLeft);
-    
-        if(timeLeft === 0) {
-            clearInterval(window.cdInterval);
-        }
-    }, 1000);
+    window.cdInterval = setInterval(, 1000);
 }
 
 function formatTime(time) {
@@ -44,7 +46,9 @@ function setRemainingPathColor(timeLeft) {
 }
 
 function calculateTimeFraction() {
-    return (Math.floor(Date.now()/1000) - window.cdBegin) / (window.cdEnd - window.cdBegin);
+    var fraction = (Math.floor(Date.now()/1000) - window.cdBegin) / (window.cdEnd - window.cdBegin);
+    if(fraction < 0) return 0;
+    return fraction;
 }
 
 function setCircleDasharray() {
