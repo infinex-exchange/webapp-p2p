@@ -47,9 +47,9 @@ function setRemainingPathColor(timeLeft) {
 }
 
 function calculateTimeFraction() {
-    var fraction = (Math.floor(Date.now()/1000) - window.cdBegin) / (window.cdEnd - window.cdBegin);
-    if(fraction < 0) return 0;
-    return fraction;
+    var ratio = (Math.floor(Date.now()/1000) - window.cdBegin) / (window.cdEnd - window.cdBegin);
+    if(ratio > 1) ratio = 1;
+    return 1 - ratio;
 }
 
 function setCircleDasharray() {
