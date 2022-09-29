@@ -38,12 +38,14 @@ function formatTime(time) {
 
 function setRemainingPathColor(timeLeft) {
     if(timeLeft <= 60) {
-        $('countdown-path-remaining').removeClass('orange').addClass('red');
+        $('.countdown-path-remaining').removeClass('orange').addClass('red');
     }
     
     else if(timeLeft <= 300) {
-        $('countdown-path-remaining').removeClass('green').addClass('orange');
+        $('.countdown-path-remaining').removeClass('green').addClass('orange');
     }
+    
+    else $('.countdown-path-remaining').addClass('green');
 }
 
 function calculateTimeFraction() {
