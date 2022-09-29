@@ -61,11 +61,13 @@
             </div>
         </div>
         
+        <div id="app"></div>
+        
         <div class="row pb-4">
             <div class="col-12">
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
                     <div class="px-2">
-                        <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
+                        <div class="countdown"></div>
                     </div>
                     <div class="px-2">
                         <strong>Please make a payment</strong>
@@ -77,7 +79,7 @@
                 </div>
                 <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="SELL">
                     <div class="px-2">
-                        <i class="fa-solid fa-clock fa-2x"></i>
+                        <div class="countdown"></div>
                     </div>
                     <div class="px-2">
                         <strong>Waiting for the payment</strong>
@@ -88,7 +90,7 @@
                 
                 <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="BUY">
                     <div class="px-2">
-                        <i class="fa-solid fa-clock fa-2x"></i>
+                        <div class="countdown"></div>
                     </div>
                     <div class="px-2">
                         <strong>Waiting for confirmation</strong>
@@ -100,7 +102,7 @@
                 </div>
                 <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="SELL">
                     <div class="px-2">
-                        <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
+                        <div class="countdown"></div>
                     </div>
                     <div class="px-2">
                         <strong>The buyer paid you</strong>
