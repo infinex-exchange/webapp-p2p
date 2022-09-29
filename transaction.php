@@ -63,7 +63,7 @@
         
         <div class="row pb-4">
             <div class="col-12">
-                <div class="status ui-card-light border border-primary d-flex align-items-center m-0" data-status="PENDING" data-side="BUY">
+                <div class="status ui-card-light d-flex align-items-center m-0" data-status="PENDING" data-side="BUY">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
@@ -75,7 +75,7 @@
                         Then confirm that the payment has been made using the button below.
                     </div>
                 </div>
-                <div class="status ui-card-light border border-secondary d-flex align-items-center m-0" role="alert" data-status="PENDING" data-side="SELL">
+                <div class="status ui-card-light d-flex align-items-center m-0" role="alert" data-status="PENDING" data-side="SELL">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-secondary d-flex align-items-center m-0" data-status="PAID" data-side="BUY">
+                <div class="status ui-card-light secondary d-flex align-items-center m-0" data-status="PAID" data-side="BUY">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
@@ -98,7 +98,7 @@
                         Now the seller has to confirm that they have received your transfer.
                     </div>
                 </div>
-                <div class="status ui-card-light border border-primary d-flex align-items-center m-0" data-status="PAID" data-side="SELL">
+                <div class="status ui-card-light secondary d-flex align-items-center m-0" data-status="PAID" data-side="SELL">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 
-                <div class="status alert alert-success d-flex align-items-center m-0 py-2" role="alert" data-status="COMPLETED" data-side="BUY">
+                <div class="status ui-card-light border border-success text-green d-flex align-items-center m-0 py-2" role="alert" data-status="COMPLETED" data-side="BUY">
                     <div class="px-2">
                         <i class="fa-solid fa-circle-check fa-2x"></i>
                     </div>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-danger d-flex align-items-center m-0" data-status="CANCELED" data-side="BUY">
+                <div class="status ui-card-light border border-danger text-red d-flex align-items-center m-0" data-status="CANCELED" data-side="BUY">
                     <div class="p-2">
                         <i class="fa-solid fa-circle-xmark fa-2x"></i>
                     </div>
@@ -146,7 +146,7 @@
                         Cryptocurrency has been returned to the seller.
                     </div>
                 </div>
-                <div class="status ui-card-light border border-danger d-flex align-items-center m-0" data-status="CANCELED" data-side="SELL">
+                <div class="status ui-card-light border border-danger text-red d-flex align-items-center m-0" data-status="CANCELED" data-side="SELL">
                     <div class="p-2">
                         <i class="fa-solid fa-circle-xmark fa-2x"></i>
                     </div>
