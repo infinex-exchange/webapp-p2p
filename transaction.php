@@ -63,11 +63,11 @@
         
         <div class="row pb-4">
             <div class="col-12">
-                <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="BUY">
-                    <div class="px-2">
+                <div class="status ui-card-light border-primary text-ultra d-flex align-items-center m-0 py-2" data-status="PENDING" data-side="BUY">
+                    <div class="pe-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
-                    <div class="px-2">
+                    <div class="ps-2>
                         <strong>Please make a payment</strong>
                         <br>
                         Make a transfer using one of the payment methods offered by the seller.
@@ -75,11 +75,11 @@
                         Then confirm that the payment has been made using the button below.
                     </div>
                 </div>
-                <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="SELL">
-                    <div class="px-2">
+                <div class="status ui-card-light border-secondary secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PENDING" data-side="SELL">
+                    <div class="pe-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
-                    <div class="px-2">
+                    <div class="ps-2">
                         <strong>Waiting for the payment</strong>
                         <br>
                         We will inform you when the buyer completes the transfer and marks the payment as complete.
