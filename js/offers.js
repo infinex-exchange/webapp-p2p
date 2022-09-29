@@ -178,7 +178,7 @@ $(document).on('haveConfig', function() {
 	                                   <span class="d-none d-lg-inline">${window.p2pInitialCoin}</span>
 	                                </button>
                                 </div>
-                                <div class="col-12 small secondary">
+                                <div class="col-12 pt-1 small secondary text-center">
                                     <i class="fa-solid fa-hourglass-half"></i>
                                     ${v.time_window} minutes
                                 </div>
