@@ -1,7 +1,5 @@
 function refreshCountdown() {
-    alert(window.cdEnd);
-    alert(Math.floor(Date.now()/1000));
-    var timeLeft = window.cdEnd - Math.floor(Date.now()/1000);
+    var timeLeft = Math.floor(window.cdEnd - (Date.now() / 1000));
     if(timeLeft < 0) {
         clearInterval(window.cdInterval);
         timeLeft = 0;
