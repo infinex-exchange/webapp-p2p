@@ -67,7 +67,7 @@
                     <div class="pe-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
-                    <div class="ps-2>
+                    <div class="ps-2">
                         <strong>Please make a payment</strong>
                         <br>
                         Make a transfer using one of the payment methods offered by the seller.
