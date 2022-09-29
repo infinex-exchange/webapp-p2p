@@ -88,6 +88,9 @@ function refreshTransaction(first = false) {
             $('.feedback').addClass('d-none');
             if(data.transaction.status == 'COMPLETED' || data.transaction.status == 'CANCELED')
                 $('.feedback[data-feedback~="' + data.transaction.recommends + '"]').removeClass('d-none');
+            
+            if(typeof(data.transaction.deadline) !== 'undefined')
+                initCountdown(data.transactions.deadline - (data.transaction.time_window * 60), data.transactions.deadline);                                             
         }
         else {
             msgBoxRedirect(data.error);

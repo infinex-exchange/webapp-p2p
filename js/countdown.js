@@ -1,15 +1,19 @@
-function initCountdown(timestamp) {
-    window.cdTimestamp = timestamp;
+function initCountdown(begin, end) {
+    if(typeof(window.cdInterval) !== 'undefined' && window.cdInterval)
+        clearInterval(window.cdInterval);
     
-    window.countdownInterval = setInterval(function() {
-        var timeLeft = window.cdTimestamp() - Math.floor(Date.now()/1000);
+    window.cdBegin = begin;
+    window.cdEnd = end;
+    
+    window.cdInterval = setInterval(function() {
+        var timeLeft = window.cdEnd - Math.floor(Date.now()/1000);
         
         $('.countdown-label').html(formatTime(timeLeft));
         setCircleDasharray();
         setRemainingPathColor(timeLeft);
     
         if(timeLeft === 0) {
-            clearInterval(timerInterval);
+            clearInterval(window.cdInterval);
         }
     }, 1000);
 }
@@ -40,8 +44,7 @@ function setRemainingPathColor(timeLeft) {
 }
 
 function calculateTimeFraction() {
-    const rawTimeFraction = timeLeft / TIME_LIMIT;
-    return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+    return (Math.floor(Date.now()/1000) - window.cdBegin) / (window.cdEnd - window.cdBegin);
 }
 
 function setCircleDasharray() {
