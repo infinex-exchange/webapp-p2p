@@ -50,6 +50,7 @@ function setRemainingPathColor(timeLeft) {
 
 function calculateTimeFraction() {
     var ratio = (Math.floor(Date.now()/1000) - window.cdBegin) / (window.cdEnd - window.cdBegin);
+    alert(ratio)
     if(ratio > 1) ratio = 1;
     return 1 - ratio;
 }
