@@ -139,8 +139,8 @@
 
 .countdown {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .countdown-svg {
@@ -181,11 +181,11 @@
 
 .countdown-label {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 24px;
 }
