@@ -109,11 +109,11 @@
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-success text-green d-flex align-items-center m-0 py-2" role="alert" data-status="COMPLETED" data-side="BUY">
-                    <div class="px-2">
+                <div class="status ui-card-light border border-success text-green d-flex align-items-center m-0" data-status="COMPLETED" data-side="BUY">
+                    <div class="p-2">
                         <i class="fa-solid fa-circle-check fa-2x"></i>
                     </div>
-                    <div class="px-2">
+                    <div class="p-2">
                         <strong>Completed</strong>
                         <br>
                         The seller confirmed receipt of the transfer.
@@ -121,11 +121,11 @@
                         Cryptocurrency has been released to your account.
                     </div>
                 </div>
-                <div class="status alert alert-success d-flex align-items-center m-0 py-2" role="alert" data-status="COMPLETED" data-side="SELL">
-                    <div class="px-2">
+                <div class="status ui-card-light border border-success text-green d-flex align-items-center m-0" data-status="COMPLETED" data-side="SELL">
+                    <div class="p-2">
                         <i class="fa-solid fa-circle-check fa-2x"></i>
                     </div>
-                    <div class="px-2">
+                    <div class="p-2">
                         <strong>Completed</strong>
                         <br>
                         You confirmed receipt of payment from the buyer.
