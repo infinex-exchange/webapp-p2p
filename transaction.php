@@ -63,7 +63,7 @@
         
         <div class="row pb-4">
             <div class="col-12">
-                <div class="status ui-card-light border-primary text-ultra d-flex align-items-center m-0" data-status="PENDING" data-side="BUY">
+                <div class="status ui-card-light border border-primary d-flex align-items-center m-0" data-status="PENDING" data-side="BUY">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
@@ -75,7 +75,7 @@
                         Then confirm that the payment has been made using the button below.
                     </div>
                 </div>
-                <div class="status ui-card-light border-secondary secondary d-flex align-items-center m-0" role="alert" data-status="PENDING" data-side="SELL">
+                <div class="status ui-card-light border border-secondary d-flex align-items-center m-0" role="alert" data-status="PENDING" data-side="SELL">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
