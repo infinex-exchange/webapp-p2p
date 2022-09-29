@@ -90,7 +90,7 @@ function refreshTransaction(first = false) {
                 $('.feedback[data-feedback~="' + data.transaction.recommends + '"]').removeClass('d-none');
             
             if(typeof(data.transaction.deadline) !== 'undefined')
-                initCountdown(data.transactions.deadline - (data.transaction.time_window * 60), data.transactions.deadline);                                             
+                initCountdown(data.transaction.deadline - (data.transaction.time_window * 60), data.transaction.deadline);                                             
         }
         else {
             msgBoxRedirect(data.error);
