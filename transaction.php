@@ -70,9 +70,11 @@
                     <div class="p-2">
                         <strong>Please make a payment</strong>
                         <br>
-                        Make a transfer using one of the payment methods offered by the seller.
-                        <br>
-                        Then confirm that the payment has been made using the button below.
+                        <span class="secondary">
+	                        Make a transfer using one of the payment methods offered by the seller.
+	                        <br>
+	                        Then confirm that the payment has been made using the button below.
+	                    </span>
                     </div>
                 </div>
                 <div class="status ui-card-light d-flex align-items-center m-0" role="alert" data-status="PENDING" data-side="SELL">
@@ -82,80 +84,94 @@
                     <div class="p-2">
                         <strong>Waiting for the payment</strong>
                         <br>
-                        We will inform you when the buyer completes the transfer and marks the payment as complete.
+                        <span class="secondary">
+	                        We will inform you when the buyer completes the transfer and marks the payment as complete.
+	                    </span>
                     </div>
                 </div>
                 
-                <div class="status ui-card-light secondary d-flex align-items-center m-0" data-status="PAID" data-side="BUY">
+                <div class="status ui-card-light d-flex align-items-center m-0" data-status="PAID" data-side="BUY">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
                     <div class="p-2">
                         <strong>Waiting for confirmation</strong>
                         <br>
-                        You marked the payment as complete.
-                        <br>
-                        Now the seller has to confirm that they have received your transfer.
+                        <span class="secondary">
+	                        You marked the payment as complete.
+	                        <br>
+	                        Now the seller has to confirm that they have received your transfer.
+	                    </span>
                     </div>
                 </div>
-                <div class="status ui-card-light secondary d-flex align-items-center m-0" data-status="PAID" data-side="SELL">
+                <div class="status ui-card-light d-flex align-items-center m-0" data-status="PAID" data-side="SELL">
                     <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
                     <div class="p-2">
                         <strong>The buyer paid you</strong>
                         <br>
-                        Please check that you have received the full transfer amount and confirm that you have received it.
+                        <span class="secondary">
+	                        Please check that you have received the full transfer amount and confirm that you have received it.
+	                    </span>
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-success text-green d-flex align-items-center m-0" data-status="COMPLETED" data-side="BUY">
+                <div class="status ui-card-light border border-success d-flex align-items-center m-0" data-status="COMPLETED" data-side="BUY">
                     <div class="p-2">
-                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                        <i class="fa-solid fa-circle-check fa-2x text-green"></i>
                     </div>
                     <div class="p-2">
-                        <strong>Completed</strong>
+                        <strong class="text-green">Completed</strong>
                         <br>
-                        The seller confirmed receipt of the transfer.
-                        <br>
-                        Cryptocurrency has been released to your account.
+                        <span class="secondary">
+	                        The seller confirmed receipt of the transfer.
+	                        <br>
+	                        Cryptocurrency has been released to your account.
+	                    </span>
                     </div>
                 </div>
-                <div class="status ui-card-light border border-success text-green d-flex align-items-center m-0" data-status="COMPLETED" data-side="SELL">
+                <div class="status ui-card-light border border-success d-flex align-items-center m-0" data-status="COMPLETED" data-side="SELL">
                     <div class="p-2">
-                        <i class="fa-solid fa-circle-check fa-2x"></i>
+                        <i class="fa-solid fa-circle-check fa-2x text-green"></i>
                     </div>
                     <div class="p-2">
-                        <strong>Completed</strong>
+                        <strong class="text-green">Completed</strong>
                         <br>
-                        You confirmed receipt of payment from the buyer.
-                        <br>
-                        Cryptocurrency has been released to buyers account.
+                        <span class="secondary">
+	                        You confirmed receipt of payment from the buyer.
+	                        <br>
+	                        Cryptocurrency has been released to buyers account.
+	                    </span>
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-danger text-red d-flex align-items-center m-0" data-status="CANCELED" data-side="BUY">
+                <div class="status ui-card-light border border-danger d-flex align-items-center m-0" data-status="CANCELED" data-side="BUY">
                     <div class="p-2">
-                        <i class="fa-solid fa-circle-xmark fa-2x"></i>
+                        <i class="fa-solid fa-circle-xmark fa-2x text-red"></i>
                     </div>
                     <div class="p-2">
-                        <strong>Canceled</strong>
+                        <strong class="text-red">Canceled</strong>
                         <br>
-                        You did not make the transfer on time.
-                        <br>
-                        Cryptocurrency has been returned to the seller.
+                        <span class="secondary">
+	                        You did not make the transfer on time.
+	                        <br>
+	                        Cryptocurrency has been returned to the seller.
+	                    </span>
                     </div>
                 </div>
-                <div class="status ui-card-light border border-danger text-red d-flex align-items-center m-0" data-status="CANCELED" data-side="SELL">
+                <div class="status ui-card-light border border-danger d-flex align-items-center m-0" data-status="CANCELED" data-side="SELL">
                     <div class="p-2">
-                        <i class="fa-solid fa-circle-xmark fa-2x"></i>
+                        <i class="fa-solid fa-circle-xmark fa-2x text-red"></i>
                     </div>
                     <div class="p-2">
-                        <strong>Canceled</strong>
+                        <strong class="text-red">Canceled</strong>
                         <br>
-                        The buyer did not pay you on time.
-                        <br>
-                        Cryptocurrency has been returned to your account.
+                        <span class="secondary">
+	                        The buyer did not pay you on time.
+	                        <br>
+	                        Cryptocurrency has been returned to your account.
+	                    </span>
                     </div>
                 </div>
                 
