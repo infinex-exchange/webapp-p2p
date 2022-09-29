@@ -283,6 +283,7 @@
         </div>
     
         <script src="/p2p/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
+        <script src="/p2p/js/countdown.js?<?php echo filemtime(__DIR__.'/js/countdown.js'); ?>"></script>
         <script src="/p2p/js/transaction.js?<?php echo filemtime(__DIR__.'/js/transaction.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
