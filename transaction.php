@@ -86,11 +86,11 @@
                     </div>
                 </div>
                 
-                <div class="status alert alert-secondary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="BUY">
-                    <div class="px-2">
+                <div class="status ui-card-light border border-secondary d-flex align-items-center m-0" data-status="PAID" data-side="BUY">
+                    <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
-                    <div class="px-2">
+                    <div class="p-2">
                         <strong>Waiting for confirmation</strong>
                         <br>
                         You marked the payment as complete.
@@ -98,11 +98,11 @@
                         Now the seller has to confirm that they have received your transfer.
                     </div>
                 </div>
-                <div class="status alert alert-primary d-flex align-items-center m-0 py-2" role="alert" data-status="PAID" data-side="SELL">
-                    <div class="px-2">
+                <div class="status ui-card-light border border-primary d-flex align-items-center m-0" data-status="PAID" data-side="SELL">
+                    <div class="p-2">
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
-                    <div class="px-2">
+                    <div class="p-2">
                         <strong>The buyer paid you</strong>
                         <br>
                         Please check that you have received the full transfer amount and confirm that you have received it.
