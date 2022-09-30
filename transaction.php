@@ -68,10 +68,10 @@
                         <?php include(__DIR__.'/templates/countdown.html'); ?>
                     </div>
                     <div class="p-2">
-                        <strong>Please make a payment</strong>
+                        <strong>Please make the payment</strong>
                         <br>
                         <span class="secondary">
-	                        Make a transfer using one of the payment methods offered by the seller.
+	                        Please make a transfer using any of the payment methods offered by the seller.
 	                        <br>
 	                        Then confirm that the payment has been made using the button below.
 	                    </span>
