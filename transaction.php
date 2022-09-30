@@ -71,7 +71,7 @@
                         <strong>Please make a payment</strong>
                         <br>
                         <span class="secondary">
-	                        Transfer money to the seller using any of the offered payment methods.
+	                        Transfer money to seller using any of the offered payment methods.
 	                        <br>
 	                        Then confirm that the payment has been made using the button below.
 	                    </span>
@@ -85,7 +85,7 @@
                         <strong>Waiting for the payment</strong>
                         <br>
                         <span class="secondary">
-	                        We will inform you when the buyer completes the transfer and marks the payment as complete.
+	                        We will inform you when the buyer marks the payment as complete.
 	                    </span>
                     </div>
                 </div>
