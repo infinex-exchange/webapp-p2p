@@ -191,7 +191,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="status alert alert-warning d-flex align-items-center m-0" data-status="DISPUTE" data-side="SELL">
+                <div class="status ui-card-light border border-warning d-flex align-items-center m-0" data-status="DISPUTE" data-side="SELL">
                     <div class="p-2">
                         <i class="fa-solid fa-bolt fa-2x text-warning"></i>
                     </div>
