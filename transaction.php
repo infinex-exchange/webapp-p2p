@@ -143,7 +143,7 @@
                         <span class="secondary">
 	                        You confirmed receipt of the payment.
 	                        <br>
-	                        Cryptocurrency has been released to buyers account.
+	                        Cryptocurrency has been released to the buyers account.
 	                    </span>
                     </div>
                 </div>
