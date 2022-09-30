@@ -78,14 +78,14 @@
                             </div>
 
                             <div class="col-12 pt-3">
-                                <h5>Account name:</h5>
+                                <h5>Description:</h5>
                             </div>
                             <div class="col-12 pt-1">
                                 <input id="ma-name" type="text" class="form-control">
                             </div>
                             <div class="col-12 pt-1 pb-3">
                                 <small id="ma-help-name" class="form-text" style="display: none">
-                                    Invalid account name.
+                                    Invalid description.
                                 </small>
                             </div>
                         </div>
