@@ -127,7 +127,7 @@
                         <strong class="text-green">Completed</strong>
                         <br>
                         <span class="secondary">
-	                        The seller confirmed receipt of the transfer.
+	                        The seller confirmed receipt of the payment.
 	                        <br>
 	                        Cryptocurrency has been released to your account.
 	                    </span>
@@ -141,7 +141,7 @@
                         <strong class="text-green">Completed</strong>
                         <br>
                         <span class="secondary">
-	                        You confirmed receipt of payment from the buyer.
+	                        You confirmed receipt of the payment.
 	                        <br>
 	                        Cryptocurrency has been released to buyers account.
 	                    </span>
