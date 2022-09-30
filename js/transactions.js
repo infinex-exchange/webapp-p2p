@@ -10,18 +10,7 @@ function renderTransaction(t) {
     
     var notiHtml = '';
     var restCol = 9;
-    if((t.status == 'PAID' && t.side == 'SELL') ||
-       (t.status == 'PENDING' && t.side == 'BUY')
-    ) {
-        notiHtml = `
-            <div class="col-2 pe-0 my-auto text-center">
-               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
-                   <i class="fa-solid fa-money-bill-transfer fa-beat small"></i> 
-               </div>
-            </div>
-        `;
-    }
-    else if(t.new_msg) {
+    if(t.new_msg) {
         notiHtml = `
             <div class="col-2 pe-0 my-auto text-center">
                 <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
@@ -30,6 +19,20 @@ function renderTransaction(t) {
             </div>
         `;
     }
+    else if((t.status == 'PAID' && t.side == 'SELL') ||
+            (t.status == 'PENDING' && t.side == 'BUY')
+    ) {
+        
+    }
+    else if(t.status == 'DISPUTE') {
+        notiHtml = `
+            <div class="col-2 pe-0 my-auto text-center">
+               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
+                   <i class="fa-solid fa-bolt fa-beat small"></i> 
+               </div>
+            </div>
+        `;
+    } 
     else {
         restCol = 11;
     }
