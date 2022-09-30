@@ -109,6 +109,26 @@
         
         <script src="/p2p/js/settings_fpmi.js?<?php echo filemtime(__DIR__.'/js/settings_fpmi.js'); ?>"></script>
         
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm-remove">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirm remove</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to remove saved payment method?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal" id="mcr-submit">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            </div
+        </div>
+        
         <?php include('../../templates/modals.php'); ?>
         <?php include('templates/mobile_navbar.php'); ?>
     

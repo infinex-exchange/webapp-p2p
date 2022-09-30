@@ -132,6 +132,38 @@ $(document).ready(function() {
     });
 });
 
+function removeFpmInsta(fpminstaid) {
+    $.ajax({
+        url: config.apiUrl + '/p2p/fpm_instances/remove',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            fpminstaid: fpminstaid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            window.fpmiAS.reset();
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function removeFpmInstaPrompt(fpminstaid) {
+    $('#mcr-submit').unbind('click').click(function() {
+        removeFpmInsta(fpminstaid);
+    });
+    
+    $('#modal-confirm-remove').modal('show');
+}
+
 $(document).on('authChecked', function() {
     if(!window.loggedIn)
         return;
