@@ -231,19 +231,19 @@
             <div class="status py-4 col-6 col-lg-auto" data-status="PENDING" data-side="BUY">
                 <button type="button" class="btn btn-primary w-100" onClick="confirmPaid()">
                     <i class="fa-solid fa-check"></i>
-                    Confirm that transfer was made
+                    Confirm payment made
                 </button>
             </div>
             <div class="status py-4 col-6 col-lg-auto" data-status="PAID DISPUTE" data-side="SELL">
                 <button type="button" class="btn btn-primary w-100" onClick="confirmReceivedPrompt()">
                     <i class="fa-solid fa-check"></i>
-                    Confirm transfer received
+                    Confirm receipt of payment
                 </button>
             </div>
             <div class="status py-4 col-6 col-lg-auto" data-status="PENDING PAID DISPUTE" data-side="BUY">
                 <button type="button" class="btn btn-danger w-100" onClick="cancelTransactionPrompt()">
                     <i class="fa-solid fa-xmark"></i>
-                    Cancel P2P transaction
+                    Cancel transaction
                 </button>
             </div>
         </div>
@@ -253,6 +253,9 @@
         </div>
         
         <div class="feedback row" data-feedback="null">
+            <div class="col-12 pb-1">
+                Do you recommend trading with this user?
+            </div>
             <div class="col-6 col-lg-auto">
                 <button type="button" class="btn btn-outline-green w-100" onClick="postFeedback(true)">
                     <i class="fa-solid fa-thumbs-up"></i>
@@ -270,14 +273,14 @@
         <div class="feedback row text-green" data-feedback="true">
             <div class="col-12">
                 <i class="fa-solid fa-thumbs-up"></i>
-                I recommend
+                I recommend trading with this user
             </div>
         </div>
         
          <div class="feedback row text-red" data-feedback="false">
             <div class="col-12">
                 <i class="fa-solid fa-thumbs-up"></i>
-                I do not recommend
+                I do not recommend trading with this user
             </div>
         </div>
         
