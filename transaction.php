@@ -98,9 +98,9 @@
                         <strong>Waiting for confirmation</strong>
                         <br>
                         <span class="secondary">
-	                        You marked the payment as complete.
+	                        You have marked the payment as complete.
 	                        <br>
-	                        Now the seller has to confirm that they have received your transfer.
+	                        Now the seller has to confirm receipt of the transfer.
 	                    </span>
                     </div>
                 </div>
@@ -112,7 +112,9 @@
                         <strong>The buyer paid you</strong>
                         <br>
                         <span class="secondary">
-	                        Please check that you have received the full transfer amount and confirm that you have received it.
+	                        Please check your bank account if you received the correct amount.
+                            <br>
+                            If you have no complaints, confirm payment receipt using the button below.
 	                    </span>
                     </div>
                 </div>
