@@ -126,7 +126,7 @@
                         </button>
                     </div>
                 </div>
-            </div
+            </div>
         </div>
         
         <?php include('../../templates/modals.php'); ?>
