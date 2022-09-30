@@ -279,7 +279,7 @@
         
          <div class="feedback row text-red" data-feedback="false">
             <div class="col-12">
-                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-thumbs-down"></i>
                 I do not recommend trading with this user
             </div>
         </div>
