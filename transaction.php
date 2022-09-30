@@ -156,7 +156,7 @@
                         <strong class="text-red">Canceled</strong>
                         <br>
                         <span class="secondary">
-	                        You did not make the transfer on time.
+	                        You didn't make the payment on time.
 	                        <br>
 	                        Cryptocurrency has been returned to the seller.
 	                    </span>
@@ -170,7 +170,7 @@
                         <strong class="text-red">Canceled</strong>
                         <br>
                         <span class="secondary">
-	                        The buyer did not pay you on time.
+	                        The buyer didn't pay you on time.
 	                        <br>
 	                        Cryptocurrency has been returned to your account.
 	                    </span>
