@@ -185,11 +185,12 @@
                         <strong class="text-warning">Transaction dispute</strong>
                         <br>
                         <span class="secondary">
-                            You marked the payment as complete, but the seller did not receive it.
+                            You have marked the payment as completed, but the seller didn't confirm it.
                             <br>
-                            Use chat to come to an agreement with the seller.
+                            Please use the chat to come to an agreement.
                             <br>
-                            If you do not cancel the transaction within 24 hours and the seller does not confirm receipt of payment, this transaction will be investigated by the Vayamos administrators.
+                            If you don't cancel the transaction and the seller doesn't confirm receipt of payment within 24 hours,
+                            Vayamos staff will help to solve the dispute.
                         </span>
                     </div>
                 </div>
@@ -201,11 +202,12 @@
                         <strong class="text-warning">Transaction dispute</strong>
                         <br>
                         <span class="secondary">
-                            The buyer marked the transaction as paid, but you didn't confirm it.
+                            The buyer have marked payment as completed, but you didn't confirm it.
                             <br>
-                            Use chat to come to an agreement with the buyer.
+                            Please use the chat to come to an agreement.
                             <br>
-                            If you do not confirm receipt of payment within 24 hours and the buyer does not cancel the transaction, this transaction will be investigated by the Vayamos administrators.
+                            If you don't confirm receipt of payment and the buyer doesn't cancel the transaction within 24 hours,
+                            Vayamos staff will help to solve the dispute.
                         </span>
                     </div>
                 </div>
