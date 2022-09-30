@@ -36,16 +36,20 @@
             </div>
             
             <div class="row p-2 d-none d-lg-flex secondary">
-                <div class="col-3">
-                <h5>Description</h5>
-                </div>
-                <div class="col-3">
-                <h5>Payment method</h5>
-                </div>
-                <div class="col-6">
-                <h5>Transfer details</h5>
-                </div>
-            </div>
+                <div class="col-11">
+                    <div class="row">
+		                <div class="col-3">
+			                <h5>Description</h5>
+		                </div>
+		                <div class="col-3">
+			                <h5>Payment method</h5>
+		                </div>
+		                <div class="col-6">
+			                <h5>Transfer details</h5>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
             
             <div id="fpmi-data">
             </div>

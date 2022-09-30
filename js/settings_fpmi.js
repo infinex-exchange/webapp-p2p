@@ -173,19 +173,28 @@ $(document).on('authChecked', function() {
             
                 thisAS.append(`
                     <div class="row p-2 fpmi-item hoverable separate">
-		                <div class="col-auto col-lg-3 my-auto my-lg-0">
-			                <h4>${v.name}</h4>
-		                </div>
-		                <div class="col-auto col-lg-3 my-auto my-lg-0">
-		                    <img width="24px" height="24px" src="${data.fpms[v.fpmid].icon_url}">
-			                ${data.fpms[v.fpmid].name}
-		                </div>
-		                <div class="col-12 col-lg-6 pt-2 pt-lg-0">
-			                <div class="row">
-			                ${fieldsInnerHtml}
-			                </div>
-		                </div>
-		            </div>
+                        <div class="col-10 col-lg-11">
+                            <div class="row">
+				                <div class="col-auto col-lg-3 my-auto my-lg-0">
+					                <h4>${v.name}</h4>
+				                </div>
+				                <div class="col-auto col-lg-3 my-auto my-lg-0">
+				                    <img width="24px" height="24px" src="${data.fpms[v.fpmid].icon_url}">
+					                ${data.fpms[v.fpmid].name}
+				                </div>
+				                <div class="col-12 col-lg-6 pt-2 pt-lg-0">
+					                <div class="row">
+						                ${fieldsInnerHtml}
+					                </div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="col-2 col-lg-1 my-auto text-center">
+				            <a class="nav-link" href="#_" onClick="removeFpmInstaPrompt(${k})">
+			                    <i class="fa-solid fa-trash-can fa-lg"></i>
+			                </a>
+				        </div>
+				    </div>
                 `);
             });
             
