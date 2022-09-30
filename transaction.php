@@ -259,13 +259,13 @@
             <div class="col-6 col-lg-auto">
                 <button type="button" class="btn btn-outline-green w-100" onClick="postFeedback(true)">
                     <i class="fa-solid fa-thumbs-up"></i>
-                    I recommend
+                    Recommend
                 </button>
             </div>
             <div class="col-6 col-lg-auto">
                 <button type="button" class="btn btn-outline-red w-100" onClick="postFeedback(false)">
                     <i class="fa-solid fa-thumbs-down"></i>
-                    I do not recommend
+                    Not recommend
                 </button>
             </div>
         </div>
@@ -317,14 +317,13 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Confirm payment received</h5>
+                        <h5 class="modal-title">Confirm receipt of payment</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Please confirm receipt of payment only after verifying in your bank account that you have received
-                        the full transaction amount from the buyer.
+                        Please confirm only if you received the correct amount from the buyer.
                         <br>
-                        Upon confirmation, the buyer will receive your cryptocurrencies and transaction cannot be reverted.
+                        Cryptocurrency will be released to the buyer and there will be no possibility of complaint.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
