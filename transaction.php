@@ -342,12 +342,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Cancel transaction only if you have serious reasons.
-                        <br>
-                        You can get a negative rating for it.
-                        <br>
-                        After canceling the transaction, the seller will receive their cryptocurrencies back.
-                        Absolutely do not cancel the transaction if you have already made a transfer to the seller.
+                        <p>You can cancel transaction only if you have serious reasons to do it.
+                        The counterparty user may give you negative feedback.</p>
+                        <p>After canceling the transaction, the seller will receive their cryptocurrencies back.</p>
+                        <p><strong>Please absolutely do not cancel the transaction if you have already made a transfer to the seller.</strong></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
