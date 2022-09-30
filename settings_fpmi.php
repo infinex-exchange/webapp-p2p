@@ -37,7 +37,7 @@
             
             <div class="row p-2 d-none d-lg-flex secondary">
                 <div class="col-3">
-                <h5>Account name</h5>
+                <h5>Description</h5>
                 </div>
                 <div class="col-3">
                 <h5>Payment method</h5>
