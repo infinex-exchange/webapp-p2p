@@ -43,7 +43,7 @@
                 <h5>Payment method</h5>
                 </div>
                 <div class="col-6">
-                <h5>Data</h5>
+                <h5>Transfer details</h5>
                 </div>
             </div>
             
