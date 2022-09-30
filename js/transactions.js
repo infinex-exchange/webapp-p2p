@@ -22,7 +22,13 @@ function renderTransaction(t) {
     else if((t.status == 'PAID' && t.side == 'SELL') ||
             (t.status == 'PENDING' && t.side == 'BUY')
     ) {
-        
+        notiHtml = `
+            <div class="col-2 pe-0 my-auto text-center">
+               <div class="noti-icon d-flex align-items-center justify-content-center rounded-circle">
+                   <i class="fa-solid fa-money-bill-transfer fa-beat small"></i> 
+               </div>
+            </div>
+        `;
     }
     else if(t.status == 'DISPUTE') {
         notiHtml = `
