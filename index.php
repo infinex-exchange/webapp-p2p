@@ -242,7 +242,7 @@
                     <div class="modal-body">
                         Closed offer cannot be restored. Need a break from serving P2P clients?
                         You can use the toggle switch on the left side to temporary deactivate the offer.
-                        <br>
+                        <br><br>
                         Are you sure you want to permanently close the offer?
                     </div>
                     <div class="modal-footer">
