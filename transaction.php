@@ -321,9 +321,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Please confirm only if you received the correct amount from the buyer.
-                        <br>
-                        Cryptocurrency will be released to the buyer and there will be no possibility of complaint.
+                        <p>Please confirm only if you received the correct amount from the buyer.</p>
+                        <p>Cryptocurrency will be released to the buyer and you won't be able to make a complaint.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
