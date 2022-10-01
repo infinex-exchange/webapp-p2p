@@ -173,6 +173,12 @@
                     fff
                 </div>
             </div>
+            
+            <div class="row my-4">
+                <div class="col-12 col-lg-6">
+                    <button type="submit" class="btn btn-primary w-100">Create offer</button>
+                </div>
+            </div>
         
         <!-- / Main column -->
         </div>
