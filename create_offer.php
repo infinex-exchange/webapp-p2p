@@ -115,8 +115,8 @@
                     <h5 class="secondary">Payment methods:</h5>
                 </div>
                 
-                <div class="col-12">
-                    <div class="row ui-card-light">
+                <div class="col-12 ui-card-light">
+                    <div class="row">
                         <div class="col-12 text-center">
                             <strong class="secondary">No payment methods</strong>
                         </div>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-3 pt-1">
+                <div class="col-12 col-lg-3 pt-1 px-0">
                     <button type="button" class="btn btn-primary btn-sm w-100">
                         <i class="fa-solid fa-plus"></i>
                         Add
