@@ -95,6 +95,22 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="row pt-3">
+                <h5 class="secondary">Add payment methods:</h5>
+            </div>
+            
+            <div class="row pt-1" id="payment-methods-data">
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-12 col-lg-auto">
+                    <button type="button" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-plus"></i>
+                        Add
+                    </button>
+                </div>
+            </div>
         
         <!-- / Main column -->
         </div>

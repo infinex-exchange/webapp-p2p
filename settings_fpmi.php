@@ -31,7 +31,7 @@
             
             <div class="row p-2">
                 <div class="col-auto my-auto">
-                    <button type="button" class="btn btn-primary btn-sm" onClick="showAddFpmiPrompt()">Add payment method</a>
+                    <button type="button" class="btn btn-primary btn-sm" onClick="showAddFpmiPrompt()">Add payment method</button>
                 </div>
             </div>
             
