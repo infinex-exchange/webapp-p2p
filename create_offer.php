@@ -23,6 +23,41 @@
             <div class="row">
                 <h3>Create offer</h3>
             </div>
+            
+            <div class="row pt-3">
+                <h5 class="secondary">Side:</h5>
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-6 col-lg-3 px-1">
+                    <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
+                    <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
+                </div>
+                <div class="col-6 col-lg-3 px-1">
+                    <input type="radio" class="btn-check" name="side" id="side-sell" value="SELL" autocomplete="off">
+                    <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
+                </div>
+            </div>
+            
+            <div class="pt-3">
+                <h5 class="secondary">Coin:</h5>
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-12 col-lg-6">
+                    <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                </div>
+            </div>
+            
+            <div class="pt-3">
+                <h5 class="secondary">Fiat:</h5>
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-12 col-lg-6">
+                    <?php include(__DIR__.'/../../templates/select_fiat.php'); ?>
+                </div>
+            </div>
         
         <!-- / Main column -->
         </div>
