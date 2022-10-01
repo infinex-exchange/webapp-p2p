@@ -148,15 +148,15 @@
                     </div>
                 </div>
                 
-                <div class="col-2 col-lg-1 pt-1">
+                <div class="col-2 col-lg-1 pt-1 my-auto">
                     <h6 class="secondary">Add:</h6>
                 </div>
                 
-                <div id="select-fpm-wrapper" class="col-10 col-lg-11 pt-1">
+                <div id="select-fpm-wrapper" class="col-10 col-lg-5 pt-1">
                     <?php include(__DIR__.'/templates/select_fpm.php'); ?>
                 </div>
                 
-                <div id="select-fpminsta-wrapper" class="col-10 col-lg-11 pt-1 d-none">
+                <div id="select-fpminsta-wrapper" class="col-10 col-lg-5 pt-1 d-none">
                     <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
                 </div>
             </div>
