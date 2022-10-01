@@ -1,6 +1,9 @@
 $(document).ready(function() {
-    window.renderingStagesTarget = 1;
-    $(document).trigger('renderingStage');
+    window.renderingStagesTarget = 2;
+    
+    $('#select-coin, #select-fiat').on('dataLoaded', function() {
+        $(document).trigger('renderingStage');
+    });
 });
 
 $(document).on('authChecked', function() {
