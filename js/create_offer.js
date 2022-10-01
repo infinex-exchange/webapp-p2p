@@ -13,7 +13,8 @@ $(document).ready(function() {
         
         $('.assetid').html(assetid);
         $('.fiatid').html(fiatid);
-        $('.step2').prop('readonly', false);
+        $('.step2-ro').prop('readonly', false);
+        $('.step2-dis').prop('disabled', false);
     });
 });
 

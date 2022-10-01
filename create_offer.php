@@ -68,7 +68,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-ps-group">
-                                <input id="price" type="text" class="form-control step2" data-tsval="" data-rval="" readonly>
+                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                 <span class="suffix fiatid"></span>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                         </div>
                         <div class="col-12">
                             <div class="input-ps-group">
-                                <input id="amount-crypto" type="text" class="form-control step2" data-tsval="" data-rval="" readonly>
+                                <input id="amount-crypto" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                 <span class="suffix assetid"></span>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                             <div class="row">
                                 <div class="col-5 pe-0">
                                     <div class="input-ps-group">
-                                        <input id="fiat-min" type="text" class="form-control step2" data-tsval="" data-rval="" readonly>
+                                        <input id="fiat-min" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                         <span class="suffix fiatid"></span>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="col-6 ps-0">
                                     <div class="input-ps-group">
-                                        <input id="fiat-max" type="text" class="form-control step2" data-tsval="" data-rval="" readonly>
+                                        <input id="fiat-max" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                         <span class="suffix fiatid"></span>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-3 pt-1 px-0">
-                    <button type="button" class="btn btn-primary btn-sm w-100">
+                    <button type="button" class="btn btn-primary btn-sm w-100 step2-dis" disabled>
                         <i class="fa-solid fa-plus"></i>
                         Add
                     </button>
