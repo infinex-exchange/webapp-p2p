@@ -24,7 +24,7 @@
                 <h3>Create offer</h3>
             </div>
             
-            <div class="row mb-3">
+            <div class="row mb-4">
                 <div class="col-6 col-lg-2 mt-auto px-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
                     <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             
-            <div class="row my-3">
+            <div class="row my-4">
                 <div class="col-12 col-lg-6 my-auto px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
@@ -77,7 +77,7 @@
                 </div>
             </div>
             
-            <div class="row my-3">
+            <div class="row my-4">
                 <div class="col-12 col-lg-6 my-auto pb-2 px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
@@ -110,7 +110,7 @@
                 </div>
             </div>
             
-            <div class="row my-3">
+            <div class="row my-4">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Payment methods:</h5>
                 </div>
