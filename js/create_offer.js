@@ -1,3 +1,31 @@
+function refreshPmSelectors() {
+    window.assetid = $('#select-coin').val();
+    window.fiatid = $('#select-fiat').val();
+    
+    if(window.assetid == '' || window.fiatid == '') return;
+    
+    if(window.side == 'BUY') {
+        // FPM
+        if(typeof(window.selectFpmAS) == 'undefined')
+            initSelectFpm(window.fiatid, false);
+        else if(window.selectFpmAS.data.fiat != window.fiatid)
+            window.selectFpmAS.reset();
+        
+        $('#select-fpm-wrapper').removeClass('d-none');
+        $('#select-fpminsta-wrapper').addClass('d-none');
+    }
+    else {
+        // FPMI
+        if(typeof(window.selectFpmAS.data.fiat) == 'undefined' || window.selectFpmAS.data.fiat != window.fiatid) {
+            window.selectFpmInstaAS.data.fiat = window.fiatid;
+            window.selectFpmInstaAS.reset();
+        }
+        
+        $('#select-fpm-wrapper').addClass('d-none');
+        $('#select-fpminsta-wrapper').removeClass('d-none');
+    }
+}
+
 $(document).ready(function() {
     window.renderingStagesTarget = 2;
     
@@ -13,26 +41,7 @@ $(document).ready(function() {
         
         if(window.assetid == '' || window.fiatid == '') return;
         
-        if(window.side == 'BUY') {
-            // FPM
-            if(typeof(window.selectFpmAS) == 'undefined')
-                initSelectFpm(window.fiatid, false);
-            else if(window.selectFpmAS.data.fiat != window.fiatid)
-                window.selectFpmAS.reset();
-            
-            $('#select-fpm-wrapper').removeClass('d-none');
-            $('#select-fpminsta-wrapper').addClass('d-none');
-        }
-        else {
-            // FPMI
-            if(typeof(window.selectFpmAS.data.fiat) == 'undefined' || window.selectFpmAS.data.fiat != window.fiatid) {
-                window.selectFpmInstaAS.data.fiat = window.fiatid;
-                window.selectFpmInstaAS.reset();
-            }
-            
-            $('#select-fpm-wrapper').addClass('d-none');
-            $('#select-fpminsta-wrapper').removeClass('d-none');
-        }
+        refreshPmSelectors();
         
         $('.assetid').html(window.assetid);
         $('.fiatid').html(window.fiatid);
@@ -41,6 +50,8 @@ $(document).ready(function() {
     });
     
     $('input[name="side"]').change(function() {
+        refreshPmSelectors();
+        
         $('#payment-methods-data').empty();
         $('#payment-methods-empty').removeClass('d-none');
         window.side = this.value;
