@@ -128,6 +128,7 @@ $(document).on('haveConfig', function() {
                 var ratingStars = Math.round(v.user_rating/10)/2; // num / 10 = num / 20 * 2
                 
                 var button = '';
+                var unavailable = '';
 
                 if(!v.can_take) {
                     button = `
@@ -135,6 +136,7 @@ $(document).on('haveConfig', function() {
                             Unavailable
                         </div>
                     `;
+                    unavailable = 'unavailable';
                 }
                 
                 else if(window.loggedIn) {
@@ -156,7 +158,7 @@ $(document).on('haveConfig', function() {
                 }        
                 
                 thisAS.append(`
-                    <div class="trade-item separate row px-2 py-4 hoverable" data-offerid="${v.offerid}" data-total="${v.total}"
+                    <div class="trade-item ${unavailable} separate row px-2 py-4 hoverable" data-offerid="${v.offerid}" data-total="${v.total}"
                      data-fiat-min="${v.fiat_min}" data-fiat-max="${v.fiat_max}" data-price="${v.price}">
                         <div class="my-auto sm-w-100 order-1" style="width: 20%">
                             <div class="row">
