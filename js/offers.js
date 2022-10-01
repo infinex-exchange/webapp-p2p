@@ -125,7 +125,35 @@ $(document).on('haveConfig', function() {
                     window.btnText = 'Sell';
                 }
                 
-                var ratingStars = Math.round(v.user_rating/10)/2; // num / 10 = num / 20 * 2        
+                var ratingStars = Math.round(v.user_rating/10)/2; // num / 10 = num / 20 * 2
+                
+                var button = '';
+
+                if(!v.can_take) {
+                    button = `
+                        <div class="small border rounded p-2 text-center">
+                            Unavailable
+                        </div>
+                    `;
+                }
+                
+                else if(window.loggedIn) {
+                    button = `
+                        <button type="button" class="btn ${window.btnBg} btn-sm w-100" onClick="takeOfferModal(${v.offerid})">
+                           ${window.btnText}
+                           <span class="d-none d-lg-inline">${window.p2pInitialCoin}</span>
+                        </button>
+                    `;
+                }
+                
+                else {
+                    button = `
+                        <button type="button" class="btn ${window.btnBg} btn-sm w-100" onClick="gotoLogin()">
+                           ${window.btnText}
+                           <span class="d-none d-lg-inline">${window.p2pInitialCoin}</span>
+                        </button>
+                    `;
+                }        
                 
                 thisAS.append(`
                     <div class="trade-item separate row px-2 py-4 hoverable" data-offerid="${v.offerid}" data-total="${v.total}"
@@ -175,10 +203,7 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto sm-w-30 py-4 py-lg-0 order-4 order-lg-5" style="width: 14%">
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="button" class="btn ${window.btnBg} btn-sm w-100 user-only" onClick="takeOfferModal(${v.offerid})">
-	                                   ${window.btnText}
-	                                   <span class="d-none d-lg-inline">${window.p2pInitialCoin}</span>
-	                                </button>
+                                    ${button}
                                 </div>
                                 <div class="col-12 pt-1 small secondary text-center">
                                     <i class="fa-solid fa-hourglass-half"></i>
