@@ -23,7 +23,7 @@ function refreshPmSelectors() {
     }
     else {
         // FPMI
-        if(typeof(window.selectFpmAS.data.fiat) == 'undefined' || window.selectFpmAS.data.fiat != window.fiatid) {
+        if(typeof(window.selectFpmInstaAS.data.fiat) == 'undefined' || window.selectFpmInstaAS.data.fiat != window.fiatid) {
             window.selectFpmInstaAS.data.fiat = window.fiatid;
             window.selectFpmInstaAS.reset();
         }
