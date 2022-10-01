@@ -61,6 +61,26 @@
                 <div class="col-12 col-lg-6 my-auto px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
+                            <h5 class="secondary">Price:</h6>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-ps-group">
+                                <input id="price" type="text" class="form-control" data-tsval="" data-rval="">
+                                <span class="suffix fiatid"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-6 my-auto">
+                    Available etc...
+                </div>
+            </div>
+            
+            <div class="row my-4">
+                <div class="col-12 col-lg-6 my-auto px-1">
+                    <div class="row">
+                        <div class="col-12 pb-1">
                             <h5 class="secondary">How much crypto?</h6>
                         </div>
                         <div class="col-12">
