@@ -69,7 +69,7 @@ $(document).ready(function() {
             
             var innerHtml = $('.select-fpm-item[data-fpmid="' + fpmid + '"]').html();
             $('#payment-methods-data').append(`
-                <div class="col-12 col-md-3 col-lg-3">
+                <div class="col-12 col-md-3 col-lg-3 p-2">
                     <div class="row">
                         ${innerHtml}
                     </div>
