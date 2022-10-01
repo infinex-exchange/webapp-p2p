@@ -139,7 +139,12 @@
                 </div>
                 
                 <div class="col-12 col-lg-6 my-auto px-1">
-                    ffff
+                    <div class="pretty p-switch">
+                        <input type="checkbox" id="sec-min-rating-cbx">
+                        <div class="state p-primary">
+                            <label for="withdraw-save">Minimum user rating</label>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="col-12 col-lg-6 my-auto">
