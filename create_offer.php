@@ -55,7 +55,7 @@
             
             <div class="row pt-1">
                 <div class="col-12 col-lg-6">
-                    <?php include(__DIR__.'/../../templates/select_fiat.php'); ?>
+                    <?php include(__DIR__.'/templates/select_fiat.php'); ?>
                 </div>
             </div>
             
