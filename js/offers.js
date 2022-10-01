@@ -31,7 +31,9 @@ $(document).ready(function() {
         else window.p2pOffersAS.data.fpm = val;
         window.p2pOffersAS.reset();
     });
-    
+});
+
+$(document).on('authChecked', function() {
     window.p2pInitialCoin = localStorage.getItem("p2pInitialCoin");
     window.p2pInitialFiat = localStorage.getItem("p2pInitialFiat");
     if(window.p2pInitialCoin === null || window.p2pInitialFiat === null) {
@@ -71,14 +73,21 @@ $(document).on('haveConfig', function() {
     $('#select-fiat').val(window.p2pInitialFiat);
     initSelectFpm(window.p2pInitialFiat);
     
+    var data = {
+        side: 'BUY',
+        asset: window.p2pInitialCoin,
+        fiat: window.p2pInitialFiat
+    };
+    
+    if(window.loggedIn)
+        data = Object.assign(data, {
+            api_key: window.apiKey
+        });
+    
     window.p2pOffersAS = new AjaxScroll(
         $('#trade-data'),
         $('#trade-preloader'),
-        {
-            side: 'BUY',
-            asset: window.p2pInitialCoin,
-            fiat: window.p2pInitialFiat
-        },
+        data,
         function() {
             this.data.offset = this.offset;
             var thisAS = this;
@@ -130,7 +139,7 @@ $(document).on('haveConfig', function() {
                 var button = '';
                 var unavailable = '';
 
-                if(!v.can_take) {
+                if(typeof(v.can_take) != 'undefined' && !v.can_take) {
                     button = `
                         <div class="small border rounded p-2 text-center">
                             Unavailable
