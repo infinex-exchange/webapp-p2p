@@ -6,6 +6,6 @@ $(document).ready(function() {
 $(document).on('authChecked', function() {
     if(!window.loggedIn) return;
     
-    initCoinSelect('/p2p/assets');
+    initSelectCoin('/p2p/assets');
     initSelectFiat();
 });
