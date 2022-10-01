@@ -81,7 +81,7 @@
                 <div class="col-12 col-lg-6 my-auto px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h5 class="secondary">How much crypto?</h6>
+                            <h5 class="secondary">Crypto amount:</h6>
                         </div>
                         <div class="col-12">
                             <div class="input-ps-group">
@@ -155,7 +155,7 @@
             
             <div class="row mt-4">
                 <div class="col-12 pb-1">
-                    <h5 class="secondary">Additional security options:</h5>
+                    <h5 class="secondary">Additional safety options:</h5>
                 </div>
             </div>
             
