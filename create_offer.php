@@ -78,7 +78,7 @@
             </div>
             
             <div class="row my-4">
-                <div class="col-12 col-lg-6 my-auto pb-2 px-1">
+                <div class="col-12 col-lg-6 my-auto px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h5 class="secondary">Single transaction limits:</h6>
@@ -130,6 +130,20 @@
                         <i class="fa-solid fa-plus"></i>
                         Add
                     </button>
+                </div>
+            </div>
+            
+            <div class="row my-4">
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Additional security options:</h5>
+                </div>
+                
+                <div class="col-12 col-lg-6 my-auto px-1">
+                    ffff
+                </div>
+                
+                <div class="col-12 col-lg-6 my-auto">
+                    fff
                 </div>
             </div>
         
