@@ -69,7 +69,7 @@ $(document).ready(function() {
             
             var innerHtml = $('.select-fpm-item[data-fpmid="' + fpmid + '"]').html();
             $('#payment-methods-data').append(`
-                <div class="col-12 col-md-3 col-lg-3 py-2 mx-2 hoverable">
+                <div class="col-12 col-md-3 col-lg-3 p-2 hoverable">
                     <div class="row">
                         ${innerHtml}
                     </div>
@@ -90,7 +90,7 @@ $(document).ready(function() {
             
             var innerHtml = $('.select-fpm-insta-item[data-fpminstaid="' + fpminstaid + '"]').html();
             $('#payment-methods-data').append(`
-                <div class="col-12 col-md-3 col-lg-3 py-2 mx-2 hoverable">
+                <div class="col-12 col-md-3 col-lg-3 p-2 hoverable">
                     <div class="row">
                         ${innerHtml}
                     </div>

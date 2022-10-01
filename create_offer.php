@@ -140,11 +140,11 @@
                 
                 <div class="col-12 ui-card-light p-2">
                     <div class="row" id="payment-methods-empty">
-                        <div class="col-12 text-center">
+                        <div class="col-12 pt-4 text-center">
                             <strong class="secondary">No payment methods</strong>
                         </div>
                     </div>
-                    <div class="row" id="payment-methods-data">
+                    <div class="row p-2" id="payment-methods-data">
                     </div>
                 </div>
                 
