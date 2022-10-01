@@ -40,7 +40,7 @@
             </div>
             
             <div class="pt-3">
-                <h5 class="secondary">Coin:</h5>
+                <h5 class="secondary">Select coin:</h5>
             </div>
             
             <div class="row pt-1">
@@ -50,12 +50,49 @@
             </div>
             
             <div class="pt-3">
-                <h5 class="secondary">Fiat:</h5>
+                <h5 class="secondary">Select fiat:</h5>
             </div>
             
             <div class="row pt-1">
                 <div class="col-12 col-lg-6">
                     <?php include(__DIR__.'/../../templates/select_fiat.php'); ?>
+                </div>
+            </div>
+            
+            <div class="row pt-3">
+                <h5 class="secondary">Crypto amount:</h5>
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-12 col-lg-6">
+                    <div class="input-ps-group">
+                        <input id="amount-crypto" type="text" class="form-control" data-tsval="" data-rval="">
+                        <span class="suffix assetid"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row pt-3">
+                <h5 class="secondary">Fiat amount:</h5>
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-12 col-lg-6">
+                    <div class="input-ps-group">
+                        <span class="prefix">Test</span>
+                        <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
+                        <span class="suffix fiatid"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row pt-1">
+                <div class="col-12 col-lg-6">
+                    <div class="input-ps-group">
+                        <span class="prefix">Test</span>
+                        <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
+                        <span class="suffix fiatid"></span>
+                    </div>
                 </div>
             </div>
         
