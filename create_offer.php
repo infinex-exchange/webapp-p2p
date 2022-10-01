@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-12 col-lg-5 pe-0">
+                                <div class="col-5 pe-0">
                                     <div class="input-ps-group">
                                         <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
                                         <span class="suffix fiatid"></span>
@@ -86,7 +86,7 @@
                                 <div class="col-1 my-auto text-center p-0">
                                     <strong>-</strong>
                                 </div>
-                                <div class="col-12 col-lg-6 ps-0">
+                                <div class="col-6 ps-0">
                                     <div class="input-ps-group">
                                         <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
                                         <span class="suffix fiatid"></span>
