@@ -61,7 +61,7 @@ $(document).ready(function() {
         
         if(!window.fpm_instances.includes(fpminstaid)) {
             window.fpm_instances.push(fpminstaid);
-            $('#payment-methods-data').append(fpmid);
+            $('#payment-methods-data').append(fpminstaid);
         }
         
         $('#select-fpm-insta').val('').data('fpminstaid', '');
