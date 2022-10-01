@@ -78,6 +78,8 @@ function refreshTransaction(first = false) {
                 $.each(data.fpm_instances, function(k, v) {
                     renderFpmInstance(k, v, data.fpms);
                 });
+                
+                document.title = data.transaction.side + ' ' + data.transaction.assetid + ' | Vayamos P2P';
 
                 $(document).trigger('renderingStage');
             }
