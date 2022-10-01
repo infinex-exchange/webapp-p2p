@@ -77,17 +77,17 @@
             </div>
             
             <div class="row pt-1">
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-3">
                     <div class="input-ps-group">
                         <span class="prefix d-lg-none">&gt;</span>
                         <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
                         <span class="suffix fiatid"></span>
                     </div>
                 </div>
-                <div class="d-none d-lg-block col-2">
+                <div class="d-none d-lg-block col-1">
                     <strong>-</strong>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-3">
                     <div class="input-ps-group">
                         <span class="prefix d-lg-none">&lt;</span>
                         <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
