@@ -45,7 +45,7 @@ $(document).ready(function() {
         }
     });
     
-    $('select-fpm').on('change', function() {
+    $('#select-fpm').on('change', function() {
         var fpmid = $(this).data('fpmid');
         
         if(!window.fpms.includes(fpmid)) {
