@@ -29,11 +29,11 @@
             </div>
             
             <div class="row pt-1">
-                <div class="col-6 col-lg-3 pe-1">
+                <div class="col-6 col-lg-2 pe-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
                     <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
                 </div>
-                <div class="col-6 col-lg-3 ps-1">
+                <div class="col-6 col-lg-2 ps-1">
                     <input type="radio" class="btn-check" name="side" id="side-sell" value="SELL" autocomplete="off">
                     <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
                 </div>
@@ -84,7 +84,7 @@
                         <span class="suffix fiatid"></span>
                     </div>
                 </div>
-                <div class="d-none d-lg-block col-1">
+                <div class="d-none d-lg-block col-auto">
                     <strong>-</strong>
                 </div>
                 <div class="col-12 col-lg-3">
