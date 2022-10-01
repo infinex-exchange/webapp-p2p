@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <?php include(__DIR__.'/../../templates/head.php'); ?>
+        <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
+        <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <title>Settings | Vayamos P2P</title>
     </head>
     <body>
