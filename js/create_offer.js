@@ -16,7 +16,7 @@ $(document).ready(function() {
         $('.assetid').html(window.assetid);
         $('.fiatid').html(window.fiatid);
         $('.step2-ro').prop('readonly', false);
-        $('#select-fpm, #select-fpm-insta').prop('disabled', true);
+        $('#select-fpm, #select-fpm-insta').prop('disabled', false);
     });
     
     $('input[name="side"]').change(function() {
