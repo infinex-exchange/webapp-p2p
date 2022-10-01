@@ -18,7 +18,7 @@
         <div class="row m-0 h-rest">
         
         <!-- Main column -->
-        <div class="col-12 col-lg-8 p-0 ui-card ui-column">
+        <div class="col-12 col-lg-8 ui-card ui-column">
             
             <div class="row pb-2">
                 <h3>Create offer</h3>
@@ -118,7 +118,7 @@
         </div>
         
         <!-- Right column -->
-        <div class="d-none d-lg-block col-4 p-0 ui-card ui-column">
+        <div class="d-none d-lg-block col-4 ui-card ui-column">
             
             <div class="row">
                 <h3>Info</h3>
