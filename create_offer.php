@@ -144,7 +144,7 @@
                             <strong class="secondary">No payment methods</strong>
                         </div>
                     </div>
-                    <div class="row" id="payment-methods-data">
+                    <div class="row p-2" id="payment-methods-data">
                     </div>
                 </div>
                 
