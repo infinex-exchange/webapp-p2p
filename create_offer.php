@@ -133,21 +133,23 @@
                 </div>
             </div>
             
-            <div class="row my-4">
+            <div class="row mt-4">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Additional security options:</h5>
                 </div>
-                
-                <div class="col-12 col-lg-6 my-auto px-1">
+            </div>
+            
+            <div class="row mt-2">            
+                <div class="col-12 col-lg-auto my-auto px-1">
                     <div class="pretty p-switch">
                         <input type="checkbox" id="sec-min-rating-cbx">
                         <div class="state p-primary">
-                            <label for="withdraw-save">Minimum user rating</label>
+                            <label for="withdraw-save">Minimal user rating</label>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-6 my-auto">
+                <div class="col-12 col-lg-auto my-auto">
                     fff
                 </div>
             </div>
