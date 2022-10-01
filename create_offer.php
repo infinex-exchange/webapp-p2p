@@ -73,23 +73,23 @@
             </div>
             
             <div class="row pt-3">
-                <h5 class="secondary">Fiat amount:</h5>
+                <h5 class="secondary">Fiat transaction limits:</h5>
             </div>
             
             <div class="row pt-1">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-5">
                     <div class="input-ps-group">
-                        <span class="prefix">Test</span>
+                        <span class="prefix d-lg-none">&gt;</span>
                         <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
                         <span class="suffix fiatid"></span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="row pt-1">
-                <div class="col-12 col-lg-6">
+                <div class="d-none d-lg-block col-2">
+                    <strong>-</strong>
+                </div>
+                <div class="col-12 col-lg-5">
                     <div class="input-ps-group">
-                        <span class="prefix">Test</span>
+                        <span class="prefix d-lg-none">&lt;</span>
                         <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
                         <span class="suffix fiatid"></span>
                     </div>
