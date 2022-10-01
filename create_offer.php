@@ -76,19 +76,21 @@
                             <h6 class="secondary">Single transaction limits:</h6>
                         </div>
                         <div class="col-12">
-                            <div class="col-12 col-lg-5">
-                                <div class="input-ps-group">
-                                    <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
-                                    <span class="suffix fiatid"></span>
+                            <div class="row">
+                                <div class="col-12 col-lg-5">
+                                    <div class="input-ps-group">
+                                        <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
+                                        <span class="suffix fiatid"></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-2 my-auto text-center">
-                                <strong>-</strong>
-                            </div>
-                            <div class="col-12 col-lg-5">
-                                <div class="input-ps-group">
-                                    <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
-                                    <span class="suffix fiatid"></span>
+                                <div class="col-2 my-auto text-center">
+                                    <strong>-</strong>
+                                </div>
+                                <div class="col-12 col-lg-5">
+                                    <div class="input-ps-group">
+                                        <input id="amount-fiat" type="text" class="form-control" data-tsval="" data-rval="">
+                                        <span class="suffix fiatid"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
