@@ -87,7 +87,16 @@ $(document).ready(function() {
         
         if(!window.fpm_instances.includes(fpminstaid)) {
             window.fpm_instances.push(fpminstaid);
-            $('#payment-methods-data').append(fpminstaid);
+            
+            var innerHtml = $('.select-fpm-insta-item[data-fpminstaid="' + fpminstaid + '"]').html();
+            $('#payment-methods-data').append(`
+                <div class="col-12 col-md-3 col-lg-3 p-2">
+                    <div class="row">
+                        ${innerHtml}
+                    </div>
+                </div>
+            `);
+            
             $('#payment-methods-empty').addClass('d-none');
         }
         
