@@ -25,7 +25,7 @@
             </div>
             
             <div class="row">
-                <div class="col-6 col-lg-2 mt-auto pb-2 px-1">
+                <div class="col-6 col-lg-2 mt-auto pb-3 px-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
                     <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
                 </div>
@@ -34,7 +34,7 @@
                     <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
                 </div>
                 
-                <div class="col-12 col-lg-4 my-auto pb-2 px-1">
+                <div class="col-12 col-lg-4 my-auto pb-3 px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h6 class="secondary">Coin:</h6>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-4 my-auto pb-2 px-1">
+                <div class="col-12 col-lg-4 my-auto pb-3 px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h6 class="secondary">Fiat:</h6>
