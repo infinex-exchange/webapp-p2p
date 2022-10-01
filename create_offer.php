@@ -84,7 +84,7 @@
                         <span class="suffix fiatid"></span>
                     </div>
                 </div>
-                <div class="d-none d-lg-block col-auto">
+                <div class="d-none d-lg-block col-auto my-auto text-center">
                     <strong>-</strong>
                 </div>
                 <div class="col-12 col-lg-3">
