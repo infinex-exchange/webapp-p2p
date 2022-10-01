@@ -13,8 +13,10 @@ function refreshPmSelectors() {
         // FPM
         if(typeof(window.selectFpmAS) == 'undefined')
             initSelectFpm(window.fiatid, false);
-        else if(window.selectFpmAS.data.fiat != window.fiatid)
+        else if(window.selectFpmAS.data.fiat != window.fiatid) {
+            window.selectFpmAS.data.fiat = window.fiatid;
             window.selectFpmAS.reset();
+        }
         
         $('#select-fpm-wrapper').removeClass('d-none');
         $('#select-fpminsta-wrapper').addClass('d-none');
