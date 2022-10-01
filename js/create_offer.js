@@ -66,7 +66,14 @@ $(document).ready(function() {
         
         if(!window.fpms.includes(fpmid)) {
             window.fpms.push(fpmid);
-            $('#payment-methods-data').append(fpmid);
+            
+            var innerHtml = $('.select-fpm-item[data-fpmid="' + fpmid + '"]').html();
+            $('#payment-methods-data').append(`
+                <div class="col-12 col-md-3 col-lg-3">
+                    ${innerHtml}
+                </div>
+            `);
+            
             $('#payment-methods-empty').addClass('d-none');
         }
         
