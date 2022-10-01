@@ -148,11 +148,16 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-3 pt-1 px-0">
-                    <button id="payment-methods-add" type="button" class="btn btn-primary btn-sm w-100 step2-dis" disabled>
-                        <i class="fa-solid fa-plus"></i>
-                        Add
-                    </button>
+                <div class="col-2 col-lg-1 pt-1">
+                    <h6 class="secondary">Add:</h6>
+                </div>
+                
+                <div id="select-fpm-wrapper" class="col-10 col-lg-11 pt-1">
+                    <?php include(__DIR__.'/templates/select_fpm.php'); ?>
+                </div>
+                
+                <div id="select-fpminsta-wrapper" class="col-10 col-lg-11 pt-1 d-none">
+                    <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
                 </div>
             </div>
             
@@ -201,26 +206,6 @@
         </div>
         
         <script src="/p2p/js/create_offer.js?<?php echo filemtime(__DIR__.'/js/create_offer.js'); ?>"></script>
-        
-        <div class="modal fade" tabindex="-1" role="dialog" id="modal-add-fpm">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <?php include(__DIR__.'/templates/select_fpm.php'); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal fade" tabindex="-1" role="dialog" id="modal-add-fpm-insta">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <?php include('../../templates/modals.php'); ?>
         <?php include('templates/mobile_navbar.php'); ?>

@@ -1,8 +1,5 @@
 $(document).ready(function() {
     window.renderingStagesTarget = 2;
-    window.side = 'BUY';
-    window.fpms = [];
-    window.fpm_instances = [];
     
     $('#select-coin, #select-fiat').on('dataLoaded', function() {
         $(document).trigger('renderingStage');
@@ -17,7 +14,6 @@ $(document).ready(function() {
         $('.assetid').html(window.assetid);
         $('.fiatid').html(window.fiatid);
         $('.step2-ro').prop('readonly', false);
-        $('.step2-dis').prop('disabled', false);
     });
     
     $('input[name="side"]').change(function() {
@@ -26,9 +22,7 @@ $(document).ready(function() {
         window.side = this.value;
         window.fpms = [];
         window.fpm_instances = [];
-    });
-    
-    $('#payment-methods-add').click(function() {
+        
         if(window.side == 'BUY') {
             // FPM
             if(typeof(window.selectFpmAS) == 'undefined')
@@ -36,8 +30,8 @@ $(document).ready(function() {
             else if(window.selectFpmAS.data.fiat != window.fiatid)
                 window.selectFpmAS.reset();
             
-            $('#modal-add-fpm').modal('show');
-            $('#select-fpm').trigger('click');
+            $('#select-fpm-wrapper').removeClass('d-none');
+            $('#select-fpminsta-wrapper').addClass('d-none');
         }
         else {
             // FPMI
@@ -46,15 +40,13 @@ $(document).ready(function() {
                 window.selectFpmInstaAS.reset();
             }
             
-            $('#modal-add-fpm-insta').modal('show');
-            $('#select-fpm-insta').trigger('click');
+            $('#select-fpm-wrapper').addClass('d-none');
+            $('#select-fpminsta-wrapper').removeClass('d-none');
         }
     });
     
     $('select-fpm').on('change', function() {
         var fpmid = $(this).data('fpmid');
-        
-        $('#modal-add-fpm').modal('hide');
         
         if(!window.fpms.includes(fpmid)) {
             window.fpms.push(fpmid);
@@ -66,8 +58,6 @@ $(document).ready(function() {
     
     $('#select-fpm-insta').on('change', function() {
         var fpminstaid = $(this).data('fpminstaid');
-        
-        $('#modal-add-fpm-insta').modal('hide');
         
         if(!window.fpm_instances.includes(fpminstaid)) {
             window.fpm_instances.push(fpminstaid);
@@ -84,4 +74,6 @@ $(document).on('authChecked', function() {
     initSelectCoin('/p2p/assets');
     initSelectFiat();
     initSelectFpmInsta();
+    
+    $('#side-buy').trigger('change');
 });
