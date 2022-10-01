@@ -32,11 +32,12 @@ $(document).ready(function() {
         if(window.side == 'BUY') {
             // FPM
             if(typeof(window.selectFpmAS) == 'undefined')
-                initSelectFpm(window.fiatid);
+                initSelectFpm(window.fiatid, false);
             else if(window.selectFpmAS.data.fiat != window.fiatid)
                 window.selectFpmAS.reset();
             
             $('#modal-add-fpm').modal('show');
+            $('#select-fpm').trigger('click');
         }
         else {
             // FPMI
@@ -46,6 +47,7 @@ $(document).ready(function() {
             }
             
             $('#modal-add-fpm-insta').modal('show');
+            $('#select-fpm-insta').trigger('click');
         }
     });
     
