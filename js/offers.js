@@ -141,7 +141,7 @@ $(document).on('haveConfig', function() {
 
                 if(typeof(v.can_take) != 'undefined' && !v.can_take) {
                     button = `
-                        <div class="small border rounded p-2 text-center">
+                        <div class="small border rounded text-center">
                             Unavailable
                         </div>
                     `;
