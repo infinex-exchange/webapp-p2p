@@ -130,7 +130,7 @@
                 
                 <div id="my-offers-footer" class="row user-only">
                     <div class="col-12 col-lg-6">
-                        <a href="/p2p/create_offer" class="btn btn-primary btn-sm w-100">
+                        <a href="/p2p/create-offer" class="btn btn-primary btn-sm w-100">
                             <i class="fa-solid fa-plus"></i>
                             Create offer
                         </a>

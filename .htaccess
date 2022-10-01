@@ -5,4 +5,4 @@ RewriteEngine on
 RewriteRule ^transaction/([^/]+)/?$ transaction.php [L]
 RewriteRule ^settings/?$ settings.php [L]
 RewriteRule ^settings/payment-methods/?$ settings_fpmi.php [L]
-RewriteRule ^create_offer/?$ create_offer.php [L]
+RewriteRule ^create-offer/?$ create_offer.php [L]
