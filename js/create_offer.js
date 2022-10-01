@@ -51,7 +51,7 @@ $(document).ready(function() {
         if(!window.fpms.includes(fpmid)) {
             window.fpms.push(fpmid);
             $('#payment-methods-data').append(fpmid);
-            $('#payment-methods-emtpy').addClass('d-none');
+            $('#payment-methods-empty').addClass('d-none');
         }
         
         $('#select-fpm').val('').data('fpmid', '');
@@ -63,7 +63,7 @@ $(document).ready(function() {
         if(!window.fpm_instances.includes(fpminstaid)) {
             window.fpm_instances.push(fpminstaid);
             $('#payment-methods-data').append(fpminstaid);
-            $('#payment-methods-emtpy').addClass('d-none');
+            $('#payment-methods-empty').addClass('d-none');
         }
         
         $('#select-fpm-insta').val('').data('fpminstaid', '');
