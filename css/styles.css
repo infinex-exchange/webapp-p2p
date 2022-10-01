@@ -193,5 +193,5 @@
 /* Unavailable offer */
 
 .trade-item.unavailable > div {
-    opacity: 25%;
+    opacity: 35%;
 }
