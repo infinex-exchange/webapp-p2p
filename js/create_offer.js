@@ -13,24 +13,6 @@ $(document).ready(function() {
         
         if(window.assetid == '' || window.fiatid == '') return;
         
-        $('.assetid').html(window.assetid);
-        $('.fiatid').html(window.fiatid);
-        $('.step2-ro').prop('readonly', false);
-        $('#select-fpm, #select-fpm-insta').prop('disabled', false);
-    });
-    
-    $('input[name="side"]').change(function() {
-        $('#payment-methods-data').empty();
-        $('#payment-methods-empty').removeClass('d-none');
-        window.side = this.value;
-        window.fpms = [];
-        window.fpm_instances = [];
-        
-        window.assetid = $('#select-coin').val();
-        window.fiatid = $('#select-fiat').val();
-        
-        if(window.assetid == '' || window.fiatid == '') return;
-        
         if(window.side == 'BUY') {
             // FPM
             if(typeof(window.selectFpmAS) == 'undefined')
@@ -51,6 +33,19 @@ $(document).ready(function() {
             $('#select-fpm-wrapper').addClass('d-none');
             $('#select-fpminsta-wrapper').removeClass('d-none');
         }
+        
+        $('.assetid').html(window.assetid);
+        $('.fiatid').html(window.fiatid);
+        $('.step2-ro').prop('readonly', false);
+        $('#select-fpm, #select-fpm-insta').prop('disabled', false);
+    });
+    
+    $('input[name="side"]').change(function() {
+        $('#payment-methods-data').empty();
+        $('#payment-methods-empty').removeClass('d-none');
+        window.side = this.value;
+        window.fpms = [];
+        window.fpm_instances = [];
     });
     
     $('#select-fpm').on('change', function() {
