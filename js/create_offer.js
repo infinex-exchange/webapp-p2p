@@ -1,4 +1,9 @@
 function refreshPmSelectors() {
+    $('#payment-methods-data').empty();
+    $('#payment-methods-empty').removeClass('d-none');
+    window.fpms = [];
+    window.fpm_instances = [];
+    
     window.assetid = $('#select-coin').val();
     window.fiatid = $('#select-fiat').val();
     
@@ -50,13 +55,8 @@ $(document).ready(function() {
     });
     
     $('input[name="side"]').change(function() {
-        refreshPmSelectors();
-        
-        $('#payment-methods-data').empty();
-        $('#payment-methods-empty').removeClass('d-none');
         window.side = this.value;
-        window.fpms = [];
-        window.fpm_instances = [];
+        refreshPmSelectors();
     });
     
     $('#select-fpm').on('change', function() {
