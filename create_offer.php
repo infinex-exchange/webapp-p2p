@@ -20,11 +20,11 @@
         <!-- Main column -->
         <div class="col-12 col-lg-8 ui-card ui-column">
             
-            <div class="row pb-2">
+            <div class="row">
                 <h3>Create offer</h3>
             </div>
             
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-6 col-lg-2 mt-auto px-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
                     <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
@@ -57,11 +57,11 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div class="row my-3">
                 <div class="col-12 col-lg-6 my-auto px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h6 class="secondary">How much crypto?</h6>
+                            <h5 class="secondary">How much crypto?</h6>
                         </div>
                         <div class="col-12">
                             <div class="input-ps-group">
@@ -77,11 +77,11 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div class="row my-3">
                 <div class="col-12 col-lg-6 my-auto pb-2 px-1">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h6 class="secondary">Single transaction limits:</h6>
+                            <h5 class="secondary">Single transaction limits:</h6>
                         </div>
                         <div class="col-12">
                             <div class="row">
@@ -110,14 +110,21 @@
                 </div>
             </div>
             
-            <div class="row pt-3">
-                <h5 class="secondary">Payment methods:</h5>
-            </div>
-            
-            <div class="row pt-1" id="payment-methods-data">
-            </div>
-            
-            <div class="row pt-1">
+            <div class="row my-3">
+                <div class="col-12">
+                    <h5 class="secondary">Payment methods:</h5>
+                </div>
+                
+                <div class="col-12 ui-card-light">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <strong class="secondary">No payment methods</i>
+                        </div>
+                    </div>
+                    <div class="row" id="payment-methods-data">
+                    </div>
+                </div>
+                
                 <div class="col-12 col-lg-auto">
                     <button type="button" class="btn btn-primary btn-sm">
                         <i class="fa-solid fa-plus"></i>
