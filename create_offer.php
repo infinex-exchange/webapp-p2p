@@ -175,7 +175,7 @@
             </div>
             
             <div class="row my-4">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 px-0">
                     <button type="submit" class="btn btn-primary w-100">Create offer</button>
                 </div>
             </div>
