@@ -26,6 +26,11 @@ $(document).ready(function() {
         window.fpms = [];
         window.fpm_instances = [];
         
+        window.assetid = $('#select-coin').val();
+        window.fiatid = $('#select-fiat').val();
+        
+        if(window.assetid == '' || window.fiatid == '') return;
+        
         if(window.side == 'BUY') {
             // FPM
             if(typeof(window.selectFpmAS) == 'undefined')
