@@ -52,7 +52,7 @@ $(document).ready(function() {
         
         $('.assetid').html(window.assetid);
         $('.fiatid').html(window.fiatid);
-        $('.step2-ro').prop('readonly', false);
+        $('.step2-ro').prop('readonly', false).data('rval', '').val('');
         $('#select-fpm, #select-fpm-insta').prop('disabled', false);
     });
     
