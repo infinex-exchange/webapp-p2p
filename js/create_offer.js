@@ -54,6 +54,8 @@ $(document).ready(function() {
     $('#select-fpm, #select-fpm-insta').prop('disabled', true);
     
     $('.rateit').rateit({
+        readonly: true,
+        ispreset: true,
         mode: 'font'
     });
     
