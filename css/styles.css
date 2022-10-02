@@ -195,3 +195,13 @@
 .trade-item.unavailable > div {
     opacity: 35%;
 }
+
+/* Crete offer / payment methods: remove button only on hover */
+
+.payment-methods-item .remove-pm {
+    display: none;
+}
+
+.payment-methods-item:hover .remove-pm {
+    display: initial;
+}
