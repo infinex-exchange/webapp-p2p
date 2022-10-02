@@ -53,10 +53,6 @@ $(document).ready(function() {
     window.renderingStagesTarget = 2;
     $('#select-fpm, #select-fpm-insta').prop('disabled', true);
     
-    $('.rateit_').rateit({
-        mode: 'font'
-    });
-    
     // Remove preloader
     
     $('#select-coin, #select-fiat').on('dataLoaded', function() {
@@ -133,7 +129,16 @@ $(document).ready(function() {
     // Toggle rateit on checkbox click
     
     $('#sec-min-rating-cbx').on('change', function() {
-        $('#sec-min-rating-expand').toggleClass('d-none');
+        if(this.checked) {
+            $('#sec-min-rating-expand').removeClass('d-none');
+        
+            $('.rateit_').rateit({
+                mode: 'font'
+            });
+        }
+        
+        else
+            $('#sec-min-rating-expand').addClass('d-none');
     });
     
     // Lock format and precision of inputs
