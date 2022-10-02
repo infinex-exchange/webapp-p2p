@@ -174,7 +174,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-auto my-auto">
-                    <div class="rateit_" style="font-size: 20px"></div>
+                    <div class="rateit_" data-rateit-resetable="false" style="font-size: 40px"></div>
                 </div>
             </div>
             
