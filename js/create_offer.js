@@ -130,6 +130,12 @@ $(document).ready(function() {
         $('#select-fpm-insta').val('').data('fpminstaid', '');
     });
     
+    // Toggle rateit on checkbox click
+    
+    $('#sec-min-rating-cbx').on('change', function() {
+        $('#sec-min-rating-expand').toggleClass('d-none');
+    });
+    
     // Lock format and precision of inputs
     
     $('#price, #amount-crypto, #fiat-min, #fiat-max').on('input', function () {

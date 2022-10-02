@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-auto my-auto">
+                <div class="d-none col-12 col-lg-auto my-auto" id="sec-min-rating-expand">
                     <div class="rateit_" data-rateit-resetable="false" style="font-size: 40px"></div>
                 </div>
             </div>
