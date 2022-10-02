@@ -36,11 +36,15 @@ function refreshPmSelectors() {
 function removeFpmInsta(item, fpminstaid) {
     $(item).remove();
     window.fpm_instances.splice(window.fpm_instances.indexOf(fpminstaid), 1);
+    if(window.fpm_instances.length == 0)
+        $('#payment-methods-empty').removeClass('d-none');
 }
 
 function removeFpm(item, fpmid) {
     $(item).remove();
     window.fpms.splice(window.fpms.indexOf(fpmid), 1);
+    if(window.fpms.length == 0)
+        $('#payment-methods-empty').removeClass('d-none');
 }
 
 $(document).ready(function() {
