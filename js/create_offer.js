@@ -34,13 +34,18 @@ function refreshPmSelectors() {
 }
 
 $(document).ready(function() {
-    window.renderingStagesTarget = 2;
+    // Initial
     
+    window.renderingStagesTarget = 2;
     $('#select-fpm, #select-fpm-insta').prop('disabled', true);
+    
+    // Remove preloader
     
     $('#select-coin, #select-fiat').on('dataLoaded', function() {
         $(document).trigger('renderingStage');
     });
+    
+    // On change selectors
     
     $('#select-coin, #select-fiat').on('change', function() {
         window.assetid = $('#select-coin').val();
@@ -52,7 +57,7 @@ $(document).ready(function() {
         
         $('.assetid').html(window.assetid);
         $('.fiatid').html(window.fiatid);
-        $('.step2-ro').prop('readonly', false).data('rval', '').val('');
+        $('.step2-ro').prop('readonly', false).data('rval', '').data('tsval', '').val('');
         $('#select-fpm, #select-fpm-insta').prop('disabled', false);
     });
     
@@ -101,6 +106,47 @@ $(document).ready(function() {
         }
         
         $('#select-fpm-insta').val('').data('fpminstaid', '');
+    });
+    
+    // Lock format and precision of inputs
+    
+    $('#price, #amount-crypto, #fiat-min, #fiat-max').on('input', function () {
+        prec = $('#select-fiat').data('prec');
+        if($(this).is('#amount-crypto')) prec = $('#select-coin').data('prec'); 
+        
+        var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + prec + "})?$");
+        var newVal = $(this).val();
+        
+        // Revert bad format (visible value to typing safe value)
+        if (!regex.test(newVal)) {
+            $(this).val( $(this).data('tsval') );
+        }
+        
+        else {
+            // Check is real value change by calculations pending
+            var haveRVal = $(this).data('rval') != $(this).data('tsval');
+            
+            // Drop . on last position (typing safe value only)
+            if(newVal.slice(-1) == '.') {
+                $(this).data('tsval', newVal.substring(0, newVal.length - 1));
+            }
+        
+            // Change . to 0. on first position (typing safe value only)
+            else if(newVal.startsWith('.')) {
+                $(this).data('tsval', '0' + newVal);
+            }
+        
+            // Save typing safe value as is when everythink ok
+            else {
+                $(this).data('tsval', newVal);
+            }
+            
+            // If there is no pending change by calculations set rval also
+            $(this).data('rval', newVal);
+        }
+        
+        // Do calculations
+        $(this).trigger('updateCalc');
     });
 });
 

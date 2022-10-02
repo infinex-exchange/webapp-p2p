@@ -74,10 +74,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-12 col-lg-6 my-auto">
-                    Available etc...
-                </div>
             </div>
             
             <div class="row my-5">
