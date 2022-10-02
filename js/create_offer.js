@@ -35,12 +35,12 @@ function refreshPmSelectors() {
 
 function removeFpmInsta(item, fpminstaid) {
     $(item).remove();
-    window.fpm_instances = window.fpm_instances.splice(window.fpm_instances.indexOf(fpminstaid), 1);
+    window.fpm_instances.splice(window.fpm_instances.indexOf(fpminstaid), 1);
 }
 
 function removeFpm(item, fpmid) {
     $(item).remove();
-    window.fpms = window.fpms.splice(window.fpms.indexOf(fpmid), 1);
+    window.fpms.splice(window.fpms.indexOf(fpmid), 1);
 }
 
 $(document).ready(function() {
