@@ -52,8 +52,11 @@ function initSelectFiat(endpoint = '/p2p/fiats') {
             .done(function (data) {
                 if(data.success) {
                     $.each(data.fiats, function(k, v) {
+                        var prec = '';
+                        if(typeof(v.prec) !== 'undefined') prec = v.prec;
+                        
                         thisAS.append(`
-                            <div class="select-fiat-item row p-1 hoverable" data-asset="${k}">
+                            <div class="select-fiat-item row p-1 hoverable" data-asset="${k}" data-prec="${prec}">
                                 <div class="col-auto my-auto">
                                     <div class="bg-white d-flex align-items-center justify-content-center rounded-circle" style="width: 24px; height: 24px; color: black;">
                                         <strong>${v.symbol}</strong>
@@ -71,6 +74,7 @@ function initSelectFiat(endpoint = '/p2p/fiats') {
                     
                     $('.select-fiat-item').on('click', function(event) {
                         $('#select-fiat').val($(this).attr('data-asset'));
+                        $('#select-fiat').data('prec', $(this).attr('data-prec'));
                         $('#select-fiat').trigger('change');
                     });
                         

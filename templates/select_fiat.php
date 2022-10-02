@@ -6,7 +6,7 @@
         </div>
     </form>
     <div id="select-fiat-dropdown" class="selector-dropdown">
-        <input id="select-fiat-search" type="text" placeholder="Search..." class="input-search form-control selector-search">
+        <input id="select-fiat-search" type="text" placeholder="Search..." class="input-search form-control selector-search" data-prec="">
         <div id="select-fiat-data" class="scrollable selector-data"></div>
         <div id="select-fiat-data-preloader">
             Loading...
