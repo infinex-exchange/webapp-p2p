@@ -53,6 +53,10 @@ $(document).ready(function() {
     window.renderingStagesTarget = 2;
     $('#select-fpm, #select-fpm-insta').prop('disabled', true);
     
+    $('.rateit').rateit({
+        mode: 'font'
+    });
+    
     // Remove preloader
     
     $('#select-coin, #select-fiat').on('dataLoaded', function() {

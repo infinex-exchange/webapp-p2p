@@ -174,7 +174,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-auto my-auto">
-                    fff
+                    <div class="rateit" style="font-size: 20px"></div>
                 </div>
             </div>
             
