@@ -67,7 +67,7 @@ function initSelectFpm(fiat = null, allowWildcard = true, endpoint = '/p2p/fpms'
                                 <div class="col-auto my-auto text-center" style="width: 32px">
                                     <img width="24px" height="24px" src="${v.icon_url}">
                                 </div>
-                                <div class="col my-auto">
+                                <div class="col-auto my-auto">
                                     <span class="secondary">${v.name}</span>
                                 </div>
                             </div>

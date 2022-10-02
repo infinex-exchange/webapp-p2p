@@ -69,7 +69,7 @@ function initSelectFpmInsta(endpoint = '/p2p/fpm_instances') {
                                 <div class="col-auto my-auto text-center" style="width: 32px">
                                     <img width="24px" height="24px" src="${fpm.icon_url}">
                                 </div>
-                                <div class="col my-auto">
+                                <div class="col-auto my-auto">
                                     <h5 class="secondary">${v.name}</h5>
                                     ${fpm.name}
                                 </div>

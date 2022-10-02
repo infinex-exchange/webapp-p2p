@@ -33,6 +33,16 @@ function refreshPmSelectors() {
     }
 }
 
+function removeFpmInsta(item, fpminstaid) {
+    $(item).remove();
+    window.fpm_instances = window.fpm_instances.splice(window.fpm_instances.indexOf(fpminstaid), 1);
+}
+
+function removeFpm(item, fpmid) {
+    $(item).remove();
+    window.fpms = window.fpms.splice(window.fpms.indexOf(fpmid), 1);
+}
+
 $(document).ready(function() {
     // Initial
     
@@ -74,9 +84,12 @@ $(document).ready(function() {
             
             var innerHtml = $('.select-fpm-item[data-fpmid="' + fpmid + '"]').html();
             $('#payment-methods-data').append(`
-                <div class="col-12 col-md-3 col-lg-3 p-2 hoverable">
+                <div class="payment-methods-item col-12 col-md-3 col-lg-3 p-2 hoverable" onClick="removeFpm(this, fpmid)">
                     <div class="row">
                         ${innerHtml}
+                        <div class="col-auto ms-auto">
+                            <i class="fa-solid fa-xmark remove-pm"></i>
+                        </div>
                     </div>
                 </div>
             `);
@@ -95,9 +108,10 @@ $(document).ready(function() {
             
             var innerHtml = $('.select-fpm-insta-item[data-fpminstaid="' + fpminstaid + '"]').html();
             $('#payment-methods-data').append(`
-                <div class="col-12 col-md-3 col-lg-3 p-2 hoverable">
+                <div class="payment-methods-item col-12 col-md-3 col-lg-3 p-2 hoverable" onClick="removeFpmInsta(this, fpminstaid)">
                     <div class="row">
                         ${innerHtml}
+                        <i class="fa-solid fa-xmark remove-pm"></i>
                     </div>
                 </div>
             `);
