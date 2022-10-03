@@ -42,7 +42,7 @@
                 <div class="col-12 col-lg-4 my-auto px-lg-1">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h6 class="secondary">Coin:</h6>
+                            <h5 class="secondary">Coin:</h5>
                         </div>
                         <div class="col-12">
                             <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
@@ -53,7 +53,7 @@
                 <div class="col-12 col-lg-4 my-auto px-lg-1">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h6 class="secondary">Fiat:</h6>
+                            <h5 class="secondary">Fiat:</h5>
                         </div>
                         <div class="col-12">
                             <?php include(__DIR__.'/templates/select_fiat.php'); ?>
