@@ -1,3 +1,54 @@
+var PREDEF_TIME_WINDOW = [
+    { //0
+        val: 5,
+        desc: '5 minutes'
+    },
+    { //1
+        val: 10,
+        desc: '10 minutes'
+    },
+    { //2
+        val: 15,
+        desc: '15 minutes'
+    }
+    { //3
+        val: 30,
+        desc: '30 minutes'
+    },
+    { //4
+        val: 45,
+        desc: '45 minutes'
+    },
+    { //5
+        val: 60,
+        desc: '1 hour'
+    },
+    { //6
+        val: 90,
+        desc: '1.5 hours'
+    },
+    { //7
+        val: 120,
+        desc: '2 hours'
+    },
+    { //8
+        val: 180,
+        desc: '3 hours'
+    },
+    { //9
+        val: 360,
+        desc: 6 hours
+    },
+    { //10
+        val: 720,
+        desc: 12 hours
+    },
+    { //11
+        val: 1440,
+        desc: 24 hours
+    }
+];
+
 function refreshPmSelectors() {
     $('#payment-methods-data').empty();
     $('#payment-methods-empty').removeClass('d-none');
@@ -141,6 +192,14 @@ $(document).ready(function() {
         
         else
             $('#sec-min-rating-expand').addClass('d-none');
+    });
+    
+    // Time window
+    
+    $('#time-window-raw').on('input', function() {
+        var raw = $(this).val();
+        window.timeWindow = PREDEF_TIME_WINDOW[raw].val;
+        $('#time-window-desc').html(window.timeWindow);
     });
     
     // Lock format and precision of inputs

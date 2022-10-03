@@ -6,7 +6,7 @@
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
-        <title>Settings | Vayamos P2P</title>
+        <title>Create offer | Vayamos P2P</title>
     </head>
     <body>
     
@@ -154,6 +154,22 @@
                 
                 <div id="select-fpminsta-wrapper" class="col-10 col-lg-5 pt-1 d-none">
                     <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
+                </div>
+            </div>
+            
+            <div class="row my-5">
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Payment time window:</h5>
+                </div>
+                
+                <div class="col-12 col-lg-6">
+                    <input id="time-window-raw" type="range" class="form-range" min="0" max="11" step="1" value="0">
+                </div>
+                
+                <div class="col-6 d-none d-lg-block"></div>
+                
+                <div class="col-12 col-lg-6 text-center">
+                    <span class="small secondary" id="time-window-desc"></span>
                 </div>
             </div>
             
