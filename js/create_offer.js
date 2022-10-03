@@ -200,7 +200,7 @@ $(document).ready(function() {
         var raw = $(this).val();
         window.timeWindow = PREDEF_TIME_WINDOW[raw].val;
         $('#time-window-desc').html(PREDEF_TIME_WINDOW[raw].desc);
-    });
+    }).trigger('input');
     
     // Lock format and precision of inputs
     
