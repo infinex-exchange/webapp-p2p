@@ -287,7 +287,7 @@ $(document).ready(function() {
                .val( $(this).data('rval') );
     });
     
-    // Drop amount to available balance
+    // Red text if amount > available balance
     $('#amount-crypto').on('updateCalc setVal', function() {
         amount = new BigNumber($(this).data('rval'));
         
@@ -295,6 +295,29 @@ $(document).ready(function() {
         
         if(window.side == 'SELL' && amount.gt(window.sellBalance))
             $('#amount-crypto, #sell-balance').addClass('text-red');
+    });
+    
+    // Red text if fiat_min > fiat_max
+    $('#fiat-min, #fiat-max').on('updateCalc setVal', function() {
+        min = new BigNumber($('#fiat-min').data('rval'));
+        max = new BigNumber($('#fiat-max').data('rval'));
+        
+        $('#fiat-max').removeClass('text-red');
+        
+        if(min.ge(max))
+            $('#fiat-max').addClass('text-red');
+    });
+    
+    // Red text if fiat_min > amount * price (untakeable offer)
+    $('#fiat-min, #amount-crypto, #price').on('updateCalc setVal', function() {
+        min = new BigNumber($('#fiat-min').data('rval'));
+        amount = new BigNumber($('#amount-crypto').data('rval'));
+        price = new BigNumber($('#price').data('rval'));        
+        
+        $('#fiat-min').removeClass('text-red');
+        
+        if(min.gt(amount.times(price)))
+            $('#fiat-min').addClass('text-red');
     });
     
     // Submit
