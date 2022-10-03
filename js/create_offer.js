@@ -199,7 +199,7 @@ $(document).ready(function() {
     $('#time-window-raw').on('input', function() {
         var raw = $(this).val();
         window.timeWindow = PREDEF_TIME_WINDOW[raw].val;
-        $('#time-window-desc').html(window.timeWindow);
+        $('#time-window-desc').html(PREDEF_TIME_WINDOW[raw].desc);
     });
     
     // Lock format and precision of inputs
