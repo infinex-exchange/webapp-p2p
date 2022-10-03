@@ -167,7 +167,7 @@
             </div>
             
             <div class="row mt-2">            
-                <div class="col-12 col-lg-auto my-auto px-1">
+                <div class="col-12 col-lg-auto my-auto">
                     <div class="pretty p-switch">
                         <input type="checkbox" id="sec-min-rating-cbx">
                         <div class="state p-primary">
@@ -182,7 +182,7 @@
             </div>
             
             <div class="row my-5">
-                <div class="col-12 col-lg-6 px-0">
+                <div class="col-12 col-lg-6">
                     <button type="submit" class="btn btn-primary w-100">Create offer</button>
                 </div>
             </div>
