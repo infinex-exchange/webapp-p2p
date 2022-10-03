@@ -10,7 +10,7 @@ var PREDEF_TIME_WINDOW = [
     { //2
         val: 15,
         desc: '15 minutes'
-    }
+    },
     { //3
         val: 30,
         desc: '30 minutes'
