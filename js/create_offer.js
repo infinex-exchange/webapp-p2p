@@ -328,8 +328,8 @@ $(document).ready(function() {
         data['amount_crypto'] = amount;
         data['fiat_min'] = fiatMin;
         data['fiat_max'] = fiatMax;
-        data['assetid'] = window.assetid;
-        data['fiatid'] = window.fiatid;
+        data['asset'] = window.assetid;
+        data['fiat'] = window.fiatid;
         data['time_window'] = window.timeWindow;
         
         if((window.side == 'BUY' && window.fpms.length == 0) ||
