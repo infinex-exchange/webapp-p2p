@@ -163,7 +163,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-6">
-                    <input id="time-window-raw" type="range" class="form-range" min="0" max="11" step="1" value="0">
+                    <input id="time-window-raw" type="range" class="form-range" min="0" max="11" step="1" value="5">
                 </div>
                 
                 <div class="col-6 d-none d-lg-block"></div>
