@@ -29,17 +29,17 @@
                 <h3>Create offer</h3>
             </div>
             
-            <div class="row mb-5">
-                <div class="col-6 col-lg-2 mb-5 mb-lg-0 mt-auto pe-1">
+            <div class="row mb-0 mb-lg-5">
+                <div class="col-6 col-lg-2 mt-3 mt-lg-0 mt-auto pe-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
                     <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
                 </div>
-                <div class="col-6 col-lg-2 mb-5 mb-lg-0 mt-auto ps-1">
+                <div class="col-6 col-lg-2 mt-3 mt-lg-0 mt-auto ps-1">
                     <input type="radio" class="btn-check" name="side" id="side-sell" value="SELL" autocomplete="off">
                     <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
                 </div>
                 
-                <div class="col-12 col-lg-4 mb-5 mb-lg-0 px-lg-1">
+                <div class="col-12 col-lg-4 mt-3 mt-lg-0 px-lg-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h5 class="secondary">Coin:</h5>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-4 mb-5 mb-lg-0 px-lg-1">
+                <div class="col-12 col-lg-4 mt-3 mt-lg-0 px-lg-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h5 class="secondary">Fiat:</h5>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             
-            <div class="row my-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Price:</h6>
                 </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             
-            <div class="row my-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Crypto amount:</h6>
                 </div>
@@ -91,7 +91,7 @@
                 </div>
             </div>
             
-            <div class="row my-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Single transaction limits:</h6>
                 </div>
@@ -116,7 +116,7 @@
                 </div>
             </div>
             
-            <div class="row my-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Payment methods:</h5>
                 </div>
@@ -144,7 +144,7 @@
                 </div>
             </div>
             
-            <div class="row my-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Payment time window:</h5>
                 </div>
@@ -160,7 +160,7 @@
                 </div>
             </div>
             
-            <div class="row mt-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 pb-1">
                     <h5 class="secondary">Additional safety options:</h5>
                 </div>
@@ -181,7 +181,7 @@
                 </div>
             </div>
             
-            <div class="row my-5">
+            <div class="row mt-3 mt-lg-5">
                 <div class="col-12 col-lg-6">
                     <button type="submit" class="btn btn-primary w-100">Create offer</button>
                 </div>
