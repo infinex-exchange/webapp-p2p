@@ -79,24 +79,19 @@
             </div>
             
             <div class="row my-5">
-                <div class="col-12 col-lg-6 my-auto px-1">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Crypto amount:</h6>
-                        </div>
-                        <div class="col-12">
-                            <div class="input-ps-group">
-                                <input id="amount-crypto" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix assetid"></span>
-                            </div>
-                        </div>
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Crypto amount:</h6>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="input-ps-group">
+                        <input id="amount-crypto" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                        <span class="suffix assetid"></span>
                     </div>
                 </div>
-                
-                <div id="sell-balance-wrapper" class="col-12 col-lg-6 d-none my-auto small secondary">
+                <div id="sell-balance-wrapper" class="col-12 col-lg-6 d-none small secondary">
                     Available:
                     <span id="sell-balance"></span>
-                    <span class="assetid"></span>
+                    <span class="assetid text-right"></span>
                 </div>
             </div>
             
