@@ -183,7 +183,7 @@
             
             <div class="row mt-4 mt-lg-5">
                 <div class="col-12 col-lg-6">
-                    <button type="submit" class="btn btn-primary w-100">Create offer</button>
+                    <button id="submit" type="submit" class="btn btn-primary w-100">Create offer</button>
                 </div>
             </div>
         

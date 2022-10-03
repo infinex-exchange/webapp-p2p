@@ -55,9 +55,6 @@ function refreshPmSelectors() {
     window.fpms = [];
     window.fpm_instances = [];
     
-    window.assetid = $('#select-coin').val();
-    window.fiatid = $('#select-fiat').val();
-    
     if(window.assetid == '' || window.fiatid == '') return;
     
     if(window.side == 'BUY') {
@@ -99,9 +96,6 @@ function removeFpm(item, fpmid) {
 }
 
 function refreshSellBalance() {
-    window.assetid = $('#select-coin').val();
-    window.fiatid = $('#select-fiat').val();
-    
     if(window.assetid == '' || window.fiatid == '') return;
     
     if(window.side == 'BUY') {
@@ -141,6 +135,8 @@ $(document).ready(function() {
     
     window.renderingStagesTarget = 2;
     $('#select-fpm, #select-fpm-insta').prop('disabled', true);
+    window.assetid = '';
+    window.fiatid = '';
     
     // Remove preloader
     
@@ -299,6 +295,80 @@ $(document).ready(function() {
         
         if(window.side == 'SELL' && amount.gt(window.sellBalance))
             $('#amount-crypto, #sell-balance').addClass('text-red');
+    });
+    
+    // Submit
+    $('#submit').click(function() {
+        var price = $('#price').data('rval');
+        var amountField = $('#amount-crypto');
+        var amount = amountField.data('rval');
+        var fiatMinField = $('#fiat-min');
+        var fiatMin = fiatMinField.data('rval');
+        var fiatMaxField = $('#fiat-max');
+        var fiatMax = fiatMaxField.data('rval');
+        
+        if(amountField.hasClass('text-red') ||
+           fiatMinField.hasClass('text-red') ||
+           fiatMaxField.hasClass('text-red') ||
+           price == '' ||
+           amount == '' ||
+           fiatMin == '' ||
+           fiatMax == '' ||
+           window.assetid == '' ||
+           window.fiatid == ''
+        ) {
+            msgBox('Please fill in the form correctly')
+            return;
+        }
+        
+        var data = new Object();
+        data['api_key'] = window.apiKey;
+        data['side'] = window.side;
+        data['price'] = price;
+        data['amount_crypto'] = amount;
+        data['fiat_min'] = fiatMin;
+        data['fiat_max'] = fiatMax;
+        data['assetid'] = window.assetid;
+        data['fiatid'] = window.fiatid;
+        data['time_window'] = window.timeWindow;
+        
+        if((window.side == 'BUY' && window.fpm_instances.length == 0) ||
+           (window.side == 'SELL' && window.fpms.length == 0)
+        ) {
+            msgBox('Add at least one payment method');
+            return;
+        }
+        
+        data['fpms'] = window.fpms;
+        data['fpm_instances'] = window.fpm_instances;
+        
+        if($('#sec-min-rating-cbx').prop('checked')) {
+            var ratingRaw = $('.rateit_').rateit('value');
+            if(ratingRaw == 0) {
+                msgBox('Please set minimal user rating or disable this filter');
+                return;
+            }
+            data['sec_min_rating'] = ratingRaw * 20;
+        }
+
+        $.ajax({
+            url: config.apiUrl + '/p2p/my_offers/add',
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                msgBoxRedirect('The offer has been successfully created', '/p2p');
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
     });
 });
 
