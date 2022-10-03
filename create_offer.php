@@ -63,17 +63,13 @@
             </div>
             
             <div class="row my-5">
-                <div class="col-12 col-lg-6 my-auto px-1">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Price:</h6>
-                        </div>
-                        <div class="col-12">
-                            <div class="input-ps-group">
-                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix fiatid"></span>
-                            </div>
-                        </div>
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Price:</h6>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="input-ps-group">
+                        <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                        <span class="suffix fiatid"></span>
                     </div>
                 </div>
             </div>
