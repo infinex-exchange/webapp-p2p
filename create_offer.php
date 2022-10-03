@@ -21,7 +21,7 @@
         <div class="row m-0 h-rest">
         
         <!-- Main column -->
-        <div class="col-12 col-lg-8 ui-card ui-column">
+        <div class="col-12 ui-card ui-column">
             
             <div class="row">
                 <h3>Create offer</h3>
