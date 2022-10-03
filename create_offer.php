@@ -22,6 +22,8 @@
         
         <!-- Main column -->
         <div class="col-12 ui-card ui-column">
+        <div class="row">
+        <div class="col-12 col-lg-8">
             
             <div class="row">
                 <h3>Create offer</h3>
@@ -201,6 +203,8 @@
             </div>
         
         <!-- / Main column -->
+        </div>
+        </div>
         </div>
             
         <!-- / Root container -->    
