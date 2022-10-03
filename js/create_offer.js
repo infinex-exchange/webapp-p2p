@@ -37,15 +37,15 @@ var PREDEF_TIME_WINDOW = [
     },
     { //9
         val: 360,
-        desc: 6 hours
+        desc: '6 hours'
     },
     { //10
         val: 720,
-        desc: 12 hours
+        desc: '12 hours'
     },
     { //11
         val: 1440,
-        desc: 24 hours
+        desc: '24 hours'
     }
 ];
 
