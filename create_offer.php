@@ -30,11 +30,11 @@
             </div>
             
             <div class="row mb-5">
-                <div class="col-6 col-lg-2 mt-auto">
+                <div class="col-6 col-lg-2 mt-auto pe-1">
                     <input type="radio" class="btn-check" name="side" id="side-buy" value="BUY" autocomplete="off" checked>
                     <label class="btn w-100 small btn-outline-green px-4" for="side-buy">Buy</label>
                 </div>
-                <div class="col-6 col-lg-2 mt-auto">
+                <div class="col-6 col-lg-2 mt-auto ps-1">
                     <input type="radio" class="btn-check" name="side" id="side-sell" value="SELL" autocomplete="off">
                     <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
                 </div>
