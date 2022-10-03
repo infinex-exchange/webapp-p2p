@@ -182,7 +182,7 @@ $(document).ready(function() {
                 <div class="payment-methods-item col-12 col-md-3 col-lg-3 p-2 hoverable" onClick="removeFpm(this, '${fpmid}')">
                     <div class="row">
                         ${innerHtml}
-                        <div class="col-auto ms-auto">
+                        <div class="col-auto ms-auto my-auto">
                             <i class="fa-solid fa-xmark remove-pm"></i>
                         </div>
                     </div>
@@ -206,7 +206,7 @@ $(document).ready(function() {
                 <div class="payment-methods-item col-12 col-md-3 col-lg-3 p-2 hoverable" onClick="removeFpmInsta(this, ${fpminstaid})">
                     <div class="row">
                         ${innerHtml}
-                        <div class="col-auto ms-auto">
+                        <div class="col-auto ms-auto my-auto">
                             <i class="fa-solid fa-xmark remove-pm"></i>
                         </div>
                     </div>
