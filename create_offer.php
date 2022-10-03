@@ -121,7 +121,7 @@
                     <h5 class="secondary">Payment methods:</h5>
                 </div>
                 
-                <div class="col-12 ui-card-light p-2">
+                <div class="col-12 ui-card-light m-2">
                     <div class="row" id="payment-methods-empty">
                         <div class="col-12 text-center">
                             <strong class="secondary">No payment methods</strong>
