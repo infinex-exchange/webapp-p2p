@@ -93,8 +93,10 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-6 my-auto">
-                    Available etc...
+                <div id="sell-balance-wrapper" class="col-12 col-lg-6 d-none my-auto small secondary">
+                    Available:
+                    <span id="sell-balance"></span>
+                    <span class="assetid"></span>
                 </div>
             </div>
             

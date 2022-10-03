@@ -98,6 +98,44 @@ function removeFpm(item, fpmid) {
         $('#payment-methods-empty').removeClass('d-none');
 }
 
+function refreshSellBalance() {
+    window.assetid = $('#select-coin').val();
+    window.fiatid = $('#select-fiat').val();
+    
+    if(window.assetid == '' || window.fiatid == '') return;
+    
+    if(window.side == 'BUY') {
+        $('#sell-balance-wrapper').addClass('d-none');
+        return;
+    }
+    
+    window.sellBalance = new BigNumber(0);
+        
+    $.ajax({
+        url: config.apiUrl + '/wallet/balances',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            symbols: [ window.assetid ]
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            window.sellBalance = new BigNumber(data.balances[window.assetid].avbl);
+            $('#sell-balance').html(data.balances[window.assetid].avbl);
+            $('#sell-balance-wrapper').removeClass('d-none');
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
 $(document).ready(function() {
     // Initial
     
@@ -119,6 +157,7 @@ $(document).ready(function() {
         if(window.assetid == '' || window.fiatid == '') return;
         
         refreshPmSelectors();
+        refreshSellBalance();
         
         $('.assetid').html(window.assetid);
         $('.fiatid').html(window.fiatid);
@@ -129,6 +168,7 @@ $(document).ready(function() {
     $('input[name="side"]').change(function() {
         window.side = this.value;
         refreshPmSelectors();
+        refreshSellBalance();
     });
     
     $('#select-fpm').on('change', function() {
@@ -241,6 +281,24 @@ $(document).ready(function() {
         
         // Do calculations
         $(this).trigger('updateCalc');
+    });
+    
+    // Move data-val to real visible value
+    $('#price, #amount-crypto, #fiat-min, #fiat-max').onFirst('focusout setVal', function() {
+        if($(this).is(':focus')) return;
+        
+        $(this).data('tsval', $(this).data('rval') )
+               .val( $(this).data('rval') );
+    });
+    
+    // Drop amount to available balance
+    $('#amount-crypto').on('updateCalc setVal', function() {
+        amount = new BigNumber($(this).data('rval'));
+        
+        $('#amount-crypto, #sell-balance').removeClass('text-red');
+        
+        if(window.side == 'SELL' && amount.gt(window.sellBalance))
+            $('#amount-crypto, #sell-balance').addClass('text-red');
     });
 });
 
