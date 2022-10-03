@@ -39,7 +39,7 @@
                     <label class="btn w-100 small btn-outline-red px-4" for="side-sell">Sell</label>
                 </div>
                 
-                <div class="col-12 col-lg-4 my-auto px-1">
+                <div class="col-12 col-lg-4 my-auto px-lg-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h6 class="secondary">Coin:</h6>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-4 my-auto px-1">
+                <div class="col-12 col-lg-4 my-auto px-lg-1">
                     <div class="row">
                         <div class="col-12 pb-1">
                             <h6 class="secondary">Fiat:</h6>
