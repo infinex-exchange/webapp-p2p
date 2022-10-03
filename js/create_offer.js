@@ -332,8 +332,8 @@ $(document).ready(function() {
         data['fiatid'] = window.fiatid;
         data['time_window'] = window.timeWindow;
         
-        if((window.side == 'BUY' && window.fpm_instances.length == 0) ||
-           (window.side == 'SELL' && window.fpms.length == 0)
+        if((window.side == 'BUY' && window.fpms.length == 0) ||
+           (window.side == 'SELL' && window.fpm_instances.length == 0)
         ) {
             msgBox('Add at least one payment method');
             return;
