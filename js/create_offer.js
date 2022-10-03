@@ -304,7 +304,7 @@ $(document).ready(function() {
         
         $('#fiat-max').removeClass('text-red');
         
-        if(min.ge(max))
+        if(min.gte(max))
             $('#fiat-max').addClass('text-red');
     });
     
