@@ -92,35 +92,27 @@
             </div>
             
             <div class="row my-5">
-                <div class="col-12 col-lg-6 my-auto px-1">
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Single transaction limits:</h6>
+                </div>
+                <div class="col-12 col-lg-6">
                     <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Single transaction limits:</h6>
+                        <div class="col-5 pe-0">
+                            <div class="input-ps-group">
+                                <input id="fiat-min" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                                <span class="suffix fiatid"></span>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-5 pe-0">
-                                    <div class="input-ps-group">
-                                        <input id="fiat-min" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                        <span class="suffix fiatid"></span>
-                                    </div>
-                                </div>
-                                <div class="col-1 my-auto text-center p-0">
-                                    <strong>-</strong>
-                                </div>
-                                <div class="col-6 ps-0">
-                                    <div class="input-ps-group">
-                                        <input id="fiat-max" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                        <span class="suffix fiatid"></span>
-                                    </div>
-                                </div>
+                        <div class="col-1 my-auto text-center p-0">
+                            <strong>-</strong>
+                        </div>
+                        <div class="col-6 ps-0">
+                            <div class="input-ps-group">
+                                <input id="fiat-max" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                                <span class="suffix fiatid"></span>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-12 col-lg-6 my-auto">
-                    Min max etc...
                 </div>
             </div>
             
