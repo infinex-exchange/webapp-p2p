@@ -202,16 +202,6 @@
         
         <!-- / Main column -->
         </div>
-        
-        <!-- Right column -->
-        <div class="d-none d-lg-block col-4 ui-card ui-column">
-            
-            <div class="row">
-                <h3>Info</h3>
-            </div>
-        
-        <!-- / Right column -->
-        </div>
             
         <!-- / Root container -->    
         </div>
