@@ -6,6 +6,7 @@
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Vayamos P2P</title>
+        <script src="/p2p/config.js?<?php echo filemtime(__DIR__.'/config.js'); ?>"></script>
     </head>
     <body>
     
