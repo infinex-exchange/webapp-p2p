@@ -1,8 +1,7 @@
 class ChatClient {
-    constructor(url, onOpen = null, onClose = null) {
+    constructor(url) {
         this.url = url;
-        this.onOpen = onOpen;
-        this.onClose = onClose;
+        this.callbacks = new Object();
         this.reconDelay = 0;
         this.onCloseCalled = false;
     }
@@ -27,8 +26,8 @@ class ChatClient {
             if(typeof(t.apiKey) !== 'undefined')
 	            t.auth(t.apiKey, t.ptid, t.authRespCb, t.authErrorCb);
             
-            if(t.onOpen != null)
-                t.onOpen();
+            if(typeof(t.callbacks['open']) != 'undefined')
+                t.callbacks['open']();
             
             t.onCloseCalled = false;
         }
@@ -47,9 +46,9 @@ class ChatClient {
 	            t.open();
             }, t.reconDelay);
             
-            if(t.onClose != null && !t.onCloseCalled) {
+            if(typeof(t.callbacks['open']) != 'undefined' && !t.onCloseCalled) {
 	            t.onCloseCalled = true;
-                t.onClose();
+                t.callbacks['close']();
             }
         }
         
@@ -63,9 +62,9 @@ class ChatClient {
         var t = this;
         
         t.pingTimeout = setTimeout(function() {
-            if(t.onClose != null && !t.onCloseCalled) {
+            if(typeof(t.callbacks['open']) != 'undefined' && !t.onCloseCalled) {
 	            t.onCloseCalled = true;
-                t.onClose();
+                t.callbacks['close']();
             }
             t.ws.close();
         }, 2000);
@@ -78,10 +77,8 @@ class ChatClient {
         });
     }
     
-    auth(apiKey, ptid, respCallback, errorCallback) { 
+    auth(apiKey, ptid) { 
         this.authId = this.randomId();
-        this.authRespCb = respCallback;
-        this.authErrorCb = errorCallback;
         this.apiKey = apiKey;
         this.ptid = ptid;
         
@@ -114,14 +111,14 @@ class ChatClient {
             
             if(msg.id == t.authId) {
                 if(msg.success) {
-                    t.authRespCb();
+                    if(typeof(t.callbacks['authSuccess']) != 'undefined')
+                        t.callbacks['authSuccess']();
                 }
                 else {
-                    t.authErrorCb(msg.error);
+                    if(typeof(t.callbacks['authFailed']) != 'undefined')
+                        t.callbacks['authFailed'](msg.error);
 	                delete t.apiKey;
 	                delete t.ptid;
-	                delete t.authRespCb;
-	                delete t.authErrorCb;
 	            }
 	            
 	            delete t.authId;
@@ -129,31 +126,28 @@ class ChatClient {
         }
             
         else if(msg.class == 'data') {
-            /*for(var stream in t.subDb) {
-                if(msg.stream == stream)
-                    t.subDb[stream]['dataCallback'](msg);
-            }*/
+            if(typeof(t.callbacks[msg.event]) != 'undefined')
+                t.callbacks[msg.event](msg);
         }
     }
     
-    unsub(streams, errorCallback) {
-        var t = this;
-        
-        var streamsArr = streams;
-        if(typeof(streams) === 'string')
-            streamsArr = new Array(streams);
-            
-        var id = t.randomId();
-        
-        $.each(streamsArr, function(k, stream) {
-            t.subDb[stream]['status'] = 'unsub_wait';
-            t.subDb[stream]['id'] = id;
+    function on(event, callback) {
+        this.callbacks[event] = callback;
+    }
+    
+    function sendTyping() {
+        this.send({
+            id: this.randomId(),
+            op: 'typing'
         });
-        
-        t.send({
-            op: 'unsub',
-            streams: streams,
-            id: id
+    }
+    
+    function sendMessage(type, body) {
+        this.send({
+            id: this.randomId(),
+            op: 'message',
+            type: type,
+            body: body
         });
     }
 }
