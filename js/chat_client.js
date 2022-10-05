@@ -131,23 +131,23 @@ class ChatClient {
         }
     }
     
-    function on(event, callback) {
+    on(event, callback) {
         this.callbacks[event] = callback;
     }
     
-    function off(event) {
+    off(event) {
         if(typeof(this.callbacks[event]) != 'undefined')
              delete this.callbacks[event]);
     }
     
-    function sendTyping() {
+    sendTyping() {
         this.send({
             id: this.randomId(),
             op: 'typing'
         });
     }
     
-    function sendMessage(type, body) {
+    sendMessage(type, body) {
         this.send({
             id: this.randomId(),
             op: 'message',
@@ -156,7 +156,7 @@ class ChatClient {
         });
     }
     
-    function markRead() {
+    markRead() {
         this.send({
             id: this.randomId(),
             op: 'mark_read'
