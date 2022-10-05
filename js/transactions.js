@@ -52,7 +52,7 @@ function renderTransaction(t) {
                         <div class="row">
                         
                             <div class="col-12 small">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-regular fa-circle-user"></i>
                                 <strong>${t.nickname}</strong>
                             </div>
                             <div class="col-12 small">
