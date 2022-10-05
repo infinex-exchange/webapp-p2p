@@ -74,6 +74,7 @@ function refreshTransaction(first = false) {
                 $('.amount-crypto').html(data.transaction.amount_crypto);
                 $('.fiatid').html(data.transaction.fiatid);
                 $('.price').html(data.transaction.price);
+                $('.nickname').html(data.transaction.nickname);
                 
                 $.each(data.fpm_instances, function(k, v) {
                     renderFpmInstance(k, v, data.fpms);
