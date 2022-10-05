@@ -44,7 +44,7 @@ function renderTransaction(t) {
     }
 
     return `
-        <div class="transaction-item separate row flex-nowrap px-1 py-2 hoverable" onClick="gotoTrans(${t.ptid})">
+        <div class="transaction-item separate row flex-nowrap px-1 py-3 hoverable" onClick="gotoTrans(${t.ptid})">
             ${notiHtml}
             <div class="col-${restCol} pe-0">
                 <div class="row">
