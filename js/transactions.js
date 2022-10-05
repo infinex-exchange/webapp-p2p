@@ -52,10 +52,11 @@ function renderTransaction(t) {
                         <div class="row">
                         
                             <div class="col-12 small">
-                                <span class="${color}">${t.side}</span>
+                                <strong>${t.nickname}</strong>
                             </div>
                             <div class="col-12 small">
-		                        ${t.amount_crypto} ${t.assetid}
+		                        <span class="${color}">${t.side}</span>
+                                ${t.amount_crypto} ${t.assetid}
 		                    </div>
                             
                             <div class="col-12 pt-1">
