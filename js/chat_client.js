@@ -137,7 +137,7 @@ class ChatClient {
     
     off(event) {
         if(typeof(this.callbacks[event]) != 'undefined')
-             delete this.callbacks[event]);
+             delete this.callbacks[event];
     }
     
     sendTyping() {
