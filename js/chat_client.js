@@ -150,4 +150,11 @@ class ChatClient {
             body: body
         });
     }
+    
+    function markRead() {
+        this.send({
+            id: this.randomId(),
+            op: 'mark_read'
+        });
+    }
 }
