@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Vayamos P2P</title>
         <script src="/p2p/config.js?<?php echo filemtime(__DIR__.'/config.js'); ?>"></script>
+        <script src="/p2p/js/chat_client.js?<?php echo filemtime(__DIR__.'/js/chat_client.js'); ?>"></script>
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
     </head>
     <body>
     
