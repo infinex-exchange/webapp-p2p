@@ -172,7 +172,8 @@ $(document).on('haveConfig', function() {
                         <div class="my-auto sm-w-100 order-1" style="width: 20%">
                             <div class="row">
 	                            <div class="col-3 col-lg-12">
-		                            <strong>${v.nickname}</strong>
+		                            <i class="fa-solid fa-user"></i>
+                                    <strong>${v.nickname}</strong>
 		                        </div>
                                 <div class="col-4 col-lg-12">
 		                            <div class="rateit" data-rateit-value="${ratingStars}" style="font-size: 20px"></div>
