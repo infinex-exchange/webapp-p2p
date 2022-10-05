@@ -24,7 +24,7 @@ class ChatClient {
             }, 5000);
             
             if(typeof(t.apiKey) !== 'undefined')
-	            t.auth(t.apiKey, t.ptid, t.authRespCb, t.authErrorCb);
+	            t.auth(t.apiKey, t.ptid);
             
             if(typeof(t.callbacks['open']) != 'undefined')
                 t.callbacks['open']();
@@ -133,6 +133,11 @@ class ChatClient {
     
     function on(event, callback) {
         this.callbacks[event] = callback;
+    }
+    
+    function off(event) {
+        if(typeof(this.callbacks[event]) != 'undefined')
+             delete this.callbacks[event]);
     }
     
     function sendTyping() {

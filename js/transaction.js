@@ -82,7 +82,7 @@ function refreshTransaction(first = false) {
                 
                 document.title = data.transaction.side + ' ' + data.transaction.assetid + ' | Vayamos P2P';
 
-                $(document).trigger('renderingStage');
+                $(document).trigger('ptidVerified').trigger('renderingStage');
             }
             
             $('.status').addClass('d-none');
