@@ -11,6 +11,8 @@ function doJsSizing() {
         var remainH = $('#' + i).height() - $('#' + i + '-header').outerHeight() - footerH;
         document.body.style.setProperty('--target-height-' + i + '-data', remainH + 'px');
     });
+    
+    $(document).trigger('afterJsSizing');
 }
 
 $(document).on('renderingComplete', function() {

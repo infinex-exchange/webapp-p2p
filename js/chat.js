@@ -143,7 +143,13 @@ $(document).on('ptidVerified', function() {
         else {
             $('#chat-data').prepend(msgHtml);
         }
+        
+        $('#chat-data').scrollTop(999999);
     });
     
     window.chatClient.open();
+});
+
+$(document).on('afterJsSizing', function() {
+    $('#chat-data').scrollTop(999999);
 });
