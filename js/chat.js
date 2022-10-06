@@ -31,6 +31,7 @@ function markAllRead() {
     
     window.chatClient.markRead();
     $('.chat-new-msg-separator').remove();
+    $('.chat-msg-item').attr('data-unread', 'false');
 }
 
 function sendChatMessage() {
@@ -157,7 +158,7 @@ $(document).on('ptidVerified', function() {
         var time = formatMessageTimestamp(msg.time);
         
         var msgHtml = `
-            <div class="row chat-msg-item" data-timestamp="${msg.time}" data-unread="${msg.unread}">
+            <div class="row chat-msg-item" data-timestamp="${msg.time}" data-incoming="${msg.incoming}" data-unread="${msg.unread}">
             <div class="col-12 py-1">
                 <div class="chat-msg ${incoming}">
                     <div class="row">
@@ -196,7 +197,7 @@ $(document).on('ptidVerified', function() {
             </div>
         `;
         
-        $(separHtml).insertBefore('.chat-msg-item[data-unread="true"]:first');
+        $(separHtml).insertBefore('.chat-msg-item[data-incoming="true"][data-unread="true"]:first');
         
         $('#chat-data').scrollTop(999999);
     });
