@@ -24,5 +24,6 @@ $(window).resize(function() {
 });
 
 $('.nav-link[data-ui-card-target]').on('click', function() {
+    alert('js sized');
     doJsSizing();
 });
