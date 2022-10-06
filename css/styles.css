@@ -228,10 +228,6 @@
     float: left !important;
 }
 
-#chat-input {
-    resize: none;
-}
-
 /* New messages separator */
 
 .chat-new-msg-separator-h {
