@@ -275,14 +275,14 @@
         <div class="feedback row" data-feedback="true">
             <div class="col-12">
                 <i class="fa-solid fa-thumbs-up text-green"></i>
-                I recommend trading with this user
+                <span class="secondary">I recommend trading with this user</span>
             </div>
         </div>
         
          <div class="feedback row" data-feedback="false">
             <div class="col-12">
                 <i class="fa-solid fa-thumbs-down text-red"></i>
-                I do not recommend trading with this user
+                <span class="secondary">I do not recommend trading with this user</span>
             </div>
         </div>
         
