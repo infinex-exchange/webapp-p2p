@@ -210,13 +210,14 @@
 
 .chat-msg {
     border-radius: 10px;
-    background-color: var(--color-input);
+    background-color: var(--color-ultra);
+    color: white;
     float: right;
     padding: 8px;
 }
 
 .chat-msg.incoming {
-    background-color: var(--color-ultra) !important;
-    color: white !important;
+    background-color: var(--color-input) !important;
+    color: initial !important;
     float: left !important;
 }
