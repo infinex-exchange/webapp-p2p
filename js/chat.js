@@ -20,7 +20,10 @@ function updatePresence() {
 }
 
 function sendChatMessage() {
-    alert('send message');
+    var body = $('#chat-input').val();
+    if(body.trim().length == 0) return;
+    
+    window.chatClient.sendMessage('text', body);
 }
 
 $(document).on('ptidVerified', function() {
