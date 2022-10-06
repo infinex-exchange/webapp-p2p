@@ -61,7 +61,7 @@ $(document).on('ptidVerified', function() {
         
         var msgHtml = `
             <div class="row chat-msg-item" data-timestamp="${msg.time}">
-            <div class="col-12">
+            <div class="col-12 py-1">
                 <div class="chat-msg ${incoming}">
                     <div class="row">
                         <div class="col-12">
