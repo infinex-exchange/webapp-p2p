@@ -3,7 +3,9 @@ function doJsSizing() {
     document.body.style.setProperty('--height-mobile-nav', $('#mobile-navbar').outerHeight() + 'px');
 	document.body.style.setProperty('--height-main-nav', $('#main-navbar').outerHeight() + 'px');
     
-    ['trade', 'recent-trades', 'my-offers'].forEach(function(i) {
+    ['trade', 'recent-trades', 'my-offers', 'chat'].forEach(function(i) {
+        if($('#' + i).length == 0) return;
+        
         var footerH = 0;
         if($('#' + i + '-footer').length) footerH = $('#' + i + '-footer').outerHeight();
         var remainH = $('#' + i).height() - $('#' + i + '-header').outerHeight() - footerH;
