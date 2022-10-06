@@ -21,7 +21,7 @@ function updatePresence() {
 
 $(document).on('ptidVerified', function() {
     window.presenceOnline = false;
-    window.presenceLastSeen = NULL;
+    window.presenceLastSeen = null;
     
     setInterval(updatePresence, 1000);
     updatePresence();
