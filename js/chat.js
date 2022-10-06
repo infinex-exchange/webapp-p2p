@@ -41,6 +41,20 @@ function formatLastSeen(seconds) {
     return s + (s == 1 ? " second" : " seconds");
 }
 
+function formatMessageTimestamp(timestamp) {
+    var date = new Date(timestamp * 1000);
+    var today = new Date();
+    
+    if(date.getDate() == today.getDate() &&
+       date.getMonth() == today.getMonth() &&
+       date.getFullYear() == today.getFullYear()
+    ) {
+        return date.toLocaleTimeString();
+    }
+    
+    return date.toLocaleString();
+}
+
 $(document).on('ptidVerified', function() {
     window.presenceOnline = false;
     window.presenceLastSeen = null;
@@ -100,6 +114,8 @@ $(document).on('ptidVerified', function() {
         
         var body = msg.body.replace(/\n/g, '<br>');
         
+        var time = formatMessageTimestamp(msg.time);
+        
         var msgHtml = `
             <div class="row chat-msg-item" data-timestamp="${msg.time}">
             <div class="col-12 py-1">
@@ -109,7 +125,7 @@ $(document).on('ptidVerified', function() {
                             ${body}
                         </div>
                         <div class="col-auto ms-auto">
-                            <i class="small">${msg.time}</i>
+                            <i class="small">${time}</i>
                         </div>
                     </div>
                 </div>
