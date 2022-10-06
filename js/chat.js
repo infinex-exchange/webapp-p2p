@@ -128,9 +128,9 @@ $(document).on('ptidVerified', function() {
         if($('.chat-msg-item[data-timestamp="' + msg.time + '"]').length)
             return;
         
-        alert(msg.incoming);
-        alert(typeof(window.typingInTimeout) != 'undefined');
-        alert(window.typingInTimeout !== null);
+        console.log(msg.incoming);
+        console.log(typeof(window.typingInTimeout) != 'undefined');
+        console.log(window.typingInTimeout !== null);
         if(msg.incoming && typeof(window.typingInTimeout) != 'undefined' && window.typingInTimeout !== null) {
             alert('condition to remove typing');
             $('.chat-typing-vmsg').addClass('d-none');
