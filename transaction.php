@@ -310,6 +310,12 @@
         </div>
         
         <div id="chat-footer" class="row">
+            <div class="col-10">
+                <textarea class="form-control" id="chat-input"></textarea>
+            </div>
+            <div class="col-2">
+                s
+            </div>
         </div>
         
         <!-- / Right column -->
