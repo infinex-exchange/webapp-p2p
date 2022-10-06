@@ -297,13 +297,11 @@
         <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
         <div id="chat-header" class="row p-2">
-            <div class="col-auto my-auto p-0">
+            <div class="col-auto my-auto">
                 <i id="chat-online-icon" class="fa-solid fa-circle fa-lg"></i>
             </div>
             <div class="col-auto my-auto">
                 <h3 class="nickname"></h3>
-            </div>
-            <div class="col-12">
                 <span class="secondary" id="chat-last-seen"></span>
             </div>
         </div>
