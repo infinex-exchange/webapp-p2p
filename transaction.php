@@ -297,7 +297,7 @@
         <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
         <div id="chat-header" class="row">
-            <div class="col-auto my-auto pb-2">
+            <div class="col-auto my-auto pb-2 text-center">
                 <i id="chat-online-icon" class="fa-solid fa-circle fa-lg"></i>
             </div>
             <div class="col-auto my-auto pb-2">
