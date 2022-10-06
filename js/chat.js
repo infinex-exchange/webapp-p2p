@@ -74,7 +74,7 @@ $(document).on('ptidVerified', function() {
         }
         
         var now = new Date().getTime();
-        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 1) {
+        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 1500) {
             window.chatClient.sendTyping();
             window.typingOutLastSend = now;
         } 
