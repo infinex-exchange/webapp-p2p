@@ -128,6 +128,11 @@ $(document).on('ptidVerified', function() {
         if($('.chat-msg-item[data-timestamp="' + msg.time + '"]').length)
             return;
         
+        if(msg.incoming && typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null) {
+            $('.chat-typing-vmsg').addClass('d-none');
+            window.typingInInterval = null;
+        }
+        
         var incoming = '';
         if(msg.incoming) incoming = 'incoming';
         
@@ -164,11 +169,6 @@ $(document).on('ptidVerified', function() {
         }
         
         $('#chat-data').scrollTop(999999);
-        
-        if(msg.incoming && typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null) {
-            $('.chat-typing-vmsg').addClass('d-none');
-            window.typingInInterval = null;
-        }
     });
     
     window.chatClient.open();
