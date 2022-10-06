@@ -13,7 +13,7 @@ function updatePresence() {
             $('#chat-last-seen').html('Offline');
         }
         else {
-            var seconds = (Date.now() / 1000) - window.presenceLastSeen;
+            var seconds = Math.floor((Date.now() / 1000) - window.presenceLastSeen);
             $('#chat-last-seen').html('Seen ' + seconds + ' seconds ago');
         }
     }
