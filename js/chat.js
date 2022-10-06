@@ -19,6 +19,10 @@ function updatePresence() {
     }
 }
 
+function sendChatMessage() {
+    alert('send message');
+}
+
 $(document).on('ptidVerified', function() {
     window.presenceOnline = false;
     window.presenceLastSeen = null;
@@ -26,6 +30,23 @@ $(document).on('ptidVerified', function() {
     setInterval(updatePresence, 1000);
     updatePresence();
     
+    
+    
+    
+    $("#chat-input").keypress(function (e) {
+        if(e.which === 13 && !e.shiftKey) {
+            e.preventDefault();
+            sendChatMessage();
+        }
+    });
+    
+    $('#chat-submit').click(function() {
+        sendChatMessage();
+    });
+
+
+
+
     window.chatClient = new ChatClient(p2pConfig.chatServerUrl);
     
     window.chatClient.on('open', function() {
