@@ -85,13 +85,15 @@ $(document).on('ptidVerified', function() {
         var incoming = '';
         if(msg.incoming) incoming = 'incoming';
         
+        var body = msg.body.replace(/\n/g, '<br>');
+        
         var msgHtml = `
             <div class="row chat-msg-item" data-timestamp="${msg.time}">
             <div class="col-12 py-1">
                 <div class="chat-msg ${incoming}">
                     <div class="row">
                         <div class="col-12">
-                            ${msg.body}
+                            ${body}
                         </div>
                         <div class="col-auto ms-auto">
                             <i class="small">${msg.time}</i>
