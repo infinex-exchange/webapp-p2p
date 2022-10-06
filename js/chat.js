@@ -121,13 +121,16 @@ $(document).on('ptidVerified', function() {
         window.typingInTimeout = setTimeout(function() {
             $('.chat-typing-vmsg').addClass('d-none');
             window.typingInTimeout = null;
-        }, 5000);
+        }, 4000);
     });
     
     window.chatClient.on('message', function(msg) {
         if($('.chat-msg-item[data-timestamp="' + msg.time + '"]').length)
             return;
         
+        alert(msg.incoming);
+        alert(typeof(window.typingInTimeout) != 'undefined');
+        alert(window.typingInTimeout !== null);
         if(msg.incoming && typeof(window.typingInTimeout) != 'undefined' && window.typingInTimeout !== null) {
             alert('condition to remove typing');
             $('.chat-typing-vmsg').addClass('d-none');
