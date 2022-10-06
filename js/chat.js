@@ -115,12 +115,12 @@ $(document).on('ptidVerified', function() {
         $('.chat-typing-vmsg').removeClass('d-none');
         $('#chat-data').scrollTop(999999);
         
-        if(typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null)
-            clearInterval(window.typingInInterval);
+        if(typeof(window.typingInTimeout) != 'undefined' && window.typingInTimeout !== null)
+            clearTimeout(window.typingInTimeout);
         
-        window.typingInInterval = setInterval(function() {
+        window.typingInTimeout = setTimeout(function() {
             $('.chat-typing-vmsg').addClass('d-none');
-            window.typingInInterval = null;
+            window.typingInTimeout = null;
         }, 3000);
     });
     
@@ -128,9 +128,9 @@ $(document).on('ptidVerified', function() {
         if($('.chat-msg-item[data-timestamp="' + msg.time + '"]').length)
             return;
         
-        if(msg.incoming && typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null) {
+        if(msg.incoming && typeof(window.typingInTimeout) != 'undefined' && window.typingInTimeout !== null) {
             $('.chat-typing-vmsg').addClass('d-none');
-            window.typingInInterval = null;
+            window.typingInTimeout = null;
         }
         
         var incoming = '';
