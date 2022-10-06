@@ -14,7 +14,8 @@ function updatePresence() {
         }
         else {
             var seconds = Math.floor((Date.now() / 1000) - window.presenceLastSeen);
-            $('#chat-last-seen').html('Seen ' + seconds + ' seconds ago');
+            var lastSeenStr = formatLastSeen(seconds);
+            $('#chat-last-seen').html('Seen ' + lastSeenStr + ' ago');
         }
     }
 }
@@ -26,6 +27,18 @@ function sendChatMessage() {
     window.chatClient.sendMessage('text', body);
     
     $('#chat-input').val('');
+}
+
+function formatLastSeen(seconds) {
+    var d = Math.floor(seconds / (3600*24));
+    var h = Math.floor(seconds % (3600*24) / 3600);
+    var m = Math.floor(seconds % 3600 / 60);
+    var s = Math.floor(seconds % 60);
+
+    if(d > 0) return d + (d == 1 ? " day" : " days");
+    if(h > 0) return h + (h == 1 ? " hour" : " hours");
+    if(m > 0) return m + (m == 1 ? " minute" : " minutes");
+    return s + (s == 1 ? " second" : " seconds");
 }
 
 $(document).on('ptidVerified', function() {
