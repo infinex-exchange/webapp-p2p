@@ -73,7 +73,7 @@ $(document).on('ptidVerified', function() {
             sendChatMessage();
         }
         
-        var now = new Date();
+        var now = new Date().getTime();
         if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 1) {
             window.chatClient.sendTyping();
             window.typingOutLastSend = now;
