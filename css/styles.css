@@ -56,6 +56,10 @@
     height: var(--target-height-my-offers-data);
 }
 
+#chat-data {
+    height: var(--target-height-chat-data);
+}
+
 /* Outline button */
 
 .btn-outline-green {
