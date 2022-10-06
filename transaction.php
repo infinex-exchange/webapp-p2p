@@ -310,11 +310,13 @@
         </div>
         
         <div id="chat-footer" class="row mt-2">
-            <div class="col-10">
+            <div class="col-10 my-auto">
                 <textarea class="w-100" id="chat-input"></textarea>
             </div>
-            <div class="col-2">
-                s
+            <div class="col-2 my-auto">
+                <button type="button" class="btn btn-primary w-100 h-100" onClick="sendChatMessage()">
+                    <i class="fa-solid fa-paper-plane fa-lg"></i>
+                </button>
             </div>
         </div>
         
