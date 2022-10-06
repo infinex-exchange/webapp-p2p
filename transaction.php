@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-success d-flex align-items-center m-0" data-status="COMPLETED" data-side="BUY">
+                <div class="status ui-card-light border d-flex align-items-center m-0" data-status="COMPLETED" data-side="BUY">
                     <div class="p-2">
                         <i class="fa-solid fa-circle-check fa-2x text-green"></i>
                     </div>
@@ -135,7 +135,7 @@
 	                    </span>
                     </div>
                 </div>
-                <div class="status ui-card-light border border-success d-flex align-items-center m-0" data-status="COMPLETED" data-side="SELL">
+                <div class="status ui-card-light border d-flex align-items-center m-0" data-status="COMPLETED" data-side="SELL">
                     <div class="p-2">
                         <i class="fa-solid fa-circle-check fa-2x text-green"></i>
                     </div>
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-danger d-flex align-items-center m-0" data-status="CANCELED" data-side="BUY">
+                <div class="status ui-card-light border d-flex align-items-center m-0" data-status="CANCELED" data-side="BUY">
                     <div class="p-2">
                         <i class="fa-solid fa-circle-xmark fa-2x text-red"></i>
                     </div>
@@ -164,7 +164,7 @@
 	                    </span>
                     </div>
                 </div>
-                <div class="status ui-card-light border border-danger d-flex align-items-center m-0" data-status="CANCELED" data-side="SELL">
+                <div class="status ui-card-light border d-flex align-items-center m-0" data-status="CANCELED" data-side="SELL">
                     <div class="p-2">
                         <i class="fa-solid fa-circle-xmark fa-2x text-red"></i>
                     </div>
@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 
-                <div class="status ui-card-light border border-warning d-flex align-items-center m-0" data-status="DISPUTE" data-side="BUY">
+                <div class="status ui-card-light border d-flex align-items-center m-0" data-status="DISPUTE" data-side="BUY">
                     <div class="p-2">
                         <i class="fa-solid fa-bolt fa-2x text-warning"></i>
                     </div>
@@ -196,7 +196,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="status ui-card-light border border-warning d-flex align-items-center m-0" data-status="DISPUTE" data-side="SELL">
+                <div class="status ui-card-light border d-flex align-items-center m-0" data-status="DISPUTE" data-side="SELL">
                     <div class="p-2">
                         <i class="fa-solid fa-bolt fa-2x text-warning"></i>
                     </div>
@@ -272,16 +272,16 @@
             </div>
         </div>
         
-        <div class="feedback row text-green" data-feedback="true">
+        <div class="feedback row" data-feedback="true">
             <div class="col-12">
-                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-thumbs-up text-green"></i>
                 I recommend trading with this user
             </div>
         </div>
         
-         <div class="feedback row text-red" data-feedback="false">
+         <div class="feedback row" data-feedback="false">
             <div class="col-12">
-                <i class="fa-solid fa-thumbs-down"></i>
+                <i class="fa-solid fa-thumbs-down text-red"></i>
                 I do not recommend trading with this user
             </div>
         </div>
