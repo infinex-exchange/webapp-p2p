@@ -74,10 +74,9 @@ $(document).on('ptidVerified', function() {
         }
         
         var now = new Date().getTime();
-        console.log(now - window.typingOutLastSend > 1500);
-        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 1500) {
+        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSent > 1500) {
             window.chatClient.sendTyping();
-            window.typingOutLastSend = now;
+            window.typingOutLastSent = now;
         } 
     });
     
