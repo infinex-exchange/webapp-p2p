@@ -24,6 +24,8 @@ function sendChatMessage() {
     if(body.trim().length == 0) return;
     
     window.chatClient.sendMessage('text', body);
+    
+    $('#chat-input').val('');
 }
 
 $(document).on('ptidVerified', function() {
