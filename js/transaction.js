@@ -21,6 +21,8 @@ function renderFpmInstance(fpminstaid, fpminsta, fpms) {
     var fieldsInnerHtml = '';
 	            
     $.each(fpminsta.fields, function(kk, vv) {
+        vv = nl2br(vv);
+        
         fieldsInnerHtml += `
         
 	        <div class="row">

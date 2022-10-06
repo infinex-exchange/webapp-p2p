@@ -205,6 +205,8 @@ $(document).on('authChecked', function() {
 	            var fieldsInnerHtml = '';
 	            
 	            $.each(v.fields, function(kk, vv) {
+                    vv = nl2br(vv);
+                    
 	                fieldsInnerHtml += `
 	                    <div class="col-12 pb-2">
 		                    <h5 class="secondary">
