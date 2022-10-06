@@ -130,6 +130,7 @@ $(document).on('ptidVerified', function() {
         
         if(msg.incoming && typeof(window.typingInTimeout) != 'undefined' && window.typingInTimeout !== null) {
             $('.chat-typing-vmsg').addClass('d-none');
+            clearTimeout(window.typingInTimeout);
             window.typingInTimeout = null;
         }
         
