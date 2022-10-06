@@ -297,6 +297,7 @@
         <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
         <div id="chat-header" class="row p-2">
+            <i class="fa-solid fa-circle fa-xl"></i>
             <h3 class="nickname"></h3>
         </div>
         
