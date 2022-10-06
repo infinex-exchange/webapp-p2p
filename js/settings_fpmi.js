@@ -48,13 +48,25 @@ $(document).ready(function() {
                         var optional = '';
                         if(!v.required) optional = '<i class="secondary">(optional)</i>';
                         
+                        var inputHtml = null;
+                        if(v.regexp.includes('\n')) {
+                            inputHtml = `
+                                <textarea class="ma-field w-100" rows="2" data-key="${k}" onInput="validateField(this)"></textarea>
+                            `;
+                        }
+                        else {
+                            inputHtml = `
+                                <input type="text" class="ma-field form-control" data-key="${k}" onInput="validateField(this)">
+                            `;
+                        }
+                        
                         $('#ma-fields').append(`
                             <div class="col-12 pt-3">
                                 <h5 class="d-inline">${v.name}:</h5>
                                 ${optional}
                             </div>
                             <div class="col-12 pt-1">
-                                <input type="text" class="ma-field form-control" data-key="${k}" onInput="validateField(this)">
+                                ${inputHtml}
                             </div>
                             <div class="col-12 pt-1">
                                 <small class="ma-field-help form-text" data-key="${k}" style="display: none">
