@@ -173,8 +173,8 @@ $(document).on('ptidVerified', function() {
         
         separHtml = `
             <div class="row chat-new-msg-separator">
-                <div class="col-12">
-                    <h6 class="chat-new-msg-separator-h">
+                <div class="col-12 py-1">
+                    <h6 class="chat-new-msg-separator-h secondary">
                         NEW MESSAGES
                     </h6>
                 </div>
