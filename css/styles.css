@@ -218,6 +218,6 @@
 
 .chat-msg.incoming {
     background-color: var(--color-input) !important;
-    color: initial !important;
+    color: var(--color-primary) !important;
     float: left !important;
 }
