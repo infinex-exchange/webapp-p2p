@@ -142,7 +142,7 @@ $(document).on('ptidVerified', function() {
         var time = formatMessageTimestamp(msg.time);
         
         var msgHtml = `
-            <div class="row chat-msg-item" data-timestamp="${msg.time}">
+            <div class="row chat-msg-item" data-timestamp="${msg.time}" data-unread="${msg.unread}">
             <div class="col-12 py-1">
                 <div class="chat-msg ${incoming}">
                     <div class="row">
@@ -168,6 +168,20 @@ $(document).on('ptidVerified', function() {
         else {
             $('#chat-data').prepend(msgHtml);
         }
+        
+        $('.chat-new-msg-separator').remove();
+        
+        separHtml = `
+            <div class="row chat-new-msg-separator">
+                <div class="col-12">
+                    <h6 class="chat-new-msg-separator-h">
+                        NEW MESSAGES
+                    </h6>
+                </div>
+            </div>
+        `;
+        
+        $(separHtml).insertBefore('.chat-msg-item[data-unread="true"]:first');
         
         $('#chat-data').scrollTop(999999);
     });

@@ -231,3 +231,25 @@
 #chat-input {
     resize: none;
 }
+
+/* New messages separator */
+
+.chat-new-msg-separator-h {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-new-msg-separator-h:before, .chat-new-msg-separator-h:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.chat-new-msg-separator-h:before {
+    margin-right: 10px
+}
+
+.chat-new-msg-separator-h:after {
+    margin-left: 10px
+}
