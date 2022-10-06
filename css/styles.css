@@ -222,7 +222,7 @@
 }
 
 .chat-msg.incoming {
-    background-color: var(--color-input) !important;
+    background-color: var(--color-bg-light) !important;
     color: var(--color-primary) !important;
     float: left !important;
 }

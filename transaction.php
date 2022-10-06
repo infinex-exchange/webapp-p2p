@@ -311,7 +311,7 @@
         
         <div id="chat-footer" class="row mt-2">
             <div class="col-10">
-                <textarea id="chat-input"></textarea>
+                <textarea class="w-100" id="chat-input"></textarea>
             </div>
             <div class="col-2">
                 s
