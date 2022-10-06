@@ -22,6 +22,17 @@ function updatePresence() {
     }
 }
 
+function markAllRead() {
+    if($('#chat').hasClass('d-none'))
+        return;
+    
+    if($('.chat-new-msg-separator').length == 0)
+        return;
+    
+    window.chatClient.markRead();
+    $('.chat-new-msg-separator').remove();
+}
+
 function sendChatMessage() {
     var body = $('#chat-input').val();
     if(body.trim().length == 0) return;
@@ -82,6 +93,10 @@ $(document).on('ptidVerified', function() {
     
     $('#chat-submit').click(function() {
         sendChatMessage();
+    });
+    
+    $('body').on('click keypress', function() {
+        markAllRead();
     });
 
 
