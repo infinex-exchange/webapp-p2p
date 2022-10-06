@@ -2,7 +2,30 @@ function realOnOpen() {
     alert('open');
 }
 
+function updatePresence() {
+    if(window.presenceOnline) {
+        $('#chat-online-icon').removeClass('secondary').addClass('text-green');
+        $('#chat-last-seen').html('Online');
+    }
+    else {
+        $('#chat-online-icon').removeClass('text-green').addClass('secondary');
+        if(window.presenceLastSeen == null) {
+            $('#chat-last-seen').html('Offline');
+        }
+        else {
+            var seconds = (Date.now() / 1000) - window.presenceLastSeen;
+            $('#chat-last-seen').html('Seen ' + seconds + ' seconds ago');
+        }
+    }
+}
+
 $(document).on('ptidVerified', function() {
+    window.presenceOnline = false;
+    window.presenceLastSeen = NULL;
+    
+    setInterval(updatePresence, 1000);
+    updatePresence();
+    
     window.chatClient = new ChatClient(p2pConfig.chatServerUrl);
     
     window.chatClient.on('open', function() {
@@ -18,15 +41,19 @@ $(document).on('ptidVerified', function() {
     window.chatClient.on('authFailed', msgBox);
     
     window.chatClient.on('presence', function(presence) {
-        alert(presence);
+        window.presenceOnline = presence.online;
+        if(typeof(presence.last_seen) != 'undefined')
+            window.presenceLastSeen = presence.last_seen;
+        
+        updatePresence();
     });
     
     window.chatClient.on('typing', function() {
-        alert('typing');
+        //
     });
     
     window.chatClient.on('message', function(msg) {
-        alert(msg.body);
+        //
     });
     
     window.chatClient.open();
