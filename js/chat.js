@@ -129,6 +129,7 @@ $(document).on('ptidVerified', function() {
             return;
         
         if(msg.incoming && typeof(window.typingInTimeout) != 'undefined' && window.typingInTimeout !== null) {
+            alert('condition to remove typing');
             $('.chat-typing-vmsg').addClass('d-none');
             clearTimeout(window.typingInTimeout);
             window.typingInTimeout = null;
