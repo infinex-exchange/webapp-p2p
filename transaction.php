@@ -307,6 +307,13 @@
         </div>
         
         <div id="chat-data" class="scrollable">
+            <div class="row chat-typing-vmsg d-none">
+            <div class="col-12 py-1">
+                <div class="chat-msg incoming">
+                    ...
+                </div>
+            </div>
+            </div>
         </div>
         
         <div id="chat-footer" class="row">

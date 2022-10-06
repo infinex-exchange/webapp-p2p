@@ -106,7 +106,15 @@ $(document).on('ptidVerified', function() {
     });
     
     window.chatClient.on('typing', function() {
-        //
+        $('.chat-typing-vmsg').removeClass('d-none');
+        
+        if(typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null)
+            clearInterval(window.typingInInterval);
+        
+        window.typingInInterval = setInterval(function() {
+            $('.chat-typing-vmsg').removeClass('d-none');
+            window.typingInInterval = null;
+        }, 3000);
     });
     
     window.chatClient.on('message', function(msg) {
@@ -141,7 +149,7 @@ $(document).on('ptidVerified', function() {
             window.mostRecentMsgTime = 0;
         
         if(msg.time > window.mostRecentMsgTime) {
-            $('#chat-data').append(msgHtml);
+            $(msgHtml).insertBefore('.chat-typing-vmsg');
             window.mostRecentMsgTime = msg.time;
         }
         else {
@@ -149,6 +157,11 @@ $(document).on('ptidVerified', function() {
         }
         
         $('#chat-data').scrollTop(999999);
+        
+        if(msg.incoming && typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null) {
+            $('.chat-typing-vmsg').removeClass('d-none');
+            window.typingInInterval = null;
+        }
     });
     
     window.chatClient.open();
