@@ -68,7 +68,7 @@ $(document).on('ptidVerified', function() {
                             ${msg.body}
                         </div>
                         <div class="col-auto ms-auto">
-                            <i class="small secondary">${msg.time}</i>
+                            <i class="small">${msg.time}</i>
                         </div>
                     </div>
                 </div>
