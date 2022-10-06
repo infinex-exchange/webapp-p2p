@@ -296,7 +296,7 @@
         <div class="row m-0">
         <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
-        <div id="chat-header" class="row p-2">
+        <div id="chat-header" class="row">
             <div class="col-auto my-auto">
                 <i id="chat-online-icon" class="fa-solid fa-circle fa-lg"></i>
             </div>
@@ -304,6 +304,12 @@
                 <h3 class="nickname mb-1"></h3>
                 <span class="secondary" id="chat-last-seen"></span>
             </div>
+        </div>
+        
+        <div id="chat-data" class="scrollable">
+        </div>
+        
+        <div id="chat-footer" class="row">
         </div>
         
         <!-- / Right column -->

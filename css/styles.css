@@ -205,3 +205,18 @@
 .payment-methods-item:hover .remove-pm {
     display: initial;
 }
+
+/* Chat messages */
+
+.chat-msg {
+    border-radius: 10px;
+    background-color: var(--color-input);
+    color: black;
+    float: right;
+}
+
+.chat-msg.incoming {
+    background-color: var(--color-ultra) !important;
+    color: white !important;
+    float: left !important;
+}

@@ -1,5 +1,5 @@
 function realOnOpen() {
-    alert('open');
+    console.log('open');
 }
 
 function updatePresence() {
@@ -35,7 +35,7 @@ $(document).on('ptidVerified', function() {
     });
     
     window.chatClient.on('close', function() {
-        alert('close');
+        console.log('close');
     });
     
     window.chatClient.on('authFailed', msgBox);
@@ -53,7 +53,30 @@ $(document).on('ptidVerified', function() {
     });
     
     window.chatClient.on('message', function(msg) {
-        //
+        if($('.chat-msg-item[data-timestamp="' + msg.time + '"]').length)
+            return;
+        
+        var incoming = '';
+        if(msg.incoming) incoming = 'incoming';
+        
+        var msgHtml = `
+            <div class="row chat-msg-item" data-timestamp="${msg.time}">
+            <div class="col-12">
+                <div class="chat-msg ${incoming}">
+                    <div class="row">
+                        <div class="col-12">
+                            ${msg.body}
+                        </div>
+                        <div class="col-12 text-right">
+                            <i class="small">${msg.timestamp}</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        `;
+        
+        $('#chat-data').append(msgHtml);
     });
     
     window.chatClient.open();
