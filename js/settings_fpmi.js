@@ -49,7 +49,7 @@ $(document).ready(function() {
                         if(!v.required) optional = '<i class="secondary">(optional)</i>';
                         
                         var inputHtml = null;
-                        if(v.regexp.includes('\n')) {
+                        if(v.regexp.includes('\\n')) {
                             inputHtml = `
                                 <textarea class="ma-field w-100" rows="2" data-key="${k}" onInput="validateField(this)"></textarea>
                             `;
