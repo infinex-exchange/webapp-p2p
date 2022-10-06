@@ -1,5 +1,7 @@
 function realOnOpen() {
-    console.log('open');
+    $('.chat-footer-recon').addClass('d-none');
+    $('.chat-footer-good').removeClass('d-none');
+    doJsSizing();
 }
 
 function updatePresence() {
@@ -88,7 +90,9 @@ $(document).on('ptidVerified', function() {
     });
     
     window.chatClient.on('close', function() {
-        console.log('close');
+        $('.chat-footer-recon').removeClass('d-none');
+        $('.chat-footer-good').addClass('d-none');
+        doJsSizing();
     });
     
     window.chatClient.on('authFailed', msgBox);
