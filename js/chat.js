@@ -74,7 +74,7 @@ $(document).on('ptidVerified', function() {
         }
         
         var now = new Date();
-        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 2) {
+        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 1) {
             window.chatClient.sendTyping();
             window.typingOutLastSend = now;
         } 
@@ -113,6 +113,7 @@ $(document).on('ptidVerified', function() {
     
     window.chatClient.on('typing', function() {
         $('.chat-typing-vmsg').removeClass('d-none');
+        $('#chat-data').scrollTop(999999);
         
         if(typeof(window.typingInInterval) != 'undefined' && window.typingInInterval !== null)
             clearInterval(window.typingInInterval);
@@ -120,7 +121,7 @@ $(document).on('ptidVerified', function() {
         window.typingInInterval = setInterval(function() {
             $('.chat-typing-vmsg').addClass('d-none');
             window.typingInInterval = null;
-        }, 5000);
+        }, 3000);
     });
     
     window.chatClient.on('message', function(msg) {
