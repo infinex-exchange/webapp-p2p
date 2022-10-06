@@ -133,7 +133,16 @@ $(document).on('ptidVerified', function() {
             </div>
         `;
         
-        $('#chat-data').append(msgHtml);
+        if(typeof(window.mostRecentMsgTime) == 'undefined')
+            window.mostRecentMsgTime = 0;
+        
+        if(msg.time > window.mostRecentMsgTime) {
+            $('#chat-data').append(msgHtml);
+            window.mostRecentMsgTime = msg.time;
+        }
+        else {
+            $('#chat-data').prepend(msgHtml);
+        }
     });
     
     window.chatClient.open();
