@@ -15,15 +15,16 @@ function doJsSizing() {
     $(document).trigger('afterJsSizing');
 }
 
-$(document).on('renderingComplete', function() {
-    doJsSizing();
-});
+$(document).ready(function() {
+    $(document).on('renderingComplete', function() {
+        doJsSizing();
+    });
 
-$(window).resize(function() {
-	doJsSizing();
-});
+    $(window).resize(function() {
+    	doJsSizing();
+    });
 
-$('.nav-link[data-ui-card-target]').on('click', function() {
-    alert('js sized');
-    doJsSizing();
+    $('.nav-link[data-ui-card-target]').on('click', function() {
+        doJsSizing();
+    });
 });
