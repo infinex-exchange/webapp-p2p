@@ -219,6 +219,7 @@
     color: white;
     float: right;
     padding: 8px;
+    word-break: break-all;
 }
 
 .chat-msg.incoming {
