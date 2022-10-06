@@ -296,11 +296,11 @@
         <div class="row m-0">
         <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
-        <div id="chat-header" class="row mb-2">
-            <div class="col-auto my-auto">
+        <div id="chat-header" class="row">
+            <div class="col-auto my-auto pb-2">
                 <i id="chat-online-icon" class="fa-solid fa-circle fa-lg"></i>
             </div>
-            <div class="col-auto my-auto">
+            <div class="col-auto my-auto pb-2">
                 <h3 class="nickname mb-1"></h3>
                 <span class="secondary" id="chat-last-seen"></span>
             </div>
@@ -309,11 +309,11 @@
         <div id="chat-data" class="scrollable">
         </div>
         
-        <div id="chat-footer" class="row mt-2">
-            <div class="col-10 pe-0">
+        <div id="chat-footer" class="row">
+            <div class="col-10 pe-0 pt-2">
                 <textarea class="w-100 h-100" rows="2" id="chat-input"></textarea>
             </div>
-            <div class="col-2 ps-0">
+            <div class="col-2 ps-0 pt-2">
                 <button type="button" class="btn btn-primary w-100 h-100" onClick="sendChatMessage()">
                     <i class="fa-solid fa-paper-plane fa-lg"></i>
                 </button>
