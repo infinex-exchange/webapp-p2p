@@ -211,7 +211,7 @@
     display: initial;
 }
 
-/* Chat messages */
+/* Chat */
 
 .chat-msg {
     border-radius: 10px;
@@ -225,4 +225,8 @@
     background-color: var(--color-input) !important;
     color: var(--color-primary) !important;
     float: left !important;
+}
+
+#chat-input {
+    resize: none;
 }
