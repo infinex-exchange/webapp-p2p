@@ -121,7 +121,7 @@ $(document).on('ptidVerified', function() {
         window.typingInTimeout = setTimeout(function() {
             $('.chat-typing-vmsg').addClass('d-none');
             window.typingInTimeout = null;
-        }, 3000);
+        }, 5000);
     });
     
     window.chatClient.on('message', function(msg) {
