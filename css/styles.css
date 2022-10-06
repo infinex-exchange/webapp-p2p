@@ -211,8 +211,8 @@
 .chat-msg {
     border-radius: 10px;
     background-color: var(--color-input);
-    color: black;
     float: right;
+    padding: 8px;
 }
 
 .chat-msg.incoming {
