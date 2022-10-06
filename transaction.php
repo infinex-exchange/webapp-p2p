@@ -301,7 +301,7 @@
                 <i id="chat-online-icon" class="fa-solid fa-circle fa-lg"></i>
             </div>
             <div class="col-auto my-auto">
-                <h3 class="nickname"></h3>
+                <h3 class="nickname mb-1"></h3>
                 <span class="secondary" id="chat-last-seen"></span>
             </div>
         </div>
