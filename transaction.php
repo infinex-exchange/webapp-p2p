@@ -296,7 +296,7 @@
         <div class="row m-0">
         <div id="chat" class="col-12 p-0 ui-card ui-card-ver d-lg-block column-height sm-rest-of-height" data-ui-card="chat">
 
-        <div id="chat-header" class="row">
+        <div id="chat-header" class="row mb-2">
             <div class="col-auto my-auto">
                 <i id="chat-online-icon" class="fa-solid fa-circle fa-lg"></i>
             </div>
@@ -309,7 +309,7 @@
         <div id="chat-data" class="scrollable">
         </div>
         
-        <div id="chat-footer" class="row">
+        <div id="chat-footer" class="row mt-2">
             <div class="col-10">
                 <textarea class="form-control" id="chat-input"></textarea>
             </div>
