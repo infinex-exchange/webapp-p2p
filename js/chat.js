@@ -72,6 +72,12 @@ $(document).on('ptidVerified', function() {
             e.preventDefault();
             sendChatMessage();
         }
+        
+        var now = new Date();
+        if(typeof(window.typingOutLastSent) == 'undefined' || now - window.typingOutLastSend > 2) {
+            window.chatClient.sendTyping();
+            window.typingOutLastSend = now;
+        } 
     });
     
     $('#chat-submit').click(function() {
@@ -114,7 +120,7 @@ $(document).on('ptidVerified', function() {
         window.typingInInterval = setInterval(function() {
             $('.chat-typing-vmsg').removeClass('d-none');
             window.typingInInterval = null;
-        }, 3000);
+        }, 5000);
     });
     
     window.chatClient.on('message', function(msg) {
