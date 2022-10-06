@@ -23,7 +23,7 @@ function updatePresence() {
 }
 
 function markAllRead() {
-    if($('#chat').hasClass('d-none'))
+    if($('#chat').offset().top == 0)
         return;
     
     if($('.chat-new-msg-separator').length == 0)
