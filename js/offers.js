@@ -173,10 +173,10 @@ $(document).on('haveConfig', function() {
                             <div class="row">
 	                            <div class="col-4 col-lg-12">
 	                                <div class="row flex-nowrap">
-		                                <div class="col-auto px-1 my-auto d-none d-lg-block">
+		                                <div class="col-auto my-auto d-none d-lg-block">
 				                            <i class="fa-solid fa-circle-user"></i>
 				                        </div>
-				                        <div class="col-auto px-1 my-auto text-break">
+				                        <div class="col-auto my-auto text-break">
 				                            <strong>${v.nickname}</strong>
 				                        </div>
 				                    </div>
@@ -184,12 +184,10 @@ $(document).on('haveConfig', function() {
                                 <div class="col-4 col-lg-12 my-auto">
 		                            <div class="rateit" data-rateit-value="${ratingStars}" style="font-size: 20px"></div>
 	                            </div>
-	                            <div class="col-4 col-lg-12 my-auto text-end text-lg-start">
-		                            <span class="small secondary">
-		                                ${v.user_tcount}
-		                                <span class="d-none d-lg-block">transactions</span>
-		                                | ${v.user_rating}%
-		                            </span>
+	                            <div class="col-4 col-lg-12 my-auto text-end text-lg-start small secondary">
+	                                ${v.user_tcount}
+	                                <span class="d-none d-lg-inline">transactions</span>
+	                                | ${v.user_rating}%
 		                        </div>
 		                    </div>
                         </div>
