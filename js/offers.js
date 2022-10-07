@@ -173,7 +173,7 @@ $(document).on('haveConfig', function() {
                             <div class="row">
 	                            <div class="col-4 col-lg-12">
 	                                <div class="row flex-nowrap">
-		                                <div class="col-auto my-auto d-none d-lg-block pe-p">
+		                                <div class="col-auto my-auto d-none d-lg-block pe-0">
 				                            <i class="fa-solid fa-circle-user"></i>
 				                        </div>
 				                        <div class="col-auto my-auto text-break">
