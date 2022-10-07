@@ -112,7 +112,7 @@ $(document).on('haveConfig', function() {
                 
                 $.each(v.fpms, function(x, fpmid) {
                     innerPayments += `
-                        <div class="col-auto">
+                        <div class="col-auto py-1">
                             <div class="row flex-nowrap">
 		                        <div class="col-auto my-auto text-center" style="width: 32px">
 		                            <img width="24px" height="24px" src="${data.fpms[fpmid].icon_url}">
