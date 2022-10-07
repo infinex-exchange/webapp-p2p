@@ -171,13 +171,13 @@ $(document).on('haveConfig', function() {
                      data-fiat-min="${v.fiat_min}" data-fiat-max="${v.fiat_max}" data-price="${v.price}">
                         <div class="my-auto sm-w-100 order-1" style="width: 20%">
                             <div class="row">
-	                            <div class="col-5 col-lg-12">
+	                            <div class="col-4 col-lg-12">
 		                            <i class="fa-solid fa-circle-user"></i>&nbsp;<strong>${v.nickname}</strong>
 		                        </div>
                                 <div class="col-4 col-lg-12">
 		                            <div class="rateit" data-rateit-value="${ratingStars}" style="font-size: 20px"></div>
 	                            </div>
-	                            <div class="col-3 col-lg-12">
+	                            <div class="col-4 col-lg-12">
 		                            <span class="small secondary">
 		                                ${v.user_tcount}
 		                                <span class="d-none d-lg-block">transactions</span>
