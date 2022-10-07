@@ -176,7 +176,7 @@ $(document).on('haveConfig', function() {
 		                                <div class="col-auto pe-0 my-auto">
 				                            <i class="fa-solid fa-circle-user"></i>
 				                        </div>
-				                        <div class="col-auto ps-0 my-auto">
+				                        <div class="col-auto ps-0 my-auto text-break">
 				                            <strong>${v.nickname}</strong>
 				                        </div>
 				                    </div>
