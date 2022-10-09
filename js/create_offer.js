@@ -140,7 +140,7 @@ function refreshPrec() {
     if(window.assetid == '' || window.fiatid == '') return;
         
     $.ajax({
-        url: config.apiUrl + '/p2p/my_offers/new/prec',
+        url: config.apiUrl + '/p2p/my_offers/add/prec',
         type: 'POST',
         data: JSON.stringify({
             asset: window.assetid,
