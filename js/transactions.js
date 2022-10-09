@@ -52,8 +52,14 @@ function renderTransaction(t) {
                         <div class="row">
                         
                             <div class="col-12 small">
-                                <i class="fa-solid fa-circle-user"></i>
-                                <strong>${t.nickname}</strong>
+                                <div class="row flex-nowrap">
+                                    <div class="col-auto my-auto d-none d-lg-block pe-0">
+    		                            <i class="fa-solid fa-circle-user"></i>
+    		                        </div>
+    		                        <div class="col-auto my-auto text-break ps-lg-1">
+    		                            <strong>${t.nickname}</strong>
+    		                        </div>
+		                        </div>
                             </div>
                             <div class="col-12 small">
 		                        <span class="${color}">${t.side}</span>
