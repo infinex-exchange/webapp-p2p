@@ -180,7 +180,7 @@ $(document).on('haveConfig', function() {
 		                                <div class="col-auto my-auto d-none d-lg-block pe-0">
 				                            <i class="fa-solid fa-circle-user"></i>
 				                        </div>
-				                        <div class="col-auto my-auto text-break">
+				                        <div class="col-auto my-auto text-break ps-lg-1">
 				                            <strong>${v.nickname}</strong>
 				                        </div>
 				                    </div>
