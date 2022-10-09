@@ -96,14 +96,14 @@ function removeFpm(item, fpmid) {
 }
 
 function refreshSellBalance() {
+    window.sellBalance = new BigNumber(0);
+    
     if(window.assetid == '' || window.fiatid == '') return;
     
     if(window.side == 'BUY') {
         $('#sell-balance-wrapper').addClass('d-none');
         return;
     }
-    
-    window.sellBalance = new BigNumber(0);
         
     $.ajax({
         url: config.apiUrl + '/wallet/balances',
@@ -121,6 +121,38 @@ function refreshSellBalance() {
             window.sellBalance = new BigNumber(data.balances[window.assetid].avbl);
             $('#sell-balance').html(data.balances[window.assetid].avbl);
             $('#sell-balance-wrapper').removeClass('d-none');
+        } else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function refreshPrec() {
+    window.p2pPrec = {
+        crypto_prec: 0,
+        fiat_prec: 0,
+        price_prec: 0
+    };
+    
+    if(window.assetid == '' || window.fiatid == '') return;
+        
+    $.ajax({
+        url: config.apiUrl + '/p2p/my_offers/new/prec',
+        type: 'POST',
+        data: JSON.stringify({
+            asset: window.assetid,
+            fiat: window.fiatid
+        }),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            window.p2pPrec = data;
         } else {
             msgBox(data.error);
         }
@@ -152,6 +184,7 @@ $(document).ready(function() {
         
         if(window.assetid == '' || window.fiatid == '') return;
         
+        refreshPrec();
         refreshPmSelectors();
         refreshSellBalance();
         
@@ -241,8 +274,10 @@ $(document).ready(function() {
     // Lock format and precision of inputs
     
     $('#price, #amount-crypto, #fiat-min, #fiat-max').on('input', function () {
-        prec = $('#select-fiat').data('prec');
-        if($(this).is('#amount-crypto')) prec = $('#select-coin').data('prec'); 
+        prec = 0;
+        if($(this).is('#price')) prec = window.p2pPrec.price_prec;
+        else if($(this).is('#amount-crypto')) prec = window.p2pPrec.crypto_prec;
+        else prec = window.p2pPrec.fiat_prec;
         
         var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + prec + "})?$");
         var newVal = $(this).val();
