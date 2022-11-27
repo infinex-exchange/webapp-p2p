@@ -82,7 +82,7 @@ function refreshTransaction(first = false) {
                     renderFpmInstance(k, v, data.fpms);
                 });
                 
-                document.title = data.transaction.side + ' ' + data.transaction.assetid + ' | Vayamos P2P';
+                document.title = data.transaction.side + ' ' + data.transaction.assetid + ' | Infinex P2P';
 
                 $(document).trigger('ptidVerified').trigger('renderingStage');
             }

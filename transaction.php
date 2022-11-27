@@ -5,7 +5,7 @@
         <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Vayamos P2P</title>
+        <title>Infinex P2P</title>
         <script src="/p2p/config.js?<?php echo filemtime(__DIR__.'/config.js'); ?>"></script>
         <script src="/p2p/js/chat_client.js?<?php echo filemtime(__DIR__.'/js/chat_client.js'); ?>"></script>
         <script src="/p2p/js/utils.js?<?php echo filemtime(__DIR__.'/js/utils.js'); ?>"></script>
@@ -193,7 +193,7 @@
                             Please use the chat to come to an agreement.
                             <br>
                             If you don't cancel the transaction and the seller doesn't confirm receipt of payment within 24 hours,
-                            Vayamos staff will help to solve the dispute.
+                            Infinex staff will help to solve the dispute.
                         </span>
                     </div>
                 </div>
@@ -210,7 +210,7 @@
                             Please use the chat to come to an agreement.
                             <br>
                             If you don't confirm receipt of payment and the buyer doesn't cancel the transaction within 24 hours,
-                            Vayamos staff will help to solve the dispute.
+                            Infinex staff will help to solve the dispute.
                         </span>
                     </div>
                 </div>

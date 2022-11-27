@@ -1,3 +1,3 @@
 var p2pConfig = {
-    chatServerUrl: 'wss://chat-p2p.vayamos.cc'
+    chatServerUrl: 'wss://chat-p2p.infinex.cc'
 };

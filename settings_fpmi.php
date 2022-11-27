@@ -6,7 +6,7 @@
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <script src="/p2p/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
         <script src="/p2p/js/utils.js?<?php echo filemtime(__DIR__.'/js/utils.js'); ?>"></script>
-        <title>Settings | Vayamos P2P</title>
+        <title>Settings | Infinex P2P</title>
     </head>
     <body>
     

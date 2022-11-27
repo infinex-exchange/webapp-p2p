@@ -5,7 +5,7 @@
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/p2p/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
-        <title>Settings | Vayamos P2P</title>
+        <title>Settings | Infinex P2P</title>
     </head>
     <body>
     
