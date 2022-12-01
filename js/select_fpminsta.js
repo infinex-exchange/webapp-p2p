@@ -87,6 +87,7 @@ function initSelectFpmInsta(endpoint = '/p2p/fpm_instances') {
                         
                     thisAS.done();
                             
+                    console.log(data.fpm_instances.length);
                     if(data.fpm_instances.length != 50)
                         thisAS.noMoreData();
                 } else {
