@@ -249,7 +249,6 @@ $(document).on('authChecked', function() {
             if(thisAS.data.offset == 0)
                 $(document).trigger('renderingStage');
             
-            console.log(data.fpm_instances.length);
             if(data.fpm_instances.length != 50)
                 thisAS.noMoreData(); 
         }
