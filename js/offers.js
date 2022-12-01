@@ -248,6 +248,7 @@ $(document).on('haveConfig', function() {
             if(thisAS.data.offset == 0)
                 $(document).trigger('renderingStage');
             
+            console.log(data.offers.length);
             if(data.offers.length != 50)
                 thisAS.noMoreData(); 
         }
