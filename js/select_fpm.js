@@ -84,6 +84,7 @@ function initSelectFpm(fiat = null, allowWildcard = true, endpoint = '/p2p/fpms'
                         
                     thisAS.done();
                             
+                    console.log(data.fpms.length);
                     if(data.fpms.length != 50)
                         thisAS.noMoreData();
                 } else {
