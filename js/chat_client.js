@@ -67,7 +67,7 @@ class ChatClient {
                 t.callbacks['close']();
             }
             t.ws.close();
-        }, 2000);
+        }, 5000);
         
         t.pingId = t.randomId();
         
