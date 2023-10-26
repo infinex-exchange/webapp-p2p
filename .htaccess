@@ -1,7 +1,3 @@
-Options -MultiViews -Indexes
-
-RewriteEngine on
-
 RewriteRule ^transaction/([^/]+)/?$ transaction.php [L]
 RewriteRule ^settings/?$ settings.php [L]
 RewriteRule ^settings/payment-methods/?$ settings_fpmi.php [L]
