@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'/../../templates/head.php'); ?>
-        <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
+        <?php include('../../inc/head.php'); ?>
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
@@ -10,13 +9,7 @@
     </head>
     <body>
     
-        <!-- Preloader -->
-        <?php include(__DIR__.'/../../templates/preloader.html'); ?>
-        
-        <!-- Navbar -->
-        <div id="main-navbar">
-            <?php include(__DIR__.'/../../templates/navbar.php'); ?>
-        </div>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Root container -->
         <div class="container-fluid container-1500 p-0">
@@ -260,8 +253,6 @@
         <script src="/p2p/js/transactions.js?<?php echo filemtime(__DIR__.'/js/transactions.js'); ?>"></script>
         <script src="/p2p/js/my_offers.js?<?php echo filemtime(__DIR__.'/js/my_offers.js'); ?>"></script>
         <script src="/p2p/js/modal_take.js?<?php echo filemtime(__DIR__.'/js/modal_take.js'); ?>"></script>
-        
-        <?php include('../../templates/modals.php'); ?>
         
         <!-- Mobile navbar -->
         <?php include(__DIR__.'/templates/mobile_navbar.php'); ?>

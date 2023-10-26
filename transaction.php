@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'/../../templates/head.php'); ?>
-        <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
+        <?php include('../../inc/head.php'); ?>
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Infinex P2P</title>
@@ -12,13 +11,7 @@
     </head>
     <body>
     
-        <!-- Preloader -->
-        <?php include(__DIR__.'/../../templates/preloader.html'); ?>
-        
-        <!-- Navbar -->
-        <div id="main-navbar">
-            <?php include(__DIR__.'/../../templates/navbar.php'); ?>
-        </div>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="user-only container-fluid container-1500 p-0">
@@ -345,8 +338,6 @@
         <script src="/p2p/js/countdown.js?<?php echo filemtime(__DIR__.'/js/countdown.js'); ?>"></script>
         <script src="/p2p/js/transaction.js?<?php echo filemtime(__DIR__.'/js/transaction.js'); ?>"></script>
         <script src="/p2p/js/chat.js?<?php echo filemtime(__DIR__.'/js/chat.js'); ?>"></script>
-        
-        <?php include('../../templates/modals.php'); ?>
         
         <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm-received">
             <div class="modal-dialog modal-dialog-centered" role="document">

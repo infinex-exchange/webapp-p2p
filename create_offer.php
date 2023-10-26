@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'/../../templates/head.php'); ?>
-        <?php include(__DIR__.'/../../imports/bignumber.html'); ?>
+        <?php include('../../inc/head.php'); ?>
         <?php include(__DIR__.'/imports/rateit.html'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
@@ -10,11 +9,7 @@
     </head>
     <body>
     
-        <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
-        
-        <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 container-rest p-0 user-only">
@@ -198,7 +193,6 @@
         
         <script src="/p2p/js/create_offer.js?<?php echo filemtime(__DIR__.'/js/create_offer.js'); ?>"></script>
         
-        <?php include('../../templates/modals.php'); ?>
         <?php include('templates/mobile_navbar.php'); ?>
     
     </body>

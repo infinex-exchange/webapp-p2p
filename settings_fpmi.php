@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'/../../templates/head.php'); ?>
+        <?php include('../../inc/head.php'); ?>
         <link rel="stylesheet" href="/p2p/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <script src="/p2p/js/validate.js?<?php echo filemtime(__DIR__.'/js/validate.js'); ?>"></script>
@@ -10,11 +10,7 @@
     </head>
     <body>
     
-        <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
-        
-        <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 container-rest p-0 user-only">
@@ -130,7 +126,6 @@
             </div>
         </div>
         
-        <?php include('../../templates/modals.php'); ?>
         <?php include('templates/mobile_navbar.php'); ?>
     
     </body>
